@@ -32,7 +32,8 @@
 
 
                 <?php
-                // Change the css classes to suit your needs    
+                // Change the css classes to suit your needs
+                //change
 
                 $attributes = array('class' => 'formCon', 'id' => '');
                 echo form_open_multipart('student/create_student', $attributes);
@@ -59,7 +60,7 @@
 
                         </div>
                     </div>
-                </div>    
+                </div>
 
                 <div class="panel  panel-default"  >
                     <div class="panel-heading panel-default " >
@@ -97,7 +98,7 @@
                                 <input type="text" name="initials" value="<?php echo set_value('initials'); ?>" class="form-control" id="initials" placeholder="Name With Initials">
                                 <div><?php echo form_error('initials'); ?></div>
 
-                            </div>   
+                            </div>
                         </div>
                         <!-- Third row-->
                         <div class="row">
@@ -237,7 +238,7 @@ $grades = $this->class_model->get_grades(); ?>
                                 <textarea name="address" value="" class="form-control" id="address"><?php echo set_value('address'); ?></textarea>
                                 <div><?php echo form_error('address'); ?></div>
 
-                            </div>   
+                            </div>
                         </div>
                         <div class="row">
                             <div class="col-md-1 col-md-push-1">
@@ -250,12 +251,12 @@ $grades = $this->class_model->get_grades(); ?>
                                 <button type="reset" class="btn btn-default">Reset </button>
 
                             </div>
-                        </div>   
+                        </div>
 
 
                     </div>
 
-                </div>       
+                </div>
 <?php echo form_close(); ?>
 
 
@@ -266,5 +267,3 @@ $grades = $this->class_model->get_grades(); ?>
 </div>
 
 </div>
-
-
