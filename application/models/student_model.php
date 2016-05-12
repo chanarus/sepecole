@@ -1,9 +1,9 @@
 <?php
 /**
  * Ecole - Student Model
- * 
+ *
  * Handles DB Functionalities of the Student component
- * 
+ *
  * @author  Thomas A.P.
  * @copyright (c) 2015, Ecole. (http://projectecole.com)
  * @link http://projectecole.com
@@ -11,7 +11,7 @@
 
 class Student_Model extends CI_Model {
 
-    
+
     /**
      * constructor
      */
@@ -23,13 +23,13 @@ class Student_Model extends CI_Model {
 
     /**
      * Insert New Student recode
-     * 
+     *
      * @param type $student_data
      * @return boolean
      */
     public function insert_new_student($student_data) {
         try {
-            if($this->db->insert('students', $student_data)){ 
+            if($this->db->insert('students', $student_data)){
              $id = $this->db->insert_id();
                return $id;
             } else {
@@ -42,14 +42,14 @@ class Student_Model extends CI_Model {
 
     /**
      * Insert New Guardian recode
-     * 
+     *
      * @param type $guardian_data
      * @return type
      */
     public function insert_new_Guardian($guardian_data) {
 
-     
-        if ($this->db->insert('guardians',$guardian_data)){ 
+
+        if ($this->db->insert('guardians',$guardian_data)){
             $id = $this->db->insert_id();
             return $id;
         } else {
@@ -59,11 +59,11 @@ class Student_Model extends CI_Model {
 
     /**
      * getting the last recode details of students table
-     * 
+     *
      * @return type mixed :boolean or query result
      */
     public function get_last_row() {
-            $this->db->order_by("id", "desc"); 
+            $this->db->order_by("id", "desc");
         if ($rows = $this->db->get('students')) {
             $row = $rows->row();
             return $row;
@@ -75,7 +75,7 @@ class Student_Model extends CI_Model {
 
     /**
      * getting the recode details of Newly added Student
-     * 
+     *
      * @param type $id
      * @return type
      */
@@ -93,7 +93,7 @@ class Student_Model extends CI_Model {
 
     /**
      * getting the recode details of  Student details by given id
-     * 
+     *
      * @param type $id
      * @return type query results
      */
@@ -113,7 +113,7 @@ class Student_Model extends CI_Model {
 
     /**
      * getting the recode details of guardian details by given id
-     * 
+     *
      * @param type $id
      * @return type query resuls
      */
@@ -135,11 +135,11 @@ class Student_Model extends CI_Model {
 
     /**
      * getting all the student recode details without pagination
-     * 
+     *
      * @return type query results
      */
     public function get_all_students_2() {
-      
+
         $query = $this->db->get('students');
         return $query;
     }
@@ -147,11 +147,11 @@ class Student_Model extends CI_Model {
 
     /**
      * get all archived student recodes
-     * 
+     *
      * @return boolean
      */
     function get_all_archive_students() {
-        $this->db->order_by("id", "desc"); 
+        $this->db->order_by("id", "desc");
         $query = $this->db->get('archived_students');
 
         if ($query->num_rows() > 0) {
@@ -160,7 +160,7 @@ class Student_Model extends CI_Model {
             return FALSE;
         }
     }
-    
+
     function get_class_names(){
         $query = $this->db->get('classes');
         if ($query->num_rows() > 0) {
@@ -169,7 +169,7 @@ class Student_Model extends CI_Model {
             return FALSE;
         }
     }
-    
+
      function get_class_name_by_id($id){
         $query = $this->db->get_where('classes',array('id'=>$id),1);
         if ($query->num_rows() > 0) {
@@ -182,7 +182,7 @@ class Student_Model extends CI_Model {
 
     /**
      * delete student recode + his guardian details
-     * 
+     *
      * @param type $id
      * @return boolean
      */
@@ -198,9 +198,9 @@ class Student_Model extends CI_Model {
 
 
 
-    /**update Guardian recode 
-     * 
-     * 
+    /**update Guardian recode
+     *
+     *
      * @param type $guardian
      * @param type $myid
      * @return boolean
@@ -217,11 +217,11 @@ class Student_Model extends CI_Model {
         }
     }
 
- 
+
 
     /**
-     * update Student recode 
-     * 
+     * update Student recode
+     *
      * @param type $student
      * @param type $myid
      * @return boolean
@@ -239,7 +239,7 @@ class Student_Model extends CI_Model {
 
     /**
      * Insert new student's log details
-     * 
+     *
      * @param type $username
      * @param type $password
      * @param type $create
@@ -258,7 +258,7 @@ class Student_Model extends CI_Model {
             'user_type'=>'S'
         );
         try {
-            
+
             if ($this->db->insert('users',$user_data)) {
                 $id = $this->db->insert_id();
                 return $id;
@@ -272,7 +272,7 @@ class Student_Model extends CI_Model {
 
         /**
      * getting the recode details of  Student with his guardian details by given id
-     * 
+     *
      * @param type $id
      * @return type query results
      */
@@ -292,7 +292,7 @@ class Student_Model extends CI_Model {
 
     /**
      * set user_id of the student in the student table
-     * 
+     *
      * @param type $ID
      * @param type $userid
      * @return boolean
@@ -321,15 +321,15 @@ class Student_Model extends CI_Model {
 
     /**
      * Get Logged user's username
-     * 
+     *
      * @param type $user_id
      * @return boolean
      */
     public function get_details($user_id) {
-        
-        
+
+
         $query=$this->db->get_where('users',array('id'=>$user_id));
-        
+
         if ($query->num_rows() > 0) {
              $row=$query->row();
             return $row->username;
@@ -341,7 +341,7 @@ class Student_Model extends CI_Model {
 
     /**
      * change Logged user's password
-     * 
+     *
      * @param type $user_id
      * @param type $new_password
      * @return boolean
@@ -360,21 +360,21 @@ class Student_Model extends CI_Model {
 
     /**
      *  get Logged user's encrypted password
-     * 
+     *
      * @param type $user_id
      * @return type query results
      */
     public function get_password_hash($user_id) {
-        
+
        $query = $this->db->get_where('users',array('id'=>$user_id),1);
-        
+
         $row = $query->row();
         return $row->password;
     }
 
     /**
      * Insert New Guardian recode
-     * 
+     *
      * @param type $id
      * @return boolean
      */
@@ -384,7 +384,7 @@ class Student_Model extends CI_Model {
         try {
 
              $data_s = $this->db->get_where('students', array('user_id' => $id),1);
-             
+
             if ($data_s->row()) {
                 $student_data = $data_s->row();
 
@@ -409,10 +409,10 @@ class Student_Model extends CI_Model {
 
 
 
-                if ($this->db->query("INSERT INTO archived_students (`user_id` , `admission_no` , `admission_date` , `full_name` , `name_with_initials` , `dob` , `gender`, `language` , `religion` , `permanent_addr` , `contact_home` , `email` , `house_id` , `created_at`) 
+                if ($this->db->query("INSERT INTO archived_students (`user_id` , `admission_no` , `admission_date` , `full_name` , `name_with_initials` , `dob` , `gender`, `language` , `religion` , `permanent_addr` , `contact_home` , `email` , `house_id` , `created_at`)
     			VALUES ('$user_id' , '$admissionno', '$admissiondate' , '$fullname' , '$initials' , '$dob' , '$gender' , '$language' , '$religion_id' , '$address' , '$contact' , '$email' , '$house_id' , '$created_at')")) {
 
-                    
+
                     $data_g =$this->db->get_where('guardians', array('student_id' => $id),1);
                     if ($data_g->row()) {
                         $guardian_data = $data_g->row();
@@ -430,7 +430,7 @@ class Student_Model extends CI_Model {
                         $contact_home = $guardian_data->contact_home;
                         $contact_mobile = $guardian_data->contact_mobile;
 
-                        if ($this->db->query("INSERT INTO archived_guardians (`student_id` , `fullname` , `name_with_initials` , `dob` , `gender` , `relation` , `occupation` , `addr` , `contact_home` , `contact_mobile`,`is_pastpupil` ) 
+                        if ($this->db->query("INSERT INTO archived_guardians (`student_id` , `fullname` , `name_with_initials` , `dob` , `gender` , `relation` , `occupation` , `addr` , `contact_home` , `contact_mobile`,`is_pastpupil` )
     			VALUES ('$student_id', '$fullname'  , '$initials' , '$dob' , '$gender' , '$relation' , '$occupation' , '$adddress' , '$contact_home' , '$contact_mobile','$pastpupil')")) {
 
                             $sql1 = "DELETE s,g FROM students AS s INNER JOIN guardians AS g ON s.user_id = g.student_id  WHERE  s.user_id = '$id'";
@@ -454,14 +454,14 @@ class Student_Model extends CI_Model {
 
     /**
      *  getting the recode details of archived student by given id
-     * 
+     *
      * @param type $id
      * @return type query resuls
      */
     public function get_archived_student_only($id) {
         try {
              $data =$this->db->get_where('archived_students',array('user_id' => $id),1);
-             
+
             if ($row = $data->row()) {
                 return $row;
             } else {
@@ -476,7 +476,7 @@ class Student_Model extends CI_Model {
 
     /**
      * for serverside datatable of student recodes
-     * 
+     *
      * @param type $data
      * @return type mixed : boolean , query results
      */
@@ -516,7 +516,7 @@ class Student_Model extends CI_Model {
 
     /**
      * genarate student report
-     * 
+     *
      * @param type $report
      * @return boolean
      */
@@ -529,12 +529,12 @@ class Student_Model extends CI_Model {
             return FALSE;
         }
 
-     
+
     }
-    
+
     /**
      * genarate student report
-     * 
+     *
      * @param type $report
      * @return boolean
      */
@@ -547,18 +547,18 @@ class Student_Model extends CI_Model {
             return FALSE;
         }
 
-     
+
     }
-    
+
     /**
      * get student user id by given addmission no
-     * 
+     *
      * @param type $index
      * @return type query results
      */
     function get_id_by_index($index){
          try {
-             
+
              $data=$this->db->get_where('students',array('admission_no'=>$index),1);
             if ($data->row()) {
                 $row = $data->row()->user_id;
@@ -570,10 +570,10 @@ class Student_Model extends CI_Model {
             return null;
         }
     }
-    
+
     /**
      * get all note details
-     * 
+     *
      * @return boolean
      */
     function get_all_notes(){
@@ -581,21 +581,21 @@ class Student_Model extends CI_Model {
 
         if ($data->num_rows() > 0) {
             return $data->result();
-           
+
         }else{
             return FALSE;
         }
     }
-    
+
     /**
      * get details of a specific note by given id
-     * 
+     *
      * @param type $id
      * @return boolean
      */
      function get_note($id){
          $data = $this->db->get_where('notes',array('id'=>$id),1);
-        
+
 
         if ($data) {
             return $data->row();
@@ -603,10 +603,10 @@ class Student_Model extends CI_Model {
             return FALSE;
         }
     }
-    
+
     /**
      * Chane note settings
-     * 
+     *
      * @param type $id
      * @param type $action
      * @return boolean

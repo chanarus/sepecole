@@ -72,7 +72,7 @@
                                 $('#table_id tbody ').on('click', '#edit', function (e) {
                                     e.preventDefault();
                                     var data = table.row($(this).parents('tr')).data();
-                                    window.location.href = "/index.php/student/load_student/" + data['id2'];
+                                    window.location.href = "<?php echo base_url("index.php/student/load_student"); ?>"+"/" + data['id2'];
                                 });
                                 $('#table_id tbody ').on('click', '#delete', function (e) {
                                     e.preventDefault();
@@ -119,10 +119,10 @@
 
                                     <tr>
                                         <td><?php //echo $row->id;           ?></td>
-                                        <td><?php // echo $row->admission_no;          ?></td> 
+                                        <td><?php // echo $row->admission_no;          ?></td>
                                         <td><?php //echo $row->name_with_initials;           ?></td>
                                         <td><?php //echo $row->contact_home;           ?></td>
-                                        
+
                                         <td><a href="<?php // echo base_url("index.php/profile") . "?key=" . $row->user_id;           ?>" ><span class="glyphicon glyphicon-user" aria-hidden="true"></span></a></td>
                                         <td><a href="<?php // echo base_url("index.php/student/load_student") . "/" . $row->user_id;           ?>"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a></td>
                                         <td><a href="<?php // echo base_url("index.php/student/archive_student") . "/" . $row->user_id;           ?>" onclick="return confirm('Are you sure you want to permenantly delete this student?!!');"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></i></a></td>
@@ -137,4 +137,3 @@
         </div>
     </div>
 </div>
-
