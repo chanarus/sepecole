@@ -55,9 +55,6 @@
                                 <input type="date" name="admissiondate" value="<?php echo set_value('admissiondate'); ?>" class="form-control" id="addmissiondate">
                                 <div><?php echo form_error('admissiondate'); ?></div>
                             </div>
-
-
-
                         </div>
                     </div>
                 </div>
@@ -113,7 +110,7 @@
                             </div>
                             <div class="col-md-3 col-md-push-1 form-group">
 
-                                <label for="nic">NIC No</label>
+                                <label for="nic" id="nicl">NIC No</label>
                                 <input type="text" name="nic" value="<?php echo set_value('nic'); ?>" class="form-control" id="nic" placeholder="NIC No">
                                 <div><?php echo form_error('nic'); ?></div>
 
@@ -267,3 +264,25 @@ $grades = $this->class_model->get_grades(); ?>
 </div>
 
 </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#addmissiondate").change(function(){
+        var text = $("#addmissiondate").val().substring(2, 4);
+        //Admission number algo
+        $("#admissionnumber").val(text);
+    });
+
+    $("#nic").hide();
+    $("#nicl").hide();
+    $("#dob").change(function(){
+        var text = parseInt($("#dob").val().substring(0, 4));
+        if(text<2017)//nic available condition
+        {
+            $("#nic").show();
+            $("#nicl").show();
+        }
+    });
+});
+</script>
