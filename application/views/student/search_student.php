@@ -32,8 +32,8 @@
                                 var abuttons = '';
                                 if (type == 'A') {
                                     abuttons = ' <a href="" class="btn btn-primary btn-xs" id="view" data-toggle="tooltip"><i class="fa fa-eye"></i></a>  &nbsp; \n\
-                                                 <a href="" class="btn btn-primary btn-xs" id="edit"><i class="fa fa-edit"></i></a> &nbsp; \n\
-                                                 <a href="" class="btn btn-danger btn-xs" id="delete"><i class="fa fa-trash"></i></a>';
+                                                 <a href="" class="btn btn-primary btn-xs" id="edit" data-toggle="tooltip"><i class="fa fa-edit"></i></a> &nbsp; \n\
+                                                 <a href="" class="btn btn-danger btn-xs" id="delete" data-toggle="tooltip"><i class="fa fa-trash"></i></a>';
                                 } else {
                                     abuttons = ' <a href="" class="editor_remove" id="view" data-toggle="tooltip"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></a>';
                                 }
@@ -94,8 +94,6 @@
                                 }, function () {
                                     window.location.href = "<?php echo base_url("index.php/student/archive_student"); ?>" + "/" + userId;
                                 });
-
-
                             }
                         </script>
 

@@ -177,20 +177,20 @@
                                 <label for="house">House</label>
                                 <select  name="houseid" id="houseid" class="form-control">
                                     <option value="0" <?php if (set_value('houseid') == 0) {
-                    echo"selected";
-                } ?>>Select House</option>
+                                                          echo"selected";
+                                                        } ?>>Select House</option>
                                     <option value="1" <?php if (set_value('houseid') == 1) {
-                    echo"selected";
-                } ?>>H1</option>
+                                                          echo"selected";
+                                                        } ?>>H1</option>
                                     <option value="2" <?php if (set_value('houseid') == 2) {
-                    echo"selected";
-                } ?>>H2</option>
+                                                          echo"selected";
+                                                        } ?>>H2</option>
                                     <option value="3" <?php if (set_value('houseid') == 3) {
-                    echo"selected";
-                } ?>>H3</option>
+                                                          echo"selected";
+                                                        } ?>>H3</option>
                                     <option value="4" <?php if (set_value('houseid') == 4) {
-                    echo"selected";
-                } ?>>H4</option>
+                                                          echo"selected";
+                                                        } ?>>H4</option>
                                 </select>
                                 <div><?php echo form_error('houseid'); ?></div>
                             </div>
@@ -265,23 +265,42 @@ $grades = $this->class_model->get_grades(); ?>
 
 </div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
 <script>
+var admissionPostFix = "1111";
 $(document).ready(function(){
     $("#addmissiondate").change(function(){
         var text = $("#addmissiondate").val().substring(2, 4);
-        //Admission number algo
-        $("#admissionnumber").val(text);
+        var admissionnumber = text+admissionPostFix;
+        admissionPostFix++;
+        $("#admissionnumber").val(admissionnumber);
+        //select house
+        var house = parseInt(admissionnumber.substring(5,6));
+        if(house == 1){
+            $("#houseid").val(1);
+        }
+        if(house == 2){
+            $("#houseid").val(2);
+        }
+        if(house == 3){
+            $("#houseid").val(3);
+        }
+        if(house == 4){
+            $("#houseid").val(4);
+        }
     });
 
-    $("#nic").hide();
-    $("#nicl").hide();
+    //nic show
+    $("#nic").show();
+    $("#nicl").show();
+    var d = new Date();
+    var currentYear = parseInt(d.getFullYear());
     $("#dob").change(function(){
-        var text = parseInt($("#dob").val().substring(0, 4));
-        if(text<2017)//nic available condition
+        var dob = parseInt($("#dob").val().substring(0, 4));
+
+        if(currentYear-dob < 17)//nic available condition
         {
-            $("#nic").show();
-            $("#nicl").show();
+            $("#nic").hide();
+            $("#nicl").hide();
         }
     });
 });

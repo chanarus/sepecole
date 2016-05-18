@@ -1,6 +1,6 @@
-* { 
+* {
     margin:0px;
-    padding:0px; 
+    padding:0px;
 }
 
 html, body {
@@ -25,6 +25,7 @@ html, body {
     -webkit-border-radius: 50%;
     border-radius: 50%;
 }
+
 
 /*.footer{
     position: fixed;
@@ -198,20 +199,20 @@ html, body {
     background-color: #ccc;
 }
 
-#accordion .glyphicon { 
-    margin-right:10px; 
+#accordion .glyphicon {
+    margin-right:10px;
 }
 
-#accordion .panel-body { 
-    padding:0px; 
+#accordion .panel-body {
+    padding:0px;
 }
 
 #accordion .panel-body table tr td {
-    padding-left: 15px 
+    padding-left: 15px
 }
 
 #accordion .panel-body .table {
-    margin-bottom: 0px; 
+    margin-bottom: 0px;
 }
 
 .profile-img {
@@ -246,13 +247,13 @@ html, body {
 
 /* CSS for Main Doc with stats that need attention*/
 
-#big_stats 
-{ 
-    width: 100%; 
+#big_stats
+{
+    width: 100%;
     display: table;
     margin-top: 1.5em;
-    
-    
+
+
 }
 
 .big-stats-container .widget-content {
@@ -267,7 +268,7 @@ html, body {
     display: table-cell;
     padding: 0;
     position: relative;
-    
+
     border-right: 1px solid #CCC;
     border-left: 1px solid #FFF;
 }
@@ -483,27 +484,27 @@ margin-bottom: 26px;}
 
 /*Shortcuts*/
 .shortcuts {
-    text-align: center; 
+    text-align: center;
 }
 
-.shortcuts .shortcut { 
+.shortcuts .shortcut {
     width: 22.50%;
     display: inline-block;
     padding: 12px 0;
     margin: 0 .9% 1em;
-    vertical-align: top;    
-    
+    vertical-align: top;
+
     text-decoration: none;
-    
+
     background: #f9f6f1;
-    
+
     border-radius: 5px;
 }
 
 .shortcuts .shortcut .shortcut-icon {
     margin-top: .25em;
     margin-bottom: .25em;
-    
+
     font-size: 32px;
     color: #545454;
 }
