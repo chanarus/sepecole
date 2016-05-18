@@ -4,8 +4,8 @@
  * 
  * Responsibe for handling inputs
  * 
- * @author Gunathilaka M.A.S.S
- * @copyright (c) 2015, Ecole. (http://projectecole.com)
+ * @author V.I.Galhena
+ * @copyright (c) 2016, Ecole. (http://projectecole.com)
  * @link  http://projectecole.com
  */
 class Event extends CI_Controller {
