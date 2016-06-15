@@ -96,7 +96,7 @@ class Backup extends CI_Controller {
     }
     else
     {
-      imap_alerts();
+      alerts("Select a catogory!");
     }
 
     $data['user_type']=$this->session->userdata('user_type');

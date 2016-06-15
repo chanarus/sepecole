@@ -6,9 +6,7 @@
             <?php
             if ($user_type == 'A') {
                 $this->view('event/admin_sidebar_nav');
-            } elseif ($user_type == 'P') {
-                $this->view('event/sidebar_nav');
-            } else {
+            }else {
                 $this->view('event/sidebar_nav_teacher');
             }
             ?>
@@ -20,7 +18,7 @@
                     <strong>Event Calendar</strong>
                 </div>
                 <div class="panel-body">
-                    <div class="col-md-12"> 
+                    <div class="col-md-12">
                         <div id='calendar'></div>
                     </div>
                     <div style='clear:both'></div>

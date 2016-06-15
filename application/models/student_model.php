@@ -4,9 +4,7 @@
  *
  * Handles DB Functionalities of the Student component
  *
- * @author  Thomas A.P.
- * @copyright (c) 2015, Ecole. (http://projectecole.com)
- * @link http://projectecole.com
+ *
  */
 
 class Student_Model extends CI_Model {

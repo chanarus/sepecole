@@ -1,12 +1,10 @@
 <?php
 /**
  * Ecole - Subject Controller
- * 
+ *
  * Handles Functionality of the subject compodent(manage student)
- * 
- * @author  Thomas A.P.
- * @copyright (c) 2015, Ecole. (http://projectecole.com)
- * @link http://projectecole.com
+ *
+ * @author  K.H.M.Vidyaratna
  */
 
 class Subject extends CI_Controller {
@@ -27,10 +25,16 @@ class Subject extends CI_Controller {
     /**
      * Main function for Admin section for now. Maybe changed in future. This will just load the current user's profile.
      */
+
+  /***
+  * Function name : index
+  * function description :in the index funtion will load the create_subject page.
+  * Parameters : none
+  * Return type: query result
+  */
+
     function index() {
-        /*
-         * in the index funtion will load the create_subject page
-         */
+
 
         $this->load->library('form_validation');
         $this->form_validation->set_rules('subjectname', 'subjectname', "trim|required|xss_clean|min_length[5]|alpha_dash");
@@ -75,25 +79,28 @@ class Subject extends CI_Controller {
         }
     }
 
- 
-    
-    /**
-     * Load subject to the data table 
-     */
+
+
+    /***
+         * Function name : manage_subjects
+         * function description :Load subject to the data table .
+         * Return type: query result
+         */
+
     function manage_subjects(){
         $data['page_title'] = "Manage Subjects";
         $data['navbar'] = 'subject';
         $data['user_type']=$this->session->userdata('user_type');
-        
+
         $data['result']= $this->Subject_model->get_all_subjects();
-        
+
         $this->load->view('templates/header', $data);
         $this->load->view('navbar_main', $data);
         $this->load->view('navbar_sub', $data);
         $this->load->view('subject/manage_subjects', $data);
         $this->load->view('templates/footer');
-        
-        
+
+
     }
 //    /**
 //     * Search subjects
@@ -131,7 +138,7 @@ class Subject extends CI_Controller {
 //    }
 //    /**
 //     * Delete a subject given id
-//     * 
+//     *
 //     * @param type $id
 //     */
 //    function delete($id) {
@@ -174,15 +181,22 @@ class Subject extends CI_Controller {
 //            $this->load->view('templates/footer');
 //        }
 //    }
-    /**
-     * Edit subject
-     */
+
+
+     /*
+          * Function name : edit
+          * function description :Edit subjects.
+          * Parameters : sub_id
+          * Return type: query result
+          */
+
+
     function edit($sub_id){
-     
+
         $data['user_type']=$this->session->userdata('user_type');
 
 
-       
+
             $data['page_title'] = "Edit Subject";
             $data['navbar'] = 'subject';
             $data["query"] = $this->db->query("SELECT * FROM teachers");
@@ -200,23 +214,23 @@ class Subject extends CI_Controller {
      */
     function edit_subject(){
           $data['user_type']=$this->session->userdata('user_type');
-         
+
             $subject_data = array(
-                
+
                 'subjectid' => $this->input->post('subjectid'),
                 'subjectinchargeid' => $this->input->post('subjectinchargeid')
             );
-             
+
             if ($this->Subject_model->edit($subject_data)) {
-               
+
                  //For news field
             $tech_id = $this->session->userdata('id');
             $tech_details = $this->Teacher_Model->user_details($tech_id);
             $this->News_Model->insert_action_details($tech_id, "Subject Edited", $tech_details->profile_img, $tech_details->first_name);
             //////end news feed
-         
-            
-            
+
+
+
                 $data['page_title'] = "edit Subject ";
                 $data['navbar'] = 'subject';
                 $data['succ_message'] = "Subject Edited Successfully";
@@ -242,6 +256,6 @@ class Subject extends CI_Controller {
                 $this->load->view('templates/footer');
             }
         }
-    
+
 
 }

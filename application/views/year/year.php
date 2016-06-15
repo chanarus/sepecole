@@ -6,15 +6,12 @@
            if($user_type == 'A'){
                $this->view('year/admin_sidebar_nav');
            }
-           elseif($user_type == 'T'){
-               $this->view('leave/teacher_sidebar_nav');
-           }
            else{
                $this->view('leave/teacher_sidebar_nav');
            }
 
             ?>
-            
+
         </div>
 
         <div class="col-md-9">
@@ -41,8 +38,8 @@
                             </div>
                         </div>
                     </div>
-                    
-                        
+
+
                         <?php
                             foreach ($current_year as $row)
                             {
@@ -64,17 +61,17 @@
                                echo "<div class='row' style='margin-bottom:5px;'>";
                                echo "<div class='col-md-6'><b>Term 03 Start Date : </b>".$row->t3_start_date . "</div>";
                                echo "<div class='col-md-6'><b>Term 03 End Date : </b>".$row->t3_end_date . "</div>";
-                               echo "</div>";                                                                                             
+                               echo "</div>";
                             }
                         ?>
-                    
+
                 </div>
             </div>
         </div>
     </div>
     <div class="row">
         <div class="col-md-3">
-            
+
         </div>
         <div class="col-md-9">
 
@@ -105,7 +102,7 @@
                                 } else{
                                     echo "<td><span class='label label-danger'>Inactive</span></td>". PHP_EOL;
                                 }
-                                
+
                                 echo "<td>". PHP_EOL;
                                 ?>
                                     <a href='<?php echo base_url('index.php/year/edit_year/'.$row->id); ?>' class='btn btn-success btn-xs'><i class='fa fa-pencil-square-o'></i></a>
@@ -121,6 +118,5 @@
             </div>
         </div>
     </div>
-    
-</div>
 
+</div>

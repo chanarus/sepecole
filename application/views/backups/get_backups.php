@@ -10,7 +10,7 @@
                 function download() {
 
                     if($('#type').val() == "Index"){
-                        alert("ddd");
+                        alert("Select a Category!");
                         return;
                     }
 

@@ -1,13 +1,10 @@
 <?php
 /**
  * Ecole - Leave Model
- * 
+ *
  * Handles the News Model Functions
- * 
- * @author  Udara Karunarathna
- * @author  Sajith Sudarshana
- * @copyright (c) 2015, Ecole. (http://projectecole.com)
- * @link http://projectecole.com
+ *
+ *
  */
 class News_Model extends CI_Model {
 
@@ -32,7 +29,7 @@ class News_Model extends CI_Model {
         $this->db->query("insert into news_blog(name,description,create_at,userid) values('$news_name','$description','$created_time', '$userid')");
         return TRUE;
     }
-    
+
     /*
      * Function to get all news details
      *
@@ -42,7 +39,7 @@ class News_Model extends CI_Model {
         $data = $this->db->query("select * from news_blog order by create_at desc");
         return $data->result();
     }
-    
+
     /*
      * Function to get a particular news
      *
@@ -54,7 +51,7 @@ class News_Model extends CI_Model {
         $data = $this->db->query("select * from news_blog where id='$id'");
         return $data->row();
     }
-    
+
     /*
      * Function to update a news
      *
@@ -70,7 +67,7 @@ class News_Model extends CI_Model {
             return FALSE;
         }
     }
-    
+
     /*
      * Function to delete news items from the portal
      *
@@ -138,7 +135,7 @@ class News_Model extends CI_Model {
         else if($type == 4){
             $this->db->query("delete from user_logs");
         }
-        
+
         $data = $this->db->query("select * from user_logs");
         foreach ($data->result() as $row) {
             echo "<tr>

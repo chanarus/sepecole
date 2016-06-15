@@ -1,12 +1,10 @@
 <?php
 /**
  * Ecole - News Controller
- * 
+ *
  * Handles the News Page Functions
- * 
- * @author  Udara Karunarathna
- * @copyright (c) 2015, Ecole. (http://projectecole.com)
- * @link http://projectecole.com
+ *
+ *  @author Anuradha H.S
  */
 class News extends CI_Controller {
 
@@ -81,7 +79,7 @@ class News extends CI_Controller {
     /*
      * Function to edit a news
      *
-     * @param  int 
+     * @param  int
      *
      * @return Results
      */
@@ -145,7 +143,7 @@ class News extends CI_Controller {
     /*
      * Function to view a news
      *
-     * @param  int 
+     * @param  int
      *
      * @return Results
      */
@@ -169,7 +167,7 @@ class News extends CI_Controller {
     /*
      * Function to delete a news
      *
-     * @param  int 
+     * @param  int
      *
      * @return Results
      */

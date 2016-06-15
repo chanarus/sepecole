@@ -1,12 +1,10 @@
 <?php
 /**
  * Ecole - Event Model
- * 
+ *
  * Responsibe for handling date related to school events in the system
- * 
- * @author Gunathilaka M.A.S.S
- * @copyright (c) 2015, Ecole. (http://projectecole.com)
- * @link  http://projectecole.com
+ *
+ * @author V.I.Galhena
  */
 class Event_model extends CI_Model {
 
@@ -15,11 +13,11 @@ class Event_model extends CI_Model {
         $this->load->database();
     }
 
-    /**
+    /***
      * Interact with the database to create a new event.
-     * 
+     *
      * @param array $insert_event contains event details such as event_name,description,budget,start_date,end_date...
-     * 
+     *
      * @return boolean
      */
     function insert_sport_event($insert_event) {
@@ -29,12 +27,12 @@ class Event_model extends CI_Model {
         } catch (Exception $ex) {
             return FALSE;
         }
-        
+
     }
 
-    /**
+    /***
      * Create new event type
-     * 
+     *
      * @param array $inert_event_type contains event type details such as event type name , description
      * @return boolean
      */
@@ -45,12 +43,12 @@ class Event_model extends CI_Model {
         } catch (Exception $ex) {
             return FALSE;
         }
-        
+
     }
 
-    /**
+    /***
      * Update the event
-     * 
+     *
      * @param int $event_id
      * @param array $update_event contains event details such as event_name,description,budget,start_date,end_date...
      * @return boolean
@@ -65,9 +63,9 @@ class Event_model extends CI_Model {
         }
     }
 
-    /**
+    /***
      * Cancel the event. Only admin can cancel a event
-     * 
+     *
      * @param int $id
      * @return boolean
      */
@@ -79,13 +77,13 @@ class Event_model extends CI_Model {
                 return FALSE;
             }
         } catch (Exception $ex) {
-            
+
         }
     }
 
-    /**
+    /***
      * Get pending event details
-     * 
+     *
      * @return mixed resulting row or null value
      */
     public function get_event_details() {
@@ -102,9 +100,9 @@ class Event_model extends CI_Model {
         }
     }
 
-    /**
+    /***
      * getting details of the selected event
-     * 
+     *
      * @param int $id
      * @return mixed resulting row or null value
      */
@@ -121,9 +119,9 @@ class Event_model extends CI_Model {
         }
     }
 
-    /**
+    /***
      * getting all event type details
-     * 
+     *
      * @return mixed resulting row or null value
      */
     public function get_event_type_details() {
@@ -139,9 +137,9 @@ class Event_model extends CI_Model {
         }
     }
 
-    /**
+    /***
      * Getting upcoming event details which are approved by the system admin.
-     * 
+     *
      * @param date $today
      * @return mixed resulting row or null value
      */
@@ -159,9 +157,9 @@ class Event_model extends CI_Model {
         }
     }
 
-    /**
+    /***
      * This method is used to get selected upcoming event details
-     * 
+     *
      * @param int $id
      * @return mixed resulting row or null value
      */
@@ -180,7 +178,7 @@ class Event_model extends CI_Model {
 
     /**
      * select pending event details
-     * 
+     *
      * @return mixed resulting row or null value
      */
     public function get_pending_events_to_approve() {
@@ -196,9 +194,9 @@ class Event_model extends CI_Model {
         }
     }
 
-    /**
+    /***
      * get rejected event details
-     * 
+     *
      * @return mixed resulting set or null value
      */
     public function get_canceled_events() {
@@ -214,9 +212,9 @@ class Event_model extends CI_Model {
         }
     }
 
-    /**
+    /***
      * get selected event details
-     * 
+     *
      * @param int $id
      * @return mixed resulting row or null value
      */
@@ -233,9 +231,9 @@ class Event_model extends CI_Model {
         }
     }
 
-    /**
+    /***
      * update the selected event's status to approved
-     * 
+     *
      * @param int $id
      * @return boolean
      */
@@ -249,9 +247,9 @@ class Event_model extends CI_Model {
         }
     }
 
-    /**
+    /***
      * update the selected event's status to rejected
-     * 
+     *
      * @param int $id
      * @return boolean
      */
@@ -265,9 +263,9 @@ class Event_model extends CI_Model {
         }
     }
 
-    /**
+    /***
      * get current month event details
-     * 
+     *
      * @param date $month
      * @return mixed resulting row or null value
      */
@@ -284,9 +282,9 @@ class Event_model extends CI_Model {
         }
     }
 
-    /**
+    /***
      * get all completed event details
-     * 
+     *
      * @param date $today
      * @return mixed resulting set or null value
      */
@@ -303,9 +301,9 @@ class Event_model extends CI_Model {
         }
     }
 
-    /**
+    /***
      * get all approved event details
-     * 
+     *
      * @return mixed resulting set or null value
      */
     public function get_all_events() {
@@ -321,9 +319,9 @@ class Event_model extends CI_Model {
         }
     }
 
-    /**
+    /***
      * this method is used to get all the event types that are currently using in school
-     * 
+     *
      * @return mixed resulting set or null value
      */
     public function get_event_types() {
@@ -337,9 +335,9 @@ class Event_model extends CI_Model {
         }
     }
 
-    /**
+    /***
      * this is used to get selected teacher's nic no
-     * 
+     *
      * @param int $id
      * @return mixed resulting row or null value
      */
@@ -355,9 +353,9 @@ class Event_model extends CI_Model {
         }
     }
 
-    /**
+    /***
      * this method is used to delete event type
-     * 
+     *
      * @param int $id
      * @return boolean
      */
@@ -373,7 +371,7 @@ class Event_model extends CI_Model {
         }
     }
 
-    /**
+    /***
      * this method is used to get selected event type details
      * @param int $id
      * @return mixed resulting set or null value
@@ -389,9 +387,9 @@ class Event_model extends CI_Model {
         }
     }
 
-    /**
+    /***
      * this method is used to update the event type details
-     * 
+     *
      * @param int $id
      * @param array $update_event_type contains event type details such as eventtype name , desciption
      * @return boolean
@@ -404,12 +402,12 @@ class Event_model extends CI_Model {
         } catch (Exception $ex) {
             return FALSE;
         }
-        
+
     }
 
-    /**
+    /***
      * get count of the upcoming events
-     * 
+     *
      * @param date $today
      * @return mixed count or null
      */
@@ -426,9 +424,9 @@ class Event_model extends CI_Model {
         }
     }
 
-    /**
+    /***
      * get the logged user's nic no
-     * 
+     *
      * @param int $user
      * @return mixed string or null
      */
@@ -441,10 +439,10 @@ class Event_model extends CI_Model {
             return NULL;
         }
     }
-    
-    /**
+
+    /***
      * get the profile image of the given user
-     * 
+     *
      * @param string $nic
      * @return mixed string or resulting row
      */
@@ -457,10 +455,10 @@ class Event_model extends CI_Model {
             return "error";
         }
     }
-    
-    /**
+
+    /***
      * select given user's all event details
-     * 
+     *
      * @param string $nic
      * @return mixed string or resulting row
      */
@@ -473,10 +471,10 @@ class Event_model extends CI_Model {
             return "no";
         }
     }
-    
-    /**
+
+    /***
      * This method is used to get the pending, approved and rejected event details
-     * 
+     *
      * @return resulting set
      */
     public function get_running_events() {

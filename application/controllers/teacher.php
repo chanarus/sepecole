@@ -4,9 +4,7 @@
  *
  * Responsibe for handling inputs
  *
- * @author Gunathilaka M.A.S.S
- * @copyright (c) 2015, Ecole. (http://projectecole.com)
- * @link  http://projectecole.com
+ * @author Anuradha H.S
  */
 class Teacher extends CI_Controller {
 

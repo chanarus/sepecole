@@ -1,13 +1,12 @@
 <?php
 /**
  * Ecole - Timetable Controller
- * 
+ *
  * Controller to create and manage timetables
- * 
- * @author  Sudaraka K. S.
- * @copyright (c) 2015, Ecole. (http://projectecole.com)
- * @link http://projectecole.com
+ *
+ * @author  K.H.M Vidyaratna
  */
+ 
 class Timetable extends CI_Controller {
 
     /**
@@ -157,7 +156,7 @@ class Timetable extends CI_Controller {
         }
         return TRUE;
     }
-    
+
     /**
      * Acts as a validation method to timetable creation.
      * Will check if the class is selected.
@@ -202,7 +201,7 @@ class Timetable extends CI_Controller {
             return TRUE;
         }
     }
-    
+
     /**
      * Interface to delete a particular timetable
      * @param type $timetable_id
@@ -249,7 +248,7 @@ class Timetable extends CI_Controller {
 
     /**
      * Method used to add timetable slot
-     * 
+     *
      * @param int $timetable_id
      * @param string $slot_id
      */
@@ -297,7 +296,7 @@ class Timetable extends CI_Controller {
      * Acts as a validation method to timetable creation.
      * Checks if the teacher already have a slot in another timetable at the
      * same time.
-     * 
+     *
      * @return boolean
      */
     function teacher_already_have_slot() {

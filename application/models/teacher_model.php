@@ -2,12 +2,10 @@
 
 /**
  * Ecole - Teacher Model
- * 
+ *
  * Responsibe for handling data related to school stuff details
- * 
- * @author Gunathilaka M.A.S.S
- * @copyright (c) 2015, Ecole. (http://projectecole.com)
- * @link  http://projectecole.com
+ *
+ *
  */
 class Teacher_Model extends CI_Model {
 
@@ -19,7 +17,7 @@ class Teacher_Model extends CI_Model {
 
     /**
      * Insert personal teacher details to the database
-     * 
+     *
      * @param array $personal_teacher_details contains teacher personal details such as full name , age , gender...
      * @return int
      */
@@ -35,7 +33,7 @@ class Teacher_Model extends CI_Model {
 
     /**
      * Insert teacher accademic details to the database
-     * 
+     *
      * @param int $id
      * @param type $teacher_accademic_details
      * @return type
@@ -52,7 +50,7 @@ class Teacher_Model extends CI_Model {
 
     /**
      * get selected teacher's all details
-     * 
+     *
      * @param int $ID
      * @return mixed resulting row or null value
      */
@@ -71,7 +69,7 @@ class Teacher_Model extends CI_Model {
 
     /**
      * set the time at the teacher registration
-     * 
+     *
      * @param int $id
      * @param time $time
      * @return boolean
@@ -90,7 +88,7 @@ class Teacher_Model extends CI_Model {
 
     /**
      * set user id to the teachers
-     * 
+     *
      * @param int $ID
      * @param int $userid
      * @return boolean
@@ -109,7 +107,7 @@ class Teacher_Model extends CI_Model {
 
     /**
      * update the teacher loging details
-     * 
+     *
      * @param string $username
      * @param string $password
      * @param date-time $create
@@ -131,7 +129,7 @@ class Teacher_Model extends CI_Model {
 
     /**
      * this method is used to insert teacher's loging data
-     * 
+     *
      * @param string $username
      * @param string $password
      * @param date-time $create
@@ -164,7 +162,7 @@ class Teacher_Model extends CI_Model {
 
     /**
      * retrieve selected teacher's details
-     * 
+     *
      * @param int $id
      * @return resulting row
      */
@@ -179,7 +177,7 @@ class Teacher_Model extends CI_Model {
 
     /**
      * retrieve teacher details by ordering in ascending order
-     * 
+     *
      * @return resulting set
      */
     public function SearchAllTeachers() {
@@ -192,8 +190,8 @@ class Teacher_Model extends CI_Model {
     }
 
     /**
-     * update teacher details 
-     * 
+     * update teacher details
+     *
      * @param array $teacher contains teacher details including both personal and accademic details
      * @param int $myid
      * @return boolean
@@ -210,7 +208,7 @@ class Teacher_Model extends CI_Model {
 
     /**
      * delete teacher details
-     * 
+     *
      * @param int $id
      * @return boolean
      */
@@ -224,8 +222,8 @@ class Teacher_Model extends CI_Model {
     }
 
     /**
-     * get teacher id 
-     * 
+     * get teacher id
+     *
      * @param int $userid
      * @return mixed boolean or int value
      */
@@ -241,7 +239,7 @@ class Teacher_Model extends CI_Model {
 
     /**
      * get teacher details of given section
-     * 
+     *
      * @param string $section
      * @return type
      */
@@ -260,7 +258,7 @@ class Teacher_Model extends CI_Model {
 
     /**
      * this method is used to upload the image to the system
-     * 
+     *
      * @param int $id
      * @param string $img
      * @return boolean
@@ -277,7 +275,7 @@ class Teacher_Model extends CI_Model {
 
     /**
      * retreive the image of given user
-     * 
+     *
      * @param int $id
      * @return string
      */
@@ -293,7 +291,7 @@ class Teacher_Model extends CI_Model {
 
     /**
      * get user id of the given teacher
-     * 
+     *
      * @param int $id
      * @return int
      */
@@ -307,8 +305,8 @@ class Teacher_Model extends CI_Model {
     }
 
     /**
-     * check user id 
-     * 
+     * check user id
+     *
      * @param int $teacher_log_id
      * @return boolean
      */
@@ -322,7 +320,7 @@ class Teacher_Model extends CI_Model {
 
     /**
      * this method is used to archive the teacher details
-     * 
+     *
      * @param int $id
      * @return boolean
      */
@@ -344,7 +342,7 @@ class Teacher_Model extends CI_Model {
                 $email = $teachr_data->email;
                 $widow = $teachr_data->wnop_no;
 
-                if ($this->db->query("INSERT INTO archived_teachers(`id`,`nic_no`, `full_name`, `name_with_initials` , `dob` , `gender`, `nationality_id` , `religion_id` , `civil_status` , `permanent_addr` , `contact_mobile` , `contact_home` , `email` , `wnop_no`) 
+                if ($this->db->query("INSERT INTO archived_teachers(`id`,`nic_no`, `full_name`, `name_with_initials` , `dob` , `gender`, `nationality_id` , `religion_id` , `civil_status` , `permanent_addr` , `contact_mobile` , `contact_home` , `email` , `wnop_no`)
     			VALUES ('$id','$NIC', '$name' , '$initial' , '$birth', '$gender' , '$Nationality' , '$religion' , '$civilstatus' , '$address' , '$contactMob' , '$contactHome' , '$email' , '$widow')")) {
 
                     $sql1 = "DELETE FROM teachers  WHERE user_id = '$id'";
@@ -364,8 +362,8 @@ class Teacher_Model extends CI_Model {
     }
 
     /**
-     * get all archived teacher details 
-     * 
+     * get all archived teacher details
+     *
      * @return mixed resulting set or bollean
      */
     function get_all_archive_teachers() {
@@ -379,7 +377,7 @@ class Teacher_Model extends CI_Model {
 
     /**
      * retieve user details of the given teacher
-     * 
+     *
      * @param int $id
      * @return type
      */
@@ -395,7 +393,7 @@ class Teacher_Model extends CI_Model {
 
     /**
      * retrive the nic no of the given user
-     * 
+     *
      * @param int $uid
      * @return string
      */
@@ -410,7 +408,7 @@ class Teacher_Model extends CI_Model {
 
     /**
      * this method is used to generate teacher individual repot and sectionwise teacher report
-     * 
+     *
      * @param int $type
      * @param int $report
      */
@@ -755,7 +753,7 @@ class Teacher_Model extends CI_Model {
     }
 
     /**
-     * 
+     *
      * @return type
      */
     public function get_teacher_list() {
@@ -764,7 +762,7 @@ class Teacher_Model extends CI_Model {
     }
 
     /**
-     * 
+     *
      * @param type $teacher_id
      * @return type
      */

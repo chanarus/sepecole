@@ -7,9 +7,6 @@
             if($user_type == 'A'){
                 $this->view('event/admin_sidebar_nav');
             }
-            elseif($user_type == 'P'){
-                $this->view('event/sidebar_nav');
-            }
             else{
                 $this->view('event/sidebar_nav_teacher');
             }
@@ -23,7 +20,7 @@
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                     <?php echo validation_errors(); ?>
                 </div>
-            <?php } ?>  
+            <?php } ?>
 
             <div class="panel panel-default">
                 <div class="panel-heading">
@@ -31,7 +28,7 @@
                 </div>
                 <div class="panel-body">
                     <?php
-                    // Change the css classes to suit your needs    
+                    // Change the css classes to suit your needs
 
                     $attributes = array('class' => 'form-horizontal', 'id' => '');
                     echo form_open('event/create_event', $attributes);
@@ -94,5 +91,3 @@
     </div>
 
 </div>
-
-

@@ -6,9 +6,7 @@
             <?php
             if ($user_type == 'A') {
                 $this->view('event/admin_sidebar_nav');
-            } elseif ($user_type == 'P') {
-                $this->view('event/sidebar_nav');
-            } else {
+            }else {
                 $this->view('event/sidebar_nav_teacher');
             }
             ?>
@@ -34,7 +32,7 @@
                 </div>
                 <div class="panel-body">
                     <?php
-// Change the css classes to suit your needs    
+// Change the css classes to suit your needs
 
                     $attributes = array('class' => 'form-horizontal', 'id' => '');
                     echo form_open('event/create_event', $attributes);
@@ -155,8 +153,8 @@
                         </div>
                         <label for="inputEmail3" class="col-sm-2 control-label">*Location</label>
                         <div class="col-sm-4">
-                            <input id="location" type="text" name="location"  value="<?php 
-                            if(isset($succ_message)){ 
+                            <input id="location" type="text" name="location"  value="<?php
+                            if(isset($succ_message)){
                                 echo '';
                             }else{
                                 echo set_value('location');
@@ -214,7 +212,7 @@
                                     } else {
                                         echo "<td><span class='label label-danger'>" . $row->status . "</span></td>" . PHP_EOL;
                                     }
-                                    ?> 
+                                    ?>
 
                                 </tr>
                             <?php } ?>

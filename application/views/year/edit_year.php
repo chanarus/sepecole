@@ -6,15 +6,12 @@
                if($user_type == 'A'){
                    $this->view('year/admin_sidebar_nav');
                }
-               elseif($user_type == 'T'){
-                   $this->view('leave/teacher_sidebar_nav');
-               }
                else{
                    $this->view('leave/teacher_sidebar_nav');
                }
 
             ?>
-            
+
         </div>
 
         <div class="col-md-9">
@@ -45,13 +42,13 @@
                     <strong>Edit Academic Year</strong>
                 </div>
                 <div class="panel-body">
-                    
+
 
                     <?php
                             foreach ($year as $row)
                             {
                     ?>
-                    
+
                     <?php
                         // Change the css classes to suit your needs
 
@@ -61,7 +58,7 @@
                     <div class="row" style="margin-bottom:5px;">
                         <div class="col-md-4"><b>Name : </b>
                             <input type="text" name="txt_name" class="form-control" placeholder="Name" value="<?php echo $row->name ?>">
-                        </div>   
+                        </div>
                     </div>
                     <div class="row" style="margin-bottom:5px;">
                         <div class="col-md-4"></i><b>Starts On : </b>
@@ -69,35 +66,35 @@
                                 <input type="date" name="txt_startdate" class="form-control" placeholder="Start Date" value= "<?php echo $row->start_date ?>">
                                 <div class="input-group-addon"><i class="fa fa-calendar"></i></div>
                             </div>
-                        </div>  
+                        </div>
                         <div class="col-md-4"></i><b>Ends On : </b>
                             <div class="input-group">
                                 <input type="date" name="txt_enddate" class="form-control" placeholder="End Date" value="<?php echo $row->end_date ?>">
                                 <div class="input-group-addon"><i class="fa fa-calendar"></i></div>
                             </div>
-                        </div>    
+                        </div>
                     </div>
                     <div class="row" style="margin-bottom:5px;">
                         <div class="col-md-4"><b>Status : </b>
                             <select name="cmb_status" class="form-control">
-                            <?php 
+                            <?php
                                 if ($row->status == "1") {
                                     echo "<option value='1' selected>Active</option>". PHP_EOL;
                                 } else{
                                     echo "<option value='0' selected>Inactive</option>". PHP_EOL;
                                 }
-                             ?>                              
-                              
+                             ?>
+
                             </select>
-                        </div> 
+                        </div>
 
                     </div>
                     <hr>
                     <div class="row" style="margin-bottom:5px;">
-                        <div class="col-md-4"><b>Adtitionnal Details</b></div>   
+                        <div class="col-md-4"><b>Adtitionnal Details</b></div>
                     </div>
                     <div class="row" style="margin-bottom:5px;">
-                        <div class="col-md-4"><b>Term 01</b></div>   
+                        <div class="col-md-4"><b>Term 01</b></div>
                     </div>
                     <div class="row" style="margin-bottom:5px;  margin-top:10px;">
                         <div class="col-md-4"><b>Start Date : </b>
@@ -105,16 +102,16 @@
                                 <input type="date" name="txt_t1_startdate" class="form-control" placeholder="Start Date" value="<?php echo $row->t1_start_date ?>">
                                 <div class="input-group-addon"><i class="fa fa-calendar"></i></div>
                             </div>
-                        </div>  
+                        </div>
                         <div class="col-md-4"><b>End Date : </b>
                             <div class="input-group">
                                 <input type="date" name="txt_t1_enddate" class="form-control" placeholder="End Date" value="<?php echo $row->t1_end_date ?>">
                                 <div class="input-group-addon"><i class="fa fa-calendar"></i></div>
                             </div>
-                        </div>    
+                        </div>
                     </div>
                     <div class="row" style="margin-bottom:5px;  margin-top:10px;">
-                        <div class="col-md-4"><b>Term 02</b></div>   
+                        <div class="col-md-4"><b>Term 02</b></div>
                     </div>
                     <div class="row" style="margin-bottom:5px;">
                         <div class="col-md-4"><b>Start Date : </b>
@@ -122,16 +119,16 @@
                                 <input type="date" name="txt_t2_startdate" class="form-control" placeholder="Start Date" value="<?php echo $row->t2_start_date ?>">
                                 <div class="input-group-addon"><i class="fa fa-calendar"></i></div>
                             </div>
-                        </div>  
+                        </div>
                         <div class="col-md-4"><b>End Date : </b>
                             <div class="input-group">
                                 <input type="date" name="txt_t2_enddate" class="form-control" placeholder="End Date" value="<?php echo $row->t2_end_date ?>">
                                 <div class="input-group-addon"><i class="fa fa-calendar"></i></div>
                             </div>
-                        </div>    
+                        </div>
                     </div>
                     <div class="row" style="margin-bottom:5px; margin-top:10px;">
-                        <div class="col-md-4"><b>Term 03</b></div>   
+                        <div class="col-md-4"><b>Term 03</b></div>
                     </div>
                     <div class="row" style="margin-bottom:5px;">
                         <div class="col-md-4"><b>Start Date : </b>
@@ -139,19 +136,19 @@
                                 <input type="date" name="txt_t3_startdate" class="form-control" placeholder="Start Date" value="<?php echo $row->t3_start_date ?>">
                                 <div class="input-group-addon"><i class="fa fa-calendar"></i></div>
                             </div>
-                        </div>  
+                        </div>
                         <div class="col-md-4"><b>End Date : </b>
                             <div class="input-group">
                                 <input type="date" name="txt_t3_enddate" class="form-control" placeholder="End Date" value="<?php echo $row->t3_end_date ?>">
                                 <div class="input-group-addon"><i class="fa fa-calendar"></i></div>
                             </div>
-                        </div>    
+                        </div>
                     </div>
                     <div class="row" style="margin-bottom:5px;">
                         <div class="col-md-4">
                             <div class="form-group">
                                 <button class="btn btn-success" type="submit">Save</button>
-                            </div>  
+                            </div>
                         </div>
                     </div>
                     <!-- End of Form -->
@@ -163,7 +160,7 @@
                             <b>Add Holidays</b><br>
                             <div class="row" style="margin-bottom:5px;">
                                 <div class="col-md-12">
-                                    <?php 
+                                    <?php
                                         $attributes = array('class' => 'form-inline', 'id' => '');
                                         echo form_open('year/add_holiday/'.$row->id, $attributes);
                                     ?>
@@ -189,7 +186,7 @@
                             <b>Current Holidays</b>
 
                             <?php
-                            
+
                                 $string = $row->structure;
                                 $partial = explode(', ', $string);
                                 $final = array();
@@ -273,13 +270,13 @@
                                 <?php
                                             $indextbl++;
                                         }
-                                    
-                                    }  
+
+                                    }
                                 ?>
                                     </tbody>
                                 </table>
 
-                        </div>   
+                        </div>
                     </div>
                     <hr>
                     <div class="row" style="margin-bottom:5px;">
@@ -295,8 +292,8 @@
                                     list($key, $value) = explode('=', $val);
                                     $final[$key] = $value;
                                 });
-                                
-                                
+
+
 
                                 $months=array('January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December');
                                 $current_month=date('n');
@@ -318,7 +315,7 @@
                                         // Month Cell
                                         $first_day_in_month=date('w',mktime(0,0,0,$month,1,$current_year));
                                         $month_days=date('t',mktime(0,0,0,$month,1,$current_year));
-                                                
+
                                         // in PHP, Sunday is the first day in the week with number zero (0)
                                         // to make our calendar works we will change this to (7)
                                         if ($first_day_in_month==0){
@@ -343,7 +340,7 @@
 
                                                     // echo '<td class="'.$class.'">'.$day.'</td>';
                                                     $href = $current_year."-".$month."-".$day;
-                                                    
+
                                                     $t = true;
 
                                                     foreach ($final as $key => $value) {
@@ -353,32 +350,32 @@
 
                                                         if($sdate == '0' && $value == '1'){
                                                             $class .=  ' holi';
-                                                        
+
                                                         // echo "Key: $key; Value: $value";
                                                         // echo "<br />";
                                                         }
 
                                                         else if($sdate == '0' && $value == '2')
                                                             $class .=  ' poya';
-                                                    } 
+                                                    }
 
-                                                    // echo '<td class="'.$class.'">'.'<a href="'.$href.'">' .$day. '</a>' . '</td>'; 
+                                                    // echo '<td class="'.$class.'">'.'<a href="'.$href.'">' .$day. '</a>' . '</td>';
 
-                                                    echo '<td class="'.$class.'">'. $day . '</td>'; 
+                                                    echo '<td class="'.$class.'">'. $day . '</td>';
 
                                                     if ($pos==0) echo '</tr><tr>';
                                                 }
-                                                
+
                                         echo '</tr>';
-                                                echo '</table>';                                                                                                       
+                                                echo '</table>';
 
                                         echo '</td>';
                                     }
                                     echo '</tr>';
-                                }                                
+                                }
 
                                 echo '</table>';
-                                
+
                             ?>
                         </div>
                         <style type="text/css">
@@ -393,8 +390,8 @@
                                 text-align: center;
                             }
                             .calendar .year{
-                                font-family:Verdana; 
-                                font-size:18pt; 
+                                font-family:Verdana;
+                                font-size:18pt;
                                 color:#ff9900;
                             }
                             .calendar .month{
@@ -444,6 +441,5 @@
             </div>
         </div>
     </div>
-    
-</div>
 
+</div>

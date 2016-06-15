@@ -1,12 +1,10 @@
 <?php
 /**
- * Ecole - Leave Controller
- * 
+ * Ecole - CLASS Controller
+ *
  * Handles the Class Methods
- * 
- * @author  Supun Sudaraka
- * @copyright (c) 2015, Ecole. (http://projectecole.com)
- * @link http://projectecole.com
+ *
+ * @author  K.H.M Vidyaratna
  */
 class Classes extends CI_Controller {
 
@@ -46,7 +44,7 @@ class Classes extends CI_Controller {
         $this->load->view('classes/index', $data);
         $this->load->view('/templates/footer');
     }
-    
+
     /*
      * Interface that loads create class
      */
@@ -125,7 +123,7 @@ class Classes extends CI_Controller {
 
 //        var_dump($data['class']);
 //        var_dump($data['class_students']);
-//        
+//
 //        var_dump($data['students_eligible']);
 
         $this->load->view('templates/header', $data);
@@ -294,7 +292,7 @@ class Classes extends CI_Controller {
                 show_404();
         }
     }
-    
+
     function report_option_selected(){
         $report_option = (int)$this->input->post('report_type');
         if($report_option === 0){

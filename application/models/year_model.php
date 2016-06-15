@@ -1,12 +1,10 @@
 <?php
 /**
  * Ecole - Year Model
- * 
+ *
  * Handles the Year Model Functions
- * 
- * @author  Udara Karunarathna
- * @copyright (c) 2015, Ecole. (http://projectecole.com)
- * @link http://projectecole.com
+ *
+ * @author  V.I.Galhena
  */
 class Year_Model extends CI_Model {
 
@@ -165,7 +163,7 @@ class Year_Model extends CI_Model {
             foreach ($query->result() as $row){
                 return $row->structure;
             }
-            
+
         } catch(Exception $ex) {
             return FALSE;
         }
@@ -202,7 +200,7 @@ class Year_Model extends CI_Model {
      * @return bool
      */
     public function delete_temp_date($id){
-        
+
         try {
             if($this->db->query("DELETE FROM year_plan_temp_date WHERE id = '$id' ")) {
                 return TRUE;

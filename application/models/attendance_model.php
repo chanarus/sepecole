@@ -2,7 +2,7 @@
 
 /*
  * Model for handling Attendances. This interacts with the database to set and get attendace information.
- * - @ssudaraka
+ * -
  */
 
 class Attendance_Model extends CI_Model {

@@ -2,12 +2,10 @@
 
 /**
  * Ecole - Attendance Controller
- * 
+ *
  * Controller for attendance recording functions
- * 
- * @author  Sudaraka K. S., Thomas A. P.
- * @copyright (c) 2015, Ecole. (http://projectecole.com)
- * @link http://projectecole.com
+ *
+ * @author  Anuradha H.S
  */
 class Attendance extends CI_Controller {
 
@@ -27,7 +25,7 @@ class Attendance extends CI_Controller {
     }
 
     /**
-     * This loads the main interface for recording attendaces of teachers. 
+     * This loads the main interface for recording attendaces of teachers.
      */
     function index() {
         $data['page_title'] = "Attendance";
@@ -40,7 +38,7 @@ class Attendance extends CI_Controller {
 
         if ($this->form_validation->run() == FALSE) {
             /*
-             * If the form validation goes wrong, no worries. We will display watever the values 
+             * If the form validation goes wrong, no worries. We will display watever the values
              * recorded in the database currently. We are using a callback function to insert the data
              * into the database and it will do all the hard work.
              */
@@ -73,7 +71,7 @@ class Attendance extends CI_Controller {
     function add_record() {
         /*
          * First we check the signature number already in the attendance recording database. If it's already in the
-         * database, why again? 
+         * database, why again?
          */
 
         $signature_no = $this->input->post('signature_no');
@@ -85,7 +83,7 @@ class Attendance extends CI_Controller {
         }
 
         /*
-         * Is the inserted signature number actually belongs to a teacher? 
+         * Is the inserted signature number actually belongs to a teacher?
          */
 
         if (!$this->attendance_model->is_valid_signature_no($signature_no)) {
@@ -171,7 +169,7 @@ class Attendance extends CI_Controller {
 
         $data['result'] = $this->attendance_model->get_all_temp_records();
         $filename = "attendance_report_" . $data['date'];
-        // page info here, db calls, etc.     
+        // page info here, db calls, etc.
         $html = $this->load->view('attendance/report_pdf', $data, true);
         pdf_create($html, $filename);
         //or
@@ -302,9 +300,9 @@ class Attendance extends CI_Controller {
         }
     }
 
-    
-    #################### FOR STUDENT ##################### 
-     
+
+    #################### FOR STUDENT #####################
+
     /**
      * This is for retrieving attendance recodes of students
      */
@@ -331,7 +329,7 @@ class Attendance extends CI_Controller {
 
     /**
      * This is for the student attendance marking..we get the absent students (checked rows)
-     *  and put them to db .. 
+     *  and put them to db ..
      */
     public function get_selected_students() {
 

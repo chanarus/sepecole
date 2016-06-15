@@ -1,12 +1,9 @@
 <?php
 /**
  * Ecole - Dashboard Controller
- * 
+ *
  * Handles the Dashboard Methods
- * 
- * @author  Udara Karunarathna
- * @copyright (c) 2015, Ecole. (http://projectecole.com)
- * @link http://projectecole.com
+ *
  */
 class Dashboard extends CI_Controller {
 

@@ -6,16 +6,13 @@
             if($user_type == 'A'){
                 $this->view('event/admin_sidebar_nav');
             }
-            elseif($user_type == 'P'){
-                $this->view('event/sidebar_nav');
-            }
             else{
                 $this->view('event/sidebar_nav_teacher');
             }
             ?>
         </div>
 
-        <div class="col-md-9"> 
+        <div class="col-md-9">
             <?php if (isset($succ_message)) { ?>
             <div class="alert alert-success alert-dismissible" role="alert">
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -51,8 +48,8 @@
                             <div class="form-group">
     <label>Sorted By</label>
     <!-- <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe"> -->
-  
-                            
+
+
                             <select id="event" name="event" class="form-control" onchange="hello()">
 <?php
 echo $type;
@@ -116,8 +113,8 @@ if ($type == 1) {
                                     <td><a href="<?php echo base_url("index.php/event/cancel_event") . "/" . $row->id; ?>" onclick="return confirm('Are you sure you want to cancel this event?');" class="btn btn-danger btn-xs" aria-hidden="true"><i class="fa fa-trash"></i></i></a></td>
 
                                 <?php } ?>
-                                
-                                    
+
+
                                 </tr>
                                 <?php } ?>
                         </tbody>
@@ -150,8 +147,3 @@ if ($type == 1) {
     }
 
 </script>
-
-
-
-
-

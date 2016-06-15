@@ -7,9 +7,6 @@
             if($user_type == 'A'){
                 $this->view('event/admin_sidebar_nav');
             }
-            elseif($user_type == 'P'){
-                $this->view('event/sidebar_nav');
-            }
             else{
                 $this->view('event/sidebar_nav_teacher');
             }
@@ -37,7 +34,7 @@
                 </div>
                 <div class="panel-body">
                     <?php
-                    // Change the css classes to suit your needs    
+                    // Change the css classes to suit your needs
 
                     $attributes = array('class' => 'form-horizontal', 'id' => '');
                     echo form_open('event/update_event_type'."/".$details->id, $attributes);
@@ -50,7 +47,7 @@
                         </div>
                         <div class="media-body">
                             <br>
-                            <strong>Currently this event is running on this system. You can edit this event</strong> 
+                            <strong>Currently this event is running on this system. You can edit this event</strong>
                         </div>
                     </div>
                     <br>
@@ -87,5 +84,3 @@
     </div>
 
 </div>
-
-

@@ -1,12 +1,10 @@
 <?php
 /**
  * Ecole - Event Controller
- * 
+ *
  * Responsibe for handling inputs
- * 
+ *
  * @author V.I.Galhena
- * @copyright (c) 2016, Ecole. (http://projectecole.com)
- * @link  http://projectecole.com
  */
 class Event extends CI_Controller {
 
@@ -19,10 +17,11 @@ class Event extends CI_Controller {
         $this->load->helper('date');
     }
 
-    /**
-     * First run this index method. The session keeps track of whether the user logged in or not. If not, user has to login to the system.
-     * It riderects user to another method according to the user type.
-     */
+    /***
+    * Function name - index
+    * Description - First run this index method. The session keeps track of whether the user logged in or not. If not, user has to login to the system.
+    *               It riderects user to another method according to the user type.
+    */
     function index() {
         if (!$this->session->userdata('logged_in')) {
             redirect('login', 'refresh');
@@ -39,9 +38,11 @@ class Event extends CI_Controller {
         }
     }
 
-    /**
-     * This method is used to create a new event
-     */
+    /***
+    * Function name - create_event
+    * Description - This method is used to create a new event
+    */
+
     function create_event() {
         if (!$this->session->userdata('logged_in')) {
             redirect('login', 'refresh');
@@ -65,7 +66,7 @@ class Event extends CI_Controller {
         $this->form_validation->set_rules('location', 'location', 'required');
         $this->form_validation->set_rules('guest', 'guest', '');
         $this->form_validation->set_error_delimiters('<br /><span class="error">', '</span>');
-        
+
         if ($this->form_validation->run() == FALSE) {
             $data['details'] = $this->event_model->get_event_details();
             $data['page_title'] = "New Event";
@@ -77,7 +78,7 @@ class Event extends CI_Controller {
         } else {
 
             $data['succ_message'] = "Successfully created the event";
-            
+
             $insert_event = array(
                 'title' => $this->input->post('event_name'),
                 'event_type' => $this->input->post('event_type'),
@@ -113,9 +114,10 @@ class Event extends CI_Controller {
         }
     }
 
-    /**
-     * This method is used to update the data which is approved by the principle.
-     */
+    /***
+    * Function name - update_event
+    * Description - This method is used to update the data which is approved by the principle.
+    */
     function update_event() {
         if (!$this->session->userdata('logged_in')) {
             redirect('login', 'refresh');
@@ -123,7 +125,7 @@ class Event extends CI_Controller {
         $data['user_type'] = $this->session->userdata['user_type'];
         $data['navbar'] = "event";
         date_default_timezone_set('Asia/Kolkata');
-        
+
         $this->form_validation->set_rules('event_name', 'event name', 'required'); //Validate fields
         $this->form_validation->set_rules('event_type', 'event type', 'required');
         $this->form_validation->set_rules('description', 'description', 'required');
@@ -135,7 +137,7 @@ class Event extends CI_Controller {
         $this->form_validation->set_rules('location', 'location', 'required');
         $this->form_validation->set_rules('guest', 'guest', '');
         $this->form_validation->set_error_delimiters('<br /><span class="error">', '</span>');
-        
+
         $event_id = $this->input->post('eid');
         if ($this->form_validation->run() == FALSE) {
             $data['result'] = $this->event_model->get_event_type_details();
@@ -147,7 +149,7 @@ class Event extends CI_Controller {
             $this->load->view('event/create_approved_sport_event', $data);
             $this->load->view('/templates/footer');
         } else {
-            
+
             $update_event = array(
                 'title' => $this->input->post('event_name'),
                 'event_type' => $this->input->post('event_type'),
@@ -163,7 +165,7 @@ class Event extends CI_Controller {
             );
 
             if ($this->event_model->update_event($event_id, $update_event)) {
-                
+
                 //For news field
                 $tech_id = $this->session->userdata('id');
                 $tech_details = $this->teacher_model->user_details($tech_id);
@@ -185,12 +187,12 @@ class Event extends CI_Controller {
             }
         }
     }
-    
-    /**
-     * View selected event details
-     * 
-     * @param int $event_id
-     */
+
+    /***
+    * Function name - view_event_details
+    * Description - View selected event details
+    * @param - int $event_id
+    */
     function view_event_details($event_id){
         if (!$this->session->userdata('logged_in')) {
             redirect('login', 'refresh');
@@ -207,12 +209,12 @@ class Event extends CI_Controller {
         $this->load->view('event/view_event_details', $data);
         $this->load->view('/templates/footer');
     }
-    
-    /**
-     * This method is used to view the approved event details
-     * 
-     * @param int $event_id
-     */
+
+    /***
+    * Function name - edit_approved_event
+    * Description - This method is used to view the approved event details
+    * @param - int $event_id
+    */
     function edit_approved_event($event_id) {
         if (!$this->session->userdata('logged_in')) {
             redirect('login', 'refresh');
@@ -230,9 +232,10 @@ class Event extends CI_Controller {
         $this->load->view('/templates/footer');
     }
 
-    /**
-     * This method is used to create new event type.
-     */
+    /***
+    * Function name - create_event_type
+    * Description - This method is used to create new event type
+    */
     function create_event_type() {
         if (!$this->session->userdata('logged_in')) {
             redirect('login', 'refresh');
@@ -280,12 +283,12 @@ class Event extends CI_Controller {
             }
         }
     }
-    
-    /**
-     * This method is used to view a particular event type details.
-     * 
-     * @param int $id
-     */
+
+    /***
+    * Function name - view_event_type_details
+    * Description - This method is used to view a particular event type details
+    * @param - int $id
+    */
     function view_event_type_details($id) {
         if (!$this->session->userdata('logged_in')) {
             redirect('login', 'refresh');
@@ -301,11 +304,11 @@ class Event extends CI_Controller {
         $this->load->view('/templates/footer');
     }
 
-    /**
-     * This methos is used to update the event type
-     * 
-     * @param int $id
-     */
+    /***
+    * Function name - update_event_type
+    * Description - This methos is used to update the event type
+    * @param - int $id
+    */
     function update_event_type($id) {
         if (!$this->session->userdata('logged_in')) {
             redirect('login', 'refresh');
@@ -354,11 +357,11 @@ class Event extends CI_Controller {
         }
     }
 
-    /**
-     * This method is used to delete a particular event type
-     * 
-     * @param int $id
-     */
+    /***
+    * Function name - delete_event_type
+    * Description - This method is used to delete a particular event type
+    * @param - int $id
+    */
     function delete_event_type($id) {
         if (!$this->session->userdata('logged_in')) {
             redirect('login', 'refresh');
@@ -374,9 +377,10 @@ class Event extends CI_Controller {
         redirect('event/create_event_type');
     }
 
-    /**
-     * This method is used to view all the events that are created by admin panel
-     */
+    /***
+    * Function name - view_all_events
+    * Description - This method is used to view all the events that are created by admin panel
+    */
     function view_all_events() {
         if (!$this->session->userdata('logged_in')) {
             redirect('login', 'refresh');
@@ -393,9 +397,10 @@ class Event extends CI_Controller {
         $this->load->view('/templates/footer');
     }
 
-    /**
-     * This method is used to view only the up comming events
-     */
+    /***
+    * Function name - view_upcoming_events
+    * Description - This method is used to view only the up comming events
+    */
     function view_upcoming_events() {
         if (!$this->session->userdata('logged_in')) {
             redirect('login', 'refresh');
@@ -413,9 +418,10 @@ class Event extends CI_Controller {
         $this->load->view('/templates/footer');
     }
 
-    /**
-     * This method is used to view the monthly events.
-     */
+    /***
+    * Function name - view_monthly_events
+    * Description - This method is used to view the monthly events
+    */
     function view_monthly_events() {
         if (!$this->session->userdata('logged_in')) {
             redirect('login', 'refresh');
@@ -433,9 +439,10 @@ class Event extends CI_Controller {
         $this->load->view('/templates/footer');
     }
 
-    /**
-     * This method is used to view all the completed events.
-     */
+    /***
+    * Function name - view_completed_events
+    * Description - This method is used to view all the completed events
+    */
     function view_completed_events() {
         if (!$this->session->userdata('logged_in')) {
             redirect('login', 'refresh');
@@ -453,11 +460,11 @@ class Event extends CI_Controller {
         $this->load->view('/templates/footer');
     }
 
-    /**
-     * This method is used to view details of the particular event.
-     * 
-     * @param int $id
-     */
+    /***
+    * Function name - view_completed_events
+    * Description - This method is used to view details of the particular event
+    * @param int $id
+    */
     function view_upcoming_event_details($id) {
         if (!$this->session->userdata('logged_in')) {
             redirect('login', 'refresh');
@@ -473,11 +480,11 @@ class Event extends CI_Controller {
         $this->load->view('/templates/footer');
     }
 
-    /**
-     * This method is used to cancel an event by admin panel.
-     * 
-     * @param int $id
-     */
+    /***
+    * Function name - cancel_event
+    * Description - This method is used to cancel an event by admin panel
+    * @param int $id
+    */
     function cancel_event($id) {
         if (!$this->session->userdata('logged_in')) {
             redirect('login', 'refresh');
@@ -499,9 +506,10 @@ class Event extends CI_Controller {
         $this->load->view('/templates/footer');
     }
 
-    /**
-     * This method is used to check the events to be approved or rejected and view cancelled events.
-     */
+    /***
+    * Function name - check_event_details
+    * Description - This method is used to check the events to be approved or rejected and view cancelled events
+    */
     function check_event_details() {
         if (!$this->session->userdata('logged_in')) {
             redirect('login', 'refresh');
@@ -518,11 +526,11 @@ class Event extends CI_Controller {
         $this->load->view('/templates/footer');
     }
 
-    /**
-     * This method is used to view the details of the particular pennding event.
-     * 
-     * @param int $id
-     */
+    /***
+    * Function name - load_selected_pending_event
+    * Description - This method is used to view the details of the particular pennding event
+    * @param int $id
+    */
     function load_selected_pending_event($id) {
         if (!$this->session->userdata('logged_in')) {
             redirect('login', 'refresh');
@@ -538,11 +546,11 @@ class Event extends CI_Controller {
         $this->load->view('/templates/footer');
     }
 
-    /**
-     * This method is used to approve the event.
-     * 
-     * @param int $id
-     */
+    /***
+    * Function name - approve_event
+    * Description - This method is used to approve the event
+    * @param int $id
+    */
     function approve_event($id) {
         if (!$this->session->userdata('logged_in')) {
             redirect('login', 'refresh');
@@ -558,12 +566,11 @@ class Event extends CI_Controller {
         $this->session->set_flashdata('succ' , 'Successfully approved the event');
         redirect('event/check_event_details');
     }
-    
-    /**
-     * This method is used to reject the event.
-     * 
-     * @param int $id
-     */
+
+    /***
+    * Function name - reject_event
+    * Description - This method is used to reject the event
+    */
     function reject_event($id) {
         if (!$this->session->userdata('logged_in')) {
             redirect('login', 'refresh');
@@ -578,10 +585,11 @@ class Event extends CI_Controller {
         $this->session->set_flashdata('succ' , 'Successfully rejected the event');
         redirect('event/check_event_details');
     }
-    
-    /**
-     * View the event calendar
-     */
+
+    /***
+    * Function name - event_calendar
+    * Description - View the event calendar
+    */
     function event_calendar(){
         if (!$this->session->userdata('logged_in')) {
             redirect('login', 'refresh');
@@ -596,10 +604,11 @@ class Event extends CI_Controller {
         $this->load->view('event/event_calendar', $data);
         $this->load->view('/templates/footer');
     }
-    
-    /**
-     * view given teacher's all event details
-     */
+
+    /***
+    * Function name - teacher_event_details
+    * Description - View given teacher's all event details
+    */
     function teacher_event_details(){
         $nic = $this->uri->segment(3);
         $data['details'] = $this->event_model->get_pro_image($nic);
@@ -607,12 +616,12 @@ class Event extends CI_Controller {
         $this->load->view('event/teacher_event_details',$data);
     }
 
-    /**
-     * This method is a validation method which validate event start date
-     * 
-     * @param date $field
-     * @return boolean
-     */
+    /***
+    * Function name - check_event_start_date
+    * Description - This method is a validation method which validate event start date
+    * @param date $field
+    * @return boolean
+    */
     function check_event_start_date($field) {
         if (!$this->session->userdata('logged_in')) {
             redirect('login', 'refresh');
@@ -628,12 +637,12 @@ class Event extends CI_Controller {
         }
     }
 
-    /**
-     * This method is a validation method which validate event start date
-     * 
-     * @param date $field
-     * @return boolean
-     */
+    /***
+    * Function name - check_event_end_date
+    * Description - This method is a validation method which validate event start date
+    * @param date $field
+    * @return boolean
+    */
     function check_event_end_date($field) {
         if (!$this->session->userdata('logged_in')) {
             redirect('login', 'refresh');
@@ -647,12 +656,12 @@ class Event extends CI_Controller {
         }
     }
 
-    /**
-     * Check whether the given in charge id is a valid id or not.
-     * 
-     * @param string $field
-     * @return boolean
-     */
+    /***
+    * Function name - check_incharge_id
+    * Description - Check whether the given in charge id is a valid id or not
+    * @param date $field
+    * @return boolean
+    */
     function check_incharge_id($field) {
         if (!$this->session->userdata('logged_in')) {
             redirect('login', 'refresh');

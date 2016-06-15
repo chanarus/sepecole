@@ -6,9 +6,7 @@
             <?php
             if ($user_type == 'A') {
                 $this->view('event/admin_sidebar_nav');
-            } elseif ($user_type == 'P') {
-                $this->view('event/sidebar_nav');
-            } else {
+            }else {
                 $this->view('event/sidebar_nav_teacher');
             }
             ?>
@@ -88,5 +86,3 @@
     </div>
 
 </div>
-
-

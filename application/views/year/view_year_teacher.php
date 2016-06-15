@@ -6,15 +6,12 @@
                if($user_type == 'A'){
                    $this->view('year/admin_sidebar_nav');
                }
-               elseif($user_type == 'T'){
-                   $this->view('year/teacher_sidebar_nav');
-               }
                else{
                    $this->view('year/teacher_sidebar_nav');
                }
 
             ?>
-            
+
         </div>
 
         <div class="col-md-9">
@@ -45,22 +42,22 @@
                     <strong>Current Academic Year</strong>
                 </div>
                 <div class="panel-body">
-                    
+
                     <?php
                             foreach ($year as $row)
                             {
                     ?>
 
                     <div class="row" style="margin-bottom:5px;">
-                        <div class="col-md-4"><b>Name : </b><?php echo $row->name ?></div>   
+                        <div class="col-md-4"><b>Name : </b><?php echo $row->name ?></div>
                     </div>
                     <div class="row" style="margin-bottom:5px;">
-                        <div class="col-md-4"></i><b>Starts On : </b><?php echo $row->start_date ?></div>  
-                        <div class="col-md-4"></i><b>Ends On : </b><?php echo $row->end_date ?></div>    
+                        <div class="col-md-4"></i><b>Starts On : </b><?php echo $row->start_date ?></div>
+                        <div class="col-md-4"></i><b>Ends On : </b><?php echo $row->end_date ?></div>
                     </div>
                     <div class="row" style="margin-bottom:5px;">
                         <div class="col-md-4"><b>Status : </b>
-                            <?php 
+                            <?php
                                 if ($row->status == "1") {
                                     echo "<span class='label label-primary'>Active</span>". PHP_EOL;
                                 } else{
@@ -68,38 +65,38 @@
                                 }
                              ?>
 
-                        </div> 
+                        </div>
 
                     </div>
                     <hr>
                     <div class="row" style="margin-bottom:5px;">
-                        <div class="col-md-4"><b>Adtitionnal Details</b></div>   
+                        <div class="col-md-4"><b>Adtitionnal Details</b></div>
                     </div>
                     <div class="row" style="margin-bottom:5px;">
-                        <div class="col-md-4"><b>Term 01</b></div>   
+                        <div class="col-md-4"><b>Term 01</b></div>
                     </div>
                     <div class="row" style="margin-bottom:5px;  margin-top:10px;">
-                        <div class="col-md-4"><b>Start Date : </b><?php echo $row->t1_start_date ?></div>  
-                        <div class="col-md-4"><b>End Date : </b><?php echo $row->t1_end_date ?></div>    
+                        <div class="col-md-4"><b>Start Date : </b><?php echo $row->t1_start_date ?></div>
+                        <div class="col-md-4"><b>End Date : </b><?php echo $row->t1_end_date ?></div>
                     </div>
                     <div class="row" style="margin-bottom:5px;  margin-top:10px;">
-                        <div class="col-md-4"><b>Term 02</b></div>   
+                        <div class="col-md-4"><b>Term 02</b></div>
                     </div>
                     <div class="row" style="margin-bottom:5px;">
-                        <div class="col-md-4"><b>Start Date : </b><?php echo $row->t2_start_date ?></div>  
-                        <div class="col-md-4"><b>End Date : </b><?php echo $row->t2_end_date ?></div>    
+                        <div class="col-md-4"><b>Start Date : </b><?php echo $row->t2_start_date ?></div>
+                        <div class="col-md-4"><b>End Date : </b><?php echo $row->t2_end_date ?></div>
                     </div>
                     <div class="row" style="margin-bottom:5px; margin-top:10px;">
-                        <div class="col-md-4"><b>Term 03</b></div>   
+                        <div class="col-md-4"><b>Term 03</b></div>
                     </div>
                     <div class="row" style="margin-bottom:5px;">
-                        <div class="col-md-4"><b>Start Date : </b><?php echo $row->t3_start_date ?></div>  
-                        <div class="col-md-4"><b>End Date : </b><?php echo $row->t3_end_date ?></div>    
+                        <div class="col-md-4"><b>Start Date : </b><?php echo $row->t3_start_date ?></div>
+                        <div class="col-md-4"><b>End Date : </b><?php echo $row->t3_end_date ?></div>
                     </div>
                     <div class="row" style="margin-bottom:5px;">
                         <div class="col-md-4">
                             <?php
-                            
+
                                 // $string = $row->structure;
                                 // $partial = explode(', ', $string);
                                 // $final = array();
@@ -111,10 +108,10 @@
                                 // foreach ($final as $key => $value) {
                                 //     echo "Key: $key; Value: $value";
                                 //     echo "<br />";
-                                // }  
+                                // }
                             ?>
 
-                        </div>   
+                        </div>
                     </div>
                     <div class="row" style="margin-bottom:5px;">
                         <div align="center">
@@ -129,8 +126,8 @@
                                     list($key, $value) = explode('=', $val);
                                     $final[$key] = $value;
                                 });
-                                
-                                
+
+
 
                                 $months=array('January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December');
                                 $current_month=date('n');
@@ -152,7 +149,7 @@
                                         // Month Cell
                                         $first_day_in_month=date('w',mktime(0,0,0,$month,1,$current_year));
                                         $month_days=date('t',mktime(0,0,0,$month,1,$current_year));
-                                                
+
                                         // in PHP, Sunday is the first day in the week with number zero (0)
                                         // to make our calendar works we will change this to (7)
                                         if ($first_day_in_month==0){
@@ -177,7 +174,7 @@
 
                                                     // echo '<td class="'.$class.'">'.$day.'</td>';
                                                     $href = $current_year."-".$month."-".$day;
-                                                    
+
                                                     $t = true;
 
                                                     foreach ($final as $key => $value) {
@@ -187,32 +184,32 @@
 
                                                         if($sdate == '0' && $value == '1'){
                                                             $class .=  ' holi';
-                                                        
+
                                                         // echo "Key: $key; Value: $value";
                                                         // echo "<br />";
                                                         }
 
                                                         else if($sdate == '0' && $value == '2')
                                                             $class .=  ' poya';
-                                                    } 
+                                                    }
 
-                                                    // echo '<td class="'.$class.'">'.'<a href="'.$href.'">' .$day. '</a>' . '</td>'; 
+                                                    // echo '<td class="'.$class.'">'.'<a href="'.$href.'">' .$day. '</a>' . '</td>';
 
-                                                    echo '<td class="'.$class.'">'. $day . '</td>'; 
+                                                    echo '<td class="'.$class.'">'. $day . '</td>';
 
                                                     if ($pos==0) echo '</tr><tr>';
                                                 }
-                                                
+
                                         echo '</tr>';
-                                                echo '</table>';                                                                                                       
+                                                echo '</table>';
 
                                         echo '</td>';
                                     }
                                     echo '</tr>';
-                                }                                
+                                }
 
                                 echo '</table>';
-                                
+
                             ?>
                         </div>
                         <style type="text/css">
@@ -227,8 +224,8 @@
                                 text-align: center;
                             }
                             .calendar .year{
-                                font-family:Verdana; 
-                                font-size:18pt; 
+                                font-family:Verdana;
+                                font-size:18pt;
                                 color:#ff9900;
                             }
                             .calendar .month{
@@ -276,6 +273,5 @@
             </div>
         </div>
     </div>
-    
-</div>
 
+</div>
