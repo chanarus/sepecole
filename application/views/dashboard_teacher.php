@@ -19,7 +19,7 @@
                                     <?php if ($cnt < 5) { ?>
                                         <li>
                                             <div class = "media">
-                                                
+
                                                 <div class = "media-body">
                                                     <strong><a target="_blank" href="<?php echo base_url("index.php/news/view_news/".$row->id ); ?>"><?php echo substr($row->name,0,60)."..."; ?></strong></a><span class="pull-right"><small>Published on <?php echo $row->create_at ?></small></span>
                                                     <p class="news-item-preview"><?php echo strip_tags(substr($row->description,0,150))."..."; ?></p>
@@ -34,7 +34,7 @@
                         </div>
                     </div>
                 </div>
-            </div> 
+            </div>
             <!-- Events -->
             <div class="row">
                 <div class="col-md-12">
@@ -111,22 +111,7 @@
                             <strong><i class="fa fa-bookmark" style="margin-right:10px"></i> SHORTCUTS</strong>
                         </div>
                         <div class="panel-body">
-                            <div class="shortcuts"> 
-                                <a href="<?php echo base_url("index.php/profile"); ?>" class="shortcut">
-                                    <i class="shortcut-icon fa fa-2x fa-user"></i>
-                                    <span class="shortcut-label">Profile</span>
-                                </a>
-                    
-                                <a href="<?php echo base_url("index.php/leave"); ?>" class="shortcut">
-                                    <i class="shortcut-icon fa fa-2x fa-bed"></i>
-                                    <span class="shortcut-label">Leave</span>
-                                </a>
-                            
-                                <a href="<?php echo base_url("index.php/inbox"); ?>" class="shortcut">
-                                    <i class="shortcut-icon fa fa-2x fa-envelope"></i>
-                                    <span class="shortcut-label">Messages</span>
-                                </a>
-                            
+                            <div class="shortcuts">
                                 <a href="<?php echo base_url("index.php/year"); ?>" class="shortcut">
                                     <i class="shortcut-icon fa fa-2x fa-calendar"></i>
                                     <span class="shortcut-label">Year Plan</span>
@@ -138,7 +123,7 @@
             </div>
             <!-- calender -->
             <div class="row">
-                <div class="col-md-12"> 
+                <div class="col-md-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <strong><i class="fa fa-calendar" style="margin-right:10px"></i> ONGOING MONTH</strong>
@@ -151,7 +136,7 @@
             </div>
         </div>
     </div>
-    
+
 </div>
 
 <script>

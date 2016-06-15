@@ -21,6 +21,7 @@
                         $error_prefix = "<p class=\"help-block error\">";
                         $error_suffix = "</p>"
                         ?>
+                        <!-- Open form to edit admin -->
                         <?php echo form_open("admin/edit/{$user->id}"); ?>
                         <div class="form-group">
                             <label for="username">Username</label>
@@ -55,8 +56,8 @@
 
   function deleteUser(userId) {
     swal({
-      title: "Are you sure?", 
-      text: "Are you sure that you want to delete this user?", 
+      title: "Are you sure?",
+      text: "Are you sure that you want to delete this user?",
       type: "warning",
       showCancelButton: true,
       closeOnConfirm: false,
@@ -65,8 +66,8 @@
     }, function() {
         window.location.href = "<?php echo base_url("index.php/admin/delete"); ?>" + "/" + userId;
     });
-    
-    
+
+
   }
-  
+
   </script>

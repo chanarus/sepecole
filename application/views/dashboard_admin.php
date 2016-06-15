@@ -19,7 +19,7 @@
                                     <?php if ($cnt < 5) { ?>
                                         <li>
                                             <div class = "media">
-                                                
+
                                                 <div class = "media-body">
                                                     <strong><a target="_blank" href="<?php echo base_url("index.php/news/view_news/".$row->id ); ?>"><?php echo substr($row->name,0,60)."..."; ?></strong></a><span class="pull-right"><small>Published on <?php echo $row->create_at ?></small></span>
                                                     <p class="news-item-preview"><?php echo strip_tags(substr($row->description,0,150))."..."; ?></p>
@@ -34,7 +34,7 @@
                         </div>
                     </div>
                 </div>
-            </div> 
+            </div>
             <!-- Events -->
             <div class="row">
                 <div class="col-md-12">
@@ -119,7 +119,7 @@
                                     </div>
                                     <!-- .stat -->
 
-                                    <div class="stat"> <i class="glyphicon glyphicon-bullhorn"></i> 
+                                    <div class="stat"> <i class="glyphicon glyphicon-bullhorn"></i>
                                         <span class="value">
                                             <?php
                                             $cnt = 0;
@@ -141,7 +141,7 @@
                                     <div class="stat"> <i class="fa fa-envelope"></i> <span class="value"><?php echo $messagecount; ?></span>
                                         <br/>Messages
                                     </div>
-                                    <!-- .stat --> 
+                                    <!-- .stat -->
                                 </div>
 
                             </div>
@@ -167,7 +167,7 @@
                                     <div class="row">
                                         <div class="col-sm-2">
                                             <div class="thumbnail">
-                                                <img class="img-responsive user-photo" src="<?php echo $row->pro_img; ?>">
+                                                <img class="img-responsive user-photo" src="../uploads/user.png">
                                             </div>
                                         </div><!-- /col-sm-1 -->
 
@@ -191,6 +191,5 @@
             </div>
         </div>
     </div>
-    
-</div>
 
+</div>

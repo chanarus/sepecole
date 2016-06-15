@@ -27,7 +27,7 @@
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 <?php echo $err_message; ?>
                 </div>
-                <?php } ?> 
+                <?php } ?>
 
             <div class="panel panel-default">
                 <div class="panel-heading">
@@ -55,7 +55,7 @@
                             </tr>
                             <tr>
                                 <td><label>In Charge ID</label></td>
-                                <td><?php echo $details->in_charge_id; ?><a id="fillgrid" href="<?php echo base_url("index.php/event/teacher_event_details"); ?>" data-id="<?php echo $details->in_charge_id; ?>" style="margin-left: 5em">View Teacher Details</a></td>
+                                <td><?php echo $details->in_charge_id; ?>
                             </tr>
                             <tr>
                                 <td><label>Budget(Rs.)</label></td>
@@ -87,7 +87,7 @@
                             </tr>
                         </tbody>
                     </table>
-                    
+
                     <div class="form-group">
                         <div class="col-sm-offset-0 col-sm-10">
                             <a href="<?php echo base_url('index.php/event/approve_event/' . $details->id); ?>" class="btn btn-success" style="width: 150px">Approve</a>
@@ -120,5 +120,3 @@
 
     });
 </script>
-
-

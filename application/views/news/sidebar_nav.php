@@ -16,7 +16,7 @@
                     </tr>
                     <tr>
                         <td>
-                            <span class="glyphicon glyphicon-expand text-primary"></span><a href="<?php echo base_url('index.php/news/get_news/'); ?>">View News details</a>
+
                         </td>
                     </tr>
                 </table>

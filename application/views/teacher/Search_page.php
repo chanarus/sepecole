@@ -34,7 +34,7 @@
                     <?php echo form_close(); ?>
                 </div>
             </div>
-            
+
             <div class="row">
                 <div class="col-md-6">
                     <br>
@@ -61,7 +61,7 @@
                                     <th>Medium</th>
                                     <th>Contact</th>
                                     <td>Actions</td>
-                                   
+
                                 </tr>
                             </thead>
                             <tbody>
@@ -70,7 +70,7 @@
                                 <td><?php echo $row->id; ?></td>
                                 <td><?php echo $row->nic_no; ?></td>
                                 <td><?php echo $row->full_name; ?></td>
-                                <td><?php  $gender=$row->gender; 
+                                <td><?php  $gender=$row->gender;
                                  if ($gender == 'm') {
                                         echo 'Male';
                                     } else if ($gender == 'f') {
@@ -89,10 +89,10 @@
                                     }
                                     ?></td>
                                 <td><?php echo $row->contact_mobile; ?></td>
-                                <td><a href="<?php echo base_url("index.php/profile") . "?key=" . $row->user_id; ?>" class="btn btn-primary btn-xs" aria-hidden="true"><i class="fa fa-eye"></i></a>&nbsp;
+                                <td>
                                 <a href="<?php echo base_url("index.php/teacher/load_teacher") . "/" . $row->id; ?>" class="btn btn-primary btn-xs" aria-hidden="true"><i class="fa fa-edit"></i></a>&nbsp;
                                 <a id="delete-user" data-user-id="<?php echo $row->user_id; ?>" class="btn btn-danger btn-xs del" aria-hidden="true"><i class="fa fa-trash"></i></a></td>
-                                
+
                             </tr>
                         <?php } ?>
                     </tbody>
@@ -108,10 +108,10 @@
   });
 
   function deleteUser(userId) {
-      
+
     swal({
-      title: "Are you sure?", 
-      text: "Are you sure that you want to delete this user?", 
+      title: "Are you sure?",
+      text: "Are you sure that you want to delete this user?",
       type: "warning",
       showCancelButton: true,
       closeOnConfirm: false,
@@ -120,10 +120,8 @@
     }, function() {
         window.location.href = "<?php echo base_url("index.php/teacher/archive_teacher") ?>" + "/" + userId;
     });
-    
-    
-  }
-  
-  </script>
 
-  
+
+  }
+
+  </script>

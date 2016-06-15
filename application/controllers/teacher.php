@@ -1,9 +1,9 @@
 <?php
 /**
  * Ecole - Teacher Controller
- * 
+ *
  * Responsibe for handling inputs
- * 
+ *
  * @author Gunathilaka M.A.S.S
  * @copyright (c) 2015, Ecole. (http://projectecole.com)
  * @link  http://projectecole.com
@@ -18,7 +18,7 @@ class Teacher extends CI_Controller {
         $this->load->helper('date');
         $this->load->model('user');
     }
-    
+
     /**
      * First run this index method. The session keeps track of whether the user logged in or not. If not, user has to login to the system.
      * It riderects user to another method according to the user type.
@@ -88,7 +88,7 @@ class Teacher extends CI_Controller {
 
     /**
      * This method is used to load teacher details
-     * 
+     *
      * @param int $id
      */
     public function load_teacher($id) {
@@ -109,7 +109,7 @@ class Teacher extends CI_Controller {
 
     /**
      * this method is used to edit teacher details
-     * 
+     *
      * @param int $id
      */
     public function edit_teacher($id) {
@@ -132,7 +132,7 @@ class Teacher extends CI_Controller {
         $this->form_validation->set_rules('contactMob', 'Contact Mobile', 'exact_length[10]|integer');
         $this->form_validation->set_rules('contactHome', 'Contact Home', 'exact_length[10]|integer');
         $this->form_validation->set_rules('email', 'Email', 'valid_email');
-        $this->form_validation->set_rules('widow', 'Widow & Orphan No', 'required');
+        $this->form_validation->set_rules('widow', 'Widow & Orphan No', '');
         $this->form_validation->set_rules('serialno', 'Serial No', 'required|less_than[100000]|integer');
         $this->form_validation->set_rules('signatureno', 'Signature No', 'required|less_than[1000]|integer');
         $this->form_validation->set_rules('name', 'Name', 'required');
@@ -144,14 +144,14 @@ class Teacher extends CI_Controller {
         $this->form_validation->set_rules('servicegrade', 'Service Grade', 'required|callback_check_selection');
         $this->form_validation->set_rules('personfile', 'Personal File No', 'required');
         $this->form_validation->set_rules('teacherregno', 'Register No', 'required');
-        $this->form_validation->set_rules('serviceperiod', 'Service Period', 'required');
-        $this->form_validation->set_rules('remarks', 'Remarks', 'required');
+        $this->form_validation->set_rules('serviceperiod', 'Service Period', '');
+        $this->form_validation->set_rules('remarks', 'Remarks', '');
         $this->form_validation->set_rules('nature', 'Nature of Appointment', 'required|callback_check_selection');
         $this->form_validation->set_rules('education', 'Educational Qualification', 'required');
         $this->form_validation->set_rules('profession', 'Professional Qualification', 'required');
         $this->form_validation->set_rules('appointmentdate', 'Appointment Date', 'callback_check_career_day');
         $this->form_validation->set_rules('pension', 'Pension Date', 'callback_check_pension_day');
-        $this->form_validation->set_rules('promotions', 'Promotion', 'callback_check_selection');
+        $this->form_validation->set_rules('promotions', 'Promotion', '');
         $this->form_validation->set_rules('increment', 'Increment Date', 'callback_check_pension_day');
         $this->form_validation->set_error_delimiters('<br /><span class="error">', '</span>');
 
@@ -238,7 +238,7 @@ class Teacher extends CI_Controller {
 
     /**
      * This method is used to delete teacher record from archive list.
-     * 
+     *
      * @param int $id
      */
     public function delete_teacher($id) {
@@ -272,10 +272,10 @@ class Teacher extends CI_Controller {
             $this->load->view('/templates/footer');
         }
     }
-    
+
     /**
      * function for archive teacher record
-     * 
+     *
      * @param int $id
      */
     public function archive_teacher($id) {
@@ -293,7 +293,7 @@ class Teacher extends CI_Controller {
             $tech_details = $this->teacher_model->user_details($tech_id);
             $this->News_Model->insert_action_details($tech_id, "Delete Teacher Record", $tech_details->profile_img, $tech_details->first_name);
             //////
-             
+
              $data['succ_message'] = "Teacher details deleted successfully";
             $data['page_title'] = "Search Teacher";
             $this->load->view('/templates/header', $data);
@@ -387,8 +387,8 @@ class Teacher extends CI_Controller {
     }
 
     /**
-     * insert teacher accademic details 
-     * 
+     * insert teacher accademic details
+     *
      * @param int $id
      */
     function update_details($id) {
@@ -466,7 +466,7 @@ class Teacher extends CI_Controller {
 
     /**
      * this method is used to create teacher loging for the system
-     * 
+     *
      * @param int $id
      */
     function create_log_details($id) {
@@ -494,7 +494,7 @@ class Teacher extends CI_Controller {
             $username = $this->input->post('username');
             $password = $this->input->post('password');
             $confirm_password = $this->input->post('confirm_password');
-            
+
             $create = date('Y-m-d H:i:s');
 
             $config['upload_path'] = './uploads/';
@@ -546,7 +546,7 @@ class Teacher extends CI_Controller {
 
     /**
      * This method is used to check selected user's profile
-     * 
+     *
      * @param int $id
      */
     function check_profile($id) {
@@ -633,12 +633,12 @@ class Teacher extends CI_Controller {
             $this->load->view('/templates/footer');
         }
     }
- * 
+ *
  */
 
     /**
      * View teacher profile
-     * 
+     *
      * @param int $teacher_id
      */
     function view_profile($teacher_id) {
@@ -660,7 +660,7 @@ class Teacher extends CI_Controller {
 
     /**
      * This is used to view the reporting page
-     * 
+     *
      * @param int $val
      */
     function teacher_report($val) {
@@ -681,7 +681,7 @@ class Teacher extends CI_Controller {
 
     /**
      * This function is used to download the html page. use dompdf library for that
-     * 
+     *
      * @param int $l
      */
     function report_pdf($l) {
@@ -734,7 +734,7 @@ class Teacher extends CI_Controller {
             }
         }
     }
-    
+
     /**
      * get archive teacher details
      */
@@ -759,7 +759,7 @@ class Teacher extends CI_Controller {
             redirect('login', 'refresh');
         }
     }
-    
+
     /**
      * generate the teacher report
      */
@@ -771,7 +771,7 @@ class Teacher extends CI_Controller {
 
     /**
      * This method is used to check whether the select field is selected or not.
-     * 
+     *
      * @param int $field
      * @return boolean
      */
@@ -786,7 +786,7 @@ class Teacher extends CI_Controller {
 
     /**
      * check whether the status field is selected or not
-     * 
+     *
      * @param string $field
      * @return boolean
      */
@@ -801,7 +801,7 @@ class Teacher extends CI_Controller {
 
     /**
      * check whether the mobile no is valid or not.
-     * 
+     *
      * @param int $field
      * @return boolean
      */
@@ -817,7 +817,7 @@ class Teacher extends CI_Controller {
 
     /**
      * check whether the NIC is valid nic or not.
-     * 
+     *
      * @param string $field
      * @return boolean
      */
@@ -833,7 +833,7 @@ class Teacher extends CI_Controller {
 
     /**
      * Check whether the given age is in between 20 and 60
-     * 
+     *
      * @param date $field
      * @return boolean
      */
@@ -851,7 +851,7 @@ class Teacher extends CI_Controller {
 
     /**
      * check whether the gender is selected or not
-     *  
+     *
      * @param string $d
      * @return boolean
      */
@@ -867,7 +867,7 @@ class Teacher extends CI_Controller {
 
     /**
      * check whether the career date is valid or not.
-     * 
+     *
      * @param date $field
      * @return boolean
      */
@@ -885,7 +885,7 @@ class Teacher extends CI_Controller {
 
     /**
      * check whether the pension date is future date or not.
-     * 
+     *
      * @param date $field
      * @return boolean
      */
@@ -902,7 +902,7 @@ class Teacher extends CI_Controller {
             return FALSE;
         }
     }
-    
+
     /*
      * This method is used to get teacher full report.
      */

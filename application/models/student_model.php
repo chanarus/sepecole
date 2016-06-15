@@ -622,6 +622,23 @@ class Student_Model extends CI_Model {
         }
     }
 
+/**
+ * Get last inserted student admission number.
+ */
+    public function get_last_student_id() {
+
+        try {
+            if ($data = $this->db->query("SELECT * FROM students ORDER BY id DESC LIMIT 1")) {
+                $row = $data->row()->admission_no;
+                return $row;
+            } else {
+                return null;
+            }
+        } catch (Exception $ex) {
+            return null;
+        }
+    }
+
 }
 
 ?>

@@ -2,12 +2,10 @@
 
 /**
  * Ecole - User Authentication Controller
- * 
+ *
  * Handles the user login to the system.
- * 
- * @author  Sudaraka K. S.
- * @copyright (c) 2015, Ecole. (http://projectecole.com)
- * @link http://projectecole.com
+ *
+ * @author  Sampath R.P.C.
  */
 class User_Auth extends CI_Controller {
 
@@ -36,7 +34,7 @@ class User_Auth extends CI_Controller {
             redirect('dashboard', 'refresh');
         }
     }
-    
+
     /**
      * Authentication Validation
      * @return bool

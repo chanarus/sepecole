@@ -1,14 +1,14 @@
 
 
 <!-- Admin Nav Bar Start -->
-<?php if($user_type == 'A' || $user_type == 'P'){ ?>
+<?php if($user_type == 'A'){ ?>
 <div class="subnavbar">
   <div class="subnavbar-inner">
     <div class="container">
       <ul class="mainnav">
         <li <?php if($navbar == 'dashboard'){ echo "class='active'";} ?> ><a href="<?php echo base_url('index.php/dashboard'); ?>"><i class="glyphicon glyphicon-home"></i><span>Home</span> </a> </li>
         <li <?php if($navbar == 'teacher'){ echo "class='active'";} ?> ><a href="<?php echo base_url('index.php/teacher'); ?>"><i class="glyphicon glyphicon-user"></i><span>Teachers</span> </a> </li>
-        <li <?php if($navbar == 'leave'){ echo "class='active'";} ?> ><a href="<?php echo base_url('index.php/leave'); ?>"><i class="glyphicon glyphicon-bed"></i><span>Leaves</span> </a> </li>
+        <!-- <li <?php if($navbar == 'leave'){ echo "class='active'";} ?> ><a href="<?php echo base_url('index.php/leave'); ?>"><i class="glyphicon glyphicon-bed"></i><span>Leaves</span> </a> </li> -->
          <?php if($this->session->userdata['user_type'] == 'A') {?><li <?php if($navbar == 'attendance'){ echo "class='active'";} ?> ><a href="<?php echo base_url('index.php/attendance'); ?>"><i class="glyphicon glyphicon-list-alt"></i><span>Attendance</span> </a> </li><?php } ?>
         <?php if($this->session->userdata['user_type'] == 'A') {?><li <?php if($navbar == 'timetable') { echo "class='active'";} ?>><a href="<?php echo base_url('index.php/timetable'); ?>"><i class="glyphicon glyphicon-time"></i><span>Timetable</span> </a> </li><?php } ?>
       	<li><a href="<?php echo base_url('index.php/student'); ?>"><i class="glyphicon glyphicon-education"></i><span>Students</span> </a> </li>
@@ -27,9 +27,9 @@
         </li> -->
       </ul>
     </div>
-    <!-- /container --> 
+    <!-- /container -->
   </div>
-  <!-- /subnavbar-inner --> 
+  <!-- /subnavbar-inner -->
 </div>
 <?php } ?>
 <!-- End of Admin Side Bar -->
@@ -41,9 +41,7 @@
     <div class="container">
       <ul class="mainnav">
         <li <?php if($navbar == 'dashboard'){ echo "class='active'";} ?> ><a href="<?php echo base_url('index.php/dashboard'); ?>"><i class="glyphicon glyphicon-home"></i><span>Dashboard</span> </a> </li>
-        <!-- <li <?php if($navbar == 'teacher'){ echo "class='active'";} ?> ><a href="<?php echo base_url('index.php/teacher'); ?>"><i class="glyphicon glyphicon-user"></i><span>Teacher</span> </a> </li> -->
-        <li <?php if($navbar == 'leave'){ echo "class='active'";} ?> ><a href="<?php echo base_url('index.php/leave'); ?>"><i class="glyphicon glyphicon-bed"></i><span>Leave</span> </a> </li>
-         <!-- <li <?php if($navbar == 'attendance'){ echo "class='active'";} ?> ><a href="<?php echo base_url('index.php/attendance'); ?>"><i class="glyphicon glyphicon-list-alt"></i><span>Attendance</span> </a> </li> -->
+        <!-- <li <?php if($navbar == 'teacher'){ echo "class='active'";} ?> ><a href="<?php echo base_url('index.php/teacher'); ?>"><i class="glyphicon glyphicon-user"></i><span>Teacher</span> </a> </li> -->         <!-- <li <?php if($navbar == 'attendance'){ echo "class='active'";} ?> ><a href="<?php echo base_url('index.php/attendance'); ?>"><i class="glyphicon glyphicon-list-alt"></i><span>Attendance</span> </a> </li> -->
         <!-- <li <?php if($navbar == 'timetable') { echo "class='active'";} ?>><a href="<?php echo base_url('index.php/timetable'); ?>"><i class="glyphicon glyphicon-time"></i><span>Timetable</span> </a> </li> -->
         <li <?php if($navbar == 'student') { echo "class='active'";} ?>><a href="<?php echo base_url('index.php/student'); ?>"><i class="glyphicon glyphicon-education"></i><span>Students</span> </a> </li>
         <!-- <li><a href="#"><i class="glyphicon glyphicon-knight"></i><span>Sports</span> </a> </li> -->
@@ -61,9 +59,9 @@
         </li> -->
       </ul>
     </div>
-    <!-- /container --> 
+    <!-- /container -->
   </div>
-  <!-- /subnavbar-inner --> 
+  <!-- /subnavbar-inner -->
 </div>
 <?php } ?>
 <!-- End of Teacher Side Bar -->
@@ -95,9 +93,9 @@
         </li> -->
       </ul>
     </div>
-    <!-- /container --> 
+    <!-- /container -->
   </div>
-  <!-- /subnavbar-inner --> 
+  <!-- /subnavbar-inner -->
 </div>
 <?php } ?>
 <!-- End of Student Side Bar -->

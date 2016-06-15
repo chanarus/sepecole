@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <?php $this->view('backups/sidebar_nav'); ?>
+        </div>
+        <div class="col-md-9">
+            <h3>Create Backups</h3>
+
+            <script type="text/javascript">
+                function download() {
+
+                    if($('#type').val() == "Index"){
+                        alert("ddd");
+                        return;
+                    }
+
+
+                    //this passes the type to the same page
+                    window.location.href =  window.location.href + "?type=" + $('#type').val();
+                }
+            </script>
+
+               <div class="row">
+                   <div class="col-md-4">
+                       <div class="form-group">
+                           <select class="form-control" id="type">
+                               <option value="Index">Select Backup Type</option>
+                               <option value="fulldb">Full Database</option>
+                               <option value="users">Users</option>
+                               <option value="students">Students</option>
+                               <option value="teachers">Teachers</option>
+                           </select>
+                       </div>
+                   </div>
+                   <div class="col-md-4">
+                       <input type="submit" class="btn btn-primary" value="Create Backups" onclick="download();">
+                   </div>
+               </div>
+        </div>
+    </div>
+</div>

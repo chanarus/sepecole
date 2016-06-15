@@ -125,17 +125,17 @@
                                 <label for="language">Medium</label>
                                 <select  name="language" id="language" class="form-control">
                                     <option value="n"<?php if (set_value('language') == "n") {
-                    echo"selected";
-                } ?>>Select Medium</option>
+                                      echo"selected";
+                                    } ?>>Select Medium</option>
                                     <option value="s"<?php if (set_value('language') == "s") {
-                    echo"selected";
-                } ?>>Sinhala</option>
+                                      echo"selected";
+                                    } ?>>Sinhala</option>
                                     <option value="e"<?php if (set_value('language') == "e") {
-                    echo"selected";
-                } ?>>English</option>
+                                      echo"selected";
+                                    } ?>>English</option>
                                     <option value="t"<?php if (set_value('language') == "t") {
-                    echo"selected";
-                } ?>>Tamil</option>
+                                      echo"selected";
+                                    } ?>>Tamil</option>
                                 </select>
                                 <div><?php echo form_error('language'); ?></div>
 
@@ -145,26 +145,26 @@
                                 <label for="religion">Religion</label>
                                 <select  name="religion" id="religion" class="form-control">
                                     <option value="0" <?php if (set_value('religion') == 0) {
-                    echo"selected";
-                } ?>>Select Religion</option>
+                                      echo"selected";
+                                    } ?>>Select Religion</option>
                                     <option value="1" <?php if (set_value('religion') == 1) {
-                    echo"selected";
-                } ?>>Buddhism</option>
+                                      echo"selected";
+                                    } ?>>Buddhism</option>
                                     <option value="2" <?php if (set_value('religion') == 2) {
-                    echo"selected";
-                } ?>>Hinduism</option>
+                                      echo"selected";
+                                    } ?>>Hinduism</option>
                                     <option value="3" <?php if (set_value('religion') == 3) {
-                    echo"selected";
-                } ?>>Islam</option>
+                                      echo"selected";
+                                    } ?>>Islam</option>
                                     <option value="4" <?php if (set_value('religion') == 4) {
-                    echo"selected";
-                } ?>>Catholicism</option>
+                                      echo"selected";
+                                    } ?>>Catholicism</option>
                                     <option value="5" <?php if (set_value('religion') == 5) {
-                    echo"selected";
-                } ?>>Christianity</option>
+                                      echo"selected";
+                                    } ?>>Christianity</option>
                                     <option value="6" <?php if (set_value('religion') == 6) {
-                    echo"selected";
-                } ?>>Other</option>
+                                      echo"selected";
+                                    } ?>>Other</option>
                                 </select>
                                 <div><?php echo form_error('religion'); ?></div>
                             </div>
@@ -191,6 +191,9 @@
                                     <option value="4" <?php if (set_value('houseid') == 4) {
                                                           echo"selected";
                                                         } ?>>H4</option>
+                                    <option value="4" <?php if (set_value('houseid') == 5) {
+                                                          echo"selected";
+                                                        } ?>>H4</option>
                                 </select>
                                 <div><?php echo form_error('houseid'); ?></div>
                             </div>
@@ -199,11 +202,11 @@
 
                                 <label for="admission_grade">Admission Grade</label>
                                 <select class="form-control" name='admission_grade' id="admission_grade">
-<?php
-$grades = $this->class_model->get_grades(); ?>
-<?php foreach ($grades as $grade) { ?>
-                                        <option value="<?php echo $grade->id; ?>" <?php echo set_select('grade', $grade->id); ?>><?php echo $grade->name; ?></option>
-<?php } ?>
+                                  <?php
+                                  $grades = $this->class_model->get_grades(); ?>
+                                  <?php foreach ($grades as $grade) { ?>
+                                              <option value="<?php echo $grade->id; ?>" <?php echo set_select('grade', $grade->id); ?>><?php echo $grade->name; ?></option>
+                                  <?php } ?>
                                 </select>
                                 <div> <?php echo form_error('admission_grade'); ?></div>
 
@@ -249,44 +252,23 @@ $grades = $this->class_model->get_grades(); ?>
 
                             </div>
                         </div>
-
-
                     </div>
-
                 </div>
-<?php echo form_close(); ?>
-
-
+                <?php echo form_close(); ?>
             </div>
         </div>
     </div>
-
 </div>
 
 </div>
 
 <script>
-var admissionPostFix = "1111";
+var admissionPostFix;
 $(document).ready(function(){
     $("#addmissiondate").change(function(){
-        var text = $("#addmissiondate").val().substring(2, 4);
-        var admissionnumber = text+admissionPostFix;
-        admissionPostFix++;
-        $("#admissionnumber").val(admissionnumber);
-        //select house
-        var house = parseInt(admissionnumber.substring(5,6));
-        if(house == 1){
-            $("#houseid").val(1);
-        }
-        if(house == 2){
-            $("#houseid").val(2);
-        }
-        if(house == 3){
-            $("#houseid").val(3);
-        }
-        if(house == 4){
-            $("#houseid").val(4);
-        }
+
+      get_last_id();
+
     });
 
     //nic show
@@ -302,6 +284,53 @@ $(document).ready(function(){
             $("#nic").hide();
             $("#nicl").hide();
         }
+        if(currentYear-dob > 17)//nic available condition
+        {
+          $("#nic").show();
+          $("#nicl").show();
+        }
     });
 });
+
+function get_last_id(){
+
+  $.ajax({
+         url: "http://localhost/sep/index.php/student/get_last_id",
+         type: "GET",
+         success: function (result) {
+        admissionPostFix = parseInt(result.substring(6, 10))+4;
+        console.log(admissionPostFix);
+
+        var text = $("#addmissiondate").val().substring(2, 4);
+        var admissionnumber = text+admissionPostFix;
+        admissionPostFix++;
+        $("#admissionnumber").val(admissionnumber);
+        //select house
+        var house = parseInt(admissionnumber.substring(5,6));
+        if(house == 0){
+            $("#houseid").val(1);
+        }
+        if(house == 2){
+            $("#houseid").val(2);
+        }
+        if(house == 4){
+            $("#houseid").val(3);
+        }
+        if(house == 6){
+            $("#houseid").val(4);
+        }
+        if(house == 8){
+            $("#houseid").val(5);
+        }
+
+
+         }, error: function (request, status, error) {
+
+
+         }
+     });
+
+}
+
+
 </script>

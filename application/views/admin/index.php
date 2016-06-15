@@ -68,6 +68,13 @@
                     <span class="sub">View Notes/Complains...</span>
                 </a>
             </div>
+            <div class="admin-btn">
+                <i class="fa fa-download"></i>
+                <a href="<?php echo base_url('/index.php/backup/create'); ?>">
+                    <span class="main">Backups</span>
+                    <span class="sub">Get and restore backups...</span>
+                </a>
+            </div>
 
         </div>
     </div>

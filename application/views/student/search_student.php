@@ -31,9 +31,9 @@
                                 var type = '<?php echo $user_type; ?>';
                                 var abuttons = '';
                                 if (type == 'A') {
-                                    abuttons = ' <a href="" class="btn btn-primary btn-xs" id="view" data-toggle="tooltip"><i class="fa fa-eye"></i></a>  &nbsp; \n\
-                                                 <a href="" class="btn btn-primary btn-xs" id="edit" data-toggle="tooltip"><i class="fa fa-edit"></i></a> &nbsp; \n\
-                                                 <a href="" class="btn btn-danger btn-xs" id="delete" data-toggle="tooltip"><i class="fa fa-trash"></i></a>';
+                                    abuttons = ' <a href="" class="btn btn-primary btn-xs" id="view" data-toggle="tooltip" title="view"><i class="fa fa-eye"></i></a>  &nbsp; \n\
+                                                 <a href="" class="btn btn-primary btn-xs" id="edit" data-toggle="tooltip" title="edit"><i class="fa fa-edit"></i></a> &nbsp; \n\
+                                                 <a href="" class="btn btn-danger btn-xs" id="delete" data-toggle="tooltip" title="delete"><i class="fa fa-trash"></i></a>';
                                 } else {
                                     abuttons = ' <a href="" class="editor_remove" id="view" data-toggle="tooltip"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></a>';
                                 }
@@ -100,7 +100,7 @@
                         <table class="table table-hover" id="table_id">
                             <thead>
                                 <tr>
-                                    <th>#</th>
+                                    <th>#333</th>
                                     <th>id</th>
                                     <th>Admission No</th>
                                     <th>Name</th>

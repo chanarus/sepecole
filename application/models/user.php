@@ -1,15 +1,13 @@
 <?php
 /**
  * Ecole - User Model
- * 
+ *
  * Responsibe for handling date related to user accounts in the system
- * 
- * @author  Sudaraka K. S.
- * @copyright (c) 2015, Ecole. (http://projectecole.com)
- * @link http://projectecole.com
+ *
+ * @author  Sampath R.P.C.
  */
 class User extends CI_Model {
-    
+
     /*
      * Class Attributes
      */
@@ -18,17 +16,17 @@ class User extends CI_Model {
     /**
      * Class Constructor
      */
-    
+
     public function __construct() {
         parent::__construct();
     }
 
     /**
      * Interact with the database to authenticate user.
-     * 
+     *
      * @param string $username Username
      * @param string $password Password
-     * 
+     *
      * @return result
      */
     public function login($username, $password) {
@@ -49,6 +47,13 @@ class User extends CI_Model {
         }
     }
 
+    /**
+     * Get user details.
+     *
+     * @param $user_id User ID
+     *
+     * @return quary result(user details)
+     */
     public function get_details($user_id) {
         $query = $this->db->query("SELECT * FROM users WHERE id='{$user_id}' LIMIT 1");
         if ($query->num_rows() > 0) {
@@ -57,8 +62,13 @@ class User extends CI_Model {
             return FALSE;
         }
     }
-    
 
+    /**
+     * Change user password.
+     *
+     * @param $user_id User ID
+     * @param $new_password New password
+     */
     public function change_password($user_id, $new_password) {
         $hashed_password = md5($new_password);
         $query = "UPDATE users SET password='{$hashed_password}' WHERE id='{$user_id}'";
@@ -78,7 +88,7 @@ class User extends CI_Model {
     }
 
     public function update_info($update_data) {
-               
+
         $query = "UPDATE users SET first_name='{$update_data['first_name']}', last_name='{$update_data["last_name"]}', profile_img='{$update_data['image']}' WHERE id='{$update_data['user_id']}'";
         $result = $this->db->query($query);
 
@@ -91,7 +101,7 @@ class User extends CI_Model {
 
     /**
      * Interact with the database to create user accounts.
-     * 
+     *
      * @param array $new_user_data User account information
      * @param string $user_type Type of the user account. "A" - Admin, "T" - Teacher, "S" - Student
      * @return int Newly created user account's id.
@@ -99,18 +109,18 @@ class User extends CI_Model {
     public function create($new_user_data, $user_type) {
         $new_user_data['created_at'] = date("Y-m-d H:i:s");
         $new_user_data['user_type'] = $user_type;
-        
+
         if($user_type == 'A'){
             $new_user_data['superuser'] = 1;
         }
-        
+
         $this->db->insert('users', $new_user_data);
         return $this->db->insert_id();
     }
 
     /**
      * Returns the user list according to request user type.
-     * 
+     *
      * @param string $user_type User type of the user accounts
      * @return mixed Result set
      */
@@ -129,7 +139,7 @@ class User extends CI_Model {
 
     /**
      * Deactivate the user account by interacting with the database
-     * 
+     *
      * @param int $user_id
      * @return bool
      */
@@ -147,24 +157,24 @@ class User extends CI_Model {
 
         return $query->row()->profile_img;
     }
-    
+
     public function force_strong_password(){
         $sql = "SELECT is_strong_password FROM system_config";
         $query = $this->db->query($sql);
         $row = $query->row();
-        
+
         if($row->is_strong_password == 1) {
             return TRUE;
         } else {
             return FALSE;
         }
     }
-    
+
     public function get_user($user_id = null){
         if($user_id == NULL){
             return FALSE;
         }
-        
+
         $query = $this->db->get_where('users', array('id' => $user_id));
         if($query->num_rows()>0){
             return $query->row();
@@ -172,7 +182,7 @@ class User extends CI_Model {
     }
     /**
      * Edit user account by interacting with database.
-     * 
+     *
      * @param int $user_id User ID of the user account
      * @param mixed $data Information that needs to be updated
      * @return boolean
@@ -181,26 +191,26 @@ class User extends CI_Model {
         $this->db->update($this->table, $data, array('id' => $user_id));
         return true;
     }
-    
+
     public function get_user_type($user_id){
-        
+
          $sql = "SELECT user_type FROM users where id='$user_id'";
         $query = $this->db->query($sql);
         $row = $query->row();
-        
+
         if($user_type=$query->row()->user_type) {
             return $user_type;
         } else {
             return FALSE;
         }
-        
+
     }
-    
+
     public function add_note($data){
          try {
-            
+
             if ($this->db->query("INSERT INTO notes (`student_id`, `type` , `subject` , `note`) VALUES ('{$data['user_id']}', '{$data['type']}' , '{$data['subject']}' , '{$data['note']}')")) {
-               
+
                 return TRUE;
             } else {
                 return FALSE;
@@ -219,4 +229,3 @@ class User extends CI_Model {
         return $query->result();
     }
 }
-    

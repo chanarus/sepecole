@@ -2,12 +2,10 @@
 
 /**
  * Ecole - Admin Controller
- * 
+ *
  * Main controller for Admin related functionalties.
- * 
- * @author  Sudaraka K. S.
- * @copyright (c) 2015, Ecole. (http://projectecole.com)
- * @link http://projectecole.com
+ *
+ * @author  Sampath R.P.C.
  */
 class Admin extends CI_Controller {
 
@@ -41,7 +39,7 @@ class Admin extends CI_Controller {
     }
 
     /**
-     * System settings interface. 
+     * System settings interface.
      * Responsible for managing global system wide settings.
      */
     function system_settings() {
@@ -59,7 +57,7 @@ class Admin extends CI_Controller {
     }
 
     /**
-     * Admin account creation
+     * Create admin accounts.
      */
     function create() {
         //getting the user type
@@ -119,6 +117,9 @@ class Admin extends CI_Controller {
         $this->load->view('templates/footer');
     }
 
+    /**
+     * Search administrator accounts.
+     */
     function search() {
         //getting the user type
         $data['user_type'] = $this->session->userdata['user_type'];

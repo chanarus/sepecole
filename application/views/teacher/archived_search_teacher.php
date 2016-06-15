@@ -34,7 +34,7 @@
                     <?php echo form_close(); ?>
                 </div>
             </div>
-            
+
             <div class="row">
                 <div class="col-md-6">
                     <br>
@@ -96,4 +96,3 @@
         </div>
     </div>
 </div>
-

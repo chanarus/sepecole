@@ -14,12 +14,7 @@
                             <span class="glyphicon glyphicon-user text-primary"></span><a href="<?php echo base_url('index.php/attendance'); ?>">Record Attendance</a>
                         </td>
                     </tr>
-                    <tr>
-                        <td>
-                            <span class="glyphicon glyphicon-cog text-warning"></span><a href="<?php echo base_url('index.php/attendance/reports'); ?>">Reports</a>
-                        </td>
-                    </tr>
-                    
+
                 </table>
             </div>
         </div>
