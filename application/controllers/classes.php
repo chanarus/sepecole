@@ -47,7 +47,10 @@ class Classes extends CI_Controller {
 
     /*
      * Interface that loads create class
+     *
      */
+
+    //this will create the page
 
     function create() {
         $data['page_title'] = "Class Management";
