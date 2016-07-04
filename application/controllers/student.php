@@ -6,7 +6,7 @@
  *
  * @author  Sampath R.P.C.
  *
- * test
+ * test Sampath
  *
  */
 class Student extends CI_Controller {
