@@ -5,6 +5,9 @@
  * Handles Functionality of the student compodent(manage student)
  *
  * @author  Sampath R.P.C.
+ *
+ * test
+ *
  */
 class Student extends CI_Controller {
     /**

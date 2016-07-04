@@ -3,8 +3,12 @@
   <component name="ChangeListManager">
 <<<<<<< HEAD
     <list default="true" id="0a79ea55-3457-4f7b-af37-53f2a971ce03" name="Default" comment="">
+<<<<<<< HEAD
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/helpers/dompdf/.gitignore" afterPath="$PROJECT_DIR$/system/helpers/dompdf/.gitignore" />
+=======
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/student.php" afterPath="$PROJECT_DIR$/application/controllers/student.php" />
+>>>>>>> 7f2403b303a0a0fb1c28920d9717ff9a2caa8536
     </list>
 =======
     <list default="true" id="0a79ea55-3457-4f7b-af37-53f2a971ce03" name="Default" comment="" />
@@ -33,7 +37,11 @@
         <entry file="file://$PROJECT_DIR$/application/views/backups/get_backups.php">
           <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+<<<<<<< HEAD
             <state vertical-scroll-proportion="-8.5">
+=======
+            <state vertical-scroll-proportion="0.0">
+>>>>>>> 7f2403b303a0a0fb1c28920d9717ff9a2caa8536
 =======
             <state vertical-scroll-proportion="-0.65384614">
 >>>>>>> 9b52fdfdfd2325aa33533a1dcaea1b8fb7d5c717
@@ -47,7 +55,11 @@
       <file leaf-file-name="restore_backups.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/backups/restore_backups.php">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state vertical-scroll-proportion="-13.076923">
+=======
+            <state vertical-scroll-proportion="-14.193548">
+>>>>>>> 7f2403b303a0a0fb1c28920d9717ff9a2caa8536
               <caret line="20" column="7" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
 =======
       <file leaf-file-name="classes.php" pinned="false" current-in-tab="true">
@@ -66,6 +78,7 @@
             <state vertical-scroll-proportion="-0.0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
 >>>>>>> 9b52fdfdfd2325aa33533a1dcaea1b8fb7d5c717
+<<<<<<< HEAD
               <folding />
             </state>
           </provider>
@@ -133,7 +146,46 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-5.037037">
               <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+=======
+>>>>>>> 7f2403b303a0a0fb1c28920d9717ff9a2caa8536
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="create_student.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/student/create_student.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.7096774">
+              <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="6" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="student.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/controllers/student.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.31711712">
+              <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
+              <folding>
+                <marker date="1467614439757" expanded="true" signature="33547:33581" placeholder="..." />
+                <marker date="1467614439757" expanded="true" signature="33638:33669" placeholder="..." />
+                <marker date="1467614439757" expanded="true" signature="34625:34641" placeholder="..." />
+                <marker date="1467614439757" expanded="true" signature="34642:35120" placeholder="..." />
+                <marker date="1467614439757" expanded="true" signature="34695:35120" placeholder="..." />
+                <marker date="1467614439757" expanded="true" signature="34723:35092" placeholder="..." />
+                <marker date="1467614439757" expanded="true" signature="34748:35063" placeholder="..." />
+                <marker date="1467614439757" expanded="true" signature="35212:35454" placeholder="..." />
+                <marker date="1467614439757" expanded="true" signature="35999:36033" placeholder="..." />
+                <marker date="1467614439757" expanded="true" signature="36090:36121" placeholder="..." />
+                <marker date="1467614439757" expanded="true" signature="36314:36330" placeholder="..." />
+                <marker date="1467614439757" expanded="true" signature="36331:36809" placeholder="..." />
+                <marker date="1467614439757" expanded="true" signature="36384:36809" placeholder="..." />
+                <marker date="1467614439757" expanded="true" signature="36412:36781" placeholder="..." />
+                <marker date="1467614439757" expanded="true" signature="36437:36752" placeholder="..." />
+                <marker date="1467614439757" expanded="true" signature="36901:37143" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -174,7 +226,11 @@
         <option value="$PROJECT_DIR$/application/controllers/backup.php" />
         <option value="$PROJECT_DIR$/application/views/backups/get_backups.php" />
 <<<<<<< HEAD
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/system/helpers/dompdf/.gitignore" />
+=======
+        <option value="$PROJECT_DIR$/application/controllers/student.php" />
+>>>>>>> 7f2403b303a0a0fb1c28920d9717ff9a2caa8536
 =======
         <option value="$PROJECT_DIR$/application/controllers/classes.php" />
 >>>>>>> 9b52fdfdfd2325aa33533a1dcaea1b8fb7d5c717
@@ -191,10 +247,16 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
+<<<<<<< HEAD
+    <option name="x" value="-12" />
+    <option name="width" value="1378" />
+    <option name="height" value="780" />
+=======
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1382" />
     <option name="height" value="744" />
+>>>>>>> 9b52fdfdfd2325aa33533a1dcaea1b8fb7d5c717
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -392,10 +454,17 @@
   </component>
   <component name="ToolWindowManager">
 <<<<<<< HEAD
+<<<<<<< HEAD
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24205749" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+=======
+    <frame x="-12" y="0" width="1378" height="780" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24272588" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+>>>>>>> 7f2403b303a0a0fb1c28920d9717ff9a2caa8536
 =======
     <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="false" />
@@ -726,6 +795,16 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/application/controllers/classes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+=======
+>>>>>>> 9b52fdfdfd2325aa33533a1dcaea1b8fb7d5c717
     <entry file="file://$PROJECT_DIR$/application/controllers/subject.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -820,7 +899,11 @@
     <entry file="file://$PROJECT_DIR$/application/views/backups/get_backups.php">
       <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+<<<<<<< HEAD
         <state vertical-scroll-proportion="-8.5">
+=======
+        <state vertical-scroll-proportion="0.0">
+>>>>>>> 7f2403b303a0a0fb1c28920d9717ff9a2caa8536
 =======
         <state vertical-scroll-proportion="-0.65384614">
 >>>>>>> 9b52fdfdfd2325aa33533a1dcaea1b8fb7d5c717
@@ -832,12 +915,17 @@
     <entry file="file://$PROJECT_DIR$/application/controllers/classes.php">
       <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+<<<<<<< HEAD
         <state vertical-scroll-proportion="-13.076923">
+=======
+        <state vertical-scroll-proportion="-14.193548">
+>>>>>>> 7f2403b303a0a0fb1c28920d9717ff9a2caa8536
           <caret line="20" column="7" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
 =======
         <state vertical-scroll-proportion="0.4637931">
           <caret line="52" column="31" selection-start-line="52" selection-start-column="31" selection-end-line="52" selection-end-column="31" />
 >>>>>>> 9b52fdfdfd2325aa33533a1dcaea1b8fb7d5c717
+<<<<<<< HEAD
           <folding />
         </state>
       </provider>
@@ -895,7 +983,42 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.12230216">
           <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+=======
+>>>>>>> 7f2403b303a0a0fb1c28920d9717ff9a2caa8536
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/student/create_student.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.7096774">
+          <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="6" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/student.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.31711712">
+          <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
+          <folding>
+            <marker date="1467614439757" expanded="true" signature="33547:33581" placeholder="..." />
+            <marker date="1467614439757" expanded="true" signature="33638:33669" placeholder="..." />
+            <marker date="1467614439757" expanded="true" signature="34625:34641" placeholder="..." />
+            <marker date="1467614439757" expanded="true" signature="34642:35120" placeholder="..." />
+            <marker date="1467614439757" expanded="true" signature="34695:35120" placeholder="..." />
+            <marker date="1467614439757" expanded="true" signature="34723:35092" placeholder="..." />
+            <marker date="1467614439757" expanded="true" signature="34748:35063" placeholder="..." />
+            <marker date="1467614439757" expanded="true" signature="35212:35454" placeholder="..." />
+            <marker date="1467614439757" expanded="true" signature="35999:36033" placeholder="..." />
+            <marker date="1467614439757" expanded="true" signature="36090:36121" placeholder="..." />
+            <marker date="1467614439757" expanded="true" signature="36314:36330" placeholder="..." />
+            <marker date="1467614439757" expanded="true" signature="36331:36809" placeholder="..." />
+            <marker date="1467614439757" expanded="true" signature="36384:36809" placeholder="..." />
+            <marker date="1467614439757" expanded="true" signature="36412:36781" placeholder="..." />
+            <marker date="1467614439757" expanded="true" signature="36437:36752" placeholder="..." />
+            <marker date="1467614439757" expanded="true" signature="36901:37143" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
