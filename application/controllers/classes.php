@@ -67,7 +67,7 @@ class Classes extends CI_Controller {
             $this->form_validation->set_rules('class_teacher', 'Class Teacher', 'callback_validate_teacher_class');
         }
 
-        if ($this->form_validation->run() == FALSE) {
+        if (!$this->form_validation->run()) {
             $this->load->view('templates/header', $data);
             $this->load->view('navbar_main', $data);
             $this->load->view('navbar_sub', $data);
@@ -301,6 +301,18 @@ class Classes extends CI_Controller {
         } else {
             return TRUE;
         }
+    }
+
+    function update_grade() {
+      $data['user_type']=$this->session->userdata('user_type');
+      $data['page_title'] = "Classes";
+      $data['navbar'] = 'admin';
+
+      $this->load->view('templates/header',$data);
+      $this->load->view('navbar_main',$data);
+      $this->load->view('navbar_sub',$data);
+      $this->load->view('classes/update_grade_next_year');
+      $this->load->view('templates/footer',$data);
     }
 
 }

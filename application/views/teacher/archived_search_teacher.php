@@ -72,17 +72,17 @@
                                 <td><?php echo $row->nic_no; ?></td>
                                 <td><?php echo $row->full_name; ?></td>
                                 <td><?php echo $row->gender; ?></td>
-<!--                                <td><?php //echo $row->grade; ?></td>-->
-<!--                                <td><?php
-//                                    $med = $row->medium;
-//                                    if ($med == 's') {
-//                                        echo 'sin';
-//                                    } else if ($med == 't') {
-//                                        echo 'eng';
-//                                    } else if ($med == 'e') {
-//                                        echo 'tam';
-//                                    }
-                                    ?></td>-->
+                               <td><?php //echo $row->grade; ?></td>
+                                <td><?php
+                                    $med = $row->medium;
+                                   if ($med == 'S') {
+                                       echo 'Sinhala';
+                                   } else if ($med == 'T') {
+                                       echo 'Tamil';
+                                   } else if ($med == 'E') {
+                                      echo 'English';
+                                   }
+                                    ?></td>
                                 <td><?php echo $row->contact_mobile; ?></td>
 <!--                                <td><a href="<?php //echo base_url("index.php/teacher/view_profile") . "/" . $row->id; ?>" ><span class="glyphicon glyphicon-user" aria-hidden="true"></span></a></td>
                                 <td><a href="<?php //echo base_url("index.php/teacher/load_teacher") . "/" . $row->id; ?>"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a></td>-->

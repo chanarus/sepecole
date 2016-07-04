@@ -29,6 +29,11 @@
                             <span class="glyphicon glyphicon-folder-open text-warning"></span><a href="<?php echo base_url('index.php/classes/reports'); ?>">Reports</a>
                         </td>
                     </tr>
+                    <tr>
+                        <td>
+                            <span class="	glyphicon glyphicon-random text-warning"></span><a href="<?php echo base_url('index.php/classes/update_grade'); ?>">Auto Genarate Classes</a>
+                        </td>
+                    </tr>
                 </table>
             </div>
         </div>

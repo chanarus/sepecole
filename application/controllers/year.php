@@ -85,7 +85,6 @@ class Year extends CI_Controller {
             // Redirect Teachers to Calendar View
             redirect('year/current_adademic_year', 'refresh');
         } else {
-            // Redirect All Other Users to Calendar View
             redirect('year/current_adademic_year', 'refresh');
         }
     }
@@ -753,6 +752,3 @@ class Year extends CI_Controller {
     }
 
 }
-
-/* Coded by Udara Karunarathna @P0dda */
-/* Location: www.udara.info */

@@ -432,8 +432,12 @@ class Event_model extends CI_Model {
      */
     public function get_logged_user_nic($user) {
         try {
-            if($data=  $this->db->query("select nic_no from teachers where user_id='$user'")){
+            $data=  $this->db->query("select nic_no from teachers where user_id='$user'");
+            if($data->num_rows() > 0) {
                 return $data->row()->nic_no;
+            }
+            else {
+              return "Update Your Natinal Identity Card Number";
             }
         } catch (Exception $exc) {
             return NULL;
