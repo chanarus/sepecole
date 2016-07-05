@@ -36,12 +36,12 @@
                         <label for="inputEmail3" class="col-sm-2 control-label">Sport Name</label>
                         <div class="col-sm-5">
                             <select id="sportname" name="sportname" class="form-control">
-                                <option value="0" <?php if (set_value('Nationality') == '0') { echo "selected"; } ?>>Select Your Nationality</option>
-                                <option value="1" <?php if (set_value('Nationality') == '1') { echo "selected"; } ?>>Sinhala</option>
-                                <option value="2" <?php if (set_value('Nationality') == '2') { echo "selected"; } ?>>Sri Lankan Tamil</option>
-                                <option value="3" <?php if (set_value('Nationality') == '3') { echo "selected"; } ?>>Indian Tamil</option>
-                                <option value="4" <?php if (set_value('Nationality') == '4') { echo "selected"; } ?>>Muslim</option>
-                                <option value="5" <?php if (set_value('Nationality') == '5') { echo "selected"; } ?>>Other</option>
+                                <option value="0" <?php if (set_value('sportname') == '0') { echo "selected"; } ?>>Select a Sport</option>
+                                <option value="1" <?php if (set_value('sportname') == '1') { echo "selected"; } ?>>Cricket</option>
+                                <option value="2" <?php if (set_value('sportname') == '2') { echo "selected"; } ?>>Foot Ball</option>
+                                <option value="3" <?php if (set_value('sportname') == '3') { echo "selected"; } ?>>Rugby</option>
+                                <option value="4" <?php if (set_value('sportname') == '4') { echo "selected"; } ?>>Vally Ball</option>
+                                <option value="5" <?php if (set_value('sportname') == '5') { echo "selected"; } ?>>Base Ball</option>
                             </select>
                             <?php echo form_error('sportname'); ?>
                         </div>
@@ -51,12 +51,12 @@
                         <label for="inputEmail3" class="col-sm-2 control-label">Teacher Name</label>
                         <div class="col-sm-5">
                             <select id="teachername" name="teachername" class="form-control">
-                                <option value="0" <?php if (set_value('Nationality') == '0') { echo "selected"; } ?>>Select Your Nationality</option>
-                                <option value="1" <?php if (set_value('Nationality') == '1') { echo "selected"; } ?>>Sinhala</option>
-                                <option value="2" <?php if (set_value('Nationality') == '2') { echo "selected"; } ?>>Sri Lankan Tamil</option>
-                                <option value="3" <?php if (set_value('Nationality') == '3') { echo "selected"; } ?>>Indian Tamil</option>
-                                <option value="4" <?php if (set_value('Nationality') == '4') { echo "selected"; } ?>>Muslim</option>
-                                <option value="5" <?php if (set_value('Nationality') == '5') { echo "selected"; } ?>>Other</option>
+                                <option value="0" <?php if (set_value('teachername') == '0') { echo "selected"; } ?>>Select a Teacher</option>
+                                <option value="1" <?php if (set_value('teachername') == '1') { echo "selected"; } ?>>Sinhala</option>
+                                <option value="2" <?php if (set_value('teachername') == '2') { echo "selected"; } ?>>Sri Lankan Tamil</option>
+                                <option value="3" <?php if (set_value('teachername') == '3') { echo "selected"; } ?>>Indian Tamil</option>
+                                <option value="4" <?php if (set_value('teachername') == '4') { echo "selected"; } ?>>Muslim</option>
+                                <option value="5" <?php if (set_value('teachername') == '5') { echo "selected"; } ?>>Other</option>
                             </select>
                             <?php echo form_error('teachername'); ?>
                         </div>

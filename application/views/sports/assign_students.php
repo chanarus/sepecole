@@ -36,12 +36,12 @@
                         <label for="inputEmail3" class="col-sm-2 control-label">Student Name</label>
                         <div class="col-sm-5">
                             <select id="studname" name="studname" class="form-control">
-                                <option value="0" <?php if (set_value('Nationality') == '0') { echo "selected"; } ?>>Select Your Nationality</option>
-                                <option value="1" <?php if (set_value('Nationality') == '1') { echo "selected"; } ?>>Sinhala</option>
-                                <option value="2" <?php if (set_value('Nationality') == '2') { echo "selected"; } ?>>Sri Lankan Tamil</option>
-                                <option value="3" <?php if (set_value('Nationality') == '3') { echo "selected"; } ?>>Indian Tamil</option>
-                                <option value="4" <?php if (set_value('Nationality') == '4') { echo "selected"; } ?>>Muslim</option>
-                                <option value="5" <?php if (set_value('Nationality') == '5') { echo "selected"; } ?>>Other</option>
+                                <option value="0" <?php if (set_value('studname') == '0') { echo "selected"; } ?>>Select a Name</option>
+                                <option value="1" <?php if (set_value('studname') == '1') { echo "selected"; } ?>>Sinhala</option>
+                                <option value="2" <?php if (set_value('studname') == '2') { echo "selected"; } ?>>Sri Lankan Tamil</option>
+                                <option value="3" <?php if (set_value('studname') == '3') { echo "selected"; } ?>>Indian Tamil</option>
+                                <option value="4" <?php if (set_value('studname') == '4') { echo "selected"; } ?>>Muslim</option>
+                                <option value="5" <?php if (set_value('studname') == '5') { echo "selected"; } ?>>Other</option>
                             </select>
                             <?php echo form_error('studname'); ?>
                         </div>
@@ -56,13 +56,13 @@
                     <div class="form-group">
                         <label for="inputEmail3" class="col-sm-2 control-label">Sport Name</label>
                         <div class="col-sm-5">
-                            <select id="studname" name="studname" class="form-control">
-                                <option value="0" <?php if (set_value('Nationality') == '0') { echo "selected"; } ?>>Select Your Nationality</option>
-                                <option value="1" <?php if (set_value('Nationality') == '1') { echo "selected"; } ?>>Sinhala</option>
-                                <option value="2" <?php if (set_value('Nationality') == '2') { echo "selected"; } ?>>Sri Lankan Tamil</option>
-                                <option value="3" <?php if (set_value('Nationality') == '3') { echo "selected"; } ?>>Indian Tamil</option>
-                                <option value="4" <?php if (set_value('Nationality') == '4') { echo "selected"; } ?>>Muslim</option>
-                                <option value="5" <?php if (set_value('Nationality') == '5') { echo "selected"; } ?>>Other</option>
+                            <select id="name" name="name" class="form-control">
+                                <option value="0" <?php if (set_value('name') == '0') { echo "selected"; } ?>>Select a Sport</option>
+                                <option value="1" <?php if (set_value('name') == '1') { echo "selected"; } ?>>Cricket</option>
+                                <option value="2" <?php if (set_value('name') == '2') { echo "selected"; } ?>>Foot Ball</option>
+                                <option value="3" <?php if (set_value('name') == '3') { echo "selected"; } ?>>Rugby</option>
+                                <option value="4" <?php if (set_value('name') == '4') { echo "selected"; } ?>>Vally Ball</option>
+                                <option value="5" <?php if (set_value('name') == '5') { echo "selected"; } ?>>Base Ball</option>
                             </select>
                             <?php echo form_error('studname'); ?>
                         </div>
