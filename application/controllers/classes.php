@@ -311,11 +311,24 @@ class Classes extends CI_Controller {
       $data['page_title'] = "Classes";
       $data['navbar'] = 'admin';
 
-      $this->load->view('templates/header',$data);
-      $this->load->view('navbar_main',$data);
-      $this->load->view('navbar_sub',$data);
-      $this->load->view('classes/update_grade_next_year');
-      $this->load->view('templates/footer',$data);
+      $data['succ_message'] = $this->session->flashdata('succ_message');
+
+      $this->form_validation->set_rules('grade', 'Grade', 'required|callback_grade_selected');
+
+      if ($this->form_validation->run()) {
+        $grade = $this->input->post('grade');
+        $this->class_model->update_grade($grade);
+        $this->session->set_flashdata('succ_message', "Grade Updated");
+        redirect('classes/update_grade');
+      }
+      else {
+        $this->load->view('templates/header',$data);
+        $this->load->view('navbar_main',$data);
+        $this->load->view('navbar_sub',$data);
+        $this->load->view('classes/update_grade_next_year');
+        $this->load->view('templates/footer',$data);
+      }
+
     }
 
 }

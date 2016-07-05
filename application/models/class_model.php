@@ -16,7 +16,7 @@ class Class_Model extends CI_Model {
     }
 
 //    public function get_all_classes(){
-//        $sql = 
+//        $sql =
 //    }
 
     public function create_class($class) {
@@ -181,10 +181,22 @@ class Class_Model extends CI_Model {
         $sql = "SELECT s.*, c.* FROM students s, student_class c ";
         $sql .= "WHERE c.student_id = s.id AND c.academic_year ='{$academic_year}'";
     }
-    
+
     public function get_class_name($class_id){
         $class = $this->db->get_where('classes', array('id' => $class_id), 1)->row();
         return $class->grade_id . " " .$class->name;
+    }
+
+    public function update_grade($grade) {
+      $new_garde = $grade-1;
+      $sql = "SELECT `id` FROM `students` WHERE `current_grade`='{$new_garde}' ";
+
+      if ($this->db->query($sql)->num_rows() > 0) {
+          $sql = "UPDATE `students` SET `current_grade`='{$grade}' WHERE `current_grade`='{$new_garde}'";
+          $this->db->query($sql);
+      } else {
+          return FALSE;
+      }
     }
 
 }
