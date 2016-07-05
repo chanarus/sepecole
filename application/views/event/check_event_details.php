@@ -72,7 +72,7 @@
                                 <div class="well well-lg">
                                     <i class="fa fa-exclamation-triangle fa-5x"></i>
                                     <div class="">
-                                        <h2>No Canceled Leaves</h2>
+                                        <h2>No Canceled Events</h2>
                                     </div>
                                 </div>
                             </div>
