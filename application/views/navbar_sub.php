@@ -7,7 +7,7 @@
     <div class="container">
       <ul class="mainnav">
         <li <?php if($navbar == 'dashboard'){ echo "class='active'";} ?> ><a href="<?php echo base_url('index.php/dashboard'); ?>"><i class="glyphicon glyphicon-home"></i><span>Home</span> </a> </li>
-        <li <?php if($navbar == 'teacher'){ echo "class='active'";} ?> ><a href="<?php echo base_url('index.php/teacher'); ?>"><i class="glyphicon glyphicon-user"></i><span>Teachers</span> </a> </li>
+        <li <?php if($navbar == 'teacher'){ echo "class='active'";} ?> ><a href="<?php echo base_url('index.php/teacher'); ?>"><i class="glyphicon glyphicon-user"></i><span>Academic Staff</span> </a> </li>
         <li <?php if($navbar == 'leave'){ echo "class='active'";} ?> ><a href="<?php echo base_url('index.php/leave'); ?>"><i class="glyphicon glyphicon-bed"></i><span>Leaves</span> </a> </li>
          <?php if($this->session->userdata['user_type'] == 'A') {?><li <?php if($navbar == 'attendance'){ echo "class='active'";} ?> ><a href="<?php echo base_url('index.php/attendance'); ?>"><i class="glyphicon glyphicon-list-alt"></i><span>Attendance</span> </a> </li><?php } ?>
         <?php if($this->session->userdata['user_type'] == 'A') {?><li <?php if($navbar == 'timetable') { echo "class='active'";} ?>><a href="<?php echo base_url('index.php/timetable'); ?>"><i class="glyphicon glyphicon-time"></i><span>Timetable</span> </a> </li><?php } ?>
