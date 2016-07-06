@@ -4,7 +4,7 @@
  *
  * Handles DB Functionalities of the Student component
  *
- *
+ * @author  Sampath R.P.C.
  */
 
 class Student_Model extends CI_Model {

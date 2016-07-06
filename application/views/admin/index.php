@@ -75,7 +75,13 @@
                     <span class="sub">Get and restore backups...</span>
                 </a>
             </div>
-
+            <div class="admin-btn">
+                <i class="fa fa-certificate"></i>
+                <a href="<?php echo base_url('/index.php/certificate'); ?>">
+                    <span class="main">Certificates</span>
+                    <span class="sub">Genarate Certificates...</span>
+                </a>
+            </div>
         </div>
     </div>
 </div>
