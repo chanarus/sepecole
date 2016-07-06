@@ -13,8 +13,8 @@ class Sports extends CI_Controller {
     
     function index(){
         $data['user_type'] = $this->session->userdata['user_type'];
-        $data['page_title'] = "System Administration";
-        $data['navbar'] = "admin";
+        $data['page_title'] = "Sports";
+        $data['navbar'] = "sports";
         $data['det'] = $this->sports_model->view_sport_category();
         $this->load->view('templates/header', $data);
         $this->load->view('navbar_main', $data);
@@ -79,8 +79,8 @@ class Sports extends CI_Controller {
     
      function assign_leaders(){
         $data['user_type'] = $this->session->userdata['user_type'];
-        $data['page_title'] = "System Administration";
-        $data['navbar'] = "admin";
+        $data['page_title'] = "Sports";
+        $data['navbar'] = "sports";
 
         $this->load->view('templates/header', $data);
         $this->load->view('navbar_main', $data);
@@ -91,8 +91,8 @@ class Sports extends CI_Controller {
     
     function assign_students(){
         $data['user_type'] = $this->session->userdata['user_type'];
-        $data['page_title'] = "System Administration";
-        $data['navbar'] = "admin";
+        $data['page_title'] = "Sports";
+        $data['navbar'] = "sports";
 
         $this->load->view('templates/header', $data);
         $this->load->view('navbar_main', $data);
@@ -103,8 +103,8 @@ class Sports extends CI_Controller {
     
     function management_details(){
         $data['user_type'] = $this->session->userdata['user_type'];
-        $data['page_title'] = "System Administration";
-        $data['navbar'] = "admin";
+        $data['page_title'] = "Sports";
+        $data['navbar'] = "sports";
 
         $this->load->view('templates/header', $data);
         $this->load->view('navbar_main', $data);

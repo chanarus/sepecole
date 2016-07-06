@@ -73,10 +73,10 @@
 
                 </div>
             </div>
-            <a name="eventrequest"></a>
+            <a name="sports"></a>
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <strong>Event Request Status</strong>
+                    <strong>Sports</strong>
                 </div>
                 <div class="panel-body">
                     <table class="table table-hover">
