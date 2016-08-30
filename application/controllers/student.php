@@ -2,9 +2,12 @@
 /**
  * Ecole - Student Controller
  *
- * Handles Functionality of the student compodent(manage student)
+ * Handles Functionality of the student component(manage student)
  *
  * @author  Sampath R.P.C.
+ *
+ * test
+ *
  */
 class Student extends CI_Controller {
     /**

@@ -75,6 +75,13 @@
                     <span class="sub">Get and restore backups...</span>
                 </a>
             </div>
+            <div class="admin-btn">
+                <i class="fa fa fa-file-text-o"></i>
+                <a href="<?php echo base_url('index.php/classes'); ?>">
+                    <span class="main">Student Grades</span>
+                    <span class="sub">Students mark log...</span>
+                </a>
+                </div>
 
         </div>
     </div>
