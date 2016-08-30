@@ -22,11 +22,11 @@
             <div class="row">
                 <div class="col-md-7">
                     <?php
-            $attributes = array(
-                'class' => 'form-inline'
-            );
-            echo form_open('teacher/search_one', $attributes);
-            ?>
+                    $attributes = array(
+                        'class' => 'form-inline'
+                    );
+                    echo form_open('teacher/search_one', $attributes);
+                    ?>
                     <div class="form-group">
                         <input type="text" id="nic" name="nic" class="form-control" placeholder="Search.." size="50">
                     </div>
@@ -52,49 +52,19 @@
                         </script>
                         <table id="example" class="table table-hover">
                             <thead>
-                            <tr>
-                                <th>#</th>
-                                <th>NIC</th>
-                                <th>Name</th>
-                                <th>Gender</th>
-                                <th>Grade</th>
-                                <th>Medium</th>
-                                <th>Contact</th>
-                                <td>Actions</td>
+                                <tr>
+                                    <th>#</th>
+                                    <th>NIC</th>
+                                    <th>Name</th>
+                                    <th>Gender</th>
+                                    <th>Grade</th>
+                                    <th>Medium</th>
+                                    <th>Contact</th>
+                                    <td>Actions</td>
 
-                            </tr>
+                                </tr>
                             </thead>
                             <tbody>
-<<<<<<< HEAD
-                            <?php foreach ($result as $row) { ?>
-                                <tr>
-                                    <td><?php echo $row->id; ?></td>
-                                    <td><?php echo $row->nic_no; ?></td>
-                                    <td><?php echo $row->full_name; ?></td>
-                                    <td><?php  $gender=$row->gender;
-                                        if ($gender == 'm') {
-                                            echo 'Male';
-                                        } else if ($gender == 'f') {
-                                            echo 'Female';
-                                        }
-                                        ?></td>
-                                    <td><?php echo $row->grade; ?></td>
-                                    <td><?php
-                                        $med = $row->medium;
-                                        if ($med == 's') {
-                                            echo 'sin';
-                                        } else if ($med == 'e') {
-                                            echo 'eng';
-                                        } else if ($med == 't') {
-                                            echo 'tam';
-                                        }
-                                        ?></td>
-                                    <td><?php echo $row->contact_mobile; ?></td>
-                                    <td>
-                                        <a href="<?php echo base_url("index.php/profile") . "?key=" . $row->user_id;?>" class="btn btn-primary btn-xs" aria-hidden="true"><i class="fa fa-eye"></i></a>
-                                        <a href="<?php echo base_url("index.php/teacher/load_teacher") . "/" . $row->id; ?>" class="btn btn-primary btn-xs" aria-hidden="true"><i class="fa fa-edit"></i></a>&nbsp;
-                                        <a id="delete-user" data-user-id="<?php echo $row->user_id; ?>" class="btn btn-danger btn-xs del" aria-hidden="true"><i class="fa fa-trash"></i></a></td>
-=======
                                 <?php foreach ($result as $row) { ?>
                             <tr>
                                 <td><?php echo $row->id; ?></td>
@@ -123,37 +93,36 @@
                                 <a href="<?php echo base_url("index.php/profile") . "?key=" . $row->user_id;?>" class="btn btn-primary btn-xs" aria-hidden="true"><i class="fa fa-eye"></i></a>
                                 <a href="<?php echo base_url("index.php/teacher/load_teacher") . "/" . $row->id; ?>" class="btn btn-primary btn-xs" aria-hidden="true"><i class="fa fa-edit"></i></a>&nbsp;
                                 <a id="delete-user" data-user-id="<?php echo $row->user_id; ?>" class="btn btn-danger btn-xs del" aria-hidden="true"><i class="fa fa-trash"></i></a></td>
->>>>>>> 0753797923f921aa42333922ef5ee4d7ff33ff13
 
-                                </tr>
-                            <?php } ?>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
+                            </tr>
+                        <?php } ?>
+                    </tbody>
+                </table>
             </div>
         </div>
-        <script>
-            $('.del').click(function() {
-                var userId = $(this).attr("data-user-id");
-                deleteUser(userId);
-            });
+    </div>
+</div>
+<script>
+  $('.del').click(function() {
+    var userId = $(this).attr("data-user-id");
+    deleteUser(userId);
+  });
 
-            function deleteUser(userId) {
+  function deleteUser(userId) {
 
-                swal({
-                    title: "Are you sure?",
-                    text: "Are you sure that you want to delete this user?",
-                    type: "warning",
-                    showCancelButton: true,
-                    closeOnConfirm: false,
-                    confirmButtonText: "Yes, delete it!",
-                    confirmButtonColor: "#ec6c62"
-                }, function() {
-                    window.location.href = "<?php echo base_url("index.php/teacher/archive_teacher") ?>" + "/" + userId;
-                });
+    swal({
+      title: "Are you sure?",
+      text: "Are you sure that you want to delete this user?",
+      type: "warning",
+      showCancelButton: true,
+      closeOnConfirm: false,
+      confirmButtonText: "Yes, delete it!",
+      confirmButtonColor: "#ec6c62"
+    }, function() {
+        window.location.href = "<?php echo base_url("index.php/teacher/archive_teacher") ?>" + "/" + userId;
+    });
 
 
-            }
+  }
 
-        </script>
+  </script>
