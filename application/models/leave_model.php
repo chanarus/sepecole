@@ -1,12 +1,10 @@
 <?php
 /**
  * Ecole - Leave Model
- * 
+ *
  * Handles the Leave Model Functions
- * 
- * @author  Udara Karunarathna
- * @copyright (c) 2015, Ecole. (http://projectecole.com)
- * @link http://projectecole.com
+ *
+ * @author  Sampath R.P.C.
  */
 class Leave_Model extends CI_Model {
 
@@ -60,7 +58,7 @@ class Leave_Model extends CI_Model {
             $query = $this->db->get('leave_types');
             $row = $query->row();
             return $row->max_leave_count;
-			
+
 		} catch (Exception $ex) {
 			return FALSE;
 		}
@@ -85,9 +83,9 @@ class Leave_Model extends CI_Model {
                 $query = $this->db->query("SELECT sum(no_of_days) as days FROM apply_leaves al WHERE user_id = '$uid' AND (YEAR(CURDATE())=YEAR(al.start_date)) AND leave_type_id = '$leave_type'  AND al.is_half_day = 1 AND (leave_status = '1' OR leave_status='0')");
                 $row = $query->row();
                 $half_days = ($row->days)/2;
-                
+
                 return $half_days+$normal_days;
-                
+
             } catch (Exception $e) {
                 return FALSE;
             }
@@ -96,7 +94,7 @@ class Leave_Model extends CI_Model {
                 $query = $this->db->query("SELECT sum(no_of_days) as days FROM apply_leaves al WHERE user_id = '$uid' AND (YEAR(CURDATE())=YEAR(al.start_date)) AND leave_type_id = '$leave_type' AND (leave_status = '1' OR leave_status='0')");
                 $row = $query->row();
                 return $row->days;
-                
+
             } catch (Exception $e) {
                 return FALSE;
             }
@@ -438,7 +436,7 @@ class Leave_Model extends CI_Model {
         }
     }
 
-     /*
+    /*
     * Function to get applied short leaves count
     *
     * @param  int uid

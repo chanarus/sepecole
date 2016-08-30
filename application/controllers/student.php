@@ -129,6 +129,10 @@ class Student extends CI_Controller {
             $fname=$this->input->post('firstname');
             $lname=$this->input->post('lastname');
             $fullname = $fname . " " . $lname;
+            $address = $this->input->post('address');
+            $address1 = $this->input->post('address1');
+            $address2 = $this->input->post('address2');
+            $full_addr = $address.",".$address1.",".$address2.".";
 
             $student_data = array(
                 // 'studentid' => $student_id,
@@ -142,7 +146,7 @@ class Student extends CI_Controller {
                 'language' => $this->input->post('language'),
                 'religion' => $this->input->post('religion'),
                 'house_id' => $this->input->post('houseid'),
-                'permanent_addr' => $this->input->post('address'),
+                'permanent_addr' => $this.$full_addr,
                 'contact_home' => $this->input->post('contact_home'),
                 'email' => $this->input->post('email'),
                 'created_at' => date('Y-m-d H:i:s'),

@@ -235,7 +235,10 @@
                             <div class="col-md-5 col-md-push-1  form-group">
 
                                 <label for="address">Permenent Address</label>
-                                <textarea name="address" value="" class="form-control" id="address"><?php echo set_value('address'); ?></textarea>
+                                <!--<textarea name="address" value="" class="form-control" id="address"><?php echo set_value('address'); ?></textarea>-->
+                                <input type="text" name="address" value="<?php echo set_value('address'); ?>" class="form-control" id="address">
+                                <input type="text" name="address1" value="<?php echo set_value('address1'); ?>" class="form-control" id="address1">
+                                <input type="text" name="address2" value="<?php echo set_value('address2'); ?>" class="form-control" id="address2">
                                 <div><?php echo form_error('address'); ?></div>
 
                             </div>
