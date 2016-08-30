@@ -76,13 +76,22 @@
                 </a>
             </div>
             <div class="admin-btn">
+<<<<<<< HEAD
                 <i class="fa fa fa-file-text-o"></i>
                 <a href="<?php echo base_url('index.php/classes'); ?>">
                     <span class="main">Student Grades</span>
                     <span class="sub">Students mark log...</span>
                 </a>
-                </div>
+            </div>
 
+=======     <div class="admin-btn">
+                <i class="fa fa-certificate"></i>
+                <a href="<?php echo base_url('/index.php/certificate'); ?>">
+                    <span class="main">Certificates</span>
+                    <span class="sub">Genarate Certificates...</span>
+                </a>
+            </div>
+>>>>>>> 93e027ad8843007c4bf426a684754c88c509209e
         </div>
     </div>
 </div>

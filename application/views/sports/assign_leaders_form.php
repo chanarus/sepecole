@@ -22,80 +22,6 @@
 
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <strong>ASSIGN SPORT HEADS</strong>
-                </div>
-                <div class="panel-body">
-                    <?php
-                    // Change the css classes to suit your needs    
-
-                    $attributes = array('class' => 'form-horizontal', 'id' => '');
-                    echo form_open('', $attributes);
-                    ?>
-
-                    <div class="form-group">
-                        <label for="inputEmail3" class="col-sm-2 control-label">Sport Name</label>
-                        <div class="col-sm-5">
-                            <select id="sportname" name="sportname" class="form-control">
-                                <option value="0" <?php if (set_value('Nationality') == '0') { echo "selected"; } ?>>Select Your Nationality</option>
-                                <option value="1" <?php if (set_value('Nationality') == '1') { echo "selected"; } ?>>Sinhala</option>
-                                <option value="2" <?php if (set_value('Nationality') == '2') { echo "selected"; } ?>>Sri Lankan Tamil</option>
-                                <option value="3" <?php if (set_value('Nationality') == '3') { echo "selected"; } ?>>Indian Tamil</option>
-                                <option value="4" <?php if (set_value('Nationality') == '4') { echo "selected"; } ?>>Muslim</option>
-                                <option value="5" <?php if (set_value('Nationality') == '5') { echo "selected"; } ?>>Other</option>
-                            </select>
-                            <?php echo form_error('sportname'); ?>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="inputEmail3" class="col-sm-2 control-label">Teacher Name</label>
-                        <div class="col-sm-5">
-                            <select id="teachername" name="teachername" class="form-control">
-                                <option value="0" <?php if (set_value('Nationality') == '0') { echo "selected"; } ?>>Select Your Nationality</option>
-                                <option value="1" <?php if (set_value('Nationality') == '1') { echo "selected"; } ?>>Sinhala</option>
-                                <option value="2" <?php if (set_value('Nationality') == '2') { echo "selected"; } ?>>Sri Lankan Tamil</option>
-                                <option value="3" <?php if (set_value('Nationality') == '3') { echo "selected"; } ?>>Indian Tamil</option>
-                                <option value="4" <?php if (set_value('Nationality') == '4') { echo "selected"; } ?>>Muslim</option>
-                                <option value="5" <?php if (set_value('Nationality') == '5') { echo "selected"; } ?>>Other</option>
-                            </select>
-                            <?php echo form_error('teachername'); ?>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="col-sm-offset-2 col-sm-10">
-                            <input type="submit" class="btn btn-primary" value="Add">
-                            <button type="reset" class="btn btn-default">Reset</button>
-                        </div>
-                    </div>
-                    <?php echo form_close(); ?>
-
-                </div>
-                    <table class="table table-hover">
-                        <thead>
-                            <tr>
-                                <th>#</th>
-                                <th>Sport Name</th>
-                                <th>Description</th>
-                                <th>Age Category</th>
-                                <th></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>Cricket</td>
-                                <td>One of the greatest sport</td>
-                                <td>under 12</td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                    </table>
-
-
-            </div>
-            
-            <div class="panel panel-default">
-                <div class="panel-heading">
                     <strong>ASSIGN SPORT CAPTAINS</strong>
                 </div>
                 <div class="panel-body">
@@ -109,13 +35,13 @@
                     <div class="form-group">
                         <label for="inputEmail3" class="col-sm-2 control-label">Sport Name</label>
                         <div class="col-sm-5">
-                            <select id="teachername" name="teachername" class="form-control">
-                                <option value="0" <?php if (set_value('Nationality') == '0') { echo "selected"; } ?>>Select Your Nationality</option>
-                                <option value="1" <?php if (set_value('Nationality') == '1') { echo "selected"; } ?>>Sinhala</option>
-                                <option value="2" <?php if (set_value('Nationality') == '2') { echo "selected"; } ?>>Sri Lankan Tamil</option>
-                                <option value="3" <?php if (set_value('Nationality') == '3') { echo "selected"; } ?>>Indian Tamil</option>
-                                <option value="4" <?php if (set_value('Nationality') == '4') { echo "selected"; } ?>>Muslim</option>
-                                <option value="5" <?php if (set_value('Nationality') == '5') { echo "selected"; } ?>>Other</option>
+                            <select id="name" name="name" class="form-control">
+                                <option value="0" <?php if (set_value('name') == '0') { echo "selected"; } ?>>Select a Sport</option>
+                                <option value="1" <?php if (set_value('name') == '1') { echo "selected"; } ?>>Cricket</option>
+                                <option value="2" <?php if (set_value('name') == '2') { echo "selected"; } ?>>Foot Ball</option>
+                                <option value="3" <?php if (set_value('name') == '3') { echo "selected"; } ?>>Rugby</option>
+                                <option value="4" <?php if (set_value('name') == '4') { echo "selected"; } ?>>Vally Ball</option>
+                                <option value="5" <?php if (set_value('name') == '5') { echo "selected"; } ?>>Base Ball</option>
                             </select>
                             <?php echo form_error('teachername'); ?>
                         </div>
@@ -177,11 +103,11 @@
                     <div class="form-group">
                         <label for="inputEmail3" class="col-sm-2 control-label">Devision</label>
                         <div class="col-sm-5">
-                            <select id="devision" name="devision" class="form-control">
-                                <option value="0" <?php if (set_value('devision') == '0') { echo "selected"; } ?>>Select Devision</option>
-                                <option value="1" <?php if (set_value('devision') == '1') { echo "selected"; } ?>>Devision1</option>
-                                <option value="2" <?php if (set_value('devision') == '2') { echo "selected"; } ?>>Devision2</option>
-                                <option value="3" <?php if (set_value('devision') == '3') { echo "selected"; } ?>>Devision3</option>
+                            <select id="division" name="division" class="form-control">
+                                <option value="0" <?php if (set_value('division') == '0') { echo "selected"; } ?>>Select Division</option>
+                                <option value="1" <?php if (set_value('division') == '1') { echo "selected"; } ?>>Division1</option>
+                                <option value="2" <?php if (set_value('division') == '2') { echo "selected"; } ?>>Division2</option>
+                                <option value="3" <?php if (set_value('division') == '3') { echo "selected"; } ?>>Division3</option>
                             </select>
                             <?php echo form_error('teachername'); ?>
                         </div>
@@ -189,11 +115,11 @@
                     <div class="form-group">
                         <label for="inputEmail3" class="col-sm-2 control-label">Captain Name</label>
                         <div class="col-sm-5">
-                            <select id="devision" name="devision" class="form-control">
-                                <option value="0" <?php if (set_value('devision') == '0') { echo "selected"; } ?>>Select Devision</option>
-                                <option value="1" <?php if (set_value('devision') == '1') { echo "selected"; } ?>>Devision1</option>
-                                <option value="2" <?php if (set_value('devision') == '2') { echo "selected"; } ?>>Devision2</option>
-                                <option value="3" <?php if (set_value('devision') == '3') { echo "selected"; } ?>>Devision3</option>
+                            <select id="captain" name="captain" class="form-control">
+                                <option value="0" <?php if (set_value('captain') == '0') { echo "selected"; } ?>>Select a Captain</option>
+                                <option value="1" <?php if (set_value('captain') == '1') { echo "selected"; } ?>>Devision1</option>
+                                <option value="2" <?php if (set_value('captain') == '2') { echo "selected"; } ?>>Devision2</option>
+                                <option value="3" <?php if (set_value('captain') == '3') { echo "selected"; } ?>>Devision3</option>
                             </select>
                             <?php echo form_error('teachername'); ?>
                         </div>
@@ -205,11 +131,11 @@
                     <div class="form-group">
                         <label for="inputEmail3" class="col-sm-2 control-label">Vice Captain Name</label>
                         <div class="col-sm-5">
-                            <select id="devision" name="devision" class="form-control">
-                                <option value="0" <?php if (set_value('devision') == '0') { echo "selected"; } ?>>Select Devision</option>
-                                <option value="1" <?php if (set_value('devision') == '1') { echo "selected"; } ?>>Devision1</option>
-                                <option value="2" <?php if (set_value('devision') == '2') { echo "selected"; } ?>>Devision2</option>
-                                <option value="3" <?php if (set_value('devision') == '3') { echo "selected"; } ?>>Devision3</option>
+                            <select id="vice captain" name="vice captain" class="form-control">
+                                <option value="0" <?php if (set_value('vice captain') == '0') { echo "selected"; } ?>>Select a Vice Captain</option>
+                                <option value="1" <?php if (set_value('vice captain') == '1') { echo "selected"; } ?>>Devision1</option>
+                                <option value="2" <?php if (set_value('vice captain') == '2') { echo "selected"; } ?>>Devision2</option>
+                                <option value="3" <?php if (set_value('vice captain') == '3') { echo "selected"; } ?>>Devision3</option>
                             </select>
                             <?php echo form_error('teachername'); ?>
                         </div>

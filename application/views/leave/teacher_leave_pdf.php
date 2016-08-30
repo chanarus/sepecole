@@ -29,9 +29,9 @@
 ?>
 <div class="row">
     <div class="col-md-12 col-md-offset-*">
-        <table class="table table-hover">
+        <table class="table table-bordered">
             <thead>
-                <tr>
+                <tr align="center">
                     <th></th>
                     <th>Leave Type</th>
                     <th>Applied Date</th>
@@ -44,7 +44,7 @@
             <tbody>
             <?php
                                         foreach ($applied_leaves as $row) {
-                                            echo "<tr>" . PHP_EOL;
+                                            echo "<tr align='center'>" . PHP_EOL;
                                             echo "<td scope='row'><span class='glyphicon glyphicon-folder-close'></span></td>";
                                             echo "<td>" . $row->name . "</td>" . PHP_EOL;
                                             echo "<td>" . $row->applied_date . "</td>" . PHP_EOL;

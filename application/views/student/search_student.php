@@ -100,7 +100,7 @@
                         <table class="table table-hover" id="table_id">
                             <thead>
                                 <tr>
-                                    <th>#333</th>
+                                    <th>#</th>
                                     <th>id</th>
                                     <th>Admission No</th>
                                     <th>Name</th>

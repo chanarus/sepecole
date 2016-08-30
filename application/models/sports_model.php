@@ -21,8 +21,6 @@ class Sports_Model extends CI_Model {
     
     public function sport_category_details($id) {
         $data = $this->db->query("select * from sport_category where id='$id'");
-        //echo $data->row()->name;
-        //exit;
         return $data->row();
     }
 }
