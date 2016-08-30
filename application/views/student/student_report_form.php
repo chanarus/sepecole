@@ -5,7 +5,7 @@
         </div>
         <div class="col-md-9">
             <div class="panel panel-default">
-                <div class="panel-heading">Generate Teacher Reports</div>
+                <div class="panel-heading">Generate Student Reports</div>
                 <div class="panel-body">
                     <?php
                     // Change the css classes to suit your needs    
@@ -21,7 +21,7 @@
                                 </a>
                             </div>
                             <div class="media-body">
-                                <h4 class="media-heading">student Report</h4>
+                                <h4 class="media-heading">Student Report</h4>
                                 There are two report types. "Section" report and "class" report. In Section report, you can
                                 print section wise reports. In Class report, you can print class wise report. 
                             </div>

@@ -75,7 +75,7 @@
     </tr>
     <tr>
         <td><label>Address</label></td>
-        <td><label><?php echo $user_id->addr; ?></label></td>
+        <td><label><?php echo $user_id->addr.",". $user_id->addr1; ?></label></td>
     </tr>
     
     <tr>

@@ -128,7 +128,7 @@
                             </tr>
                             <tr>
                                 <td class="subheadng">Address</td>
-                                <td class="normal"><?= $personal->permanent_addr; ?></td>
+                                <td class="normal"><?= $personal->permanent_addr.",".$personal->permanent_addr1.",".$personal->permanent_addr2; ?></td>
                                 <td class="subheadng">&nbsp;  </td>
                                 <td class="normal">&nbsp; </td>        
                             </tr>
@@ -185,7 +185,7 @@
                                 <td class="subheadng">Occupation</td>
                                 <td class="normal"><?= $guardian->occupation; ?></td>
                                 <td class="subheadng">Address</td>
-                                <td class="normal"><?= $guardian->addr; ?></td>
+                                <td class="normal"><?= $guardian->addr.",".$guardian->addr1.",".$guardian->addr2; ?></td>
                             </tr>
                             <tr>
                                 <td class="subheadng">Birthday</td>
