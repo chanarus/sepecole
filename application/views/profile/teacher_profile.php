@@ -162,11 +162,13 @@
                             </tr>
                             <tr>
                                 <td class="subheadng">Address</td>
-                                <td class="normal"><?= $details->permanent_addr; ?></td>
+                                <td class="normal"><?= $details->permanent_addr; ?>,
+                                                   <?= $details->permanent_addr1; ?>,
+                                                   <?= $details->permanent_addr2; ?></td>
                                 <td class="subheadng">&nbsp;  </td>
-                                <td class="normal">&nbsp; </td>        
-                            </tr>
+                                <td class="normal">&nbsp; </td>
 
+                            </tr>
 
 
                         </tbody></table>
@@ -365,12 +367,12 @@
                         echo $details->increment_date;
                     }; ?></td>
                                 <td class="subheadng">&nbsp;  </td>
-                                <td class="normal">&nbsp; </td>        
+                                <td class="normal">&nbsp; </td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
-                                <?php if (isset($year)) { ?>  
+                                <?php if (isset($year)) { ?>
                     <div class="bhoechie-tab-content hide">
                         <br>
 
@@ -383,35 +385,35 @@
 
 
                             <div class="row" style="margin-bottom:5px;">
-                                <div class="col-md-4"><b>Name : </b><?php echo $row->name ?></div>   
+                                <div class="col-md-4"><b>Name : </b><?php echo $row->name ?></div>
                             </div>
                             <div class="row" style="margin-bottom:5px;">
-                                <div class="col-md-4"></i><b>Starts On : </b><?php echo $row->start_date ?></div>  
-                                <div class="col-md-4"></i><b>Ends On : </b><?php echo $row->end_date ?></div>    
+                                <div class="col-md-4"></i><b>Starts On : </b><?php echo $row->start_date ?></div>
+                                <div class="col-md-4"></i><b>Ends On : </b><?php echo $row->end_date ?></div>
                             </div>
 
                             <hr>
 
                             <div class="row" style="margin-bottom:5px;">
-                                <div class="col-md-4"><b>Term 01</b></div>   
+                                <div class="col-md-4"><b>Term 01</b></div>
                             </div>
                             <div class="row" style="margin-bottom:5px;  margin-top:10px;">
-                                <div class="col-md-4"><b>Start Date : </b><?php echo $row->t1_start_date ?></div>  
-                                <div class="col-md-4"><b>End Date : </b><?php echo $row->t1_end_date ?></div>    
+                                <div class="col-md-4"><b>Start Date : </b><?php echo $row->t1_start_date ?></div>
+                                <div class="col-md-4"><b>End Date : </b><?php echo $row->t1_end_date ?></div>
                             </div>
                             <div class="row" style="margin-bottom:5px;  margin-top:10px;">
-                                <div class="col-md-4"><b>Term 02</b></div>   
+                                <div class="col-md-4"><b>Term 02</b></div>
                             </div>
                             <div class="row" style="margin-bottom:5px;">
-                                <div class="col-md-4"><b>Start Date : </b><?php echo $row->t2_start_date ?></div>  
-                                <div class="col-md-4"><b>End Date : </b><?php echo $row->t2_end_date ?></div>    
+                                <div class="col-md-4"><b>Start Date : </b><?php echo $row->t2_start_date ?></div>
+                                <div class="col-md-4"><b>End Date : </b><?php echo $row->t2_end_date ?></div>
                             </div>
                             <div class="row" style="margin-bottom:5px; margin-top:10px;">
-                                <div class="col-md-4"><b>Term 03</b></div>   
+                                <div class="col-md-4"><b>Term 03</b></div>
                             </div>
                             <div class="row" style="margin-bottom:5px;">
-                                <div class="col-md-4"><b>Start Date : </b><?php echo $row->t3_start_date ?></div>  
-                                <div class="col-md-4"><b>End Date : </b><?php echo $row->t3_end_date ?></div>   <div class="col-md-4"><div class="col-md-6"><span  style="color: #00BCD4;font-size: 11px;font-weight: bold;">School Holidays</span></div><div class="col-md-6"><span style="color: red;font-size: 11px;font-weight: bold;">Public Holidays</span></div></div> 
+                                <div class="col-md-4"><b>Start Date : </b><?php echo $row->t3_start_date ?></div>
+                                <div class="col-md-4"><b>End Date : </b><?php echo $row->t3_end_date ?></div>   <div class="col-md-4"><div class="col-md-6"><span  style="color: #00BCD4;font-size: 11px;font-weight: bold;">School Holidays</span></div><div class="col-md-6"><span style="color: red;font-size: 11px;font-weight: bold;">Public Holidays</span></div></div>
 
 
                                 <div class="row" style="margin-bottom:5px;">
@@ -429,10 +431,10 @@
                                         // foreach ($final as $key => $value) {
                                         //     echo "Key: $key; Value: $value";
                                         //     echo "<br />";
-                                        // }  
+                                        // }
                                         ?>
 
-                                    </div>   
+                                    </div>
                                 </div>
                                 <div class="row" style="margin-bottom:5px;">
                                     <div align="center">
@@ -511,7 +513,7 @@
                                                     //Class set for Holidays
                                                     // $class .= ($pos==6) ? ' weekend' : '';
                                                     // $class .= ($pos==0) ? ' weekend' : '';
-                                                    // echo '<td class="'.$class.'">'.'<a href="'.$href.'">' .$day. '</a>' . '</td>'; 
+                                                    // echo '<td class="'.$class.'">'.'<a href="'.$href.'">' .$day. '</a>' . '</td>';
 
                                                     echo '<td class="' . $class . '">' . $day . '</td>';
 
@@ -542,8 +544,8 @@
                                             text-align: center;
                                         }
                                         .calendar .year{
-                                            font-family:Verdana; 
-                                            font-size:18pt; 
+                                            font-family:Verdana;
+                                            font-size:18pt;
                                             color:#ff9900;
                                         }
                                         .calendar .month{

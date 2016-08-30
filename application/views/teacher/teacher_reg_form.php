@@ -25,7 +25,7 @@
                 </div>
                 <div class="panel-body">
                     <?php
-                    // Change the css classes to suit your needs    
+                    // Change the css classes to suit your needs
 
                     $attributes = array('class' => 'form-horizontal', 'id' => '');
                     echo form_open('teacher/create', $attributes);
@@ -134,9 +134,11 @@
                         <label for="inputEmail3" class="col-sm-2 control-label">*Address</label>
                         <div class="col-sm-4">
 
-                            <input id="address" type="text" name="address"  value="<?php echo set_value('address'); ?>" type="text" class="form-control" id="address" placeholder="Address">
+                            <input id="address" type="text" name="address"  value="<?php echo set_value('address'); ?>" type="text" class="form-control" id="address" placeholder="Address 1">
                             <?php echo form_error('address'); ?>
                         </div>
+
+
 <!--                    </div>
 
                     <div class="form-group">-->
@@ -148,16 +150,35 @@
                         </div>
                     </div>
 
+
+
                     <div class="form-group" style="margin-right: 2em">
+
+                     <label for="inputEmail3" class="col-sm-2 control-label"></label>
+                      <div class="col-sm-4">
+
+                          <input id="address1" type="text" name="address1"  value="<?php echo set_value('address1'); ?>" type="text" class="form-control" id="address1" placeholder="Address 2">
+                          <?php echo form_error('address1'); ?>
+                      </div>
+
                         <label for="inputEmail3" class="col-sm-2 control-label">Contact Home</label>
                         <div class="col-sm-4">
 
                             <input id="contactHome" type="text" name="contactHome"  value="<?php echo set_value('contactHome'); ?>" type="text" class="form-control" id="contactHome" placeholder="Contact Home">
                             <?php echo form_error('contactHome'); ?>
                         </div>
-<!--                    </div>
+                      </div>
 
-                    <div class="form-group">-->
+                    <div class="form-group" style="margin-right: 2em">
+
+
+                    <label for="inputEmail3" class="col-sm-2 control-label"></label> 
+                    <div class="col-sm-4">
+
+                        <input id="address2" type="text" name="address2"  value="<?php echo set_value('address2'); ?>" type="text" class="form-control" id="address2" placeholder="Address 2">
+                        <?php echo form_error('address2'); ?>
+                    </div>
+
                         <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
                         <div class="col-sm-4">
 
@@ -189,5 +210,3 @@
     </div>
 
 </div>
-
-

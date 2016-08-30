@@ -320,7 +320,7 @@
                 <tr class="numbers">
                     <td><?php echo $row->id ?></td>
                     <td><?php echo $row->full_name ?></td>
-                    <td><?php 
+                    <td><?php
                                           $bday = explode("-", $row->dob)  ;
                                           echo substr($bday[0], 2);?>
                     </td>
@@ -330,11 +330,12 @@
                     <td><?php echo $row->nationality_id; ?></td>
                     <td><?php echo $row->religion_id; ?></td>
                     <td><?php if($row->civil_status == 's'){ echo '1';} else if($row->civil_status == 'm'){ echo '2'; } else if($row->civil_status == 'w'){     echo '3'; } else if($row->civil_status == 'o'){     echo '4'; }; ?></td>
-                    <td><?php 
+                    <td><?php
                                           $regDate = explode("-", $row->first_appointment_date)  ;
                                           echo substr($regDate[0], 2);?>
                     </td>
                     <td><?php echo $regDate[1] ?></td>
+                  
                     <td>11</td>
                     <td>12</td>
                     <td><?php echo $row->nature_of_appointment ?></td>
