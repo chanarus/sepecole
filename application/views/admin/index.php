@@ -76,6 +76,13 @@
                 </a>
             </div>
             <div class="admin-btn">
+                <i class="fa fa fa-file-text-o"></i>
+                <a href="<?php echo base_url('index.php/classes'); ?>">
+                    <span class="main">Student Grades</span>
+                    <span class="sub">Students mark log...</span>
+                </a>
+            </div>
+             <div class="admin-btn">
                 <i class="fa fa-certificate"></i>
                 <a href="<?php echo base_url('/index.php/certificate'); ?>">
                     <span class="main">Certificates</span>

@@ -320,6 +320,8 @@ class leave extends CI_Controller {
      * @return Results
      */
     public function approve_leave($id) {
+
+
         $data['navbar'] = "leave";
 
         $data['page_title'] = "Leave Details";
@@ -509,6 +511,9 @@ class leave extends CI_Controller {
             } else {
                 //Setting Values
                 $data['report_results'] = "Not Empty";
+                $data['stdate'] = $startdate;
+                $data['endate'] = $enddate;
+                $data['uid'] = $userid;
             }
 
             //Passing it to the View
@@ -530,6 +535,8 @@ class leave extends CI_Controller {
         $startdate = $this->input->post('startdate');
         $enddate = $this->input->post('enddate');
         $userid = $this->input->post('userid');
+
+        //echo $startdate;
 
         $data['applied_leaves'] = $this->Leave_Model->get_leaves_for_report($userid, $startdate, $enddate);
         $data['teacher_details'] = $this->Leave_Model->get_teacher_by_id($userid);
