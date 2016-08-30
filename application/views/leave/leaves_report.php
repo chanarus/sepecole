@@ -44,9 +44,9 @@
                                       <div class="form-group">
                                         <label >Start Date</label>
                                         <div class="input-group">
-                                            <input type="date" name="txt_startdate" class="form-control" placeholder="Start Date">
+                                            <input type="date" name="txt_startdate" class="form-control" placeholder="Start Date" id="txt_startdate">
                                             <div class="input-group-addon"><i class="fa fa-calendar"></i></div>
-                                        </div> 
+                                        </div>
                                       </div>
                                   </div>
                                   <div class="col-md-4">
@@ -55,18 +55,18 @@
                                         <div class="input-group">
                                             <input type="date" name="txt_enddate" class="form-control" placeholder="End Date">
                                             <div class="input-group-addon"><i class="fa fa-calendar"></i></div>
-                                        </div> 
+                                        </div>
                                       </div>
                                     </div>
                                     <div class="col-md-4">
-                                        
+
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                            <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i> Search</button>
+                                            <button type="submit" class="btn btn-primary" id="sbtn"><i class="fa fa-search"></i> Search</button>
                                         </div>
 
-                              
+
                             <?php echo form_close(); ?>
                         </div>
                     </div>
@@ -74,9 +74,11 @@
                     <?php if (isset($report_results)) { ?>
                         <!-- Report Generation Form -->
                         <?php echo form_open('leave/leaves_report_print'); ?>
-                        <input type="hidden" name="userid" value="<?php echo $uid; ?>" >
-                        <input type="hidden" name="startdate" value="<?php echo $sd; ?>" >
-                        <input type="hidden" name="enddate" value="<?php echo $ed; ?>" >
+
+
+                        <input type="hidden" name="userid" value="<?php echo $uid ?>" id="uid">
+                        <input type="hidden" name="startdate" value="<?php echo $stdate ?>" id="sdt">
+                        <input type="hidden" name="enddate" value="<?php echo $endate ?>" id="edt">
                         <div class="row">
                             <div class="col-md-4">
                                 <button type="submit" class="btn btn-primary"><i class="fa fa-print"></i> Print</button>

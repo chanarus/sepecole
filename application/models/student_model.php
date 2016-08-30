@@ -196,8 +196,8 @@ class Student_Model extends CI_Model {
 
 
 
-    /**update Guardian recode
-     *
+    /**
+     *update Guardian recode
      *
      * @param type $guardian
      * @param type $myid
@@ -453,7 +453,7 @@ class Student_Model extends CI_Model {
 
 
     /**
-     *  getting the recode details of archived student by given id
+     * getting the recode details of archived student by given id
      *
      * @param type $id
      * @return type query resuls

@@ -1,12 +1,10 @@
 <?php
 /**
  * Ecole - Leave Controller
- * 
+ *
  * Handles the Leave Methods
- * 
- * @author  Udara Karunarathna
- * @copyright (c) 2015, Ecole. (http://projectecole.com)
- * @link http://projectecole.com
+ *
+ * @author  Sampath R.P.C.
  */
 if (!defined('BASEPATH'))
     exit('No direct script access allowed');
@@ -23,7 +21,7 @@ class leave extends CI_Controller {
         // $this->load->helper('sms_helper');
     }
 
-    /** 
+    /**
      *  Index Method to View Leave Controller Pages
      *  This Function will help you to View Leave Functions
      */
@@ -95,8 +93,8 @@ class leave extends CI_Controller {
         }
     }
 
-    /** 
-     *  Function to Apply Leave 
+    /**
+     *  Function to Apply Leave
      *  This Function will help you to apply leaves on teacher side
      */
     public function apply_leave() {
@@ -179,7 +177,7 @@ class leave extends CI_Controller {
                 $enddate_var = $enddate;
                 $enddate_var = date('Y-m-d', strtotime('-1 day', strtotime($enddate_var)));
                 $days = date_diff(date_create($startdate), date_create($enddate_var));
-                //No of days in between Term 1 start and end 
+                //No of days in between Term 1 start and end
                 $t1days = $days->format("%a");
                 $newdate = $startdate;
 
@@ -288,7 +286,7 @@ class leave extends CI_Controller {
         }
     }
 
-    /*
+    /**
      * Function to Get Leave Details
      *
      * @param  int
@@ -314,7 +312,7 @@ class leave extends CI_Controller {
         $this->load->view('/templates/footer');
     }
 
-    /*
+    /**
      * Function to Approve Leave
      *
      * @param  int
@@ -322,6 +320,8 @@ class leave extends CI_Controller {
      * @return Results
      */
     public function approve_leave($id) {
+
+
         $data['navbar'] = "leave";
 
         $data['page_title'] = "Leave Details";
@@ -357,7 +357,7 @@ class leave extends CI_Controller {
         }
     }
 
-    /*
+    /**
      * Function to Approve Short Leave
      *
      * @param  int
@@ -382,7 +382,7 @@ class leave extends CI_Controller {
         }
     }
 
-    /*
+    /**
      * Function to Reject Leave
      *
      * @param  int
@@ -425,7 +425,7 @@ class leave extends CI_Controller {
         }
     }
 
-    /*
+    /**
      * Function to Reject Short Leave
      *
      * @param  int
@@ -450,7 +450,7 @@ class leave extends CI_Controller {
         }
     }
 
-    /*
+    /**
      * Function to load All Views Page
      */
     public function get_all_leaves() {
@@ -473,7 +473,7 @@ class leave extends CI_Controller {
         $this->load->view('/templates/footer');
     }
 
-    /*
+    /**
      * Function to load Leaves Report
      */
     public function leaves_report() {
@@ -511,6 +511,9 @@ class leave extends CI_Controller {
             } else {
                 //Setting Values
                 $data['report_results'] = "Not Empty";
+                $data['stdate'] = $startdate;
+                $data['endate'] = $enddate;
+                $data['uid'] = $userid;
             }
 
             //Passing it to the View
@@ -522,7 +525,7 @@ class leave extends CI_Controller {
         }
     }
 
-    /*
+    /**
      * Function to print Leave Reports
      */
     public function leaves_report_print() {
@@ -533,6 +536,8 @@ class leave extends CI_Controller {
         $enddate = $this->input->post('enddate');
         $userid = $this->input->post('userid');
 
+        //echo $startdate;
+
         $data['applied_leaves'] = $this->Leave_Model->get_leaves_for_report($userid, $startdate, $enddate);
         $data['teacher_details'] = $this->Leave_Model->get_teacher_by_id($userid);
         $data['school_name'] = "D. S. Senanayake College";
@@ -542,7 +547,7 @@ class leave extends CI_Controller {
         pdf_create($html, $filename);
     }
 
-    /*
+    /**
      * Function to view All Teachers Leave Report
      */
     public function all_teacher_leave() {
@@ -594,7 +599,7 @@ class leave extends CI_Controller {
         }
     }
 
-    /*
+    /**
      * Function to apply for teacher leaves from admin side
      * Same as the Leave Function on apply_leave
      * If you are changing this Function make sure it tallies with apply_leave as well
@@ -682,7 +687,7 @@ class leave extends CI_Controller {
                     $enddate_var = $enddate;
                     $enddate_var = date('Y-m-d', strtotime('-1 day', strtotime($enddate_var)));
                     $days = date_diff(date_create($startdate), date_create($enddate_var));
-                    //No of days in between Term 1 start and end 
+                    //No of days in between Term 1 start and end
                     $t1days = $days->format("%a");
                     $newdate = $startdate;
 
@@ -723,7 +728,7 @@ class leave extends CI_Controller {
                     } else {
                         $data['error_message'] = "Failed to save data to the Database";
                     }
-                }         
+                }
             }
 
             //Passing it to the View
@@ -735,7 +740,7 @@ class leave extends CI_Controller {
         }
     }
 
-    /*
+    /**
      * Function to load short leaves page
      */
     public function short_leave() {
@@ -763,7 +768,7 @@ class leave extends CI_Controller {
         $this->load->view('/templates/footer');
     }
 
-    /*
+    /**
      * Function to apply short leaves
      */
     public function apply_short_leave() {
@@ -857,7 +862,7 @@ class leave extends CI_Controller {
         }
     }
 
-    /*
+    /**
      * Function to get short Leaves Details
      *
      * @param  int
@@ -883,7 +888,7 @@ class leave extends CI_Controller {
         $this->load->view('/templates/footer');
     }
 
-    /*
+    /**
      * Function to get short Leaves Details
      *
      * @param  date
@@ -902,7 +907,7 @@ class leave extends CI_Controller {
         }
     }
 
-    /*
+    /**
      * Function to check status check
      *
      * @param  int
@@ -918,7 +923,7 @@ class leave extends CI_Controller {
         }
     }
 
-    /*
+    /**
      * Function to validate a date
      *
      * @param  date

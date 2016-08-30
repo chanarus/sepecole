@@ -337,13 +337,15 @@ class Teacher_Model extends CI_Model {
                 $religion = $teachr_data->religion_id;
                 $civilstatus = $teachr_data->civil_status;
                 $address = $teachr_data->permanent_addr;
+                $address1 = $teachr_data->permanent_addr1;
+                $address2 = $teachr_data->permanent_addr2;
                 $contactMob = $teachr_data->contact_mobile;
                 $contactHome = $teachr_data->contact_home;
                 $email = $teachr_data->email;
                 $widow = $teachr_data->wnop_no;
 
-                if ($this->db->query("INSERT INTO archived_teachers(`id`,`nic_no`, `full_name`, `name_with_initials` , `dob` , `gender`, `nationality_id` , `religion_id` , `civil_status` , `permanent_addr` , `contact_mobile` , `contact_home` , `email` , `wnop_no`)
-    			VALUES ('$id','$NIC', '$name' , '$initial' , '$birth', '$gender' , '$Nationality' , '$religion' , '$civilstatus' , '$address' , '$contactMob' , '$contactHome' , '$email' , '$widow')")) {
+                if ($this->db->query("INSERT INTO archived_teachers(`id`,`nic_no`, `full_name`, `name_with_initials` , `dob` , `gender`, `nationality_id` , `religion_id` , `civil_status` , `permanent_addr` ,`permanent_addr1`,`permanent_addr2`, `contact_mobile` , `contact_home` , `email` , `wnop_no`)
+    			VALUES ('$id','$NIC', '$name' , '$initial' , '$birth', '$gender' , '$Nationality' , '$religion' , '$civilstatus' , '$address' , '$address1', '$address2', '$contactMob' , '$contactHome' , '$email' , '$widow')")) {
 
                     $sql1 = "DELETE FROM teachers  WHERE user_id = '$id'";
                     if ($query = $this->db->query($sql1)) {
@@ -552,7 +554,9 @@ class Teacher_Model extends CI_Model {
             </tr>
             <tr align='left' width='50%'>
                 <td>Address</td>
-                <td>$result->permanent_addr
+                <td>$result->permanent_addr,
+                    $result->permanent_addr1,
+                    $result->permanent_addr2
                 </td>
             </tr>
             <tr align='left' width='50%'>

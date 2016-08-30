@@ -2,7 +2,7 @@
 /**
  * Ecole - Student Controller
  *
- * Handles Functionality of the student compodent(manage student)
+ * Handles Functionality of the student component(manage student)
  *
  * @author  Sampath R.P.C.
  */
@@ -131,6 +131,10 @@ class Student extends CI_Controller {
             $fname=$this->input->post('firstname');
             $lname=$this->input->post('lastname');
             $fullname = $fname . " " . $lname;
+            $address = $this->input->post('address');
+            $address1 = $this->input->post('address1');
+            $address2 = $this->input->post('address2');
+            $full_addr = $address.",".$address1.",".$address2.".";
 
             $student_data = array(
                 // 'studentid' => $student_id,
