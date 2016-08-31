@@ -148,7 +148,7 @@
                      <div class="col-md-5 col-md-push-1  form-group">
                                 <div><?php echo form_error('address'); ?></div>
                                 <label for="address">Permenent Address</label>
-                                <textarea name="address" value="" class="form-control" id="address"><?php  echo $result->addr; ?></textarea>
+                                <textarea name="address" value="" class="form-control" id="address"><?php  echo $result->addr.",".$result->addr1.",".$result->addr2; ?></textarea>
                                 
                      </div>   
                 </div>
