@@ -234,7 +234,6 @@
 
                             <div class="col-md-5 col-md-push-1  form-group">
 
-
                                 <label for="inputEmail3" class="col-sm-2 control-label">Address</label>
                                 <div>
 
@@ -253,8 +252,6 @@
                                     <input id="address2" type="text" name="address2"  value="<?php echo set_value('address2'); ?>" type="text" class="form-control" id="address2" placeholder="Address 3">
                                         <?php echo form_error('address'); ?>
                                 </div>
-
-
                             </div>
                         </div>
                         <div class="row">
