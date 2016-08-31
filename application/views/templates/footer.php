@@ -1,8 +1,6 @@
 
 <!-- <footer class="footer">
-    <div class="container">
-        <p class="text-muted">Managed by SLIIT - WE Software Engineering Group</p>
-    </div>
+        <a class="navbar-brand" href="#">école</a>
 </footer> -->
 
 <!-- Include all compiled plugins (below), or include individual files as needed -->
