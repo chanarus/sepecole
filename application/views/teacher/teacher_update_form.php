@@ -27,7 +27,7 @@
                 </div>
                 <div class="panel-body">
                     <?php
-                    // Change the css classes to suit your needs    
+                    // Change the css classes to suit your needs
 
                     $attributes = array('class' => 'form-horizontal', 'id' => '');
                     echo form_open('teacher/update_details'."/".$user_id, $attributes);
@@ -40,15 +40,15 @@
                                 <?php echo form_error('regno'); ?>
                             </div>
                         </div>
-                    
+
                         <div class="form-group" style="margin-right:2em">
                             <label for="inputEmail3" class="col-sm-2 control-label">*Signature No</label>
                             <div class="col-sm-4">
                                 <input id="signatureno" type="text" name="signatureno"  value="<?php echo set_value('signatureno'); ?>"  type="text" class="form-control" id="signatureno" placeholder="Signature">
                                 <?php echo form_error('signatureno'); ?>
-                            </div>                           
+                            </div>
 <!--                        </div>
-                        
+
                         <div class="form-group">-->
                             <label for="inputEmail3" class="col-sm-2 control-label">*Serial No</label>
                             <div class="col-sm-4">
@@ -62,7 +62,7 @@
                             <div class="col-sm-4">
                                 <input id="careerdate" type="date" name="careerdate"  value="<?php echo set_value('careerdate'); ?>" type="text" class="form-control" id="careerdate" placeholder="Start Date">
                             <?php echo form_error('careerdate'); ?>
-                            </div>                           
+                            </div>
 <!--                        </div>
 
 
@@ -154,11 +154,11 @@
                                     <option value="11" <?php if (set_value('servicegrade') == '11') { echo "selected"; } ?>>Sri Lanka Teacher Service3I</option>
                                     <option value="12" <?php if (set_value('servicegrade') == '12') { echo "selected"; } ?>>Sri Lanka Teacher Service3II</option>
                                     <option value="13" <?php if (set_value('servicegrade') == '13') { echo "selected"; } ?>>Sri Lanka Teacher Service Pending</option>
-                                </select>  
+                                </select>
                                 <?php echo form_error('servicegrade'); ?>
                             </div>
                         </div>
-                        
+
                         <div class="form-group" style="margin-right:2em">
                             <label for="inputEmail3" class="col-sm-2 control-label">*Nature of Appointment</label>
                             <div class="col-sm-4">
@@ -170,43 +170,43 @@
                                     <option value="4" <?php if (set_value('appointment') == '4') { echo "selected"; } ?>>Other</option>
                                 </select>
                                 <?php echo form_error('appointment'); ?>
-                            </div>                           
+                            </div>
 <!--                        </div>
-                        
+
                         <div class="form-group">-->
                             <label for="inputEmail3" class="col-sm-2 control-label">Educational Qualification</label>
                             <div class="col-sm-4">
                                 <textarea id="educational" name="educational" class="form-control" placeholder="Educational Qualifications"><?php echo set_value('educational'); ?></textarea>
                                 <?php echo form_error('educational'); ?>
-                            </div>                           
+                            </div>
                         </div>
-                    
+
                         <div class="form-group" style="margin-right:2em">
                             <label for="inputEmail3" class="col-sm-2 control-label">Professional Qualification</label>
                             <div class="col-sm-4">
                                 <textarea id="profession" name="profession" class="form-control" placeholder="Professional Qualifications"><?php echo set_value('profession'); ?></textarea>
                                 <?php echo form_error('profession'); ?>
-                            </div> 
-                            
-                            <label for="inputEmail3" class="col-sm-2 control-label">First Appointment</label>
+                            </div>
+
+                            <label for="inputEmail3" class="col-sm-2 control-label">*First Appointment</label>
                             <div class="col-sm-4">
                                 <input type="date" id="first_appointment" name="first_appointment" class="form-control" value="<?php echo set_value('first_appointment'); ?>"/>
                                 <?php echo form_error('first_appointment'); ?>
-                            </div> 
+                            </div>
                         </div>
-                    
+
                         <div class="form-group" style="margin-right:2em">
                             <label for="inputEmail3" class="col-sm-2 control-label">Personal File No</label>
                             <div class="col-sm-4">
                                 <input type="text" id="fileno" name="fileno" class="form-control" value="<?php echo set_value('fileno'); ?>" placeholder="File No"/>
                                 <?php echo form_error('fileno'); ?>
-                            </div> 
-                            
+                            </div>
+
                             <label for="inputEmail3" class="col-sm-2 control-label">Due Pension Date</label>
                             <div class="col-sm-4">
                                 <input type="date" id="pension" name="pension" class="form-control" value="<?php echo set_value('pension'); ?>" />
                                 <?php echo form_error('pension'); ?>
-                            </div> 
+                            </div>
                         </div>
 
                         <div class="form-group">
@@ -224,5 +224,3 @@
         </div>
 
     </div>
-
-

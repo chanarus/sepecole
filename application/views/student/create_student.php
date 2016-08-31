@@ -234,12 +234,46 @@
 
                             <div class="col-md-5 col-md-push-1  form-group">
 
+<<<<<<< HEAD
+                                <label for="inputEmail3" class="col-sm-2 control-label">Address</label>
+                                <div>
+
+                                    <input id="address" type="text" name="address"  value="<?php echo set_value('address'); ?>" type="text" class="form-control" id="address" placeholder="Address 1">
+                                        <?php echo form_error('address'); ?>
+                                </div>
+                                <label for="inputEmail3" class="col-sm-2 control-label"></label>
+                                <div>
+
+                                    <input id="address1" type="text" name="address1"  value="<?php echo set_value('address1'); ?>" type="text" class="form-control" id="address1" placeholder="Address 2">
+                                        <?php echo form_error('address'); ?>
+                                </div>
+                                <label for="inputEmail3" class="col-sm-2 control-label"></label>
+                                <div>
+
+                                    <input id="address2" type="text" name="address2"  value="<?php echo set_value('address2'); ?>" type="text" class="form-control" id="address2" placeholder="Address 3">
+                                        <?php echo form_error('address'); ?>
+                                </div>
+
+  <!--                              // <label for="address1">Permenent Address Line 01</label>
+                                // <input type="address1" value="" class="form-control" id="address" placeholder="Address Line 01"><?php echo set_value('address'); ?>
+                                // <div><?php echo form_error('address'); ?></div>
+
+                                // <label for="address2">Permenent Address Line 02</label>
+                                // <input type="address2" value="" class="form-control" id="address" placeholder="Address Line 02"><?php echo set_value('address'); ?>
+                                // <div><?php echo form_error('address'); ?></div>
+
+                                // <label for="address3">Permenent Address Line 03</label>
+                                // <input type="address3" value="" class="form-control" id="address" placeholder="Address Line 03"><?php echo set_value('address'); ?>
+                                // <div><?php echo form_error('address'); ?></div>
+-->
+=======
                                 <label for="address">Permenent Address</label>
                                 <!--<textarea name="address" value="" class="form-control" id="address"><?php echo set_value('address'); ?></textarea>-->
                                 <input type="text" name="address" value="<?php echo set_value('address'); ?>" class="form-control" id="address">
                                 <input type="text" name="address1" value="<?php echo set_value('address1'); ?>" class="form-control" id="address1">
                                 <input type="text" name="address2" value="<?php echo set_value('address2'); ?>" class="form-control" id="address2">
                                 <div><?php echo form_error('address'); ?></div>
+>>>>>>> 0753797923f921aa42333922ef5ee4d7ff33ff13
 
                             </div>
                         </div>

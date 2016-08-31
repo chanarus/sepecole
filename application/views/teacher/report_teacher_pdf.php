@@ -8,8 +8,8 @@
     <table class="table table-hover">
         <thead>
             <tr>
-                <th align="left" width="250px">#1</th>
-                <th align="left" width="250px">#2</th>
+                <th align="left" width="250px"> </th>
+                <th align="left" width="250px"> </th>
             </tr>
         </thead>
         <tbody>
@@ -94,8 +94,20 @@
             </tr>
             <tr>
                 <td>Address</td>
-                <td><?php echo $result->permanent_addr; ?></td>
+                <td><?php echo $result->permanent_addr;?>
+                </td>
             </tr>
+            <tr>
+                <td></td>
+                <td><?php echo $result->permanent_addr1;?>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><?php echo $result->permanent_addr2;?>
+                </td>
+            </tr>
+
             <tr>
                 <td>Contact Mobile No</td>
                 <td><?php echo $result->contact_home; ?></td>
@@ -106,12 +118,14 @@
             </tr>
         </tbody>
     </table>
+
+    
     <h3><u>Academic Details</u></h3>
     <table class="table table-hover">
         <thead>
             <tr>
-                <th align="left" width="250px">#1</th>
-                <th align="left" width="250px">#2</th>
+                <th align="left" width="250px"> </th>
+                <th align="left" width="250px"> </th>
             </tr>
         </thead>
         <tbody>

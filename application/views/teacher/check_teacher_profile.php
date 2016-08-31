@@ -130,8 +130,12 @@
                                                 </tr>
                                                 <tr>
                                                     <td><label>Address</label></td>
-                                                    <td><label class="news-item-title"><?php echo $user_id->permanent_addr; ?></label></td>
+                                                    <td><label class="news-item-title"><?php echo $user_id->permanent_addr; ?>,</label>
+                                                         <label class="news-item-title"><?php echo $user_id->permanent_addr1; ?>
+                                                           <label class="news-item-title"><?php echo $user_id->permanent_addr2; ?></label></td>
                                                 </tr>
+
+
                                                 <tr>
                                                     <td><label>Contact Mobile</label></td>
                                                     <td><label class="news-item-title"><?php echo $user_id->contact_mobile; ?></label></td>
@@ -170,7 +174,8 @@
 
 
                         </div>
-                        <div class="tab-pane fade" id="profile">
+                      <!--  <div class="tab-pane fade" id="profile"> -->
+                          <div class="tab-pane active in" id="profile">
                             <!--                                    <div class="panel-heading">
                                                                     <h3 class="panel-title"><?php echo $user_id->id; ?></h3>
                                                                 </div>-->
@@ -182,7 +187,7 @@
                                             <tbody>
                                                 <tr>
                                                     <td><label>Teacher Register No</label></td>
-                                                    <td><label class="news-item-title"><?php echo $user_id->teacher_register_no; ?></label></td>                                                       
+                                                    <td><label class="news-item-title"><?php echo $user_id->teacher_register_no; ?></label></td>
                                                 </tr>
                                                 <tr>
                                                     <td><label>Signature No</label></td>
@@ -190,7 +195,7 @@
                                                 </tr>
                                                 <tr>
                                                     <td><label>Serial No</label></td>
-                                                    <td><label class="news-item-title"><?php echo $user_id->serial_no; ?></label></td>                                                       
+                                                    <td><label class="news-item-title"><?php echo $user_id->serial_no; ?></label></td>
                                                 </tr>
                                                 <tr>
                                                     <td><label>Register Date</label></td>
@@ -421,5 +426,3 @@
 
     </div>
 </div>
-
-

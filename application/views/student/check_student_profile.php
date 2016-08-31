@@ -141,6 +141,7 @@ if ($house == 1) {
                                                         <tr>
                                                             <td><label>Address</label></td>
                                                             <td><label><?php echo $user_id->permanent_addr; ?></label></td>
+                                                            <td><label><?php echo $user_id->permanent_addr1; ?></label></td>
                                                         </tr>
 
                                                         <tr>

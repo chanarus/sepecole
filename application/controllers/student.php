@@ -2,7 +2,7 @@
 /**
  * Ecole - Student Controller
  *
- * Handles Functionality of the student compodent(manage student)
+ * Handles Functionality of the student component(manage student)
  *
  * @author  Sampath R.P.C.
  */
@@ -108,6 +108,8 @@ class Student extends CI_Controller {
         $this->form_validation->set_rules('religion', 'Religion', 'callback_check_selection');
         $this->form_validation->set_rules('houseid', 'Houser', 'required');
         $this->form_validation->set_rules('address', 'Address', 'required');
+     // $this->form_validation->set_rules('address2', 'Address', 'required');
+     // $this->form_validation->set_rules('address3', 'Address', 'required');
         $this->form_validation->set_rules('contact_home', 'Contact Home', 'exact_length[10]|integer');
         $this->form_validation->set_rules('email', 'Email', 'valid_email');
 
@@ -146,7 +148,9 @@ class Student extends CI_Controller {
                 'language' => $this->input->post('language'),
                 'religion' => $this->input->post('religion'),
                 'house_id' => $this->input->post('houseid'),
-                'permanent_addr' => $this.$full_addr,
+                'permanent_addr' => $this->input->post('address'),
+                'permanent_addr1' => $this->input->post('address1'),
+                'permanent_addr2' => $this->input->post('address2'),
                 'contact_home' => $this->input->post('contact_home'),
                 'email' => $this->input->post('email'),
                 'created_at' => date('Y-m-d H:i:s'),
@@ -251,6 +255,8 @@ class Student extends CI_Controller {
                         'occupation' => $this->input->post('occupation'),
                         'is_pastpupil' => $pastpupil,
                         'addr' => $this->input->post('address'),
+                        'addr1'=> $this->input->post('address1'),
+                        'addr2'=> $this->input->post('address2'),
                         'contact_home' => $this->input->post('contact_homeg'),
                         'contact_mobile' => $this->input->post('contact_mobile')
                     );

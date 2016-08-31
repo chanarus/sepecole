@@ -23,7 +23,7 @@
             <div>
 
                 <?php
-                // Change the css classes to suit your needs    
+                // Change the css classes to suit your needs
 
                 $attributes = array('class' => 'form-horizontal');
                 echo form_open('teacher/edit_teacher'."/".$row->id, $attributes);
@@ -74,7 +74,7 @@
                                     <label for="inputEmail3" class="col-sm-2 control-label">Gender</label>
                                     <div class="col-sm-4">
                                         <label class="radio-inline">
-                                            <input id="male" type="radio" name="gender"  value="m" type="radio"  id="male" 
+                                            <input id="male" type="radio" name="gender"  value="m" type="radio"  id="male"
                                             <?php
                                             if($attempt == '1'){
                                                 if (($row->gender) == 'm') {
@@ -83,13 +83,13 @@
                                             }
                                             else if($attempt == '2'){
                                                 if (set_value('gender') == 'm') {
-                                                    echo "checked"; 
+                                                    echo "checked";
                                                 }
                                             }
                                             ?>> Male
                                         </label>
                                         <label class="radio-inline">
-                                            <input id="female" type="radio" name="gender"  value="f" type="radio" id="female" 
+                                            <input id="female" type="radio" name="gender"  value="f" type="radio" id="female"
                                             <?php
                                             if($attempt == '1'){
                                                 if (($row->gender) == 'f') {
@@ -98,7 +98,7 @@
                                             }
                                             else if($attempt == '2'){
                                                 if (set_value('gender') == 'f') {
-                                                    echo "checked"; 
+                                                    echo "checked";
                                                 }
                                             }
                                             ?>> Female
@@ -109,69 +109,69 @@
                                     <label for="inputEmail3" class="col-sm-2 control-label">Nationality</label>
                                     <div class="col-sm-4">
                                         <select id="Nationality" name="Nationality" class="form-control">
-                                            <option value="0" 
+                                            <option value="0"
                                             <?php
                                             if($attempt == '1'){
                                                 if (($row->nationality_id) == null || ($row->nationality_id) == 0) {
                                                     echo "selected";
                                                 }
                                             }
-                                            else if(set_value('Nationality') == '0') { 
+                                            else if(set_value('Nationality') == '0') {
                                                 echo "selected";
                                             }
                                             ?>>Select Your Nationality</option>
-                                            <option value="1" 
+                                            <option value="1"
                                             <?php
                                             if($attempt == '1'){
                                                 if (($row->nationality_id) == 1) {
                                                     echo "selected";
                                                 }
                                             }
-                                            else if(set_value('Nationality') == '1') { 
+                                            else if(set_value('Nationality') == '1') {
                                                 echo "selected";
                                             }
                                             ?> >Sinhala</option>
-                                            <option value="2" 
+                                            <option value="2"
                                             <?php
                                             if($attempt == '1'){
                                                 if (($row->nationality_id) == 2) {
                                                     echo "selected";
                                                 }
                                             }
-                                            else if(set_value('Nationality') == '2') { 
+                                            else if(set_value('Nationality') == '2') {
                                                 echo "selected";
                                             }
                                             ?> >Sri Lankan Tamil</option>
-                                            <option value="3" 
+                                            <option value="3"
                                             <?php
                                             if($attempt == '1'){
                                                 if (($row->nationality_id) == 3) {
                                                     echo "selected";
                                                 }
                                             }
-                                            else if(set_value('Nationality') == '3') { 
+                                            else if(set_value('Nationality') == '3') {
                                                 echo "selected";
                                             }
                                             ?> >Indian Tamil</option>
-                                            <option value="4" 
+                                            <option value="4"
                                             <?php
                                             if($attempt == '1'){
                                                 if (($row->nationality_id) == 4) {
                                                     echo "selected";
                                                 }
                                             }
-                                            else if(set_value('Nationality') == '4') { 
+                                            else if(set_value('Nationality') == '4') {
                                                 echo "selected";
                                             }
                                             ?> >Muslim</option>
-                                            <option value="5" 
+                                            <option value="5"
                                             <?php
                                             if($attempt == '1'){
                                                 if (($row->nationality_id) == 5) {
                                                     echo "selected";
                                                 }
                                             }
-                                            else if(set_value('Nationality') == '5') { 
+                                            else if(set_value('Nationality') == '5') {
                                                 echo "selected";
                                             }
                                             ?> >Other</option>
@@ -185,80 +185,80 @@
                                     <label for="inputEmail3" class="col-sm-2 control-label">Religion</label>
                                     <div class="col-sm-4">
                                         <select id="religion" name="religion" class="form-control">
-                                            <option value="0" 
+                                            <option value="0"
                                             <?php
                                             if($attempt == '1'){
                                                 if (($row->religion_id) == 0 || ($row->religion_id) == null) {
                                                     echo "selected";
                                                 }
                                             }
-                                            else if(set_value('religion') == '0') { 
+                                            else if(set_value('religion') == '0') {
                                                 echo "selected";
                                             }
                                             ?>>Select Your Religion</option>
-                                            <option value="1" 
+                                            <option value="1"
                                             <?php
                                             if($attempt == '1'){
                                                 if (($row->religion_id) == 1) {
                                                     echo "selected";
                                                 }
                                             }
-                                            else if(set_value('religion') == '1') { 
+                                            else if(set_value('religion') == '1') {
                                                 echo "selected";
                                             }
                                             ?>>Buddhism</option>
-                                            <option value="2" 
+                                            <option value="2"
                                             <?php
                                             if($attempt == '1'){
                                                 if (($row->religion_id) == 2) {
                                                     echo "selected";
                                                 }
                                             }
-                                            else if(set_value('religion') == '2') { 
+                                            else if(set_value('religion') == '2') {
                                                 echo "selected";
                                             }
                                             ?>>Hinduism</option>
-                                            <option value="3" 
+                                            <option value="3"
                                             <?php
                                             if($attempt == '1'){
                                                 if (($row->religion_id) == 3) {
                                                     echo "selected";
                                                 }
                                             }
-                                            else if(set_value('religion') == '3') { 
+                                            else if(set_value('religion') == '3') {
                                                 echo "selected";
                                             }
                                             ?>>Islam</option>
-                                            <option value="4" 
+                                            <option value="4"
                                             <?php
                                             if($attempt == '1'){
                                                 if (($row->religion_id) == 4) {
                                                     echo "selected";
                                                 }
                                             }
-                                            else if(set_value('religion') == '4') { 
+                                            else if(set_value('religion') == '4') {
                                                 echo "selected";
                                             }
                                             ?>>Catholicism</option>
-                                            <option value="5" 
+                                            <option value="5"
                                             <?php
                                             if($attempt == '1'){
                                                 if (($row->religion_id) == 5) {
                                                     echo "selected";
                                                 }
                                             }
-                                            else if(set_value('religion') == '5') { 
+                                            else if(set_value('religion') == '5') {
                                                 echo "selected";
                                             }
                                             ?>>Christianity</option>
-                                            <option value="6" 
+                                            <option value="6"
                                             <?php
                                             if($attempt == '1'){
                                                 if (($row->religion_id) == 6) {
                                                     echo "selected";
                                                 }
                                             }
-                                            else if(set_value('religion') == '6') { 
+                                            else if(set_value('religion') == '6') {
                                                 echo "selected";
                                             }
                                             ?>>Other</option>
@@ -268,58 +268,58 @@
                                     <label for="inputEmail3" class="col-sm-2 control-label">Civil Status</label>
                                     <div class="col-sm-4">
                                         <select id="civilstatus" name="civilstatus" class="form-control">
-                                            <option value="n" 
+                                            <option value="n"
                                             <?php
                                             if($attempt == '1'){
                                                 if (($row->civil_status) == 'n') {
                                                     echo "selected";
                                                 }
                                             }
-                                            else if(set_value('civilstatus') == 'n') { 
+                                            else if(set_value('civilstatus') == 'n') {
                                                 echo "selected";
                                             }
                                             ?>>Select Your Status</option>
-                                            <option value="s" 
+                                            <option value="s"
                                             <?php
                                             if($attempt == '1'){
                                                 if (($row->civil_status) == 's') {
                                                     echo "selected";
                                                 }
                                             }
-                                            else if(set_value('civilstatus') == 's') { 
+                                            else if(set_value('civilstatus') == 's') {
                                                 echo "selected";
                                             }
                                             ?>>Single</option>
-                                            <option value="m" 
+                                            <option value="m"
                                             <?php
                                             if($attempt == '1'){
                                                 if (($row->civil_status) == 'm') {
                                                     echo "selected";
                                                 }
                                             }
-                                            else if(set_value('civilstatus') == 'm') { 
+                                            else if(set_value('civilstatus') == 'm') {
                                                 echo "selected";
                                             }
                                             ?>>Married</option>
-                                            <option value="w" 
+                                            <option value="w"
                                             <?php
                                             if($attempt == '1'){
                                                 if (($row->civil_status) == 'w') {
                                                     echo "selected";
                                                 }
                                             }
-                                            else if(set_value('civilstatus') == 'w') { 
+                                            else if(set_value('civilstatus') == 'w') {
                                                 echo "selected";
                                             }
                                             ?>>Widow</option>
-                                            <option value="o" 
+                                            <option value="o"
                                             <?php
                                             if($attempt == '1'){
                                                 if (($row->civil_status) == 'o') {
                                                     echo "selected";
                                                 }
                                             }
-                                            else if(set_value('civilstatus') == 'o') { 
+                                            else if(set_value('civilstatus') == 'o') {
                                                 echo "selected";
                                             }
                                             ?>>Other</option>
@@ -332,7 +332,8 @@
                                     <label for="inputEmail3" class="col-sm-2 control-label">Address</label>
                                     <div class="col-sm-4">
                                         <input id="address" type="text" name="address"  value="<?php if($attempt == '1'){ echo $row->permanent_addr;} else if($attempt == '2'){ echo set_value('address') ;}; ?>" class="form-control" placeholder="Address">
-                                        <?php echo form_error('address'); ?>
+                                          <?php echo form_error('address'); ?>
+
                                     </div>
                                     <label for="inputEmail3" class="col-sm-2 control-label">Contact Mobile</label>
                                     <div class="col-sm-4">
@@ -341,16 +342,36 @@
                                     </div>
                                 </div>
 
+
                                 <div class="form-group" style="margin-right:2em">
-                                    <label for="inputEmail3" class="col-sm-2 control-label">Contact Home</label>
+                                    <label for="inputEmail3" class="col-sm-2 control-label"></label>
                                     <div class="col-sm-4">
-                                        <input id="contactHome" type="text" name="contactHome"  value="<?php if($attempt == '1'){ echo $row->contact_home;} else if($attempt == '2'){ echo set_value('contactHome') ;}; ?>" class="form-control" placeholder="Contact Home">
-                                        <?php echo form_error('contactHome'); ?>
+                                        <input id="address1" type="text" name="address1"  value="<?php if($attempt == '1'){ echo $row->permanent_addr1;} else if($attempt == '2'){ echo set_value('address1') ;}; ?>" class="form-control" placeholder="Address 1">
+                                          <?php echo form_error('address1'); ?>
+
                                     </div>
                                     <label for="inputEmail3" class="col-sm-2 control-label">Email Address</label>
                                     <div class="col-sm-4">
                                         <input id="email" type="text" name="email"  value="<?php if($attempt == '1'){ echo $row->email;} else if($attempt == '2'){ echo set_value('email') ;}; ?>" class="form-control" placeholder="Email Address">
                                         <?php echo form_error('email'); ?>
+                                    </div>
+
+                                </div>
+
+                                <div class="form-group" style="margin-right:2em">
+                                    <label for="inputEmail3" class="col-sm-2 control-label"></label>
+                                    <div class="col-sm-4">
+                                        <input id="address2" type="text" name="address2"  value="<?php if($attempt == '1'){ echo $row->permanent_addr2;} else if($attempt == '2'){ echo set_value('address2') ;}; ?>" class="form-control" placeholder="Address 2">
+                                          <?php echo form_error('address2'); ?>
+
+                                    </div>
+                                  </div>
+
+                                <div class="form-group" style="margin-right:2em">
+                                    <label for="inputEmail3" class="col-sm-2 control-label">Contact Home</label>
+                                    <div class="col-sm-4">
+                                        <input id="contactHome" type="text" name="contactHome"  value="<?php if($attempt == '1'){ echo $row->contact_home;} else if($attempt == '2'){ echo set_value('contactHome') ;}; ?>" class="form-control" placeholder="Contact Home">
+                                        <?php echo form_error('contactHome'); ?>
                                     </div>
                                 </div>
 
@@ -366,7 +387,7 @@
                             <div class="tab-pane fade" id="profile">
                                 <br>
                                 <br>
-                                
+
                                 <div class="form-group" style="margin-right:2em">
                                     <label for="inputEmail3" class="col-sm-2 control-label">Register No</label>
                                     <div class="col-sm-4">
@@ -374,7 +395,7 @@
                                         <?php echo form_error('teacherregno'); ?>
                                     </div>
                                 </div>
-                                
+
                                 <div class="form-group" style="margin-right:2em">
                                     <label for="inputEmail3" class="col-sm-2 control-label">Signature No</label>
                                     <div class="col-sm-4">
@@ -397,47 +418,47 @@
                                     <label for="inputEmail3" class="col-sm-2 control-label">Medium</label>
                                     <div class="col-sm-4">
                                         <select id="medium" name="medium" class="form-control">
-                                            <option value="n" 
+                                            <option value="n"
                                             <?php
                                             if($attempt == '1'){
                                                 if (($row->medium) == 'n') {
                                                     echo "selected";
                                                 }
                                             }
-                                            else if(set_value('medium') == 'n') { 
+                                            else if(set_value('medium') == 'n') {
                                                 echo "selected";
                                             }
                                             ?>>Select Medium</option>
-                                            <option value="s" 
+                                            <option value="s"
                                             <?php
                                             if($attempt == '1'){
                                                 if (($row->medium) == 's') {
                                                     echo "selected";
                                                 }
                                             }
-                                            else if(set_value('medium') == 's') { 
+                                            else if(set_value('medium') == 's') {
                                                 echo "selected";
                                             }
                                             ?>>Sinhala</option>
-                                            <option value="t" 
+                                            <option value="t"
                                             <?php
                                             if($attempt == '1'){
                                                 if (($row->medium) == 't') {
                                                     echo "selected";
                                                 }
                                             }
-                                            else if(set_value('medium') == 't') { 
+                                            else if(set_value('medium') == 't') {
                                                 echo "selected";
                                             }
                                             ?>>English</option>
-                                            <option value="e" 
+                                            <option value="e"
                                             <?php
                                             if($attempt == '1'){
                                                 if (($row->medium) == 'e') {
                                                     echo "selected";
                                                 }
                                             }
-                                            else if(set_value('medium') == 'e') { 
+                                            else if(set_value('medium') == 'e') {
                                                 echo "selected";
                                             }
                                             ?>>Tamil</option>
@@ -450,91 +471,91 @@
                                     <label for="inputEmail3" class="col-sm-2 control-label">Designation</label>
                                     <div class="col-sm-4">
                                         <select id="designation" name="designation" class="form-control">
-                                            <option value="0" 
+                                            <option value="0"
                                             <?php
                                             if($attempt == '1'){
                                                 if (($row->designation_id) == 0) {
                                                     echo "selected";
                                                 }
                                             }
-                                            else if(set_value('designation') == 0) { 
+                                            else if(set_value('designation') == 0) {
                                                 echo "selected";
                                             }
                                             ?>>Select Designation</option>
-                                            <option value="1" 
+                                            <option value="1"
                                             <?php
                                             if($attempt == '1'){
                                                 if (($row->designation_id) == 1) {
                                                     echo "selected";
                                                 }
                                             }
-                                            else if(set_value('designation') == 1) { 
+                                            else if(set_value('designation') == 1) {
                                                 echo "selected";
                                             }
                                             ?>>Principal</option>
-                                            <option value="2" 
+                                            <option value="2"
                                             <?php
                                             if($attempt == '1'){
                                                 if (($row->designation_id) == 2) {
                                                     echo "selected";
                                                 }
                                             }
-                                            else if(set_value('designation') == 2) { 
+                                            else if(set_value('designation') == 2) {
                                                 echo "selected";
                                             }
                                             ?>>Acting Principal</option>
-                                            <option value="3" 
+                                            <option value="3"
                                             <?php
                                             if($attempt == '1'){
                                                 if (($row->designation_id) == 3) {
                                                     echo "selected";
                                                 }
                                             }
-                                            else if(set_value('designation') == 3) { 
+                                            else if(set_value('designation') == 3) {
                                                 echo "selected";
                                             }
                                             ?>>Deputy Principal</option>
-                                            <option value="4" 
+                                            <option value="4"
                                             <?php
                                             if($attempt == '1'){
                                                 if (($row->designation_id) == 4) {
                                                     echo "selected";
                                                 }
                                             }
-                                            else if(set_value('designation') == 4) { 
+                                            else if(set_value('designation') == 4) {
                                                 echo "selected";
                                             }
                                             ?>>Acting Deputy Principal</option>
-                                            <option value="5" 
+                                            <option value="5"
                                             <?php
                                             if($attempt == '1'){
                                                 if (($row->designation_id) == 5) {
                                                     echo "selected";
                                                 }
                                             }
-                                            else if(set_value('designation') == 5) { 
+                                            else if(set_value('designation') == 5) {
                                                 echo "selected";
                                             }
                                             ?>>Assistant Principal</option>
-                                            <option value="6" 
+                                            <option value="6"
                                             <?php
                                             if($attempt == '1'){
                                                 if (($row->designation_id) == 6) {
                                                     echo "selected";
                                                 }
                                             }
-                                            else if(set_value('designation') == 6) { 
+                                            else if(set_value('designation') == 6) {
                                                 echo "selected";
                                             }
                                             ?>>Acting Assistant Principal</option>
-                                            <option value="7" 
+                                            <option value="7"
                                             <?php
                                             if($attempt == '1'){
                                                 if (($row->designation_id) == 7) {
                                                     echo "selected";
                                                 }
                                             }
-                                            else if(set_value('designation') == 7) { 
+                                            else if(set_value('designation') == 7) {
                                                 echo "selected";
                                             }
                                             ?>>Teacher</option>
@@ -544,91 +565,91 @@
                                     <label for="inputEmail3" class="col-sm-2 control-label">Section</label>
                                     <div class="col-sm-4">
                                         <select id="section" name="section" class="form-control">
-                                            <option value="0" 
+                                            <option value="0"
                                             <?php
                                             if($attempt == '1'){
                                                 if (($row->section) == 0) {
                                                     echo "selected";
                                                 }
                                             }
-                                            else if(set_value('section') == 0) { 
+                                            else if(set_value('section') == 0) {
                                                 echo "selected";
                                             }
                                             ?>>Select Section</option>
-                                            <option value="1" 
+                                            <option value="1"
                                             <?php
                                             if($attempt == '1'){
                                                 if (($row->section) == 1) {
                                                     echo "selected";
                                                 }
                                             }
-                                            else if(set_value('section') == 1) { 
+                                            else if(set_value('section') == 1) {
                                                 echo "selected";
                                             }
                                             ?>>1/5</option>
-                                            <option value="2" 
+                                            <option value="2"
                                             <?php
                                             if($attempt == '1'){
                                                 if (($row->section) == 2) {
                                                     echo "selected";
                                                 }
                                             }
-                                            else if(set_value('section') == 2) { 
+                                            else if(set_value('section') == 2) {
                                                 echo "selected";
                                             }
                                             ?>>6/7</option>
-                                            <option value="3" 
+                                            <option value="3"
                                             <?php
                                             if($attempt == '1'){
                                                 if (($row->section) == 3) {
                                                     echo "selected";
                                                 }
                                             }
-                                            else if(set_value('section') == 3) { 
+                                            else if(set_value('section') == 3) {
                                                 echo "selected";
                                             }
                                             ?>>8/9</option>
-                                            <option value="4" 
+                                            <option value="4"
                                             <?php
                                             if($attempt == '1'){
                                                 if (($row->section) == 4) {
                                                     echo "selected";
                                                 }
                                             }
-                                            else if(set_value('section') == 4) { 
+                                            else if(set_value('section') == 4) {
                                                 echo "selected";
                                             }
                                             ?>>10/11</option>
-                                            <option value="5" 
+                                            <option value="5"
                                             <?php
                                             if($attempt == '1'){
                                                 if (($row->section) == 5) {
                                                     echo "selected";
                                                 }
                                             }
-                                            else if(set_value('section') == 5) { 
+                                            else if(set_value('section') == 5) {
                                                 echo "selected";
                                             }
                                             ?>>A/L Science</option>
-                                            <option value="6" 
+                                            <option value="6"
                                             <?php
                                             if($attempt == '1'){
                                                 if (($row->section) == 6) {
                                                     echo "selected";
                                                 }
                                             }
-                                            else if(set_value('section') == 6) { 
+                                            else if(set_value('section') == 6) {
                                                 echo "selected";
                                             }
                                             ?>>A/L Commerce</option>
-                                            <option value="7" 
+                                            <option value="7"
                                             <?php
                                             if($attempt == '1'){
                                                 if (($row->section) == 7) {
                                                     echo "selected";
                                                 }
                                             }
-                                            else if(set_value('section') == 7) { 
+                                            else if(set_value('section') == 7) {
                                                 echo "selected";
                                             }
                                             ?>>A/L Arts</option>
@@ -641,146 +662,146 @@
                                     <label for="inputEmail3" class="col-sm-2 control-label">Main Subject</label>
                                     <div class="col-sm-4">
                                         <select id="mainsubject" name="mainsubject" class="form-control">
-                                            <option value="0" 
+                                            <option value="0"
                                             <?php
                                             if($attempt == '1'){
                                                 if (($row->main_subject_id) == 0) {
                                                     echo "selected";
                                                 }
                                             }
-                                            else if(set_value('mainsubject') == 0) { 
+                                            else if(set_value('mainsubject') == 0) {
                                                 echo "selected";
                                             }
                                             ?>>Select Your Main Subject</option>
-                                            <option value="1" 
+                                            <option value="1"
                                             <?php
                                             if($attempt == '1'){
                                                 if (($row->main_subject_id) == 1) {
                                                     echo "selected";
                                                 }
                                             }
-                                            else if(set_value('mainsubject') == 1) { 
+                                            else if(set_value('mainsubject') == 1) {
                                                 echo "selected";
                                             }
                                             ?>>Maths</option>
-                                            <option value="2" 
+                                            <option value="2"
                                             <?php
                                             if($attempt == '1'){
                                                 if (($row->main_subject_id) == 2) {
                                                     echo "selected";
                                                 }
                                             }
-                                            else if(set_value('mainsubject') == 2) { 
+                                            else if(set_value('mainsubject') == 2) {
                                                 echo "selected";
                                             }
                                             ?>>Science</option>
-                                            <option value="3" 
+                                            <option value="3"
                                             <?php
                                             if($attempt == '1'){
                                                 if (($row->main_subject_id) == 3) {
                                                     echo "selected";
                                                 }
                                             }
-                                            else if(set_value('mainsubject') == 3) { 
+                                            else if(set_value('mainsubject') == 3) {
                                                 echo "selected";
                                             }
                                             ?>>Chemistry</option>
-                                            <option value="4" 
+                                            <option value="4"
                                             <?php
                                             if($attempt == '1'){
                                                 if (($row->main_subject_id) == 4) {
                                                     echo "selected";
                                                 }
                                             }
-                                            else if(set_value('mainsubject') == 4) { 
+                                            else if(set_value('mainsubject') == 4) {
                                                 echo "selected";
                                             }
                                             ?>>Physics</option>
-                                            <option value="5" 
+                                            <option value="5"
                                             <?php
                                             if($attempt == '1'){
                                                 if (($row->main_subject_id) == 5) {
                                                     echo "selected";
                                                 }
                                             }
-                                            else if(set_value('mainsubject') == 5) { 
+                                            else if(set_value('mainsubject') == 5) {
                                                 echo "selected";
                                             }
                                             ?>>Business Studies</option>
-                                            <option value="6" 
+                                            <option value="6"
                                             <?php
                                             if($attempt == '1'){
                                                 if (($row->main_subject_id) == 6) {
                                                     echo "selected";
                                                 }
                                             }
-                                            else if(set_value('mainsubject') == 6) { 
+                                            else if(set_value('mainsubject') == 6) {
                                                 echo "selected";
                                             }
                                             ?>>English</option>
-                                            <option value="7" 
+                                            <option value="7"
                                             <?php
                                             if($attempt == '1'){
                                                 if (($row->main_subject_id) == 7) {
                                                     echo "selected";
                                                 }
                                             }
-                                            else if(set_value('mainsubject') == 7) { 
+                                            else if(set_value('mainsubject') == 7) {
                                                 echo "selected";
                                             }
                                             ?>>History</option>
-                                            <option value="8" 
+                                            <option value="8"
                                             <?php
                                             if($attempt == '1'){
                                                 if (($row->main_subject_id) == 8) {
                                                     echo "selected";
                                                 }
                                             }
-                                            else if(set_value('mainsubject') == 8) { 
+                                            else if(set_value('mainsubject') == 8) {
                                                 echo "selected";
                                             }
                                             ?>>Information Technology</option>
-                                            <option value="9" 
+                                            <option value="9"
                                             <?php
                                             if($attempt == '1'){
                                                 if (($row->main_subject_id) == 9) {
                                                     echo "selected";
                                                 }
                                             }
-                                            else if(set_value('mainsubject') == 9) { 
+                                            else if(set_value('mainsubject') == 9) {
                                                 echo "selected";
                                             }
                                             ?>>Sinhala</option>
-                                            <option value="10" 
+                                            <option value="10"
                                             <?php
                                             if($attempt == '1'){
                                                 if (($row->main_subject_id) == 10) {
                                                     echo "selected";
                                                 }
                                             }
-                                            else if(set_value('mainsubject') == 10) { 
+                                            else if(set_value('mainsubject') == 10) {
                                                 echo "selected";
                                             }
                                             ?>>Mechanics</option>
-                                            <option value="11" 
+                                            <option value="11"
                                             <?php
                                             if($attempt == '1'){
                                                 if (($row->main_subject_id) == 11) {
                                                     echo "selected";
                                                 }
                                             }
-                                            else if(set_value('mainsubject') == 11) { 
+                                            else if(set_value('mainsubject') == 11) {
                                                 echo "selected";
                                             }
                                             ?>>Tamil</option>
-                                            <option value="12" 
+                                            <option value="12"
                                             <?php
                                             if($attempt == '1'){
                                                 if (($row->main_subject_id) == 12) {
                                                     echo "selected";
                                                 }
                                             }
-                                            else if(set_value('mainsubject') == 12) { 
+                                            else if(set_value('mainsubject') == 12) {
                                                 echo "selected";
                                             }
                                             ?>>Other</option>
@@ -790,157 +811,157 @@
                                     <label for="inputEmail3" class="col-sm-2 control-label">Service Grade</label>
                                     <div class="col-sm-4">
                                         <select id="servicegrade" name="servicegrade" class="form-control">
-                                            <option value="0"  
+                                            <option value="0"
                                             <?php
                                             if($attempt == '1'){
                                                 if (($row->grade) == 0) {
                                                     echo "selected";
                                                 }
                                             }
-                                            else if(set_value('servicegrade') == 0) { 
+                                            else if(set_value('servicegrade') == 0) {
                                                 echo "selected";
                                             }
                                             ?>>Select Your Grade</option>
-                                            <option value="1" 
+                                            <option value="1"
                                             <?php
                                             if($attempt == '1'){
                                                 if (($row->grade) == 1) {
                                                     echo "selected";
                                                 }
                                             }
-                                            else if(set_value('servicegrade') == 1) { 
+                                            else if(set_value('servicegrade') == 1) {
                                                 echo "selected";
                                             }
                                             ?>>Sri Lanka Education Administrative ServiceI</option>
-                                            <option value="2" 
+                                            <option value="2"
                                             <?php
                                             if($attempt == '1'){
                                                 if (($row->grade) == 2) {
                                                     echo "selected";
                                                 }
                                             }
-                                            else if(set_value('servicegrade') == 2) { 
+                                            else if(set_value('servicegrade') == 2) {
                                                 echo "selected";
                                             }
                                             ?>>Sri Lanka Education Administrative ServiceII</option>
-                                            <option value="3" 
+                                            <option value="3"
                                             <?php
                                             if($attempt == '1'){
                                                 if (($row->grade) == 3) {
                                                     echo "selected";
                                                 }
                                             }
-                                            else if(set_value('servicegrade') == 3) { 
+                                            else if(set_value('servicegrade') == 3) {
                                                 echo "selected";
                                             }
                                             ?>>Sri Lanka Education Administrative ServiceIII</option>
-                                            <option value="4" 
+                                            <option value="4"
                                             <?php
                                             if($attempt == '1'){
                                                 if (($row->grade) == 4) {
                                                     echo "selected";
                                                 }
                                             }
-                                            else if(set_value('servicegrade') == 4) { 
+                                            else if(set_value('servicegrade') == 4) {
                                                 echo "selected";
                                             }
                                             ?>>Sri Lanka Principal ServiceI</option>
-                                            <option value="5" 
+                                            <option value="5"
                                             <?php
                                             if($attempt == '1'){
                                                 if (($row->grade) == 5) {
                                                     echo "selected";
                                                 }
                                             }
-                                            else if(set_value('servicegrade') == 5) { 
+                                            else if(set_value('servicegrade') == 5) {
                                                 echo "selected";
                                             }
                                             ?>>Sri Lanka Principal Service2I</option>
-                                            <option value="6" 
+                                            <option value="6"
                                             <?php
                                             if($attempt == '1'){
                                                 if (($row->grade) == 6) {
                                                     echo "selected";
                                                 }
                                             }
-                                            else if(set_value('servicegrade') == 6) { 
+                                            else if(set_value('servicegrade') == 6) {
                                                 echo "selected";
                                             }
                                             ?>>Sri Lanka Principal Service2II</option>
-                                            <option value="7" 
+                                            <option value="7"
                                             <?php
                                             if($attempt == '1'){
                                                 if (($row->grade) == 7) {
                                                     echo "selected";
                                                 }
                                             }
-                                            else if(set_value('servicegrade') == 7) { 
+                                            else if(set_value('servicegrade') == 7) {
                                                 echo "selected";
                                             }
                                             ?>>Sri Lanka Principal Service3</option>
-                                            <option value="8" 
+                                            <option value="8"
                                             <?php
                                             if($attempt == '1'){
                                                 if (($row->grade) == 8) {
                                                     echo "selected";
                                                 }
                                             }
-                                            else if(set_value('servicegrade') == 8) { 
+                                            else if(set_value('servicegrade') == 8) {
                                                 echo "selected";
                                             }
                                             ?>>Sri Lanka Teacher ServiceI</option>
-                                            <option value="9" 
+                                            <option value="9"
                                             <?php
                                             if($attempt == '1'){
                                                 if (($row->grade) == 9) {
                                                     echo "selected";
                                                 }
                                             }
-                                            else if(set_value('servicegrade') == 9) { 
+                                            else if(set_value('servicegrade') == 9) {
                                                 echo "selected";
                                             }
                                             ?>>Sri Lanka Teacher Service2I</option>
-                                            <option value="10" 
+                                            <option value="10"
                                             <?php
                                             if($attempt == '1'){
                                                 if (($row->grade) == 10) {
                                                     echo "selected";
                                                 }
                                             }
-                                            else if(set_value('servicegrade') == 10) { 
+                                            else if(set_value('servicegrade') == 10) {
                                                 echo "selected";
                                             }
                                             ?>>Sri Lanka Teacher Service2II</option>
-                                            <option value="11" 
+                                            <option value="11"
                                             <?php
                                             if($attempt == '1'){
                                                 if (($row->grade) == 11) {
                                                     echo "selected";
                                                 }
                                             }
-                                            else if(set_value('servicegrade') == 11) { 
+                                            else if(set_value('servicegrade') == 11) {
                                                 echo "selected";
                                             }
                                             ?>>Sri Lanka Teacher Service3I</option>
-                                            <option value="12" 
+                                            <option value="12"
                                             <?php
                                             if($attempt == '1'){
                                                 if (($row->grade) == 12) {
                                                     echo "selected";
                                                 }
                                             }
-                                            else if(set_value('servicegrade') == 12) { 
+                                            else if(set_value('servicegrade') == 12) {
                                                 echo "selected";
                                             }
                                             ?>>Sri Lanka Teacher Service3II</option>
-                                            <option value="13" 
+                                            <option value="13"
                                             <?php
                                             if($attempt == '1'){
                                                 if (($row->grade) == 13) {
                                                     echo "selected";
                                                 }
                                             }
-                                            else if(set_value('servicegrade') == 13) { 
+                                            else if(set_value('servicegrade') == 13) {
                                                 echo "selected";
                                             }
                                             ?>>Sri Lanka Teacher Service Pending</option>
@@ -971,58 +992,58 @@
                                     <label for="inputEmail3" class="col-sm-2 control-label">Nature of Appointment</label>
                                     <div class="col-sm-4">
                                         <select id="nature" name="nature" class="form-control">
-                                            <option value="0" 
+                                            <option value="0"
                                             <?php
                                             if($attempt == '1'){
                                                 if (($row->nature_of_appointment) == 0) {
                                                     echo "selected";
                                                 }
                                             }
-                                            else if(set_value('nature') == 0) { 
+                                            else if(set_value('nature') == 0) {
                                                 echo "selected";
                                             }
                                             ?>>Select Section</option>
-                                            <option value="1" 
+                                            <option value="1"
                                             <?php
                                             if($attempt == '1'){
                                                 if (($row->nature_of_appointment) == 1) {
                                                     echo "selected";
                                                 }
                                             }
-                                            else if(set_value('nature') == 1) { 
+                                            else if(set_value('nature') == 1) {
                                                 echo "selected";
                                             }
                                             ?>>Degree</option>
-                                            <option value="2" 
+                                            <option value="2"
                                             <?php
                                             if($attempt == '1'){
                                                 if (($row->nature_of_appointment) == 2) {
                                                     echo "selected";
                                                 }
                                             }
-                                            else if(set_value('nature') == 2) { 
+                                            else if(set_value('nature') == 2) {
                                                 echo "selected";
                                             }
                                             ?>>Diploma</option>
-                                            <option value="3" 
+                                            <option value="3"
                                             <?php
                                             if($attempt == '1'){
                                                 if (($row->nature_of_appointment) == 3) {
                                                     echo "selected";
                                                 }
                                             }
-                                            else if(set_value('nature') == 3) { 
+                                            else if(set_value('nature') == 3) {
                                                 echo "selected";
                                             }
                                             ?>>Trained</option>
-                                            <option value="4" 
+                                            <option value="4"
                                             <?php
                                             if($attempt == '1'){
                                                 if (($row->nature_of_appointment) == 4) {
                                                     echo "selected";
                                                 }
                                             }
-                                            else if(set_value('nature') == 4) { 
+                                            else if(set_value('nature') == 4) {
                                                 echo "selected";
                                             }
                                             ?>>Other</option>
@@ -1063,69 +1084,69 @@
                                     <label for="inputEmail3" class="col-sm-2 control-label">Promotions</label>
                                     <div class="col-sm-4">
                                         <select id="promotions" name="promotions" class="form-control">
-                                            <option value="0" 
+                                            <option value="0"
                                             <?php
                                             if($attempt == '1'){
                                                 if (($row->promotions) == 0) {
                                                     echo "selected";
                                                 }
                                             }
-                                            else if(set_value('promotions') == 0) { 
+                                            else if(set_value('promotions') == 0) {
                                                 echo "selected";
                                             }
                                             ?>>Select Section</option>
-                                            <option value="1" 
+                                            <option value="1"
                                             <?php
                                             if($attempt == '1'){
                                                 if (($row->promotions) == 1) {
                                                     echo "selected";
                                                 }
                                             }
-                                            else if(set_value('promotions') == 1) { 
+                                            else if(set_value('promotions') == 1) {
                                                 echo "selected";
                                             }
                                             ?>>SLTS 3-11</option>
-                                            <option value="2" 
+                                            <option value="2"
                                             <?php
                                             if($attempt == '1'){
                                                 if (($row->promotions) == 2) {
                                                     echo "selected";
                                                 }
                                             }
-                                            else if(set_value('promotions') == 2) { 
+                                            else if(set_value('promotions') == 2) {
                                                 echo "selected";
                                             }
                                             ?>>SLEAS 111/ SLPS 2-11/ SLTS 3-1</option>
-                                            <option value="3" 
+                                            <option value="3"
                                             <?php
                                             if($attempt == '1'){
                                                 if (($row->promotions) == 3) {
                                                     echo "selected";
                                                 }
                                             }
-                                            else if(set_value('promotions') == 3) { 
+                                            else if(set_value('promotions') == 3) {
                                                 echo "selected";
                                             }
                                             ?>>SLEAS 11/ SLPS 2-1/ SLTS 2-11</option>
-                                            <option value="4" 
+                                            <option value="4"
                                             <?php
                                             if($attempt == '1'){
                                                 if (($row->promotions) == 4) {
                                                     echo "selected";
                                                 }
                                             }
-                                            else if(set_value('promotions') == 4) { 
+                                            else if(set_value('promotions') == 4) {
                                                 echo "selected";
                                             }
                                             ?>>SLEAS 1/ SLPS 1/ SLTS 2-1</option>
-                                            <option value="5" 
+                                            <option value="5"
                                             <?php
                                             if($attempt == '1'){
                                                 if (($row->promotions) == 5) {
                                                     echo "selected";
                                                 }
                                             }
-                                            else if(set_value('promotions') == 5) { 
+                                            else if(set_value('promotions') == 5) {
                                                 echo "selected";
                                             }
                                             ?>>SLTS 1</option>
@@ -1155,5 +1176,3 @@
 
     </div>
 </div>
-
-

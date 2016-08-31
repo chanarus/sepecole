@@ -127,6 +127,8 @@ class Teacher extends CI_Controller {
         $this->form_validation->set_rules('religion', 'Religion', 'callback_check_selection');
         $this->form_validation->set_rules('civilstatus', 'Civil Status', 'callback_check_selection_status');
         $this->form_validation->set_rules('address', 'Address', 'required');
+        $this->form_validation->set_rules('address1', '');
+        $this->form_validation->set_rules('address2', '');
         $this->form_validation->set_rules('contactMob', 'Contact Mobile', 'exact_length[10]|integer');
         $this->form_validation->set_rules('contactHome', 'Contact Home', 'exact_length[10]|integer');
         $this->form_validation->set_rules('email', 'Email', 'valid_email');
@@ -145,9 +147,9 @@ class Teacher extends CI_Controller {
         $this->form_validation->set_rules('serviceperiod', 'Service Period', '');
         $this->form_validation->set_rules('remarks', 'Remarks', '');
         $this->form_validation->set_rules('nature', 'Nature of Appointment', 'required|callback_check_selection');
-        $this->form_validation->set_rules('education', 'Educational Qualification', 'required');
-        $this->form_validation->set_rules('profession', 'Professional Qualification', 'required');
-        $this->form_validation->set_rules('appointmentdate', 'Appointment Date', 'callback_check_career_day');
+        $this->form_validation->set_rules('education', 'Educational Qualification', '');
+        $this->form_validation->set_rules('profession', 'Professional Qualification', '');
+        $this->form_validation->set_rules('appointmentdate', 'Appointment Date', 'required|callback_check_career_day');
         $this->form_validation->set_rules('pension', 'Pension Date', 'callback_check_pension_day');
         $this->form_validation->set_rules('promotions', 'Promotion', '');
         $this->form_validation->set_rules('increment', 'Increment Date', 'callback_check_pension_day');
@@ -180,6 +182,8 @@ class Teacher extends CI_Controller {
                 'religion_id' => $this->input->post('religion'),
                 'civil_status' => $this->input->post('civilstatus'),
                 'permanent_addr' => $this->input->post('address'),
+                'permanent_addr1' => $this->input->post('address1'),
+                'permanent_addr2' => $this->input->post('address2'),
                 'contact_mobile' => $this->input->post('contactMob'),
                 'contact_home' => $this->input->post('contactHome'),
                 'email' => $this->input->post('email'),
@@ -330,6 +334,8 @@ class Teacher extends CI_Controller {
         $this->form_validation->set_rules('religion', 'Religion', 'callback_check_selection');
         $this->form_validation->set_rules('civilstatus', 'Civil Status', 'callback_check_selection_status');
         $this->form_validation->set_rules('address', 'Address', 'required');
+        $this->form_validation->set_rules('address1','');
+        $this->form_validation->set_rules('address2', '');
         $this->form_validation->set_rules('contactMob', 'Contatct Mobile', 'exact_length[10]|integer|callback_check_Mobile');
         $this->form_validation->set_rules('contactHome', 'Contact Home', 'exact_length[10]|integer');
         $this->form_validation->set_rules('email', 'Email', 'valid_email');
@@ -356,6 +362,8 @@ class Teacher extends CI_Controller {
                 'religion_id' => $this->input->post('religion'),
                 'civil_status' => $this->input->post('civilstatus'),
                 'permanent_addr' => $this->input->post('address'),
+                'permanent_addr1' => $this->input->post('address1'),
+                'permanent_addr2' => $this->input->post('address2'),
                 'contact_mobile' => $this->input->post('contactMob'),
                 'contact_home' => $this->input->post('contactHome'),
                 'email' => $this->input->post('email'),
@@ -410,7 +418,7 @@ class Teacher extends CI_Controller {
         $this->form_validation->set_rules('appointment', 'Appointment', 'callback_check_selection');
         $this->form_validation->set_rules('educational', 'Educational qualification', '');
         $this->form_validation->set_rules('profession', 'Professional qualification', '');
-        $this->form_validation->set_rules('first_appointment', 'First appointment', 'callback_check_career_day');
+        $this->form_validation->set_rules('first_appointment', 'First appointment', 'required|callback_check_career_day');
         $this->form_validation->set_rules('fileno', 'File no', '');
         $this->form_validation->set_rules('pension', 'Due pension date', 'callback_check_pension_day');
 
