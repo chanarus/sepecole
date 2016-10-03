@@ -1,14 +1,14 @@
 <div class="container" style="margin-top:10%">
     <div class="col-sm-6 col-md-4 col-md-offset-4">
         <?php if (validation_errors()) { ?>
-            <div class="alert alert-danger alert-dismissible" role="alert">
+            <div class="alert alert-dismissible alert-danger" role="alert">
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 <?php echo validation_errors(); ?>
             </div>
         <?php } ?>
     </div>
     <div class="col-sm-6 col-md-4 col-md-offset-4">
-        <div class="panel panel-default">
+        <div class="panel panel-info">
             <div class="panel-heading">
                 <center><strong>SCHOOL MANAGEMENT SYSTEM</strong></center>
             </div>
@@ -40,7 +40,7 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <input type="submit" class="btn btn-lg btn-primary btn-block" value="Sign in">
+                                <input type="submit" class="btn btn-lg btn-raised btn-primary btn-block" value="Sign in">
                             </div>
                         </div>
                     </div>

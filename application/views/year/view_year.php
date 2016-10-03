@@ -37,7 +37,7 @@
                 </div>
             <?php } ?>
 
-            <div class="panel panel-default">
+            <div class="panel panel-info">
                 <div class="panel-heading">
                     <strong>Academic Year</strong>
                 </div>
@@ -52,7 +52,7 @@
                     <div class="row" style="margin-bottom:5px;">
                         <div class="col-md-10"></div>
                         <div class="col-md-2">
-                            <a class="btn btn-primary btn-sm" href='<?php echo base_url('index.php/year/edit_year/'.$row->id); ?>' role="button"><i class="fa fa-pencil-square-o"></i> Edit Year</a>
+                            <a class="btn btn-raised btn-primary btn-sm" href='<?php echo base_url('index.php/year/edit_year/'.$row->id); ?>' role="button"><i class="fa fa-pencil-square-o"></i> Edit Year</a>
                         </div>
                     </div>
 

@@ -16,7 +16,7 @@
                     <?php echo validation_errors(); ?>
                 </div>
             <?php } ?>
-            <div class="panel panel-default">
+            <div class="panel panel-info">
                 <div class="panel-heading">Change password</div>
                 <div class="panel-body">
                     <div class="col-md-6">
@@ -36,7 +36,7 @@
                             <input type="password" name="conf_password" id="conf_password" class="form-control" value="">
                             <p class="help-block"></p>
                         </div>
-                        <input type="submit" class="btn btn-success" value=" Submit ">
+                        <input type="submit" class="btn btn-raised btn-success" value=" Submit ">
                         <?php echo form_close(); ?>
                     </div>
                 </div>

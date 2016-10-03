@@ -16,7 +16,7 @@
                 </ul>
             </div>
 
-            <div class="panel panel-default" style="border:0px;">
+            <div class="panel panel-info" style="border:0px;">
                 <!--                <div class="panel-body">-->
                 <?php
                 $attributes = array('class' => 'form-horizontal', 'id' => '');
@@ -31,7 +31,7 @@
                             <!--                            <a data-original-title="Broadcast Message" data-toggle="tooltip" type="button" class="btn btn-sm btn-primary"><i class="glyphicon glyphicon-envelope"></i></a>-->
                             <span class="pull-right">
 <!--                                <a href="edit.html" data-original-title="Edit this user" data-toggle="tooltip" type="button" class="btn btn-sm btn-warning"><i class="glyphicon glyphicon-edit"></i></a>-->
-                                <a href="<?php echo base_url("index.php/student/create_student"); ?>" data-original-title="Remove this user" data-toggle="tooltip" type="button" class="btn btn-sm btn-danger"><i class="glyphicon glyphicon-remove"></i></a>
+                                <a href="<?php echo base_url("index.php/student/create_student"); ?>" data-original-title="Remove this user" data-toggle="tooltip" type="button" class="btn btn-raised btn-sm btn-danger"><i class="glyphicon glyphicon-remove"></i></a>
                             </span>
                         </div>
                     </ul>
@@ -278,5 +278,3 @@ if ($val == 'm') {
 
     </div>
 </div>
-
-

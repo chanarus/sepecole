@@ -8,6 +8,12 @@ html, body {
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
+    background: #FAFAFA;
+    background-image: url("../img/school1.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+
 }
 
 .panel {
@@ -547,4 +553,8 @@ margin-bottom: 26px;}
 }
 
 .student-selector {
+}
+
+.alert {
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.3);
 }

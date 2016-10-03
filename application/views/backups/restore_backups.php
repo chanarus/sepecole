@@ -12,10 +12,10 @@
                     </div>
 
                     <div class="col-md-4">
-                        <input type="submit" class="btn btn-primary" value="Restore Backups">
+                        <input type="submit" class="btn btn-raised btn-primary" value="Restore Backups">
                     </div>
                 </div>
             </form>
         </div>
     </div>
-</div> 
+</div>

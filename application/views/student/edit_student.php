@@ -58,12 +58,12 @@
                      </div>
                 </div>
 
-             <div class="panel  panel-default"  >
-                 <div class="panel-heading panel-default " >
+             <div class="panel  panel-info"  >
+                 <div class="panel-heading panel-info " >
                     <b>EDIT STUDENT </b>
                     <span class="pull-right">
-                        <a href="<?php echo base_url("index.php/student/load_guardian") . "/" .$result->user_id;?>" data-original-title="Edit this user" data-toggle="tooltip" type="button" class="btn btn-xs btn-primary"><i class="">Guardian Details</i></a>
-                        <a href="<?php echo base_url("index.php/student") ?>" data-original-title="Remove this user" data-toggle="tooltip" type="button" class="btn btn-xs btn-danger"><i class="glyphicon glyphicon-remove"></i></a>
+                        <a href="<?php echo base_url("index.php/student/load_guardian") . "/" .$result->user_id;?>" data-original-title="Edit this user" data-toggle="tooltip" type="button" class="btn btn-raised btn-xs btn-primary"><i class="">Guardian Details</i></a>
+                        <a href="<?php echo base_url("index.php/student") ?>" data-original-title="Remove this user" data-toggle="tooltip" type="button" class="btn btn-raised btn-xs btn-danger"><i class="glyphicon glyphicon-remove"></i></a>
                 </span>
                 </div>
                  <div class="panel panel-body" >
@@ -128,12 +128,12 @@
                  <div class="row">
                      <div class="col-md-1 col-md-push-1">
 
-                       <button type="submit" class="btn btn-success " onclick="editStudent()">Edit </button>
+                       <button type="submit" class="btn btn-raised btn-success " onclick="editStudent()">Edit </button>
 
                      </div>
                      <div class="col-md-2 col-md-push-1">
 
-                       <button type="reset" class="btn btn-default ">Reset </button>
+                       <button type="reset" class="btn btn-raised btn-sucess ">Reset </button>
 
                      </div>
                  </div>

@@ -13,11 +13,8 @@
             <input class="form-control" id="newsdescription" name="newsdescription" type="text" value="<?php echo $details->description; ?>" >
         </div>
         <div class="form-group">
-            <input type="button" class="btn btn-success" id="updateitem" value="update">
-            <input type="reset" class="btn btn-default" value="Reset">
+            <input type="button" class="btn btn-raised btn-success" id="updateitem" value="update">
+            <input type="reset" class="btn btn-raised btn-default" value="Reset">
         </div>
     </form>
 </div>
-
-
-

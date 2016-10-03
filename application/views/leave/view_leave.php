@@ -54,7 +54,7 @@
                     <?php echo $succ_message; ?>
                 </div>
             <?php } ?>
-            <div class="panel panel-default">
+            <div class="panel panel-info">
                 <div class="panel-heading">
                     <strong>LEAVE DETAILS</strong>
                 </div>
@@ -121,7 +121,7 @@
                                     echo"</table>". PHP_EOL; ?>
                             <!-- Check if the leave is pending -->
                             <?php if ($row->status == "Pending") { ?>
-                              <button id="btnLeaveHistory" data-leave-id="<?php echo $row->id; ?>" class="btn btn-info" data-toggle="modal" data-target=".btnLeaveHistory">Leave History</button>
+                              <button id="btnLeaveHistory" data-leave-id="<?php echo $row->id; ?>" class="btn btn-raised btn-raised btn-info" class="btn btn-raised btn-info" data-toggle="modal" data-target=".btnLeaveHistory">Leave History</button>
 
                               <div class="modal fade btnLeaveHistory" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
                                 <div class="modal-dialog modal-lg" role="document">
@@ -183,14 +183,14 @@
 
                                     </div>
                                     <div class="modal-footer">
-                                      <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                                      <button type="button" class="btn  btn-raised btn-primary" data-dismiss="modal">Close</button>
                                     </div>
                                   </div>
                                 </div>
                               </div>
 
-                              <a id="btnApprove" data-leave-id="<?php echo $row->id; ?>" class="btn btn-success">Approve</a>
-                              <a id="btnReject" data-leave-id="<?php echo $row->id; ?>"  class="btn btn-danger">Reject</a>
+                              <a id="btnApprove" data-leave-id="<?php echo $row->id; ?>" class="btn btn-raised btn-success">Approve</a>
+                              <a id="btnReject" data-leave-id="<?php echo $row->id; ?>"  class="btn btn-raised btn-danger">Reject</a>
                             <?php } ?>
                                 <?php
                                     }

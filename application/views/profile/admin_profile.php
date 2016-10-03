@@ -55,7 +55,7 @@
     echo 'STUDENT';
 } ?></span></h4></div>-->
 <?php if ($edit) { ?>
-                <div class="col-md-offset-1 col-md-10 center" ><a href="<?php echo base_url('index.php/profile/profile_settings'); ?>"><button class='btn btn-success col-md-12'>Edit Profile</button></a></div>
+                <div class="col-md-offset-1 col-md-10 center" ><a href="<?php echo base_url('index.php/profile/profile_settings'); ?>"><button class='btn btn-raised btn-success col-md-12'>Edit Profile</button></a></div>
 <?php } ?>
             <div class="clearfix"></div>
         </div>
@@ -83,27 +83,27 @@
                                 <td class="subheadng">Name</td>
                                 <td class="normal"><?= $user_d->first_name . ' ' . $user_d->last_name; ?></td>
                                 <td class="subheadng">&nbsp;  </td>
-                                <td class="normal">&nbsp; </td>   
+                                <td class="normal">&nbsp; </td>
                             </tr>
 
                             <tr>
                                 <td class="subheadng">User Name</td>
                                 <td class="normal"><?= $user_d->username; ?></td>
                                 <td class="subheadng">&nbsp;  </td>
-                                <td class="normal">&nbsp; </td>   
+                                <td class="normal">&nbsp; </td>
                             </tr>
                             <tr>
 
                                 <td class="subheadng">User Role</td>
                                 <td class="normal">System Administrator</td>
                                 <td class="subheadng">&nbsp;  </td>
-                                <td class="normal">&nbsp; </td>   
+                                <td class="normal">&nbsp; </td>
                             </tr>
                             <tr>
                                 <td class="subheadng">Email</td>
                                 <td class="normal"><?= $user_d->email; ?></td>
                                 <td class="subheadng">&nbsp;  </td>
-                                <td class="normal">&nbsp; </td>   
+                                <td class="normal">&nbsp; </td>
                             </tr>
 
 
@@ -113,50 +113,50 @@
                     <br><br>
                     <div class="clearfix"></div>
                 </div>
-                 <?php if(isset($year)) {?> 
+                 <?php if(isset($year)) {?>
                 <div class="bhoechie-tab-content hide">
                     <br>
-                        
+
 
                             <?php
                                     foreach ($year as $row) {
                                 ?>
 
                                 <!-- Buttons for Modifications -->
-                               
+
 
                                 <div class="row" style="margin-bottom:5px;">
-                                    <div class="col-md-4"><b>Name : </b><?php echo $row->name ?></div>   
+                                    <div class="col-md-4"><b>Name : </b><?php echo $row->name ?></div>
                                 </div>
                                 <div class="row" style="margin-bottom:5px;">
-                                    <div class="col-md-4"></i><b>Starts On : </b><?php echo $row->start_date ?></div>  
-                                    <div class="col-md-4"></i><b>Ends On : </b><?php echo $row->end_date ?></div>    
+                                    <div class="col-md-4"></i><b>Starts On : </b><?php echo $row->start_date ?></div>
+                                    <div class="col-md-4"></i><b>Ends On : </b><?php echo $row->end_date ?></div>
                                 </div>
-                             
+
                                 <hr>
-                                
+
                                 <div class="row" style="margin-bottom:5px;">
-                                    <div class="col-md-4"><b>Term 01</b></div>   
+                                    <div class="col-md-4"><b>Term 01</b></div>
                                 </div>
                                 <div class="row" style="margin-bottom:5px;  margin-top:10px;">
-                                    <div class="col-md-4"><b>Start Date : </b><?php echo $row->t1_start_date ?></div>  
-                                    <div class="col-md-4"><b>End Date : </b><?php echo $row->t1_end_date ?></div>    
+                                    <div class="col-md-4"><b>Start Date : </b><?php echo $row->t1_start_date ?></div>
+                                    <div class="col-md-4"><b>End Date : </b><?php echo $row->t1_end_date ?></div>
                                 </div>
                                 <div class="row" style="margin-bottom:5px;  margin-top:10px;">
-                                    <div class="col-md-4"><b>Term 02</b></div>   
+                                    <div class="col-md-4"><b>Term 02</b></div>
                                 </div>
                                 <div class="row" style="margin-bottom:5px;">
-                                    <div class="col-md-4"><b>Start Date : </b><?php echo $row->t2_start_date ?></div>  
-                                    <div class="col-md-4"><b>End Date : </b><?php echo $row->t2_end_date ?></div>    
+                                    <div class="col-md-4"><b>Start Date : </b><?php echo $row->t2_start_date ?></div>
+                                    <div class="col-md-4"><b>End Date : </b><?php echo $row->t2_end_date ?></div>
                                 </div>
                                 <div class="row" style="margin-bottom:5px; margin-top:10px;">
-                                    <div class="col-md-4"><b>Term 03</b></div>   
+                                    <div class="col-md-4"><b>Term 03</b></div>
                                 </div>
                                 <div class="row" style="margin-bottom:5px;">
-                                    <div class="col-md-4"><b>Start Date : </b><?php echo $row->t3_start_date ?></div>  
-                                    <div class="col-md-4"><b>End Date : </b><?php echo $row->t3_end_date ?></div>   <div class="col-md-4"><div class="col-md-6"><span  style="color: #00BCD4;font-size: 11px;font-weight: bold;">School Holidays</span></div><div class="col-md-6"><span style="color: red;font-size: 11px;font-weight: bold;">Public Holidays</span></div></div> 
-                                       
-                                                                                                                    
+                                    <div class="col-md-4"><b>Start Date : </b><?php echo $row->t3_start_date ?></div>
+                                    <div class="col-md-4"><b>End Date : </b><?php echo $row->t3_end_date ?></div>   <div class="col-md-4"><div class="col-md-6"><span  style="color: #00BCD4;font-size: 11px;font-weight: bold;">School Holidays</span></div><div class="col-md-6"><span style="color: red;font-size: 11px;font-weight: bold;">Public Holidays</span></div></div>
+
+
                                 <div class="row" style="margin-bottom:5px;">
                                     <div class="col-md-4">
                                         <br>
@@ -172,10 +172,10 @@
                                         // foreach ($final as $key => $value) {
                                         //     echo "Key: $key; Value: $value";
                                         //     echo "<br />";
-                                        // }  
+                                        // }
                                         ?>
 
-                                    </div>   
+                                    </div>
                                 </div>
                                 <div class="row" style="margin-bottom:5px;">
                                     <div align="center">
@@ -254,7 +254,7 @@
                                                     //Class set for Holidays
                                                     // $class .= ($pos==6) ? ' weekend' : '';
                                                     // $class .= ($pos==0) ? ' weekend' : '';
-                                                    // echo '<td class="'.$class.'">'.'<a href="'.$href.'">' .$day. '</a>' . '</td>'; 
+                                                    // echo '<td class="'.$class.'">'.'<a href="'.$href.'">' .$day. '</a>' . '</td>';
 
                                                     echo '<td class="' . $class . '">' . $day . '</td>';
 
@@ -285,8 +285,8 @@
                                             text-align: center;
                                         }
                                         .calendar .year{
-                                            font-family:Verdana; 
-                                            font-size:18pt; 
+                                            font-family:Verdana;
+                                            font-size:18pt;
                                             color:#ff9900;
                                         }
                                         .calendar .month{
@@ -328,8 +328,8 @@
                                 </div>
 
                             <?php } ?>
-                        
-                    
+
+
                 </div>
 
 

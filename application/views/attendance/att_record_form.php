@@ -18,7 +18,7 @@
             <?php } ?>
 
 
-            <div class="panel panel-default">
+            <div class="panel panel-info">
                 <div class="panel-heading">Daily Attendance Record</div>
                 <div class="panel-body">
                     <div class="row" style="margin-left: 1em; margin-bottom: 2em;">
@@ -48,11 +48,11 @@
                                 <div class="form-group">
                                     <input type="text" id="signature_no" name="signature_no" class="form-control" placeholder="Signature No" size="15">
                                 </div>
-                                <button type="submit" class="btn btn-success" ><i class="fa fa-check-square-o"></i></button>
+                                <button type="submit" class="btn btn-raised btn-success" ><i class="fa fa-check-square-o"></i></button>
                                 <?php echo form_close(); ?>
                             </div>
                             <div class="col-md-3">
-                                <a href="<?php echo base_url("index.php/attendance/generate_report"); ?>"><button class="btn btn-primary">Generate Report</button></a>
+                                <a href="<?php echo base_url("index.php/attendance/generate_report"); ?>"><button class="btn btn-raised btn-primary">Generate Report</button></a>
                             </div>
                         </div>
                         <table class="table table-hover" style="margin-top: 1em;">
@@ -70,7 +70,7 @@
                                         <td><?php echo $row->id; ?></td>
                                         <td><?php echo $row->signature_no; ?></td>
                                         <td><?php echo $row->name_with_initials; ?></td>
-                                        <td><a href="<?php echo base_url("index.php/attendance/delete_record/" . $row->signature_no); ?>">Delete</a></td>
+                                        <td><a type="button" class="btn btn-raised btn-danger" href="<?php echo base_url("index.php/attendance/delete_record/" . $row->signature_no); ?>">Delete</a></td>
                                     </tr>
                                 <?php } ?>
                             </tbody>

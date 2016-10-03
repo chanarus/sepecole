@@ -9,7 +9,7 @@
         </div>
 
         <div class="col-md-9">
-            <?php 
+            <?php
                 if(isset($_GET['delete']) && $_GET['delete'] == true){
                     $succ_message = "News has been deleted.";
                 }
@@ -28,7 +28,7 @@
                 </div>
             <?php } ?>
 
-            <div class="panel panel-default">
+            <div class="panel panel-info">
                 <div class="panel-heading">
                     <strong>View All News</strong>
                 </div>
@@ -79,8 +79,8 @@
 
           function delete_news(newsid) {
             swal({
-              title: "Are you sure?", 
-              text: "Are you sure that you want to Delete this News?", 
+              title: "Are you sure?",
+              text: "Are you sure that you want to Delete this News?",
               type: "warning",
               showCancelButton: true,
               closeOnConfirm: false,
@@ -88,10 +88,7 @@
               confirmButtonColor: "#ec6c62"
             }, function() {
                 window.location.href = "<?php echo base_url("index.php/news/delete_news"); ?>" + "/" + newsid;
-            });  
+            });
           }
             });
 </script>
-
-
-

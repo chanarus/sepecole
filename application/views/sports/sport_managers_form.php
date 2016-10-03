@@ -1,11 +1,11 @@
 <div class="container">
-    
+
     <div class="row">
 
         <div class="col-md-3">
             <?php $this->view('sports/sport_admin_navbar'); ?>
         </div>
-        
+
         <div class="col-md-9">
             <?php if (isset($succ_message)) { ?>
             <div class="alert alert-success alert-dismissible" role="alert">
@@ -20,13 +20,13 @@
             </div>
         <?php } ?>
 
-            <div class="panel panel-default">
+            <div class="panel panel-info">
                 <div class="panel-heading">
                     <strong>ASSIGN SPORT HEADS</strong>
                 </div>
                 <div class="panel-body">
                     <?php
-                    // Change the css classes to suit your needs    
+                    // Change the css classes to suit your needs
 
                     $attributes = array('class' => 'form-horizontal', 'id' => '');
                     echo form_open('', $attributes);
@@ -63,8 +63,8 @@
                     </div>
                     <div class="form-group">
                         <div class="col-sm-offset-2 col-sm-10">
-                            <input type="submit" class="btn btn-primary" value="Add">
-                            <button type="reset" class="btn btn-default">Reset</button>
+                            <input type="submit" class="btn btn-raised btn-primary" value="Add">
+                            <button type="reset" class="btn btn-raised btn-default">Reset</button>
                         </div>
                     </div>
                     <?php echo form_close(); ?>
@@ -93,12 +93,10 @@
 
 
             </div>
-            
+
 
         </div>
 
     </div>
 
 </div>
-
-

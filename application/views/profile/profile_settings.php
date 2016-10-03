@@ -16,7 +16,7 @@
                     <?php echo validation_errors(); ?>
                 </div>
             <?php } ?>
-            <div class="panel panel-default">
+            <div class="panel panel-info">
                 <div class="panel-heading">Profile Settings</div>
                 <div class="panel-body">
                     <div class="col-md-6">
@@ -26,7 +26,7 @@
                             <br />
                             <?php $user_id= $this->session->userdata('id'); ?>
                             <img src="<?php echo $profile_image; ?>" id="profile-img" class="img-thumbnail profile-img">
-                            <span class="btn btn-default btn-file">
+                            <span class="btn btn-raised btn-default btn-file">
                                 Upload new picture<input type="file" name="profile_img" id="img-inp" onchange="readURL(this);">
                             </span>
                         </div>
@@ -40,7 +40,7 @@
                             <input type="text" name="last_name" id="last_name" class="form-control" value="<?php echo $last_name; ?>">
                             <p class="help-block"></p>
                         </div>
-                        <input type="submit" class="btn btn-success" value=" Submit ">
+                        <input type="submit" class="btn btn-raised btn-success" value=" Submit ">
                         <?php echo form_close(); ?>
                     </div>
                 </div>

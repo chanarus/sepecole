@@ -1,9 +1,9 @@
 
 <link rel="stylesheet" type="text/css" href="/DataTables-1.10.7/media/css/jquery.dataTables.css">
-  
+
 <!-- jQuery -->
 <script type="text/javascript" charset="utf8" src="/DataTables-1.10.7/media/js/jquery.js"></script>
-  
+
 <!-- DataTables -->
 <script type="text/javascript" charset="utf8" src="/DataTables-1.10.7/media/js/jquery.dataTables.js"></script>
 <script>
@@ -42,7 +42,7 @@ $(document).ready( function () {
                     <div class="form-group">
                         <input type="text" id="id" name="id" class="form-control" placeholder="Search.." size="20">
                     </div>
-                     <button type="submit" class="btn btn-success"><i class="fa fa-filter"></i> Filter Results</button>
+                     <button type="submit" class="btn btn-raised btn-success"><i class="fa fa-filter"></i> Filter Results</button>
                     <?php echo form_close(); ?>
                 </div>
             </div>
@@ -50,7 +50,7 @@ $(document).ready( function () {
                 <div class="col-md-6">
                     <br>
                     <lable ><span class="label label-info" > Tip !</span><small><i> " Search by Student No/ Admission No / Student Name " </i> </small> </lable>
-                  
+
                 </div>
             </div>
             <br>
@@ -70,10 +70,10 @@ $(document).ready( function () {
 
                             <tr>
                                 <td><?php echo $row->id; ?></td>
-                                <td><?php echo $row->admission_no; ?></td> 
+                                <td><?php echo $row->admission_no; ?></td>
                                 <td><?php echo $row->name_with_initials; ?></td>
                                 <td><?php echo $row->contact_home; ?></td>
-                                
+
                                 <td><a href="<?php echo base_url("index.php/profile") . "?key=" . $row->user_id; ?>" ><span class="glyphicon glyphicon-user" aria-hidden="true"></span></a></td>
                                 <td><a href="<?php echo base_url("index.php/student/load_student") . "/" . $row->user_id; ?>"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a></td>
                                 <td><a href="<?php echo base_url("index.php/student/delete_student") . "/" . $row->user_id; ?>" onclick="return confirm('Are you sure you want to permenantly delete this student?!!!you cannot recover this student profile after you delete!!!)');"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></i></a></td>
@@ -89,11 +89,10 @@ $(document).ready( function () {
                         <?php }
                 }
                         ?>
-                    
+
                     </nav>
                 </div>
             </div>
         </div>
     </div>
 </div>
-

@@ -43,7 +43,7 @@
             </div>
             -->
             <div class="row">
-                <div class="panel panel-default">
+                <div class="panel panel-info">
                     <div class="panel-body">
                         <script type="text/javascript">
                             $(document).ready(function () {
@@ -60,7 +60,7 @@
                                     <th>Grade</th>
                                     <th>Medium</th>
                                     <th>Contact</th>
-                                    <td>Actions</td>
+                                    <th>Actions</th>
 
                                 </tr>
                             </thead>
@@ -90,9 +90,9 @@
                                     ?></td>
                                 <td><?php echo $row->contact_mobile; ?></td>
                                 <td>
-                                <a href="<?php echo base_url("index.php/profile") . "?key=" . $row->user_id;?>" class="btn btn-primary btn-xs" aria-hidden="true"><i class="fa fa-eye"></i></a>
-                                <a href="<?php echo base_url("index.php/teacher/load_teacher") . "/" . $row->id; ?>" class="btn btn-primary btn-xs" aria-hidden="true"><i class="fa fa-edit"></i></a>&nbsp;
-                                <a id="delete-user" data-user-id="<?php echo $row->user_id; ?>" class="btn btn-danger btn-xs del" aria-hidden="true"><i class="fa fa-trash"></i></a></td>
+                                <a href="<?php echo base_url("index.php/profile") . "?key=" . $row->user_id;?>" class="btn btn-raised btn-primary btn-xs" aria-hidden="true"><i class="fa fa-eye"></i></a>
+                                <a href="<?php echo base_url("index.php/teacher/load_teacher") . "/" . $row->id; ?>" class="btn btn-raised btn-primary btn-xs" aria-hidden="true"><i class="fa fa-edit"></i></a>&nbsp;
+                                <a id="delete-user" data-user-id="<?php echo $row->user_id; ?>" class="btn btn-raised btn-danger btn-xs del" aria-hidden="true"><i class="fa fa-trash"></i></a></td>
 
                             </tr>
                         <?php } ?>

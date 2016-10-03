@@ -15,7 +15,7 @@
                 'class' => 'form-inline'
             );
             ?>
-            <div class="panel panel-default">
+            <div class="panel panel-info">
                 <div class="panel-heading">Administrator Accounts</div>
                 <div class="panel-body">
                     <script type="text/javascript">
@@ -51,7 +51,7 @@
                                     </td>
                                 </tr>
                             <?php } ?>
-                        </tbody>                      
+                        </tbody>
                     </table>
 
                 </div>
@@ -88,4 +88,3 @@
 
     }
 </script>
-

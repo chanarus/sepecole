@@ -10,7 +10,7 @@
                     <?php echo validation_errors(); ?>
                 </div>
             <?php } ?>
-            <div class="panel panel-default">
+            <div class="panel panel-info">
                 <div class="panel-heading">Create Timetable</div>
                 <div class="panel-body">
                     <div class="row" style="margin-left: 1em;">
@@ -60,7 +60,7 @@
                             </div>
                             <div class="form-group">
                                 <div class="col-sm-offset-6 col-sm-4">
-                                    <button type="submit" class="btn btn-primary">Create</button>
+                                    <button type="submit" class="btn btn-raised btn-primary">Create</button>
                                 </div>
                             </div>
                         </div>

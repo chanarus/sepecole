@@ -19,7 +19,7 @@
                     </div>
                 </div>
 <?php } ?>
-            <div class="panel panel-default">
+            <div class="panel panel-info">
 
                 <div class="col-md-12">
                     <ul class="nav nav-tabs">

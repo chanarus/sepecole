@@ -13,7 +13,7 @@
         </div>
 
         <div class="col-md-9">
-            <div class="panel panel-default">
+            <div class="panel panel-info">
                 <div class="panel-heading">
                     <strong>VIEW EVENT</strong>
                 </div>
@@ -74,7 +74,7 @@
                     <?php if((($details->status == 'approved') && ($details->end_date >= date('Y-m-d')) && ($valid_nic == $details->in_charge_id))  || ( ($this->session->userdata['user_type']) == 'A' )) {?>
                     <div class="form-group">
                         <div class="col-sm-offset-0 col-sm-10">
-                            <input type="submit" class="btn btn-primary" value="Edit" style="width: 200px">
+                            <input type="submit" class="btn btn-raised btn-primary" value="Edit" style="width: 200px">
                         </div>
                     </div>
                     <?php } ?>

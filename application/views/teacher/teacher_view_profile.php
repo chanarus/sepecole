@@ -12,15 +12,15 @@
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                     <?php echo validation_errors(); ?>
                 </div>
-            <?php } ?>  
+            <?php } ?>
 
-            <div class="panel panel-default">
+            <div class="panel panel-info">
                 <div class="panel-heading">
                     Create New Teacher
                 </div>
                 <div class="panel-body">
                     <?php
-                    // Change the css classes to suit your needs    
+                    // Change the css classes to suit your needs
 
                     $attributes = array('class' => 'form-horizontal', 'id' => '');
                     echo form_open('teacher/create_log_details', $attributes);
@@ -82,7 +82,7 @@
                         <label for="inputEmail3" class="col-sm-2 control-label">Nationality</label>
                         <div class="col-sm-5">
                             <?php echo form_error('Nationality'); ?>
-                            <input id="Nationality" type="text" name="Nationality"  value="<?php echo $user_id->nationality_id; ?>" type="text" class="form-control" id="Nationality" placeholder="Nationality" disabled style="background-color:transparent; color:red"> 
+                            <input id="Nationality" type="text" name="Nationality"  value="<?php echo $user_id->nationality_id; ?>" type="text" class="form-control" id="Nationality" placeholder="Nationality" disabled style="background-color:transparent; color:red">
                         </div>
                     </div>
 
@@ -90,7 +90,7 @@
                         <label for="inputEmail3" class="col-sm-2 control-label">Religion</label>
                         <div class="col-sm-5">
                             <?php echo form_error('religion'); ?>
-                            <input id="religion" type="text" name="religion"  value="<?php echo $user_id->religion_id; ?>" type="text" class="form-control" id="religion" placeholder="Religion" disabled style="background-color:transparent; color:red"> 
+                            <input id="religion" type="text" name="religion"  value="<?php echo $user_id->religion_id; ?>" type="text" class="form-control" id="religion" placeholder="Religion" disabled style="background-color:transparent; color:red">
                         </div>
                     </div>
 
@@ -98,7 +98,7 @@
                         <label for="inputEmail3" class="col-sm-2 control-label">Civil Status</label>
                         <div class="col-sm-5">
                             <?php echo form_error('civilstatus'); ?>
-                            <input id="civilstatus" type="text" name="civilstatus"  value="<?php echo $user_id->civil_status; ?>" type="text" class="form-control" id="civilstatus" placeholder="Civil Status" disabled style="background-color:transparent; color:red"> 
+                            <input id="civilstatus" type="text" name="civilstatus"  value="<?php echo $user_id->civil_status; ?>" type="text" class="form-control" id="civilstatus" placeholder="Civil Status" disabled style="background-color:transparent; color:red">
                         </div>
                     </div>
 
@@ -215,8 +215,3 @@
     </div>
 
 </div>
-
-
-
-
-

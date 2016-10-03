@@ -33,7 +33,7 @@
                        </div>
                    </div>
                    <div class="col-md-4">
-                       <input type="submit" class="btn btn-primary" value="Create Backups" onclick="download();">
+                       <input type="submit" class="btn btn-raised btn-primary" value="Create Backups" onclick="download();">
                    </div>
                </div>
         </div>

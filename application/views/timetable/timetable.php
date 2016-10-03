@@ -4,7 +4,7 @@
             <?php $this->view('timetable/sidebar_nav'); ?>
         </div>
         <div class="col-md-9">
-            <div class="panel panel-default">
+            <div class="panel panel-info">
                 <div class="panel-heading">Timetable For Class <strong><?php echo $class_name; ?></strong> Academic Year: <strong><?php echo $year; ?></strong></div>
                 <div class="panel-body">
                     <table class="table-bordered" style="width: 100%">
@@ -20,7 +20,7 @@
                         <tbody>
                             <tr style="height: 45px;">
                                 <td align="center">
-                                    <?php 
+                                    <?php
                                         $slot = $this->timetable_model->get_timetable_slot($timetable_id, 'MO1');
                                         if(!$slot){ ?>
                                             <a href="<?php echo base_url('index.php/timetable/add_slot') . "/" . "$timetable_id" . "/" . "MO1"; ?>">
@@ -33,7 +33,7 @@
                                     <?php } ?>
                                 </td>
                                 <td align="center">
-                                    <?php 
+                                    <?php
                                         $slot = $this->timetable_model->get_timetable_slot($timetable_id, 'TU1');
                                         if(!$slot){ ?>
                                             <a href="<?php echo base_url('index.php/timetable/add_slot') . "/" . "$timetable_id" . "/" . "TU1"; ?>">
@@ -46,7 +46,7 @@
                                     <?php } ?>
                                 </td>
                                 <td align="center">
-                                    <?php 
+                                    <?php
                                         $slot = $this->timetable_model->get_timetable_slot($timetable_id, 'WE1');
                                         if(!$slot){ ?>
                                             <a href="<?php echo base_url('index.php/timetable/add_slot') . "/" . "$timetable_id" . "/" . "WE1"; ?>">
@@ -59,7 +59,7 @@
                                     <?php } ?>
                                 </td>
                                 <td align="center">
-                                    <?php 
+                                    <?php
                                         $slot = $this->timetable_model->get_timetable_slot($timetable_id, 'TH1');
                                         if(!$slot){ ?>
                                             <a href="<?php echo base_url('index.php/timetable/add_slot') . "/" . "$timetable_id" . "/" . "TH1"; ?>">
@@ -72,7 +72,7 @@
                                     <?php } ?>
                                 </td>
                                 <td align="center">
-                                    <?php 
+                                    <?php
                                         $slot = $this->timetable_model->get_timetable_slot($timetable_id, 'FR1');
                                         if(!$slot){ ?>
                                             <a href="<?php echo base_url('index.php/timetable/add_slot') . "/" . "$timetable_id" . "/" . "FR1"; ?>">
@@ -87,7 +87,7 @@
                             </tr>
                             <tr style="height: 45px;">
                                 <td align="center">
-                                    <?php 
+                                    <?php
                                         $slot = $this->timetable_model->get_timetable_slot($timetable_id, 'MO2');
                                         if(!$slot){ ?>
                                             <a href="<?php echo base_url('index.php/timetable/add_slot') . "/" . "$timetable_id" . "/" . "MO2"; ?>">
@@ -100,7 +100,7 @@
                                     <?php } ?>
                                 </td>
                                 <td align="center">
-                                    <?php 
+                                    <?php
                                         $slot = $this->timetable_model->get_timetable_slot($timetable_id, 'TU2');
                                         if(!$slot){ ?>
                                             <a href="<?php echo base_url('index.php/timetable/add_slot') . "/" . "$timetable_id" . "/" . "TU2"; ?>">
@@ -113,7 +113,7 @@
                                     <?php } ?>
                                 </td>
                                 <td align="center">
-                                    <?php 
+                                    <?php
                                         $slot = $this->timetable_model->get_timetable_slot($timetable_id, 'WE2');
                                         if(!$slot){ ?>
                                             <a href="<?php echo base_url('index.php/timetable/add_slot') . "/" . "$timetable_id" . "/" . "WE2"; ?>">
@@ -126,7 +126,7 @@
                                     <?php } ?>
                                 </td>
                                 <td align="center">
-                                    <?php 
+                                    <?php
                                         $slot = $this->timetable_model->get_timetable_slot($timetable_id, 'TH2');
                                         if(!$slot){ ?>
                                             <a href="<?php echo base_url('index.php/timetable/add_slot') . "/" . "$timetable_id" . "/" . "TH2"; ?>">
@@ -139,7 +139,7 @@
                                     <?php } ?>
                                 </td>
                                 <td align="center">
-                                    <?php 
+                                    <?php
                                         $slot = $this->timetable_model->get_timetable_slot($timetable_id, 'FR2');
                                         if(!$slot){ ?>
                                             <a href="<?php echo base_url('index.php/timetable/add_slot') . "/" . "$timetable_id" . "/" . "FR2"; ?>">
@@ -154,7 +154,7 @@
                             </tr>
                             <tr style="height: 45px;">
                                 <td align="center">
-                                    <?php 
+                                    <?php
                                         $slot = $this->timetable_model->get_timetable_slot($timetable_id, 'MO3');
                                         if(!$slot){ ?>
                                             <a href="<?php echo base_url('index.php/timetable/add_slot') . "/" . "$timetable_id" . "/" . "MO3"; ?>">
@@ -167,7 +167,7 @@
                                     <?php } ?>
                                 </td>
                                 <td align="center">
-                                    <?php 
+                                    <?php
                                         $slot = $this->timetable_model->get_timetable_slot($timetable_id, 'TU3');
                                         if(!$slot){ ?>
                                             <a href="<?php echo base_url('index.php/timetable/add_slot') . "/" . "$timetable_id" . "/" . "TU3"; ?>">
@@ -180,7 +180,7 @@
                                     <?php } ?>
                                 </td>
                                 <td align="center">
-                                    <?php 
+                                    <?php
                                         $slot = $this->timetable_model->get_timetable_slot($timetable_id, 'WE3');
                                         if(!$slot){ ?>
                                             <a href="<?php echo base_url('index.php/timetable/add_slot') . "/" . "$timetable_id" . "/" . "WE3"; ?>">
@@ -193,7 +193,7 @@
                                     <?php } ?>
                                 </td>
                                 <td align="center">
-                                    <?php 
+                                    <?php
                                         $slot = $this->timetable_model->get_timetable_slot($timetable_id, 'TH3');
                                         if(!$slot){ ?>
                                             <a href="<?php echo base_url('index.php/timetable/add_slot') . "/" . "$timetable_id" . "/" . "TH3"; ?>">
@@ -206,7 +206,7 @@
                                     <?php } ?>
                                 </td>
                                 <td align="center">
-                                    <?php 
+                                    <?php
                                         $slot = $this->timetable_model->get_timetable_slot($timetable_id, 'FR3');
                                         if(!$slot){ ?>
                                             <a href="<?php echo base_url('index.php/timetable/add_slot') . "/" . "$timetable_id" . "/" . "FR3"; ?>">
@@ -221,7 +221,7 @@
                             </tr>
                             <tr style="height: 45px;">
                                 <td align="center">
-                                    <?php 
+                                    <?php
                                         $slot = $this->timetable_model->get_timetable_slot($timetable_id, 'MO4');
                                         if(!$slot){ ?>
                                             <a href="<?php echo base_url('index.php/timetable/add_slot') . "/" . "$timetable_id" . "/" . "MO4"; ?>">
@@ -234,7 +234,7 @@
                                     <?php } ?>
                                 </td>
                                 <td align="center">
-                                    <?php 
+                                    <?php
                                         $slot = $this->timetable_model->get_timetable_slot($timetable_id, 'TU4');
                                         if(!$slot){ ?>
                                             <a href="<?php echo base_url('index.php/timetable/add_slot') . "/" . "$timetable_id" . "/" . "TU4"; ?>">
@@ -247,7 +247,7 @@
                                     <?php } ?>
                                 </td>
                                 <td align="center">
-                                    <?php 
+                                    <?php
                                         $slot = $this->timetable_model->get_timetable_slot($timetable_id, 'WE4');
                                         if(!$slot){ ?>
                                             <a href="<?php echo base_url('index.php/timetable/add_slot') . "/" . "$timetable_id" . "/" . "WE4"; ?>">
@@ -260,7 +260,7 @@
                                     <?php } ?>
                                 </td>
                                 <td align="center">
-                                    <?php 
+                                    <?php
                                         $slot = $this->timetable_model->get_timetable_slot($timetable_id, 'TH4');
                                         if(!$slot){ ?>
                                             <a href="<?php echo base_url('index.php/timetable/add_slot') . "/" . "$timetable_id" . "/" . "TH4"; ?>">
@@ -273,7 +273,7 @@
                                     <?php } ?>
                                 </td>
                                 <td align="center">
-                                    <?php 
+                                    <?php
                                         $slot = $this->timetable_model->get_timetable_slot($timetable_id, 'FR4');
                                         if(!$slot){ ?>
                                             <a href="<?php echo base_url('index.php/timetable/add_slot') . "/" . "$timetable_id" . "/" . "FR4"; ?>">
@@ -291,7 +291,7 @@
                             </tr>
                             <tr style="height: 45px;">
                                 <td align="center">
-                                    <?php 
+                                    <?php
                                         $slot = $this->timetable_model->get_timetable_slot($timetable_id, 'MO5');
                                         if(!$slot){ ?>
                                             <a href="<?php echo base_url('index.php/timetable/add_slot') . "/" . "$timetable_id" . "/" . "MO5"; ?>">
@@ -304,7 +304,7 @@
                                     <?php } ?>
                                 </td>
                                 <td align="center">
-                                    <?php 
+                                    <?php
                                         $slot = $this->timetable_model->get_timetable_slot($timetable_id, 'TU5');
                                         if(!$slot){ ?>
                                             <a href="<?php echo base_url('index.php/timetable/add_slot') . "/" . "$timetable_id" . "/" . "TU5"; ?>">
@@ -317,7 +317,7 @@
                                     <?php } ?>
                                 </td>
                                 <td align="center">
-                                    <?php 
+                                    <?php
                                         $slot = $this->timetable_model->get_timetable_slot($timetable_id, 'WE5');
                                         if(!$slot){ ?>
                                             <a href="<?php echo base_url('index.php/timetable/add_slot') . "/" . "$timetable_id" . "/" . "WE5"; ?>">
@@ -330,7 +330,7 @@
                                     <?php } ?>
                                 </td>
                                 <td align="center">
-                                    <?php 
+                                    <?php
                                         $slot = $this->timetable_model->get_timetable_slot($timetable_id, 'TH5');
                                         if(!$slot){ ?>
                                             <a href="<?php echo base_url('index.php/timetable/add_slot') . "/" . "$timetable_id" . "/" . "TH5"; ?>">
@@ -343,7 +343,7 @@
                                     <?php } ?>
                                 </td>
                                 <td align="center">
-                                    <?php 
+                                    <?php
                                         $slot = $this->timetable_model->get_timetable_slot($timetable_id, 'FR5');
                                         if(!$slot){ ?>
                                             <a href="<?php echo base_url('index.php/timetable/add_slot') . "/" . "$timetable_id" . "/" . "FR5"; ?>">
@@ -358,7 +358,7 @@
                             </tr>
                             <tr style="height: 45px;">
                                 <td align="center">
-                                    <?php 
+                                    <?php
                                         $slot = $this->timetable_model->get_timetable_slot($timetable_id, 'MO6');
                                         if(!$slot){ ?>
                                             <a href="<?php echo base_url('index.php/timetable/add_slot') . "/" . "$timetable_id" . "/" . "MO6"; ?>">
@@ -371,7 +371,7 @@
                                     <?php } ?>
                                 </td>
                                 <td align="center">
-                                    <?php 
+                                    <?php
                                         $slot = $this->timetable_model->get_timetable_slot($timetable_id, 'TU6');
                                         if(!$slot){ ?>
                                             <a href="<?php echo base_url('index.php/timetable/add_slot') . "/" . "$timetable_id" . "/" . "TU6"; ?>">
@@ -384,7 +384,7 @@
                                     <?php } ?>
                                 </td>
                                 <td align="center">
-                                    <?php 
+                                    <?php
                                         $slot = $this->timetable_model->get_timetable_slot($timetable_id, 'WE6');
                                         if(!$slot){ ?>
                                             <a href="<?php echo base_url('index.php/timetable/add_slot') . "/" . "$timetable_id" . "/" . "WE6"; ?>">
@@ -397,7 +397,7 @@
                                     <?php } ?>
                                 </td>
                                 <td align="center">
-                                    <?php 
+                                    <?php
                                         $slot = $this->timetable_model->get_timetable_slot($timetable_id, 'TH6');
                                         if(!$slot){ ?>
                                             <a href="<?php echo base_url('index.php/timetable/add_slot') . "/" . "$timetable_id" . "/" . "TH6"; ?>">
@@ -410,7 +410,7 @@
                                     <?php } ?>
                                 </td>
                                 <td align="center">
-                                    <?php 
+                                    <?php
                                         $slot = $this->timetable_model->get_timetable_slot($timetable_id, 'FR6');
                                         if(!$slot){ ?>
                                             <a href="<?php echo base_url('index.php/timetable/add_slot') . "/" . "$timetable_id" . "/" . "FR6"; ?>">
@@ -425,7 +425,7 @@
                             </tr>
                             <tr style="height: 45px;">
                                 <td align="center">
-                                    <?php 
+                                    <?php
                                         $slot = $this->timetable_model->get_timetable_slot($timetable_id, 'MO7');
                                         if(!$slot){ ?>
                                             <a href="<?php echo base_url('index.php/timetable/add_slot') . "/" . "$timetable_id" . "/" . "MO7"; ?>">
@@ -438,7 +438,7 @@
                                     <?php } ?>
                                 </td>
                                 <td align="center">
-                                    <?php 
+                                    <?php
                                         $slot = $this->timetable_model->get_timetable_slot($timetable_id, 'TU7');
                                         if(!$slot){ ?>
                                             <a href="<?php echo base_url('index.php/timetable/add_slot') . "/" . "$timetable_id" . "/" . "TU7"; ?>">
@@ -451,7 +451,7 @@
                                     <?php } ?>
                                 </td>
                                 <td align="center">
-                                    <?php 
+                                    <?php
                                         $slot = $this->timetable_model->get_timetable_slot($timetable_id, 'WE7');
                                         if(!$slot){ ?>
                                             <a href="<?php echo base_url('index.php/timetable/add_slot') . "/" . "$timetable_id" . "/" . "WE7"; ?>">
@@ -464,7 +464,7 @@
                                     <?php } ?>
                                 </td>
                                 <td align="center">
-                                    <?php 
+                                    <?php
                                         $slot = $this->timetable_model->get_timetable_slot($timetable_id, 'TH7');
                                         if(!$slot){ ?>
                                             <a href="<?php echo base_url('index.php/timetable/add_slot') . "/" . "$timetable_id" . "/" . "TH7"; ?>">
@@ -477,7 +477,7 @@
                                     <?php } ?>
                                 </td>
                                 <td align="center">
-                                    <?php 
+                                    <?php
                                         $slot = $this->timetable_model->get_timetable_slot($timetable_id, 'FR7');
                                         if(!$slot){ ?>
                                             <a href="<?php echo base_url('index.php/timetable/add_slot') . "/" . "$timetable_id" . "/" . "FR7"; ?>">
@@ -492,7 +492,7 @@
                             </tr>
                             <tr style="height: 45px;">
                                 <td align="center">
-                                    <?php 
+                                    <?php
                                         $slot = $this->timetable_model->get_timetable_slot($timetable_id, 'MO8');
                                         if(!$slot){ ?>
                                             <a href="<?php echo base_url('index.php/timetable/add_slot') . "/" . "$timetable_id" . "/" . "MO8"; ?>">
@@ -505,7 +505,7 @@
                                     <?php } ?>
                                 </td>
                                 <td align="center">
-                                    <?php 
+                                    <?php
                                         $slot = $this->timetable_model->get_timetable_slot($timetable_id, 'TU8');
                                         if(!$slot){ ?>
                                             <a href="<?php echo base_url('index.php/timetable/add_slot') . "/" . "$timetable_id" . "/" . "TU8"; ?>">
@@ -518,7 +518,7 @@
                                     <?php } ?>
                                 </td>
                                 <td align="center">
-                                    <?php 
+                                    <?php
                                         $slot = $this->timetable_model->get_timetable_slot($timetable_id, 'WE8');
                                         if(!$slot){ ?>
                                             <a href="<?php echo base_url('index.php/timetable/add_slot') . "/" . "$timetable_id" . "/" . "WE8"; ?>">
@@ -531,7 +531,7 @@
                                     <?php } ?>
                                 </td>
                                 <td align="center">
-                                    <?php 
+                                    <?php
                                         $slot = $this->timetable_model->get_timetable_slot($timetable_id, 'TH8');
                                         if(!$slot){ ?>
                                             <a href="<?php echo base_url('index.php/timetable/add_slot') . "/" . "$timetable_id" . "/" . "TH8"; ?>">
@@ -544,7 +544,7 @@
                                     <?php } ?>
                                 </td>
                                 <td align="center">
-                                    <?php 
+                                    <?php
                                         $slot = $this->timetable_model->get_timetable_slot($timetable_id, 'FR8');
                                         if(!$slot){ ?>
                                             <a href="<?php echo base_url('index.php/timetable/add_slot') . "/" . "$timetable_id" . "/" . "FR8"; ?>">

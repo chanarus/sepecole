@@ -10,7 +10,7 @@
                 <?php echo $succ_message; ?>
             </div>
             <?php } ?>
-            <div class="panel panel-default">
+            <div class="panel panel-info">
                 <div class="panel-heading">Edit Class</div>
                 <div class="panel-body">
                     <div class="row" style="margin-left: 1em; margin-bottom: 2em;">
@@ -24,7 +24,7 @@
                                 </div>
                                 <div class="media-body">
                                     <h4 class="media-heading">Edit Class <?php echo $class->name; ?> <span class="label label-info"><?php echo $class->academic_year ;?></span> </h4>
-                                    Edit Class Details here. 
+                                    Edit Class Details here.
                                 </div>
                             </div>
                         </div>

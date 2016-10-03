@@ -25,7 +25,7 @@
                 <?php echo $err_message; ?>
             </div>
             <?php } ?>
-            <div class="panel panel-default">
+            <div class="panel panel-info">
                 <div class="panel-heading">
                     <strong><?php echo 'View '.$page_title ?></strong>
                 </div>
@@ -105,12 +105,12 @@ if ($type == 1) {
                                     <td><?php echo $row->title; ?></td>
                                     <td><?php echo $row->start_date; ?></td>
                                     <td><?php echo $row->end_date; ?></td>
-                                    <td><a href="<?php echo base_url("index.php/event/view_upcoming_event_details") . "/" . $row->id; ?>" class="btn btn-primary btn-xs" aria-hidden="true"><i class="fa fa-eye"></i></a></td>
+                                    <td><a href="<?php echo base_url("index.php/event/view_upcoming_event_details") . "/" . $row->id; ?>" class="btn btn-raised btn-primary btn-xs" aria-hidden="true"><i class="fa fa-eye"></i></a></td>
                                 <?php
                                 if ($user_type == 'A') {
                                     ?>
-                                    <td><a href="<?php echo base_url("index.php/event/edit_approved_event") . "/" . $row->id; ?>" class="btn btn-primary btn-xs" aria-hidden="true"><i class="fa fa-edit"></i></a></td>
-                                    <td><a href="<?php echo base_url("index.php/event/cancel_event") . "/" . $row->id; ?>" onclick="return confirm('Are you sure you want to cancel this event?');" class="btn btn-danger btn-xs" aria-hidden="true"><i class="fa fa-trash"></i></i></a></td>
+                                    <td><a href="<?php echo base_url("index.php/event/edit_approved_event") . "/" . $row->id; ?>" class="btn btn-raised btn-primary btn-xs" aria-hidden="true"><i class="fa fa-edit"></i></a></td>
+                                    <td><a href="<?php echo base_url("index.php/event/cancel_event") . "/" . $row->id; ?>" onclick="return confirm('Are you sure you want to cancel this event?');" class="btn btn-raised btn-danger btn-xs" aria-hidden="true"><i class="fa fa-trash"></i></i></a></td>
 
                                 <?php } ?>
 

@@ -21,7 +21,7 @@
                     50% Complete (success)
                 </div>
             </div>
-            <div class="panel panel-default">
+            <div class="panel panel-info">
                 <div class="panel-heading">
                     <b>TEACHER REGISTRATION / Personal Details > Academic Details</b>
                 </div>
@@ -211,9 +211,9 @@
 
                         <div class="form-group">
                             <div class="col-sm-offset-2 col-sm-10">
-                                <button type="submit" class="btn btn-primary" >Register</button>
+                                <button type="submit" class="btn btn-raised btn-primary" >Register</button>
                                 <!-- <button type="skip" class="btn btn-default" > Skip Now</button> -->
-                                <button type="reset" class="btn btn-default">Reset</button>
+                                <button type="reset" class="btn btn-raised btn-primary">Reset</button>
                             </div>
                         </div>
 
