@@ -6,8 +6,14 @@
     </div>
 
     <div class="col-md-9">
+<<<<<<< HEAD
       <div class="panel panel-info">
         <div class="panel-heading">Leaving Certificates</div>
+=======
+
+    <div class="panel panel-info">
+              <h3>Certificates</h3>
+>>>>>>> 31690fd72a71cfa60ab10bbace8fbf8a4d5009b9
 
         <?php
         $error_prefix = "<p class=\"help-block error\">";
@@ -62,7 +68,12 @@
                  </div>
             </div>
 
+<<<<<<< HEAD
         </div>
+=======
+        <?php echo form_close(); ?>
+    </div>
+>>>>>>> 31690fd72a71cfa60ab10bbace8fbf8a4d5009b9
 
       </div>
     </div>
