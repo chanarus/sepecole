@@ -34,9 +34,9 @@
                   </a>
                 </div>
     <div class="row" style="margin-top:10px">
-    
+
     <div class="col-md-6">
-            <div class="panel panel-default">
+            <div class="panel panel-info">
                 <div class="panel-heading">
                     <strong><i class="fa fa-newspaper-o" style="margin-right:10px"></i> RECENT NEWS</strong>
                 </div>
@@ -71,9 +71,9 @@
             </div>
         </div>
 
-		
+
 	    <div class="col-md-6">
-	    	<div class="panel panel-default">
+	    	<div class="panel panel-info">
 	            <div class="panel-heading">
 	                <strong><i class="fa fa-calendar" style="margin-right:10px"></i> UPCOMING EVENTS</strong>
 	            </div>
@@ -82,16 +82,16 @@
                         <?php foreach ($eventslist as $row) {?>
                         <li>
 
-                            <div class="news-item-date"> 
+                            <div class="news-item-date">
                                 <span class="news-item-day">
-                                    <?php 
-                                        $day=$row->start_date; 
-                                        $get_date = explode("-",$day); 
+                                    <?php
+                                        $day=$row->start_date;
+                                        $get_date = explode("-",$day);
                                         echo $get_date[2];
                                     ?>
-                                </span> 
+                                </span>
                                 <span class="news-item-month">
-                                    <?php 
+                                    <?php
                                     if($get_date[1] == 1){
                                         echo 'Jan';
                                     }
@@ -138,7 +138,7 @@
                         </li>
                         <?php }?>
 
-                        
+
                         <li>
 
                             <div class="news-item-date"> <span class="news-item-day"></span> <span class="news-item-month"></span> </div>

@@ -16,7 +16,7 @@
                         <label class="sr-only" for="year">Enter Year</label>
                         <input type="text" class="form-control" id="year" name="year" placeholder="" maxlength="4">
                     </div>
-                    <button type="submit" class="btn btn-success"><i class="fa fa-filter"></i> Filter By Year</button>
+                    <button type="submit" class="btn btn-raised btn-success"><i class="fa fa-filter"></i> Filter By Year</button>
                     <?php echo form_close(); ?>
                 </div>
                 <div class="col-md-6">
@@ -25,7 +25,7 @@
                         <label class="sr-only" for="class">Enter Class</label>
                         <input type="text" class="form-control" id="class" name="class" placeholder="">
                     </div>
-                    <button type="submit" class="btn btn-success"><i class="fa fa-filter"></i> Filter By Class</button>
+                    <button type="submit" class="btn btn-raised btn-success"><i class="fa fa-filter"></i> Filter By Class</button>
                     <?php echo form_close(); ?>
                 </div>
             </div>
@@ -37,7 +37,7 @@
             <?php } ?>
 
 
-            <div class="panel panel-default" style="margin-top: 1em;">
+            <div class="panel panel-info" style="margin-top: 1em;">
                 <div class="panel-heading">Timetable Management</div>
                 <div class="panel-body">
                     <table class="table table-hover">
@@ -47,7 +47,7 @@
                                 <th>Class Name</th>
                                 <th>Academic Year</th>
                                 <th></th>
-                            </tr> 
+                            </tr>
                         </thead>
                         <tbody>
                             <?php foreach ($timetable_list as $timetable) { ?>

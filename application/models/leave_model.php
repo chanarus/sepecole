@@ -102,6 +102,44 @@ class Leave_Model extends CI_Model {
 
     }
 
+		/*
+		 * Function to get max leave count
+		 *
+		 * @param  int leave_type
+		 * @param  int user_id
+		 *
+		 * @return mixed bool or Results
+		 */
+		public function get_no_approve_leaves($leave_type, $uid){
+				if( $leave_type == '1' ){
+						try {
+								//Normal Casual Leaves
+								$query = $this->db->query("SELECT sum(no_of_days) as days FROM apply_leaves al WHERE user_id = '$uid' AND (YEAR(CURDATE())=YEAR(al.start_date)) AND leave_type_id = '$leave_type'  AND al.is_half_day = 0 AND leave_status = '1'");
+								$row = $query->row();
+								$normal_days = $row->days;
+								//Normal Halfdays
+								$query = $this->db->query("SELECT sum(no_of_days) as days FROM apply_leaves al WHERE user_id = '$uid' AND (YEAR(CURDATE())=YEAR(al.start_date)) AND leave_type_id = '$leave_type'  AND al.is_half_day = 1 AND leave_status = '1'");
+								$row = $query->row();
+								$half_days = ($row->days)/2;
+
+								return $half_days+$normal_days;
+
+						} catch (Exception $e) {
+								return FALSE;
+						}
+				} else {
+						try {
+								$query = $this->db->query("SELECT sum(no_of_days) as days FROM apply_leaves al WHERE user_id = '$uid' AND (YEAR(CURDATE())=YEAR(al.start_date)) AND leave_type_id = '$leave_type' AND leave_status = '1'");
+								$row = $query->row();
+								return $row->days;
+
+						} catch (Exception $e) {
+								return FALSE;
+						}
+				}
+
+		}
+
     /*
      * Function to get teacher id by user_id
      *

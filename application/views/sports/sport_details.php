@@ -1,11 +1,11 @@
 <div class="container">
-    
+
     <div class="row">
 
         <div class="col-md-3">
             <?php $this->view('sports/sport_admin_navbar'); ?>
         </div>
-        
+
         <div class="col-md-9">
             <?php if (isset($succ_message)) { ?>
             <div class="alert alert-success alert-dismissible" role="alert">
@@ -20,13 +20,13 @@
             </div>
         <?php } ?>
 
-            <div class="panel panel-default">
+            <div class="panel panel-info">
                 <div class="panel-heading">
                     <strong>ADD NEW SPORT</strong>
                 </div>
                 <div class="panel-body">
                     <?php
-                    // Change the css classes to suit your needs    
+                    // Change the css classes to suit your needs
 
                     $attributes = array('class' => 'form-horizontal', 'id' => '');
                     echo form_open('sports/add_sport_category', $attributes);
@@ -48,7 +48,7 @@
                             <?php echo form_error('description'); ?>
                         </div>
                     </div>
-                    
+
                     <div class="form-group">
                         <label for="inputEmail3" class="col-sm-2 control-label">Age Category</label>
                         <div class="col-sm-6">
@@ -66,15 +66,15 @@
 
                     <div class="form-group">
                         <div class="col-sm-offset-2 col-sm-10">
-                            <input type="submit" class="btn btn-primary" value="Add">
-                            <button type="reset" class="btn btn-default">Reset</button>
+                            <input type="submit" class="btn btn-raised btn-primary" value="Add">
+                            <button type="reset" class="btn btn-raised btn-default">Reset</button>
                         </div>
                     </div>
 
                 </div>
             </div>
             <a name="sports"></a>
-            <div class="panel panel-default">
+            <div class="panel panel-info">
                 <div class="panel-heading">
                     <strong>Sports</strong>
                 </div>

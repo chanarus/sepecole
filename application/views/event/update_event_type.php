@@ -28,7 +28,7 @@
             </div>
             <?php } ?>
 
-            <div class="panel panel-default">
+            <div class="panel panel-info">
                 <div class="panel-heading">
                     <strong>Update Event Type</strong>
                 </div>
@@ -71,7 +71,7 @@
 
                     <div class="form-group">
                         <div class="col-sm-offset-2 col-sm-10">
-                            <input type="submit" class="btn btn-success" value="Update">
+                            <input type="submit" class="btn btn-raised btn-success" value="Update">
                             <button type="reset" class="btn btn-default">Reset</button>
                         </div>
                     </div>

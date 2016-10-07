@@ -21,7 +21,7 @@
                     </div>
                 <?php } ?>
             </div>
-            <div class="panel panel-default">
+            <div class="panel panel-info">
                 <div class="panel-heading">Daily Attendance Recode</div>
                 <div class="panel-body">
                     <div class="row" style="margin-left: 1em; margin-bottom: 2em;">
@@ -74,7 +74,7 @@
 
                                         <tr>
                                             <td><?php echo $row->id; ?></td>
-                                            <td><?php echo $row->admission_no; ?></td> 
+                                            <td><?php echo $row->admission_no; ?></td>
                                             <td><?php echo $row->full_name; ?></td>
                                             <td> <input name="checkboxs[]" class="checkbox1" type="checkbox" id="<?php echo'checkboxs[' . $row->id . ']'; ?>" value="<?php echo $row->id ?>"> </td>
 
@@ -86,12 +86,12 @@
 
 
                         </div>
-                        <button type="submit" class="btn btn-success " style="margin-left:15px;">Add </button>
+                        <button type="submit" class="btn btn-raised btn-success" style="margin-left:15px;">Add </button>
                     </div>
                     <?php echo form_close(); ?>
                 </div>
             </div>
-            <div class="panel panel-default" style="margin-top: 20px">
+            <div class="panel panel-info" style="margin-top: 20px">
                 <div class="panel panel-heading">Daily Attendance Recode Log</div>
                 <div class="panel panel-body">
                     <div class="row" >
@@ -117,9 +117,9 @@
 
                                         <tr>
                                             <td><?php echo $row->id; ?></td>
-                                            <td><?php echo $row->date; ?></td> 
+                                            <td><?php echo $row->date; ?></td>
                                             <td><?php echo $row->date_created; ?></td>
-                                            <td><a href="<?php echo base_url("index.php/attendance/view_one_attendance"); ?>" data-id='<?php echo $row->id ?>' class='btnedit' title='edit'><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a></td>
+                                            <td><a href="<?php echo base_url("index.php/attendance/view_one_attendance"); ?>" data-id='<?php echo $row->id ?>' class='btnedit btn-raised' title='edit'><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a></td>
                                             <!--<td> <input name="checkboxs[]" class="checkbox1" type="checkbox" id="<?php //echo'checkboxs[' . $row->id . ']';     ?>" value="<?php echo $row->id ?>"> </td>-->
 
 
@@ -161,8 +161,3 @@
 
     });
 </script>
-
-
-
-
-

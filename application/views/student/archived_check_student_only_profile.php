@@ -2,7 +2,7 @@
 <div class="container">
 
 <div class="row">
-           
+
 <div class="col-md-3">
             <?php $this->view('admin/sidebar_nav'); ?>
 </div>
@@ -20,11 +20,11 @@ echo form_open('teacher/create', $attributes);
 <div class="well">
 
 
-                 <div class="panel-heading panel-default" >
+                 <div class="panel-heading panel-info" >
                     PERSONAL DETAILS
                     <span class="pull-right">
-                        <a style="display:none;" href="<?php echo base_url("index.php/student/view_guardian_profile") . "/" .$user_id->user_id;?>" data-original-title="Edit this user" data-toggle="tooltip" type="button" class="btn btn-xs btn-primary"><i class="">Guardian Details</i></a>
-                        <a href="<?php echo base_url("index.php/student/load_all_archived_students"); ?>" data-original-title="Remove this user" data-toggle="tooltip" type="button" class="btn btn-xs btn-danger"><i class="glyphicon glyphicon-remove"></i></a>
+                        <a style="display:none;" href="<?php echo base_url("index.php/student/view_guardian_profile") . "/" .$user_id->user_id;?>" data-original-title="Edit this user" data-toggle="tooltip" type="button" class="btn btn-raised btn-xs btn-primary"><i class="">Guardian Details</i></a>
+                        <a href="<?php echo base_url("index.php/student/load_all_archived_students"); ?>" data-original-title="Remove this user" data-toggle="tooltip" type="button" class="btn btn-raised btn-xs btn-danger"><i class="glyphicon glyphicon-remove"></i></a>
                 </span>
                 </div>
                  <div class="panel panel-body" >
@@ -43,7 +43,7 @@ echo form_open('teacher/create', $attributes);
                     <div class=" col-md-9 col-lg-9 ">
                         <table class="table table-user-information">
                             <tbody>
-                         
+
                             <tr>
                                 <td><label>Admission No</label></td>
                                 <td><label><?php echo $user_id->admission_no; ?></label></td>
@@ -62,7 +62,7 @@ echo form_open('teacher/create', $attributes);
                                 <td><label>Birth Day</label></td>
                                 <td><label><?php echo $user_id->dob; ?></label></td>
                             </tr>
-                   
+
                             <tr>
                                 <td><label>Medium</label></td>
                                 <td><label>
@@ -76,7 +76,7 @@ echo form_open('teacher/create', $attributes);
                                         else if($medium == "t"){
                                             echo "Tamil";
                                         }
-                                      
+
                                         else{
                                             echo "Other";
                                         }
@@ -133,13 +133,13 @@ echo form_open('teacher/create', $attributes);
                                 <td><label>Address</label></td>
                                 <td><label><?php echo $user_id->permanent_addr1; ?></label></td>
                             </tr>
-                           
+
                             <tr>
                                 <td><label>Contact Number</label></td>
                                 <td><label><?php echo $user_id->contact_home; ?></label></td>
                             </tr>
-                            
-                            
+
+
 
                             </tbody>
                         </table>
@@ -173,5 +173,3 @@ echo form_open('teacher/create', $attributes);
 
 </div>
 </div>
-
-

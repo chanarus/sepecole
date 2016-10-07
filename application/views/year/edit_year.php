@@ -37,7 +37,7 @@
                 </div>
             <?php } ?>
 
-            <div class="panel panel-default">
+            <div class="panel panel-info">
                 <div class="panel-heading">
                     <strong>Edit Academic Year</strong>
                 </div>
@@ -147,7 +147,7 @@
                     <div class="row" style="margin-bottom:5px;">
                         <div class="col-md-4">
                             <div class="form-group">
-                                <button class="btn btn-success" type="submit">Save</button>
+                                <button class="btn btn-raised btn-success" type="submit">Save</button>
                             </div>
                         </div>
                     </div>
@@ -177,7 +177,7 @@
                                       <option value="4">Special Holiday</option>
                                       <option value="5">Special School Day</option>
                                     </select>
-                                   <button class='btn btn-success' type="submit"><i class='fa fa-plus'></i> Add Holiday</a></button>
+                                   <button class='btn btn-raised btn-success' type="submit"><i class='fa fa-plus'></i> Add Holiday</a></button>
                                     </div>
                                     <?php echo form_close(); ?>
                                 </div>

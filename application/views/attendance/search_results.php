@@ -4,7 +4,7 @@
             <?php $this->view('attendance/sidebar_nav'); ?>
         </div>
         <div class="col-md-9">
-            <div class="panel panel-default">
+            <div class="panel panel-info">
                 <div class="panel-heading">Attendance Report</div>
                 <div class="panel-body">
                     <h3>Attendance Report for: <?php echo $date; ?></h3>
@@ -33,7 +33,7 @@
                             </tbody>
                         </table>
                 </div>
-                
+
             </div>
         </div>
     </div>

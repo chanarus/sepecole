@@ -27,7 +27,7 @@
                 </div>
                 <?php } ?>
 
-            <div class="panel panel-default">
+            <div class="panel panel-info">
                 <div class="panel-heading">
                     <strong>Pending Event Details</strong>
                 </div>
@@ -88,8 +88,8 @@
 
                     <div class="form-group">
                         <div class="col-sm-offset-0 col-sm-10">
-                            <a href="<?php echo base_url('index.php/event/approve_event/' . $details->id); ?>" class="btn btn-success" style="width: 150px">Approve</a>
-                            <a href="<?php echo base_url('index.php/event/reject_event/' . $details->id); ?>" class="btn btn-danger" style="width: 150px">Reject</a>
+                            <a href="<?php echo base_url('index.php/event/approve_event/' . $details->id); ?>" class="btn btn-raised btn-success" style="width: 150px">Approve</a>
+                            <a href="<?php echo base_url('index.php/event/reject_event/' . $details->id); ?>" class="btn btn-raised btn-danger" style="width: 150px">Reject</a>
                         </div>
                     </div>
 

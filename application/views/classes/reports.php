@@ -4,7 +4,7 @@
             <?php $this->view('classes/sidebar_nav'); ?>
         </div>
         <div class="col-md-9">
-            <div class="panel panel-default">
+            <div class="panel panel-info">
                 <div class="panel-heading">Reports</div>
                 <div class="panel-body">
                     <div class="row">

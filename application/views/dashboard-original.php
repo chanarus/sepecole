@@ -1,7 +1,7 @@
 <div class="container">
 	<div class="row">
 		<div class="col-md-6">
-			<div class="panel panel-default">
+			<div class="panel panel-info">
 		        <div class="panel-heading">
 		            <strong><i class="fa fa-ellipsis-h" style="margin-right:10px"></i> NEED YOUR ATTENTION</strong>
 		        </div>
@@ -13,21 +13,21 @@
                         <br/>Leaves
                     </div>
                     <!-- .stat -->
-                    
+
                     <div class="stat"> <i class="glyphicon glyphicon-bullhorn"></i> <span class="value">3</span>
                         <br/>Events
                     </div>
                     <!-- .stat -->
-                    
+
                     <div class="stat"> <i class="fa fa-newspaper-o"></i> <span class="value">22</span>
                         <br/>News
                     </div>
                     <!-- .stat -->
-                    
+
                     <div class="stat"> <i class="fa fa-envelope"></i> <span class="value">25</span>
                         <br/>Messages
                     </div>
-                    <!-- .stat --> 
+                    <!-- .stat -->
                   </div>
 
 					</div>
@@ -35,7 +35,7 @@
 		    </div>
 		</div>
 	    <div class="col-md-6">
-	    	<div class="panel panel-default">
+	    	<div class="panel panel-info">
 	            <div class="panel-heading">
 	                <strong><i class="fa fa-newspaper-o" style="margin-right:10px"></i> RECENT NEWS</strong>
 	            </div>
@@ -50,7 +50,7 @@
     </div>
     <div class="row">
 		<div class="col-md-6">
-			<div class="panel panel-default">
+			<div class="panel panel-info">
 		        <div class="panel-heading">
 		            <strong><i class="fa fa-exchange" style="margin-right:10px"></i> ACTIVITY FEED</strong>
 		        </div>
@@ -64,7 +64,7 @@
                         </div><!-- /col-sm-1 -->
 
                         <div class="col-sm-10">
-                            <div class="panel panel-default">
+                            <div class="panel panel-info">
                                 <div class="panel-heading">
                                     <strong>myusername</strong> <span class="text-muted">commented 5 days ago</span>
                                 </div>
@@ -83,7 +83,7 @@
                         </div><!-- /col-sm-1 -->
 
                         <div class="col-sm-10">
-                            <div class="panel panel-default">
+                            <div class="panel panel-info">
                                 <div class="panel-heading">
                                     <strong>myusername</strong> <span class="text-muted">commented 5 days ago</span>
                                 </div>
@@ -102,7 +102,7 @@
                         </div><!-- /col-sm-1 -->
 
                         <div class="col-sm-10">
-                            <div class="panel panel-default">
+                            <div class="panel panel-info">
                                 <div class="panel-heading">
                                     <strong>myusername</strong> <span class="text-muted">commented 5 days ago</span>
                                 </div>
@@ -121,7 +121,7 @@
                         </div><!-- /col-sm-1 -->
 
                         <div class="col-sm-10">
-                            <div class="panel panel-default">
+                            <div class="panel panel-info">
                                 <div class="panel-heading">
                                     <strong>myusername</strong> <span class="text-muted">commented 5 days ago</span>
                                 </div>
@@ -135,7 +135,7 @@
 		    </div>
 		</div>
 	    <div class="col-md-6">
-	    	<div class="panel panel-default">
+	    	<div class="panel panel-info">
 	            <div class="panel-heading">
 	                <strong><i class="fa fa-calendar" style="margin-right:10px"></i> UPCOMING EVENTS</strong>
 	            </div>

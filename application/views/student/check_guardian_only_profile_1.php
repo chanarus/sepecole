@@ -2,7 +2,7 @@
 <div class="container">
 
 <div class="row">
-             
+
 <div class="col-md-3">
             <?php $this->view('student/sidebar_nav_t'); ?>
 </div>
@@ -17,12 +17,12 @@
 <div class="well">
 
 </ul
-<div class="panel  panel-default"  >
-                 <div class="panel-heading panel-default " >
+<div class="panel  panel-info"  >
+                 <div class="panel-heading panel-info " >
                     GUARDIAN DETAILS
                        <span class="pull-right">
-                        <a href="<?php echo base_url("index.php/student/view_student_profile") . "/" .$user_id->student_id;?>" data-original-title="Edit this user" data-toggle="tooltip" type="button" class="btn btn-xs btn-primary"><i class="">Student Details</i></a>
-                        <a href="<?php echo base_url("index.php/student"); ?>" data-original-title="Remove this user" data-toggle="tooltip" type="button" class="btn btn-xs btn-danger"><i class="glyphicon glyphicon-remove"></i></a>
+                        <a href="<?php echo base_url("index.php/student/view_student_profile") . "/" .$user_id->student_id;?>" data-original-title="Edit this user" data-toggle="tooltip" type="button" class="btn btn-raised btn-xs btn-primary"><i class="">Student Details</i></a>
+                        <a href="<?php echo base_url("index.php/student"); ?>" data-original-title="Remove this user" data-toggle="tooltip" type="button" class="btn btn-raised btn-xs btn-danger"><i class="glyphicon glyphicon-remove"></i></a>
                        </span>
                 </div>
                  <div class="panel panel-body" >
@@ -76,7 +76,7 @@
         <td><label>Address</label></td>
         <td><label><?php echo $user_id->addr.",".user_id->addr1 ; ?></label></td>
     </tr>
-    
+
     <tr>
         <td><label>Gender</label></td>
         <td><label>
@@ -103,7 +103,7 @@
                                         ?>
             </label></td>
     </tr>
-    
+
 
     </tbody>
 </table>
@@ -131,5 +131,3 @@
 
 </div>
 </div>
-
-

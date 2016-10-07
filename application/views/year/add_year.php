@@ -37,7 +37,7 @@
                 </div>
             <?php } ?>
 
-            <div class="panel panel-default">
+            <div class="panel panel-info">
                 <div class="panel-heading">
                     <strong>Add Academic Year</strong>
                 </div>
@@ -158,7 +158,7 @@
                     <div class="row" style="margin-bottom:5px; margin-top:10px;">
                         <div class="col-md-4">
                             <div class="form-group">
-                                <button class="btn btn-success" type="submit">Save</button>
+                                <button class="btn btn-raised btn-success" type="submit">Save</button>
                             </div>
                         </div>
                     </div>

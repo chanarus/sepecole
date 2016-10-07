@@ -21,10 +21,10 @@
             );
             ?>
             <?php echo form_open('subject/search', $attributes); ?>
-            
-            
+
+
             <?php echo form_close(); ?>
-            <div class="panel panel-default" style="margin-top: 10px;">
+            <div class="panel panel-info" style="margin-top: 10px;">
                 <div class="panel-heading">Subjects</div>
                 <div class="panel-body">
                     <table class="table table-hover" id="subject" >
@@ -54,18 +54,18 @@
                                               else if($row->section_id == 7 ){echo "A/L Arts";}
                                     ?></td>
                                     <td><?php echo $row->full_name; ?></td>
-                                    
+
                                     <td>
-                                       
-                                        
-                                    <a href="<?php echo base_url('index.php/subject/edit') . '/' . $row->id; ?>" data-original-title="Remove this user" data-toggle="tooltip" type="button" class="btn btn-xs btn-info"><i class="glyphicon glyphicon-trash"></i></a>
+
+
+                                    <a href="<?php echo base_url('index.php/subject/edit') . '/' . $row->id; ?>" data-original-title="Remove this user" data-toggle="tooltip" type="button" class="btn btn-raised btn-xs btn-info"><i class="glyphicon glyphicon-trash"></i></a>
                                     </td>
                                 </tr>
                             <?php } ?>
-                        </tbody>                      
+                        </tbody>
                     </table>
                     <nav>
-                        
+
                     </nav>
 
                 </div>
@@ -79,4 +79,3 @@
         $("[data-toggle='tooltip']").tooltip();
     });
 </script>
-

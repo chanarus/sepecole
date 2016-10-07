@@ -26,7 +26,7 @@
                 </div>
             <?php } ?>
 
-            <div class="panel panel-default">
+            <div class="panel panel-info">
                 <div class="panel-heading">
                     <strong>CREATE NEW EVENT</strong>
                 </div>
@@ -173,7 +173,7 @@
 
                     <div class="form-group">
                         <div class="col-sm-offset-2 col-sm-10">
-                            <input type="submit" class="btn btn-primary" value="Submit">
+                            <input type="submit" class="btn btn-raised btn-primary" value="Submit">
                             <button type="reset" class="btn btn-default">Reset</button>
                         </div>
                     </div>
@@ -181,7 +181,7 @@
                 </div>
             </div>
             <a name="eventrequest"></a>
-            <div class="panel panel-default">
+            <div class="panel panel-info">
                 <div class="panel-heading">
                     <strong>EVENT REQUEST STATUS</strong>
                 </div>

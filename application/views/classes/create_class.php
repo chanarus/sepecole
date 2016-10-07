@@ -10,7 +10,7 @@
                     <?php echo $succ_message; ?>
                 </div>
             <?php } ?>
-            <div class="panel panel-default">
+            <div class="panel panel-info">
                 <div class="panel-heading">Create Class</div>
                 <div class="panel-body">
                     <div class="row" style="margin-left: 1em; margin-bottom: 2em;">

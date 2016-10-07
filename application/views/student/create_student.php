@@ -59,8 +59,8 @@
                     </div>
                 </div>
 
-                <div class="panel  panel-default"  >
-                    <div class="panel-heading panel-default " >
+                <div class="panel  panel-info"  >
+                    <div class="panel-heading panel-info " >
                         <b>ADMISSION / Personal Details</b>
                     </div>
                     <div class="panel panel-body" >
@@ -257,12 +257,12 @@
                         <div class="row">
                             <div class="col-md-1 col-md-push-1">
 
-                                <button type="submit" class="btn btn-success ">Next </button>
+                                <button type="submit" class="btn btn-raised btn-success ">Next </button>
 
                             </div>
-                            <div class="col-md-1 col-md-push-1">
+                            <div class="col-md-1 col-md-push-2">
 
-                                <button type="reset" class="btn btn-default">Reset </button>
+                                <button type="reset" class="btn btn-raised btn-success">Reset </button>
 
                             </div>
                         </div>

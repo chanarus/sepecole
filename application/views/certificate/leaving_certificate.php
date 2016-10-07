@@ -4,7 +4,9 @@
       <?php $this->view('certificate/sidebar_nav'); ?>
     </div>
     <div class="col-md-9">
-        <h3>Certificates</h3>
+
+    <div class="panel panel-info">
+              <h3>Certificates</h3>
 
         <?php
         $error_prefix = "<p class=\"help-block error\">";
@@ -59,6 +61,7 @@
               </div>
 
         <?php echo form_close(); ?>
+    </div>
 
     </div>
   </div>

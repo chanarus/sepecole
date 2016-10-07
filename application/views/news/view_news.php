@@ -9,7 +9,7 @@
         </div>
 
         <div class="col-md-9">
-            <div class="panel panel-default">
+            <div class="panel panel-info">
                 <div class="panel-body">
                     <h3><i class="fa fa-newspaper-o"></i> <?php echo $details->name ?></h3><hr>
                     <!-- Content -->
@@ -20,7 +20,7 @@
         </div>
         <?php }else{ ?>
             <div class="col-md-12">
-            <div class="panel panel-default">
+            <div class="panel panel-info">
                 <div class="panel-body">
                     <h3><i class="fa fa-newspaper-o"></i> <?php echo $details->name ?></h3><hr>
                     <!-- Content -->
@@ -32,6 +32,3 @@
         <?php } ?>
     </div>
 </div>
-
-
-

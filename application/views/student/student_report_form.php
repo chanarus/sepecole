@@ -4,11 +4,11 @@
             <?php $this->view('student/sidebar_nav'); ?>
         </div>
         <div class="col-md-9">
-            <div class="panel panel-default">
+            <div class="panel panel-info">
                 <div class="panel-heading">Generate Student Reports</div>
                 <div class="panel-body">
                     <?php
-                    // Change the css classes to suit your needs    
+                    // Change the css classes to suit your needs
                     $l=0;
                     $attributes = array('class' => 'form-horizontal', 'id' => '');
                     echo form_open('student/report_pdf', $attributes);
@@ -23,19 +23,19 @@
                             <div class="media-body">
                                 <h4 class="media-heading">Student Report</h4>
                                 There are two report types. "Section" report and "class" report. In Section report, you can
-                                print section wise reports. In Class report, you can print class wise report. 
+                                print section wise reports. In Class report, you can print class wise report.
                             </div>
                         </div>
                     </div>
                     <div class="col-md-10">
                         <div class="row">
-                           
+
                             <div class="col-md-4">
                                 <div class="form-inline">
                                     <label for="report">Select Grade</label>
-                                   
-                                        
-                                    
+
+
+
                                         <select id="report" name="report" class="form-control" style="width: 50%;">
                                             <option value="n">--grade--</option>
                                             <option value="1">1</option>
@@ -52,7 +52,7 @@
                                             <option value="12">12</option>
                                             <option value="13">13</option>
                                         </select>
-                                   
+
 
                                         <?php echo form_error('report'); ?>
                                 </div>
@@ -67,7 +67,7 @@
                                 <?php } ?>
                             </select></div></div>
                             <div class="col-md-3">
-                                <input type="submit" class="btn btn-danger" value="Genarate Report">
+                                <input type="submit" class="btn btn-raised btn-danger" value="Genarate Report">
                             </div>
                         </div>
                     </div>
@@ -92,12 +92,12 @@
 <script type="text/javascript">
 
     $('#report').on('click', function () {
-        
+
         var formdata = new FormData();
         //var type = document.getElementById('reporttype').value;
         var report = document.getElementById('report').value;
        if(report){
-           
+
        }
         if (formdata) {
             //formdata.append("tpe", type);
@@ -114,10 +114,10 @@
         });
 
     });
-    
+
      $('#class').on('click', function () {
-        
-       
+
+
         var formdata2 = new FormData();
         //var type = document.getElementById('reporttype').value;
         var report = document.getElementById('class').value;

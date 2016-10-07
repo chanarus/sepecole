@@ -304,6 +304,33 @@ class leave extends CI_Controller {
         //Get Leave Details
         $data['leave_details'] = $this->Leave_Model->get_leave_details($id);
 
+        //$userID = $this->$data['leave_details']->user_id;
+
+
+        foreach($data['leave_details'] as $val){
+           $userID = $val->user_id;
+        }
+
+        //Getting Values from Leaves DB
+        $data['casual_leaves'] = $this->Leave_Model->get_max_leave_count("Casual");
+        $data['medical_leaves'] = $this->Leave_Model->get_max_leave_count("Medical");
+        $data['duty_leaves'] = $this->Leave_Model->get_max_leave_count("Duty");
+        $data['other_leaves'] = $this->Leave_Model->get_max_leave_count("Other");
+        $data['maternity_leaves'] = $this->Leave_Model->get_max_leave_count("Maternity");
+
+        //Getting List of Applied Leaves
+        $data['applied_leaves'] = $this->Leave_Model->get_applied_leaves_list($userID);
+
+        //Get Separate leaves count according to the type
+        $data['applied_casual_leaves'] = $this->Leave_Model->get_no_approve_leaves('1', $userID);
+        $data['applied_medical_leaves'] = $this->Leave_Model->get_no_approve_leaves('2', $userID);
+        $data['applied_duty_leaves'] = $this->Leave_Model->get_no_approve_leaves('3', $userID);
+        $data['applied_other_leaves'] = $this->Leave_Model->get_no_approve_leaves('4', $userID);
+        $data['applied_maternity_leaves'] = $this->Leave_Model->get_no_approve_leaves('5', $userID);
+
+        //total leaves
+        $data['total_leaves'] = $data['applied_casual_leaves'] + $data['applied_medical_leaves'] + $data['applied_duty_leaves'] + $data['applied_other_leaves'] + $data['applied_maternity_leaves'];
+
         //Passing it to the View
         $this->load->view('templates/header', $data);
         $this->load->view('navbar_main', $data);

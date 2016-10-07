@@ -1,14 +1,30 @@
 * {
     margin:0px;
     padding:0px;
+    box-sizing: border-box;
 }
 
 html, body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #FAFAFA;
+    /*background-image: url("../img/school1.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;*/
 
-    font-family:sans-serif;
 }
-.panel-heading {
-    padding: 5px 15px;
+
+.panel {
+    border-radius: 1px;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.3);
+    margin: 20px 0;
+}
+
+.btn {
+  border-radius: 1px;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.3);
 }
 
 .panel-footer {
@@ -43,10 +59,17 @@ html, body {
 .text-muted {
     margin: 20px 0;
 }*/
+.navbar {
+  height: 60px;
+  display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
 
 .subnavbar {
     margin-top: 0;
     margin-bottom: 2em;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.3);
 }
 
 .subnavbar-inner {
@@ -389,6 +412,8 @@ margin-bottom: 26px;}
 .admin-btn{
     margin-right: 10px;
     margin-bottom: 10px;
+    border-radius: 1px;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.3);
     background: #f5f5f5;
     float: left;
     min-width: 150px;
@@ -528,4 +553,8 @@ margin-bottom: 26px;}
 }
 
 .student-selector {
+}
+
+.alert {
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.3);
 }

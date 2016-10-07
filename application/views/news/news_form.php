@@ -2,11 +2,11 @@
     <div class="row">
         <div class="col-md-3">
             <div class="panel">
-                <div class="panel panel-default">
+                <div class="panel panel-info">
                     <div class="panel-heading">
                         Clear History
                     </div>
-                    <br> 
+                    <br>
                     <div class="panel-body">
                         select option :
                         <br><br>
@@ -19,7 +19,7 @@
                         <br>
                         <div class="form-group">
                             <div class="col-sm-offset-0">
-                                <button type="button" class="btn btn-success" id="clearhistory">Clear History</button>
+                                <button type="button" class="btn btn-raised btn-success" id="clearhistory">Clear History</button>
                             </div>
                         </div>
                     </div>

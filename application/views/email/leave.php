@@ -1,6 +1,6 @@
 <div class="container" style="margin-top:25px;">
 	<div class="row col-md-9">
-		<div class="panel panel-default">
+		<div class="panel panel-info">
   			<div class="panel-body">
   				<div class="row">
 					<div class="col-md-6 pull-right">

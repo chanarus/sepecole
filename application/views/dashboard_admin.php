@@ -5,7 +5,7 @@
             <!-- Recent News -->
             <div class="row">
                 <div class="col-md-12">
-                    <div class="panel panel-default">
+                    <div class="panel panel-info">
                         <div class="panel-heading">
                             <strong><i class="fa fa-newspaper-o" style="margin-right:10px"></i> RECENT NEWS</strong>
                         </div>
@@ -38,7 +38,7 @@
             <!-- Events -->
             <div class="row">
                 <div class="col-md-12">
-                    <div class="panel panel-default">
+                    <div class="panel panel-info">
                         <div class="panel-heading">
                             <strong><i class="fa fa-calendar" style="margin-right:10px"></i> UPCOMING EVENTS</strong>
                         </div>
@@ -106,7 +106,7 @@
             <!-- Icons Dock -->
             <div class="row">
                 <div class="col-md-12">
-                    <div class="panel panel-default">
+                    <div class="panel panel-info">
                         <div class="panel-heading">
                             <strong><i class="fa fa-ellipsis-h" style="margin-right:10px"></i> NEED YOUR ATTENTION</strong>
                         </div>
@@ -152,7 +152,7 @@
             <!-- Activity Feed -->
             <div class="row">
                 <div class="col-md-12">
-                    <div class="panel panel-default">
+                    <div class="panel panel-info">
                         <div class="panel-heading">
                             <strong><i class="fa fa-exchange" style="margin-right:10px"></i> ACTIVITY FEED</strong>
                         </div>

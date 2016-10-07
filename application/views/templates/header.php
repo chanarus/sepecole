@@ -25,6 +25,10 @@
         <!-- Bootstrap -->
         <link href="<?php echo base_url("assets/css/bootstrap.css"); ?>" rel="stylesheet">
         <link href="<?php echo base_url("assets/css/style.css"); ?>" rel="stylesheet">
+
+        <link rel="stylesheet" href="<?php echo base_url("assets/css/bootstrap-material-design.css"); ?>">
+        <link rel="stylesheet" href="<?php echo base_url("assets/css/ripples.min.css"); ?>">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <!-- <link href="https://cdn.datatables.net/1.10.7/css/jquery.dataTables.css" rel="stylesheet"> -->
         <script type="text/javascript" language="javascript" src="http://cdn.datatables.net/plug-ins/1.10.7/integration/bootstrap/3/dataTables.bootstrap.js"></script>
 

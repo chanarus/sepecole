@@ -15,7 +15,7 @@
             ?>
         </div>
         <div class="col-md-9">
-            <div class="panel panel-default">
+            <div class="panel panel-info">
                 <div class="panel-heading">
                     <strong>PENDING LEAVES</strong>
                 </div>
@@ -31,8 +31,8 @@
                                         </div>
                                    </div>
                                 </div>
-                            
-                            <?php 
+
+                            <?php
                             }else{
                                 foreach ($admin_pending_list as $row) {
                                     echo "<div class='media' style='background-color: #FFF59D;'>". PHP_EOL;
@@ -57,7 +57,7 @@
 
                 </div>
 
-                <div class="panel panel-default">
+                <div class="panel panel-info">
                 <div class="panel-heading">
                     <strong>PENDING SHORT LEAVES</strong>
                 </div>
@@ -73,8 +73,8 @@
                                         </div>
                                    </div>
                                 </div>
-                            
-                            <?php 
+
+                            <?php
                             }else{
                                 foreach ($admin_pending_short_list as $row) {
                                     echo "<div class='media' style='background-color: #90CAF9;'>". PHP_EOL;

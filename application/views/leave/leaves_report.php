@@ -15,7 +15,7 @@
             ?>
         </div>
         <div class="col-md-9">
-            <div class="panel panel-default">
+            <div class="panel panel-info">
                 <div class="panel-heading">
                     <strong>LEAVES REPORT</strong>
                 </div>
@@ -63,7 +63,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                            <button type="submit" class="btn btn-primary" id="sbtn"><i class="fa fa-search"></i> Search</button>
+                                            <button type="submit" class="btnbtn-raised btn-raised btn-primary" id="sbtn"><i class="fa fa-search"></i> Search</button>
                                         </div>
 
 
@@ -81,7 +81,7 @@
                         <input type="hidden" name="enddate" value="<?php echo $endate ?>" id="edt">
                         <div class="row">
                             <div class="col-md-4">
-                                <button type="submit" class="btn btn-primary"><i class="fa fa-print"></i> Print</button>
+                                <button type="submit" class="btn btn-raised btn-primary"><i class="fa fa-print"></i> Print</button>
                             </div>
                         </div>
                         <?php echo form_close(); ?>

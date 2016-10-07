@@ -19,13 +19,13 @@
             <?php
                 if (isset($_GET['action']) && $_GET['action'] == "approve" && isset($_GET['status']) && $_GET['action'] == true){
                     $succ_message = "Successfully Approved the Short Leave";
-                } 
+                }
                 if(isset($_GET['action']) && $_GET['action'] == "approve" && isset($_GET['status']) && $_GET['action'] == false){
                     $error_message = "Failed to Approved the Short Leave";
                 }
                 if (isset($_GET['action']) && $_GET['action'] == "reject" && isset($_GET['status']) && $_GET['action'] == true){
                     $succ_message = "Successfully Rejected the Short Leave";
-                } 
+                }
                 if(isset($_GET['action']) && $_GET['action'] == "reject" && isset($_GET['status']) && $_GET['action'] == false){
                     $error_message = "Failed to Reject the Short Leave";
                 }
@@ -38,7 +38,7 @@
 
                         setTimeout(redirect, 3000);
                     </script>
-                <?php } ?> 
+                <?php } ?>
             <!--    Messages         -->
             <?php if (isset($error_message)) { ?>
                 <div class="alert alert-danger alert-dismissible" role="alert">
@@ -54,7 +54,7 @@
                     <?php echo $succ_message; ?>
                 </div>
             <?php } ?>
-            <div class="panel panel-default">
+            <div class="panel panel-info">
                 <div class="panel-heading">
                     <strong>SHORT LEAVE DETAILS</strong>
                 </div>
@@ -86,12 +86,12 @@
                                     echo"<td><b>Date</b></td>". PHP_EOL;
                                     echo"<td>".$row->date."</td>". PHP_EOL;
                                     echo"</tr>". PHP_EOL;
-                                    
+
                                     echo"<tr>". PHP_EOL;
                                     echo"<td><b>Reason</b></td>". PHP_EOL;
                                     echo"<td>".$row->reason."</td>". PHP_EOL;
                                     echo"</tr>". PHP_EOL;
-                                    
+
                                     echo"<td><b>Leave Status</b></td>". PHP_EOL;
 
                                     if ($row->status == "Pending") {
@@ -111,8 +111,8 @@
 
                             <!-- Check if the leave is pending -->
                             <?php if ($row->status == "Pending") { ?>
-                            <a id="btnApprove" data-leave-id="<?php echo $row->id; ?>" class="btn btn-success">Approve</a>
-                            <a id="btnReject" data-leave-id="<?php echo $row->id; ?>"  class="btn btn-danger">Reject</a>
+                            <a id="btnApprove" data-leave-id="<?php echo $row->id; ?>" class="btn btn-raised btn-success">Approve</a>
+                            <a id="btnReject" data-leave-id="<?php echo $row->id; ?>"  class="btn btn-raised btn-danger">Reject</a>
                             <?php } ?>
                                 <?php
                                     }
@@ -135,8 +135,8 @@
 
   function approve(leaveid) {
     swal({
-      title: "Are you sure?", 
-      text: "Are you sure that you want to Appove this Short Leave?", 
+      title: "Are you sure?",
+      text: "Are you sure that you want to Appove this Short Leave?",
       type: "warning",
       showCancelButton: true,
       closeOnConfirm: false,
@@ -144,7 +144,7 @@
       confirmButtonColor: "#5cb85c"
     }, function() {
         window.location.href = "<?php echo base_url("index.php/leave/approve_short_leave"); ?>" + "/" + leaveid;
-    });  
+    });
   }
 
   // Reject Leave
@@ -155,8 +155,8 @@
 
   function reject(leaveid) {
     swal({
-      title: "Are you sure?", 
-      text: "Are you sure that you want to Reject Short this Leave?", 
+      title: "Are you sure?",
+      text: "Are you sure that you want to Reject Short this Leave?",
       type: "warning",
       showCancelButton: true,
       closeOnConfirm: false,
@@ -164,7 +164,7 @@
       confirmButtonColor: "#ec6c62"
     }, function() {
         window.location.href = "<?php echo base_url("index.php/leave/reject_short_leave"); ?>" + "/" + leaveid;
-    });  
+    });
   }
-  
+
   </script>

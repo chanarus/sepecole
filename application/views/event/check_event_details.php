@@ -20,7 +20,7 @@
                 <?php echo $this->session->flashdata('succ'); ?>
             </div>
             <?php } ?>
-            <div class="panel panel-default">
+            <div class="panel panel-info">
                 <div class="panel-heading">
                     <strong>Pending Events</strong>
                 </div>
@@ -51,7 +51,7 @@
                                     <td><?php echo $row->title; ?></td>
                                     <td><?php echo $row->start_date; ?></td>
                                     <td><?php echo $row->end_date; ?></td>
-                                    <td><a href="<?php echo base_url("index.php/event/load_selected_pending_event") . "/" . $row->id; ?>" class="btn btn-primary btn-xs" aria-hidden="true"><i class="fa fa-eye"></i></a></td>
+                                    <td><a href="<?php echo base_url("index.php/event/load_selected_pending_event") . "/" . $row->id; ?>" class="btn btn-raised btn-primary btn-xs" aria-hidden="true"><i class="fa fa-eye"></i></a></td>
 
                                 </tr>
                             <?php } ?>
@@ -61,7 +61,7 @@
                 </div>
             </div>
 
-            <div class="panel panel-default">
+            <div class="panel panel-info">
                 <div class="panel-heading">
                     <strong>Canceled Events </strong>
                 </div>
@@ -92,7 +92,7 @@
                                 <td><?php echo $row->title; ?></td>
                                 <td><?php echo $row->start_date; ?></td>
                                 <td><?php echo $row->end_date; ?></td>
-                                <td><a href="<?php echo base_url("index.php/event/view_upcoming_event_details") . "/" . $row->id; ?>" class="btn btn-primary btn-xs" aria-hidden="true"><i class="fa fa-eye"></i></a></td>
+                                <td><a href="<?php echo base_url("index.php/event/view_upcoming_event_details") . "/" . $row->id; ?>" class="btn btn-raised btn-primary btn-xs" aria-hidden="true"><i class="fa fa-eye"></i></a></td>
                             </tr>
                         <?php } ?>
                     </tbody>

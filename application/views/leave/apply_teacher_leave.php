@@ -35,7 +35,7 @@
                     <?php echo $error_message; ?>
                 </div>
             <?php } ?>
-            <div class="panel panel-default">
+            <div class="panel panel-info">
                 <div class="panel-heading">
                     <strong>APPLY TEACHER LEAVE</strong>
                 </div>
@@ -52,7 +52,7 @@
                     <div class="row">
                         <div class="col-md-4">
                               <div class="form-group">
-                                
+
                                 <select name="cmb_teacher" class="form-control">
                                     <option value="0">- Select Name -</option>
                                     <?php
@@ -62,8 +62,8 @@
                                 ?>
                                 </select>
                               </div>
-                              
-                            
+
+
                         </div>
                     </div>
                     <div class="row">
@@ -91,7 +91,7 @@
                                     <div class="input-group-addon"><i class="fa fa-calendar"></i></div>
                                 </div>
                             </div>
-                        </div>    
+                        </div>
                         <div class="col-md-4">
                             <div class="form-group">
                                 <div class="input-group">
@@ -106,11 +106,11 @@
                     </div>
                     <div class="row">
                         <div class="col-md-8"><textarea class="form-control" value="<?php echo set_value('txt_reason'); ?>" rows="3" id="txt_reason" name="txt_reason"></textarea></div>
-                        <div class="col-md-4"><button type="submit" class="btn btn-success">Apply</button></div>
+                        <div class="col-md-4"><button type="submit" class="btn btn-raised btn-success">Apply</button></div>
                     </div>
 
                     <?php echo form_close(); ?>
-                    <hr> 
+                    <hr>
                     <!-- Teachers individual leave report -->
                 </div>
 

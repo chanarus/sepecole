@@ -10,15 +10,15 @@
                     <?php echo $succ_message; ?>
                 </div>
             <?php } ?>
-            <div class="panel panel-default">
+            <div class="panel panel-info">
                 <div class="panel-heading">Notes</div>
                 <div class="panel-body">
-                    
-               
 
-               
-                   
-               
+
+
+
+
+
                              <?php
                 $attributes = array('class' => 'form-horizontal', 'id' => '');
                 echo form_open('student/take_action', $attributes);
@@ -26,9 +26,9 @@
 
 
 
-                                
-                                    
-                                   
+
+
+
                                         <div class="row">
                                             <div class="col-md-3 col-lg-3 " align="center"><!-- <img alt="User Pic" src="https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=100" class="img-circle">--> </div>
 
@@ -55,7 +55,7 @@
                                                         </tr>
 
                                                         <tr>
-                                                       
+
 
 
 
@@ -66,19 +66,19 @@
                                                 <div class="form-group col-md-10">
                                                     <label for="action">Action Description</label>
                                                     <textarea  name="action" id="action" class="form-control"><?php echo set_value('action'); ?></textarea>
-                                                    
+
                                                         <?php echo form_error('action'); ?>
-                                                    
+
                                                 </div>
                                                 <div class="form-group col-md-2">
                                                     <label for="but" class="col-md-9">&nbsp;</label>
-                                                    <button type="submit"  value="" class='btn btn-success ' style="margin-left: 10px;"><i class='fa fa fa-check'></i></button>
-                                                    
+                                                    <button type="submit"  value="" class='btn btn-raised btn-success ' style="margin-left: 10px;"><i class='fa fa fa-check'></i></button>
+
                                                 </div>
-                                                
+
                                                 </div>
                                         </div>
-                                    
+
                                     <!--                                        <div class="panel-footer">
                                                                                 <a data-original-title="Broadcast Message" data-toggle="tooltip" type="button" class="btn btn-sm btn-primary"><i class="glyphicon glyphicon-envelope"></i></a>
                                                                                 <span class="pull-right">
@@ -87,15 +87,15 @@
                                                                                 </span>
                                                                             </div>-->
 
-                              
+
 
                             <?phpecho  form_close();?>
-                    
 
 
 
-             
-                    
+
+
+
                     </div>
                 </div>
             </div>
