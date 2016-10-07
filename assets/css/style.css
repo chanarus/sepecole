@@ -10,6 +10,13 @@ html, body {
     font-family: Arial, Helvetica, sans-serif;
     background: #FAFAFA;
     /*background-image: url("../img/school1.png");
+<<<<<<< HEAD
+=======
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;*/
+    background-image: url("../img/school1.png");
+>>>>>>> 91f1bb15a0dbd3796902bbc0d7505d0a4de4e367
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% 100%;*/
