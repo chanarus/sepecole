@@ -227,7 +227,9 @@ class Student extends CI_Controller {
                 $ID = $data['row']->id;
                 $username = $data['row']->admission_no;
 
-                $password = "PW_" . $username;
+
+
+              $password =  $username;
 
                 $create = date('Y-m-d H:i:s');
                 $name = $studentd['full_name'];
