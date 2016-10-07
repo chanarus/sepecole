@@ -11,12 +11,12 @@
                 <table class="table">
                     <tr>
                         <td>
-                            <span class="glyphicons glyphicons-certificate"></span><a href="<?php echo base_url('index.php/certificate/create_leaving_certificate'); ?>">Leaving Certificates</a>
+                            <span class="glyphicon glyphicon-list-alt text-warning"></span><a href="<?php echo base_url('index.php/certificate/create_leaving_certificate'); ?>">Leaving Certificates</a>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <span class="glyphicons glyphicons-certificate"></span><a href="<?php echo base_url('index.php/certificate/create_character_certificate'); ?>">Character Certificates</a>
+                            <span class="glyphicon glyphicon-list-alt text-warning"></span><a href="<?php echo base_url('index.php/certificate/create_character_certificate'); ?>">Character Certificates</a>
                         </td>
                     </tr>
                 </table>

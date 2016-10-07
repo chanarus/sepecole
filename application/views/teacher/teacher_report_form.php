@@ -39,7 +39,7 @@
                                     <?php echo form_error('reporttype'); ?>
                                 </div>
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-md-4 col-md-offset-1">
                                 <div class="form-group">
                                     <?php if ($value == 0) { ?>
 
