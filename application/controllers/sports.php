@@ -83,6 +83,7 @@ class Sports extends CI_Controller {
         $data['navbar'] = "sports";
 
         $this->load->view('templates/header', $data);
+        $data['det'] = $this->sports_model->view_sport_category();
         $this->load->view('navbar_main', $data);
         $this->load->view('navbar_sub', $data);
         $this->load->view('sports/assign_leaders_form', $data);
@@ -111,6 +112,10 @@ class Sports extends CI_Controller {
         $this->load->view('navbar_sub', $data);
         $this->load->view('sports/sport_managers_form', $data);
         $this->load->view('templates/footer');
+    }
+
+    function load_sports_tables(){
+
     }
     
     

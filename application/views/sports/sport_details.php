@@ -35,7 +35,7 @@
                     <div class="form-group">
                         <label for="inputEmail3" class="col-sm-2 control-label">Sport Name</label>
                         <div class="col-sm-5">
-                            <input id="sport_name" type="text" name="sport_name"  value="<?php if(isset($succ_message)){ echo '';}else{echo set_value('sport_name');} ?>" type="text" class="form-control" id="event_name" placeholder="Event Name">
+                            <input id="sport_name" type="text" name="sport_name"  value="<?php if(isset($succ_message)){ echo '';}else{echo set_value('sport_name');} ?>" type="text" class="form-control" id="sport_name" placeholder="Sport Name">
                             <?php echo form_error('sport_name'); ?>
                         </div>
                     </div>
@@ -44,7 +44,7 @@
                         <label for="inputEmail3" class="col-sm-2 control-label">Description</label>
                         <div class="col-sm-5">
 
-                            <textarea id="description" type="text" name="description"  value=""  type="text" class="form-control" id="description" placeholder=""><?php if(isset($succ_message)){ echo '';}else{echo set_value('description');} ?></textarea>
+                            <textarea id="description" type="text" name="description"  value=""  type="text" class="form-control" id="description" placeholder="Description"><?php if(isset($succ_message)){ echo '';}else{echo set_value('description');} ?></textarea>
                             <?php echo form_error('description'); ?>
                         </div>
                     </div>
