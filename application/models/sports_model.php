@@ -23,4 +23,21 @@ class Sports_Model extends CI_Model {
         $data = $this->db->query("select * from sport_category where id='$id'");
         return $data->row();
     }
+
+    public function edit_sport_details($id,$name,$des){
+        $data = array(
+            'name'=> $name,
+            'description'=> $des
+        );
+
+        $this->db->where("id",$id);
+        $this->db->update('sport_category',$date);
+        return true;
+
+    }
+
+    public function get_all_sports(){
+        $data = $this->db->query("select name from sport_category");
+        return $data->result();
+    }
 }

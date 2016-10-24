@@ -37,11 +37,9 @@
                         <div class="col-sm-5">
                             <select id="name" name="name" class="form-control">
                                 <option value="0" <?php if (set_value('name') == '0') { echo "selected"; } ?>>Select a Sport</option>
-                                <option value="1" <?php if (set_value('name') == '1') { echo "selected"; } ?>>Cricket</option>
-                                <option value="2" <?php if (set_value('name') == '2') { echo "selected"; } ?>>Foot Ball</option>
-                                <option value="3" <?php if (set_value('name') == '3') { echo "selected"; } ?>>Rugby</option>
-                                <option value="4" <?php if (set_value('name') == '4') { echo "selected"; } ?>>Vally Ball</option>
-                                <option value="5" <?php if (set_value('name') == '5') { echo "selected"; } ?>>Base Ball</option>
+                            <?php foreach($sports as $sport)  { ?>
+                                 <option value="<?php echo $sport->name; ?>"><?php echo $sport->name; ?> </option>
+                            <?php } ?>
                             </select>
                             <?php echo form_error('teachername'); ?>
                         </div>
@@ -90,10 +88,6 @@
                                 <br>
                                 <label class="radio-inline">
                                     <input id="age4" type="radio" name="agecat" value="f" <?php if (set_value('gender') == 'f') { echo "checked"; } ?>> Under 19
-                                </label>
-                                <br>
-                                <label class="radio-inline">
-                                    <input id="age3" type="radio" name="agecat"  value="m" <?php if (set_value('gender') == 'm') { echo "checked"; } ?>> Under 18
                                 </label>
                                 <br>
                             </div>
@@ -150,8 +144,11 @@
                             <button type="reset" class="btn btn-raised btn-default">Reset</button>
                         </div>
                     </div>
-
-            
+                <a name="sports"></a>
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                    <strong>Sports</strong>
+                    </div>
                     <div class="panel-body">
                     <table class="table table-hover">
                         <thead>

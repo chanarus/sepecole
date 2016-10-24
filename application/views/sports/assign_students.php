@@ -141,6 +141,12 @@
                     </div>
 
                 </div>
+                <a name="sports"></a>
+                    <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <strong>Sports</strong>
+                    </div>
+                    <div class="panel-body">
                     <table class="table table-hover">
                         <thead>
                             <tr>
@@ -151,18 +157,30 @@
                                 <th></th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody id="fillgrid">
+                            <?php foreach ($det as $row) { ?>
                             <tr>
-                                <td>1</td>
-                                <td>Cricket</td>
-                                <td>One of the greatest sport</td>
-                                <td>under 12</td>
-                                <td></td>
+                                <td><?php echo $row->id; ?></td>
+                                <td><?php echo $row->name; ?></td>
+                                <td><?php echo $row->description; ?></td>
+                                <td><?php
+                                    $age = $row->age_category;
+                                    if ($age == 1) {
+                                        echo 'Under 10,12,14,16,18,20';
+                                    } else if ($age == 2) {
+                                        echo 'Under 13,15,17,19';
+                                    } else{
+                                        echo '';
+                                    }
+                                    ?>
+                                </td>
+                                <td><a href="<?php echo base_url("index.php/sports/view_category"); ?>" data-id='<?php echo $row->id ?>' class='btnedit' title='edit'><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a></td>
+                                <td><a href="<?php echo base_url("index.php/sports/delete_news")."/".$row->id; ?>" onclick="return confirm('Are you sure you want to delete this news?');"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></i></a></td>
                             </tr>
+                        <?php } ?>
                         </tbody>
                     </table>
-
-
+                    </div>
             </div>
 
         </div>
