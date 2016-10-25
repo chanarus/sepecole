@@ -11,28 +11,23 @@
                 <table class="table">
                     <tr>
                         <td>
-                            <span class="glyphicon glyphicon-list-alt text-warning"></span><a href="<?php echo base_url('index.php/'); ?>">Exam Details</a>
+                            <span class="glyphicon glyphicon-list-alt text-warning"></span><a href="<?php echo base_url('index.php/Marks/index'); ?>">Exam Details</a>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <span class="glyphicon glyphicon-list-alt text-warning"></span><a href="<?php echo base_url('index.php/'); ?>">Exam Marks</a>
+                            <span class="glyphicon glyphicon-list-alt text-warning"></span><a href="<?php echo base_url('index.php/Marks/view_marks'); ?>">Exam Marks</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="glyphicon glyphicon-list-alt text-warning"></span><a href="<?php echo base_url('index.php/Marks/exam_marks'); ?>">Marks Lists</a>
                         </td>
 
                     </tr>
                     <tr>
-                         <td>
-                             <span class="glyphicons glyphicons-disk-open"></span><a href="<?php echo base_url('index.php/'); ?>">Generate Report</a>
-                         </td>
-                    </tr>
-                    <tr>
                         <td>
-                            <span class="glyphicon glyphicon-list-alt text-warning"></span><a href="<?php echo base_url('index.php/'); ?>">Marks Lists</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <span class="glyphicon glyphicon-check text-warning"></span><a href="<?php echo base_url('index.php/'); ?>">Genarate Reports</a>
+                            <span class="glyphicon glyphicon-check text-warning"></span><a href="<?php echo base_url('index.php/Marks/genarate_reports'); ?>">Genarate Reports</a>
                         </td>
                     </tr>
                 </table>

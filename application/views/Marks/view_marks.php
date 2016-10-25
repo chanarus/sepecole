@@ -8,7 +8,7 @@
         <div class="col-md-9">
           <div class="panel panel-info">
             <div class="panel-heading">
-              <strong>Enter Exam Details</strong>
+              <strong>Marks List</strong>
             </div>
             <div class="panel-body">
               <div class="row" style="margin-left: 1em; margin-bottom: 2em;">
@@ -19,8 +19,8 @@
                           </a>
                       </div>
                       <div class="media-body">
-                          <h4 class="media-heading">Examination Details</h4>
-                          The examination details can be entered to the system by means of giving the start and the relevant end dates.
+                          <h4 class="media-heading">Marks</h4>
+                          aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
                       </div>
                   </div>
               </div><hr>
@@ -39,34 +39,21 @@
                   <div class="form-group">
                     <div class="row">
                       <div class="col-md-3 col-md-offset-2">
-                        <h4>Year:</h4>
+                        <h4>Student ID:</h4>
                       </div>
                       <div class="col-md-5">
-                        <input type="text" class="form-control" name="examname" placeholder="Year">
+                        <input type="text" class="form-control" name="examname" placeholder="Student ID">
                       </div>
                     </div>
                   </div>
                   <div class="form-group">
                     <div class="row">
                       <div class="col-md-3 col-md-offset-2">
-                        <h4>Grade:</h4>
+                        <h4>Subject Name:</h4>
                       </div>
                       <div class="col-md-4">
                         <select class="form-control">
-                          <option value="0">Select a Year</option>
-                          <option value="1">Grade 1</option>
-                          <option value="2">Grade 2</option>
-                          <option value="3">Grade 3</option>
-                          <option value="4">Grade 4</option>
-                          <option value="5">Grade 5</option>
-                          <option value="6">Grade 6</option>
-                          <option value="7">Grade 7</option>
-                          <option value="8">Grade 8</option>
-                          <option value="9">Grade 9</option>
-                          <option value="10">Grade 10</option>
-                          <option value="11">Grade 11</option>
-                          <option value="12">Grade 12</option>
-                          <option value="13">Grade 13</option>
+                          <option value="0">Select a Grade</option>
                         </select>
                       </div>
                     </div>
@@ -74,20 +61,10 @@
                   <div class="form-group">
                     <div class="row">
                       <div class="col-md-3 col-md-offset-2">
-                        <h4>Start Date:</h4>
+                        <h4>Mark:</h4>
                       </div>
                       <div class="col-md-4">
-                        <input type="Date" class="form-control" name="start_date">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <div class="row">
-                      <div class="col-md-3 col-md-offset-2">
-                        <h4>End Date:</h4>
-                      </div>
-                      <div class="col-md-4">
-                        <input type="Date" class="form-control" name="end_date">
+                        <input type="number" class="form-control" name="marks">
                       </div>
                     </div>
                   </div>
