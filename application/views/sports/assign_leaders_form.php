@@ -1,11 +1,11 @@
 <div class="container">
-    
+
     <div class="row">
 
         <div class="col-md-3">
             <?php $this->view('sports/sport_admin_navbar'); ?>
         </div>
-        
+
         <div class="col-md-9">
             <?php if (isset($succ_message)) { ?>
             <div class="alert alert-success alert-dismissible" role="alert">
@@ -20,28 +20,26 @@
             </div>
         <?php } ?>
 
-            <div class="panel panel-default">
+            <div class="panel panel-info">
                 <div class="panel-heading">
                     <strong>ASSIGN SPORT CAPTAINS</strong>
                 </div>
                 <div class="panel-body">
                     <?php
-                    // Change the css classes to suit your needs    
+                    // Change the css classes to suit your needs
 
                     $attributes = array('class' => 'form-horizontal', 'id' => '');
                     echo form_open('', $attributes);
                     ?>
-                    
+
                     <div class="form-group">
                         <label for="inputEmail3" class="col-sm-2 control-label">Sport Name</label>
                         <div class="col-sm-5">
                             <select id="name" name="name" class="form-control">
                                 <option value="0" <?php if (set_value('name') == '0') { echo "selected"; } ?>>Select a Sport</option>
-                                <option value="1" <?php if (set_value('name') == '1') { echo "selected"; } ?>>Cricket</option>
-                                <option value="2" <?php if (set_value('name') == '2') { echo "selected"; } ?>>Foot Ball</option>
-                                <option value="3" <?php if (set_value('name') == '3') { echo "selected"; } ?>>Rugby</option>
-                                <option value="4" <?php if (set_value('name') == '4') { echo "selected"; } ?>>Vally Ball</option>
-                                <option value="5" <?php if (set_value('name') == '5') { echo "selected"; } ?>>Base Ball</option>
+                            <?php foreach($sports as $sport)  { ?>
+                                 <option value="<?php echo $sport->name; ?>"><?php echo $sport->name; ?> </option>
+                            <?php } ?>
                             </select>
                             <?php echo form_error('teachername'); ?>
                         </div>
@@ -49,7 +47,7 @@
                     <div class="form-group">
                         <label for="inputEmail3" class="col-sm-2 control-label">Category</label>
                         <div class="col-sm-6">
-                            <div class="col-md-6"> 
+                            <div class="col-md-6">
                                 <label class="radio-inline">
                                     <input id="age1" type="radio" name="agecat"  value="m" <?php if (set_value('gender') == 'm') { echo "checked"; } ?>> Under 10
                                 </label>
@@ -90,10 +88,6 @@
                                 <br>
                                 <label class="radio-inline">
                                     <input id="age4" type="radio" name="agecat" value="f" <?php if (set_value('gender') == 'f') { echo "checked"; } ?>> Under 19
-                                </label>
-                                <br>
-                                <label class="radio-inline">
-                                    <input id="age3" type="radio" name="agecat"  value="m" <?php if (set_value('gender') == 'm') { echo "checked"; } ?>> Under 18
                                 </label>
                                 <br>
                             </div>
@@ -146,12 +140,16 @@
                     </div>
                     <div class="form-group">
                         <div class="col-sm-offset-2 col-sm-10">
-                            <input type="submit" class="btn btn-primary" value="Add">
-                            <button type="reset" class="btn btn-default">Reset</button>
+                            <input type="submit" class="btn btn-raised btn-primary" value="Add">
+                            <button type="reset" class="btn btn-raised btn-default">Reset</button>
                         </div>
                     </div>
-
-                </div>
+                <a name="sports"></a>
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                    <strong>Sports</strong>
+                    </div>
+                    <div class="panel-body">
                     <table class="table table-hover">
                         <thead>
                             <tr>
@@ -162,24 +160,34 @@
                                 <th></th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody id="fillgrid">
+                            <?php foreach ($det as $row) { ?>
                             <tr>
-                                <td>1</td>
-                                <td>Cricket</td>
-                                <td>One of the greatest sport</td>
-                                <td>under 12</td>
-                                <td></td>
+                                <td><?php echo $row->id; ?></td>
+                                <td><?php echo $row->name; ?></td>
+                                <td><?php echo $row->description; ?></td>
+                                <td><?php
+                                    $age = $row->age_category;
+                                    if ($age == 1) {
+                                        echo 'Under 10,12,14,16,18,20';
+                                    } else if ($age == 2) {
+                                        echo 'Under 13,15,17,19';
+                                    } else{
+                                        echo '';
+                                    }
+                                    ?>
+                                </td>
+                                <td><a href="<?php echo base_url("index.php/sports/view_category"); ?>" data-id='<?php echo $row->id ?>' class='btnedit' title='edit'><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a></td>
+                                <td><a href="<?php echo base_url("index.php/sports/delete_news")."/".$row->id; ?>" onclick="return confirm('Are you sure you want to delete this news?');"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></i></a></td>
                             </tr>
+                        <?php } ?>
                         </tbody>
                     </table>
-
-
+                    </div>
             </div>
-            
+
         </div>
 
     </div>
 
 </div>
-
-

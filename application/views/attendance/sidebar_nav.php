@@ -1,5 +1,5 @@
 <div class="panel-group" id="accordion">
-    <div class="panel panel-default">
+    <div class="panel panel-info">
         <div class="panel-heading">
             <h4 class="panel-title">
                 <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"><span class="glyphicon glyphicon-folder-close">
@@ -19,7 +19,7 @@
             </div>
         </div>
     </div>
-     <div class="panel panel-default">
+     <div class="panel panel-info">
         <div class="panel-heading">
             <h4 class="panel-title">
                 <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><span class="glyphicon glyphicon-folder-close">

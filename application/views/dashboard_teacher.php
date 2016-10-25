@@ -5,7 +5,7 @@
             <!-- Recent News -->
             <div class="row">
                 <div class="col-md-12">
-                    <div class="panel panel-default">
+                    <div class="panel panel-info">
                         <div class="panel-heading">
                             <strong><i class="fa fa-newspaper-o" style="margin-right:10px"></i> RECENT NEWS</strong>
                         </div>
@@ -38,7 +38,7 @@
             <!-- Events -->
             <div class="row">
                 <div class="col-md-12">
-                    <div class="panel panel-default">
+                    <div class="panel panel-info">
                         <div class="panel-heading">
                             <strong><i class="fa fa-calendar" style="margin-right:10px"></i> UPCOMING EVENTS</strong>
                         </div>
@@ -106,7 +106,7 @@
             <!-- SHORTCUTS -->
             <div class="row">
                 <div class="col-md-12">
-                    <div class="panel panel-default">
+                    <div class="panel panel-info">
                         <div class="panel-heading">
                             <strong><i class="fa fa-bookmark" style="margin-right:10px"></i> SHORTCUTS</strong>
                         </div>
@@ -124,7 +124,7 @@
             <!-- calender -->
             <div class="row">
                 <div class="col-md-12">
-                    <div class="panel panel-default">
+                    <div class="panel panel-info">
                         <div class="panel-heading">
                             <strong><i class="fa fa-calendar" style="margin-right:10px"></i> ONGOING MONTH</strong>
                         </div>

@@ -13,7 +13,7 @@
                         <?php echo $succ_message; ?>
                     </div>
                 <?php } ?>
-            <div class="panel panel-default">
+            <div class="panel panel-info">
                 <div class="panel-heading">
                     <b>CREATE PROFILE</b>
                 </div>
@@ -22,18 +22,18 @@
 
                     <div class="panel-body">
                         <div class="row">
-                            <div class="col-md-3 col-lg-3 " align="center"> 
+                            <div class="col-md-3 col-lg-3 " align="center">
                                 <label for="profile-img">Profile image</label>
                                 <br />
                                 <img src="<?php echo base_url('assets/img/profile_img.png'); ?>" id="profile-img" class="img-thumbnail profile-img">
                                 <br>
-                                <span class="btn btn-default btn-file">
+                                <span class="btn btn-raised btn-default btn-file">
                                     Upload Image<input type="file" name="profile_img" id="img-inp" onchange="readURL(this);">
                                 </span>
                                 <?php echo form_error('profile_img'); ?>
                             </div>
 
-                            <div class=" col-md-9 col-lg-9 "> 
+                            <div class=" col-md-9 col-lg-9 ">
                                 <table class="table table-user-information" >
                                     <tr>
                                         <td>
@@ -56,7 +56,7 @@
                                             <div class="form-group">
                                                 <label for="inputEmail3" class="col-sm-3 control-label">User Name</label>
                                                 <div class="col-sm-5">
-                                                    <input id="username" type="text" name="username"  value="<?php echo set_value('username'); ?>"  type="text" class="form-control" id="username" placeholder="User Name">                                                       
+                                                    <input id="username" type="text" name="username"  value="<?php echo set_value('username'); ?>"  type="text" class="form-control" id="username" placeholder="User Name">
                                                     <?php echo form_error('username'); ?>
                                                 </div>
                                             </div>
@@ -86,8 +86,8 @@
                                     <tr>
                                         <td><div class="form-group">
                                                 <div class="col-sm-offset-3 col-sm-10">
-                                                    <button type="submit" class="btn btn-primary">Submit</button>
-                                                    <button type="reset" class="btn btn-default">Reset</button>
+                                                    <button type="submit" class="btn btn-raised btn-primary">Submit</button>
+                                                    <button type="reset" class="btn btn-raised btn-sucess">Reset</button>
                                                 </div>
                                             </div>
                                         </td>
@@ -124,7 +124,3 @@
         readURL(this);
     });
 </script>
-
-
-
-

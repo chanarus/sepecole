@@ -10,7 +10,7 @@
                     <?php echo $succ_message; ?>
                 </div>
             <?php } ?>
-            <div class="panel panel-default">
+            <div class="panel panel-info">
                 <div class="panel-heading">Edit Account</div>
                 <div class="panel-body">
                     <div class="col-md-3">
@@ -38,9 +38,9 @@
                             <input type="email" name="email" id="username" class="form-control" value="<?php echo $user->email; ?>">
                             <?php echo form_error('email', $error_prefix, $error_suffix); ?>
                         </div>
-                        <button type="submit" class="btn btn-success">Edit</button>
-                        <a href="#" id="delete-user" data-user-id="<?php echo $user->id; ?>" class="btn btn-danger">Delete</a>
-                        <a href="<?php echo base_url('index.php/admin/manage_admins'); ?>" class="btn btn-default">Cancel</a>
+                        <button type="submit" class="btn btn-raised btn-success">Edit</button>
+                        <a href="#" id="delete-user" data-user-id="<?php echo $user->id; ?>" class="btn btn-raised btn-danger">Delete</a>
+                        <a href="<?php echo base_url('index.php/admin/manage_admins'); ?>" class="btn btn-raised btn-default">Cancel</a>
                         <?php echo form_close(); ?>
                     </div>
                 </div>

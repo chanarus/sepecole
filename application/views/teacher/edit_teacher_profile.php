@@ -1161,8 +1161,8 @@
 
                     <div class="form-group">
                         <div class="col-sm-offset-2 col-sm-10">
-                            <input type="submit" class="btn btn-primary" value="Update">
-                            <button type="reset" class="btn btn-default">Reset</button>
+                            <input type="submit" class="btn btn-raised btn-primary" value="Update">
+                            <button type="reset" class="btn btn-primary">Reset</button>
                         </div>
                     </div>
 

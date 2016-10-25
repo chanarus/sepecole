@@ -20,9 +20,9 @@
 <div class="panel  panel-default"  >
                  <div class="panel-heading panel-default " >
                     GUARDIAN DETAILS
-                    
+
                        <span class="pull-right">
-                        <a href="<?php echo base_url("index.php/student/view_student_profile") . "/" .$user_id->student_id;?>" data-original-title="Edit this user" data-toggle="tooltip" type="button" class="btn btn-xs btn-primary"><i class="">Student Details</i></a>
+                        <a href="<?php echo base_url("index.php/student/view_student_profile") . "/" .$user_id->student_id;?>" data-original-title="Edit this user" data-toggle="tooltip" type="button" class="btn btn-raised btn-xs btn-primary"><i class="">Student Details</i></a>
                         <a href="<?php echo base_url("index.php/student"); ?>" data-original-title="Remove this user" data-toggle="tooltip" type="button" class="btn btn-xs btn-danger"><i class="glyphicon glyphicon-remove"></i></a>
                        </span>
                 </div>
@@ -75,9 +75,9 @@
     </tr>
     <tr>
         <td><label>Address</label></td>
-        <td><label><?php echo $user_id->addr; ?></label></td>
+        <td><label><?php echo $user_id->addr.",". $user_id->addr1; ?></label></td>
     </tr>
-    
+
     <tr>
         <td><label>Gender</label></td>
         <td><label>
@@ -104,7 +104,7 @@
                                         ?>
             </label></td>
     </tr>
-    
+
 
     </tbody>
 </table>
@@ -132,5 +132,3 @@
 
 </div>
 </div>
-
-

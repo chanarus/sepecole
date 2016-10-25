@@ -5,7 +5,7 @@
         </div>
         <div class="col-md-9">
 
-            <div class="panel panel-default">
+            <div class="panel panel-info">
                 <div class="panel-heading">Assign Students to Class</div>
                 <div class="panel-body">
                     <div class="row">
@@ -41,7 +41,7 @@
                         <div class="col-md-1" style="padding-top: 150px;">
                             <button class="btn btn-block btn-success" id="btn-right">>></button>
                             <br />
-                            <button class="btn btn-block btn-info" id="btn-left"><<</button>
+                            <button class="btn btn-raised btn-info" id="btn-left"><<</button>
                         </div>
                         <div class="col-md-4">
                             <p><strong>Students In Class</strong></p>
@@ -52,7 +52,7 @@
                             </select>
                         </div>
                         <div class="col-md-3" style="padding-top: 30px;">
-                            <button type="submit" id="submit-btn" class="btn btn-lg btn-success">Assign Students</button>
+                            <button type="submit" id="submit-btn" class="btn btn-lg btn-raised btn-success">Assign Students</button>
                         </div>
                     </div>
                     <?php echo form_close(); ?>

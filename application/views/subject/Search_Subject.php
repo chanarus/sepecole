@@ -29,7 +29,7 @@
                     <div class="form-group">
                         <input type="text" id="nic" name="nic" class="form-control" placeholder="Search.." size="50">
                     </div>
-                    <button type="submit" class="btn btn-success" ><i class="fa fa-search"></i></button>
+                    <button type="submit" class="btn btn-raised btn-success" ><i class="fa fa-search"></i></button>
                     <?php echo form_close(); ?>
                 </div>
             </div>
@@ -79,11 +79,10 @@
                         <?php }
                 }
                         ?>
-                    
+
                     </nav>
                 </div>
             </div>
         </div>
     </div>
 </div>
-

@@ -7,15 +7,15 @@
         </div>
 
         <div class="col-md-9">
-           
 
-            <div class="panel panel-default">
+
+            <div class="panel panel-info">
                 <div class="panel-heading">
                     Create Student Profile
                 </div>
                 <div class="panel-body">
                     <?php
-                    // Change the css classes to suit your needs    
+                    // Change the css classes to suit your needs
 
                     $attributes = array('class' => 'form-horizontal', 'id' => '');
                     echo form_open('teacher/create_log_details', $attributes);
@@ -25,7 +25,7 @@
                         <div class="row">
                             <div class="col-md-3 col-lg-3 " align="center"> <img alt="User Pic" src="https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=100" class="img-circle"> </div>
 
-                            <div class=" col-md-9 col-lg-9 "> 
+                            <div class=" col-md-9 col-lg-9 ">
                                 <table class="table table-user-information" >
                                     <tbody>
                                         <tr>
@@ -75,8 +75,8 @@
                                         <tr>
                                             <td><div class="form-group">
                                                     <div class="col-sm-offset-2 col-sm-10">
-                                                        <button type="submit" class="btn btn-primary">Submit</button>
-                                                        <button type="reset" class="btn btn-default">Reset</button>
+                                                        <button type="submit" class="btn btn-raised btn-primary">Submit</button>
+                                                        <button type="reset" class="btn btn-raised btn-default">Reset</button>
                                                     </div>
                                                 </div>
                                             </td>
@@ -96,7 +96,3 @@
 </div>
 
 </div>
-
-
-
-

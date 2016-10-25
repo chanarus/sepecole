@@ -35,7 +35,7 @@
                     <?php echo $error_message; ?>
                 </div>
             <?php } ?>
-            <div class="panel panel-default">
+            <div class="panel panel-info">
                 <div class="panel-heading">
                     <strong>APPLY SHORT LEAVE</strong>
                 </div>
@@ -84,7 +84,7 @@
                         <div class="col-md-4">
                             <div class="form-group">
                                 <div class="input-group">
-                                    <button type="button" id="submitbutton" class="btn btn-success">Apply</button>
+                                    <button type="button" id="submitbutton" class="btn btn-raised btn-success">Apply</button>
                                 </div>
                             </div>
                         </div>
@@ -118,7 +118,7 @@
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <button type="button" 
+                                    <button type="button"
                                     class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
@@ -128,10 +128,10 @@
                                     <p id="lblMsgConfirmYesNo"></p>
                                 </div>
                                 <div class="modal-footer">
-                                    <button id="btnYesConfirmYesNo" 
-                                    type="button" class="btn btn-primary">Yes</button>
-                                    <button id="btnNoConfirmYesNo" 
-                                    type="button" class="btn btn-default">No</button>
+                                    <button id="btnYesConfirmYesNo"
+                                    type="button" class="btn btn-raised btn-primary">Yes</button>
+                                    <button id="btnNoConfirmYesNo"
+                                    type="button" class="btn btn-raised btn-default">No</button>
                                 </div>
                             </div>
                         </div>
@@ -168,7 +168,7 @@
                             $( "#frm_apply" ).submit();
                         }
                         function MyNoFunction() {
-                            
+
                         }
 
                     </script>
@@ -177,7 +177,7 @@
                 </div>
             </div>
 
-            <div class="panel panel-default">
+            <div class="panel panel-info">
               <div class="panel-heading">
                 <strong>THIS MONTH SHORT LEAVES</strong>
               </div>

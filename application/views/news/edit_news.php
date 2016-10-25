@@ -22,13 +22,13 @@
                 </div>
             <?php } ?>
 
-            <div class="panel panel-default">
+            <div class="panel panel-info">
                 <div class="panel-heading">
                     <strong>Publish News</strong>
                 </div>
                 <div class="panel-body">
                     <?php
-                    // Change the css classes to suit your needs    
+                    // Change the css classes to suit your needs
 
                     $attributes = array('class' => 'form-horizontal', 'id' => '');
                     echo form_open('news/edit_news/'.$newsid, $attributes);
@@ -41,7 +41,7 @@
                         height: 800,
                         theme : "modern",
                         plugins : "spellchecker,pagebreak,layer,table,save,insertdatetime,preview,media,searchreplace,print,contextmenu,paste,directionality,fullscreen,noneditable,visualchars,nonbreaking,template",
-                     
+
                         // Theme options
                         theme_advanced_buttons1 : "save,newdocument,|,bold,italic,underline,strikethrough,|,justifyleft,justifycenter,justifyright,justifyfull,|,styleselect,formatselect,fontselect,fontsizeselect",
                         theme_advanced_buttons2 : "cut,copy,paste,pastetext,pasteword,|,search,replace,|,bullist,numlist,|,outdent,indent,blockquote,|,undo,redo,|,link,unlink,anchor,image,cleanup,help,code,|,insertdate,inserttime,preview,|,forecolor,backcolor",
@@ -71,8 +71,8 @@
 
                     <div class="form-group">
                         <div class="col-sm-10">
-                            <input type="submit" class="btn btn-primary" value="Publish">
-                            <button type="reset" class="btn btn-default">Reset</button>
+                            <input type="submit" class="btn btn-raised btn-primary" value="Publish">
+                            <button type="reset" class="btn btn-raised  btn-default">Reset</button>
                         </div>
                     </div>
                     <?php echo form_close(); ?>
@@ -80,6 +80,3 @@
             </div>
         </div>
 </div>
-
-
-

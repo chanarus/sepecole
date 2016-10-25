@@ -15,7 +15,7 @@
                 'class' => 'form-inline'
             );
             ?>
-            <div class="panel panel-default">
+            <div class="panel panel-info">
                 <div class="panel-heading">User Accounts</div>
                 <div class="panel-body">
                     <script type="text/javascript">
@@ -37,7 +37,7 @@
                             <?php foreach ($result as $row) { ?>
                                 <tr>
                                     <td><?php echo $row->username; ?></td>
-                                    <td><?php 
+                                    <td><?php
                                             if($row->user_type == 'S'){
                                                echo "Student" ;
                                             }elseif($row->user_type == 'A'){
@@ -58,7 +58,7 @@
                                     </td>
                                 </tr>
                             <?php } ?>
-                        </tbody>                      
+                        </tbody>
                     </table>
 
                 </div>
@@ -81,8 +81,8 @@
 
   function deleteUser(userId) {
     swal({
-      title: "Are you sure?", 
-      text: "Are you sure that you want to Dissable this user?", 
+      title: "Are you sure?",
+      text: "Are you sure that you want to Dissable this user?",
       type: "warning",
       showCancelButton: true,
       closeOnConfirm: false,
@@ -91,9 +91,8 @@
     }, function() {
         window.location.href = "<?php echo base_url("index.php/admin/delete"); ?>" + "/" + userId;
     });
-    
-    
-  }
-  
-  </script>
 
+
+  }
+
+  </script>

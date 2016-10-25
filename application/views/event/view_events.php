@@ -22,7 +22,7 @@
                 </div>
             <?php } ?>
 
-            <div class="panel panel-default">
+            <div class="panel panel-info">
                 <div class="panel-heading">
                     <strong><?php echo $details->title; ?></strong>
                 </div>

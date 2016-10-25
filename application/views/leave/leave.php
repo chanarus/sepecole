@@ -47,7 +47,7 @@
             <?php } ?>
 
             <a name="leavestatus"></a>
-            <div class="panel panel-default">
+            <div class="panel panel-info">
                 <div class="panel-heading">
                     <strong>LEAVE STATUS</strong>
                 </div>
@@ -108,7 +108,7 @@
     <div class="row">
         <div class="col-md-3"></div>
         <div class="col-md-9">
-            <div class="panel panel-default">
+            <div class="panel panel-info">
                 <div class="panel-heading">
                     <strong>APPLY FOR LEAVE</strong>
                 </div>
@@ -159,13 +159,13 @@
                         <div class="row" style="margin-bottom:5px;">
                             <div class="col-xs-12 col-md-8"><b>Reason</b></div>
                             <div class="col-xs-6 col-md-4"></div>
-                        </div> 						
+                        </div>
                         <div class="row">
                             <div class="col-xs-12 col-md-8"><textarea class="form-control" rows="3" id="txt_reason" name="txt_reason"></textarea></div>
-                            <div class="col-xs-6 col-md-4"><button type="submit" class="btn btn-success">Apply</button></div>
+                            <div class="col-xs-6 col-md-4"><button type="submit" class="btn btn-raised btn-success">Apply</button></div>
                         </div>
 <?php echo form_close(); ?>
-                    </div>			
+                    </div>
                 </div>
             </div>
         </div>
@@ -221,4 +221,3 @@
         </div>
     </div>
 </div>
-

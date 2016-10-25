@@ -225,7 +225,7 @@ class Student_Model extends CI_Model {
      * @return boolean
      */
     public function update_student($student, $myid) {
-        $sql = "UPDATE students SET full_name ='{$student['name']}',  permanent_addr='{$student['address']}',  name_with_initials='{$student['nameWithInitials']}', contact_home='{$student['contact_home']}',email='{$student['email']}'  WHERE user_id='$myid'";
+        $sql = "UPDATE students SET full_name ='{$student['name']}',  permanent_addr='{$student['address']}', permanent_addr1='{$student['address1']}; permanent_addr2='{$student['address2']}; name_with_initials='{$student['nameWithInitials']}', contact_home='{$student['contact_home']}',email='{$student['email']}'  WHERE user_id='$myid'";
 
         if ($query = $this->db->query($sql)) {
             return TRUE;
@@ -336,6 +336,25 @@ class Student_Model extends CI_Model {
         }
     }
 
+    /**
+     * Get Logged user's username
+     *
+     * @param type $user_id
+     * @return boolean
+     */
+    public function get_student($user_id) {
+
+
+        $query=$this->db->get_where('students',array('id'=>$user_id));
+
+        if ($query->num_rows() > 0) {
+             $row=$query->row();
+            return $row->username;
+        } else {
+            return FALSE;
+        }
+    }
+
 
     /**
      * change Logged user's password
@@ -396,7 +415,9 @@ class Student_Model extends CI_Model {
                 $nic = $student_data->nic_no;
                 $language = $student_data->language;
                 $religion_id = $student_data->religion;
-                $address = $student_data->permanent_addr;
+                $address1 = $student_data->permanent_addr;
+                $address2 = $student_data->permanent_addr1;
+                $address3 = $student_data->permanent_addr2;
                 $contact = $student_data->contact_home;
                 $house_id = $student_data->house_id;
                 $email = $student_data->email;
@@ -407,8 +428,8 @@ class Student_Model extends CI_Model {
 
 
 
-                if ($this->db->query("INSERT INTO archived_students (`user_id` , `admission_no` , `admission_date` , `full_name` , `name_with_initials` , `dob` , `gender`, `language` , `religion` , `permanent_addr` , `contact_home` , `email` , `house_id` , `created_at`)
-    			VALUES ('$user_id' , '$admissionno', '$admissiondate' , '$fullname' , '$initials' , '$dob' , '$gender' , '$language' , '$religion_id' , '$address' , '$contact' , '$email' , '$house_id' , '$created_at')")) {
+                if ($this->db->query("INSERT INTO archived_students (`user_id` , `admission_no` , `admission_date` , `full_name` , `name_with_initials` , `dob` , `gender`, `language` , `religion` , `permanent_addr` , `permanent_addr2` , `permanent_addr3` , `contact_home` , `email` , `house_id` , `created_at`)
+    			VALUES ('$user_id' , '$admissionno', '$admissiondate' , '$fullname' , '$initials' , '$dob' , '$gender' , '$language' , '$religion_id' , '$address1' , '$address2' , '$address3' , '$contact' , '$email' , '$house_id' , '$created_at')")) {
 
 
                     $data_g =$this->db->get_where('guardians', array('student_id' => $id),1);

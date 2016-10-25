@@ -59,8 +59,8 @@
                     </div>
                 </div>
 
-                <div class="panel  panel-default"  >
-                    <div class="panel-heading panel-default " >
+                <div class="panel  panel-info"  >
+                    <div class="panel-heading panel-info " >
                         <b>ADMISSION / Personal Details</b>
                     </div>
                     <div class="panel panel-body" >
@@ -234,24 +234,35 @@
 
                             <div class="col-md-5 col-md-push-1  form-group">
 
-                                <label for="address">Permenent Address</label>
-                                <!--<textarea name="address" value="" class="form-control" id="address"><?php echo set_value('address'); ?></textarea>-->
-                                <input type="text" name="address" value="<?php echo set_value('address'); ?>" class="form-control" id="address">
-                                <input type="text" name="address1" value="<?php echo set_value('address1'); ?>" class="form-control" id="address1">
-                                <input type="text" name="address2" value="<?php echo set_value('address2'); ?>" class="form-control" id="address2">
-                                <div><?php echo form_error('address'); ?></div>
+                                <label for="inputEmail3" class="col-sm-2 control-label">Address</label>
+                                <div>
 
+                                    <input id="address" type="text" name="address"  value="<?php echo set_value('address'); ?>" type="text" class="form-control" id="address" placeholder="Address 1">
+                                        <?php echo form_error('address'); ?>
+                                </div>
+                                <label for="inputEmail3" class="col-sm-2 control-label"></label>
+                                <div>
+
+                                    <input id="address1" type="text" name="address1"  value="<?php echo set_value('address1'); ?>" type="text" class="form-control" id="address1" placeholder="Address 2">
+                                        <?php echo form_error('address'); ?>
+                                </div>
+                                <label for="inputEmail3" class="col-sm-2 control-label"></label>
+                                <div>
+
+                                    <input id="address2" type="text" name="address2"  value="<?php echo set_value('address2'); ?>" type="text" class="form-control" id="address2" placeholder="Address 3">
+                                        <?php echo form_error('address'); ?>
+                                </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-1 col-md-push-1">
 
-                                <button type="submit" class="btn btn-success ">Next </button>
+                                <button type="submit" class="btn btn-raised btn-success ">Next </button>
 
                             </div>
-                            <div class="col-md-1 col-md-push-1">
+                            <div class="col-md-1 col-md-push-2">
 
-                                <button type="reset" class="btn btn-default">Reset </button>
+                                <button type="reset" class="btn btn-raised btn-success">Reset </button>
 
                             </div>
                         </div>

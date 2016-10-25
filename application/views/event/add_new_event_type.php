@@ -33,7 +33,7 @@
             </div>
             <?php } ?>
 
-            <div class="panel panel-default">
+            <div class="panel panel-info">
                 <div class="panel-heading">
                     <strong>Create New Event Type</strong>
                 </div>
@@ -65,15 +65,15 @@
 
                     <div class="form-group">
                         <div class="col-sm-offset-2 col-sm-10">
-                            <input type="submit" class="btn btn-primary" value="Add">
-                            <button type="reset" class="btn btn-default">Reset</button>
+                            <input type="submit" class="btn btn-raised btn-primary" value="Add">
+                            <button type="reset" class="btn btn-raised btn-default">Reset</button>
                         </div>
                     </div>
 
                 </div>
             </div>
 
-            <div class="panel panel-default">
+            <div class="panel panel-info">
                 <div class="panel-heading">
                     <strong>Current Event Types</strong>
                 </div>
@@ -107,8 +107,8 @@
                             <tr>
                                 <td><?php echo $row->event_type; ?></td>
                                 <td><?php echo $row->description; ?></td>
-                                <td><a href="<?php echo base_url("index.php/event/view_event_type_details") . "/" . $row->id; ?>" class="btn btn-primary btn-xs" aria-hidden="true"><i class="fa fa-eye"></i></a></td>
-                                <td><a id="delete-user" data-user-id="<?php echo $row->id; ?>" class="btn btn-danger btn-xs del" aria-hidden="true"><i class="fa fa-trash"></i></a></td>            </tr>
+                                <td><a href="<?php echo base_url("index.php/event/view_event_type_details") . "/" . $row->id; ?>" class="btn btn-raised btn-primary btn-xs" aria-hidden="true"><i class="fa fa-eye"></i></a></td>
+                                <td><a id="delete-user" data-user-id="<?php echo $row->id; ?>" class="btn btn-raised btn-danger btn-xs del" aria-hidden="true"><i class="fa fa-trash"></i></a></td>            </tr>
                         <?php } ?>
                     </tbody>
                 </table>

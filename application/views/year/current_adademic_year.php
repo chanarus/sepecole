@@ -4,8 +4,8 @@
         <div class="col-md-12">
             <!-- calender -->
             <div class="row">
-                <div class="col-md-12"> 
-                    <div class="panel panel-default">
+                <div class="col-md-12">
+                    <div class="panel panel-info">
                         <div class="panel-heading">
                             <strong><i class="fa fa-calendar" style="margin-right:10px"></i> Current Academic Year</strong>
                         </div>
@@ -16,7 +16,7 @@
                 </div>
             </div>
         </div>
-    </div> 
+    </div>
 </div>
 
 
@@ -35,7 +35,7 @@
                 right: 'month'
             },
             defaultView: 'month',
-            
+
             views: {
                 timelineThreeDays: {
                     type: 'timeline',
@@ -70,7 +70,7 @@ foreach ($final as $row => $value) {
         $title = "Special School Day";
         echo "{id: '$row', start: '$row', end: '$row', title: '$title', color: '$color',allDay: true },";
     }
-    
+
 
 }
 ?>

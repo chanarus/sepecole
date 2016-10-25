@@ -15,7 +15,7 @@
                 'class' => 'form-inline'
             );
             ?>
-            <div class="panel panel-default">
+            <div class="panel panel-info">
                 <div class="panel-heading">Administrator Accounts</div>
                 <div class="panel-body">
                     <script type="text/javascript">
@@ -55,7 +55,7 @@
                                     </td>
                                 </tr>
                             <?php } }?>
-                        </tbody>                      
+                        </tbody>
                     </table>
 
                 </div>
@@ -78,8 +78,8 @@
 
   function deleteUser(userId) {
     swal({
-      title: "Are you sure?", 
-      text: "Are you sure that you want to delete this user?", 
+      title: "Are you sure?",
+      text: "Are you sure that you want to delete this user?",
       type: "warning",
       showCancelButton: true,
       closeOnConfirm: false,
@@ -88,9 +88,8 @@
     }, function() {
         window.location.href = "<?php echo base_url("index.php/admin/delete"); ?>" + "/" + userId;
     });
-    
-    
-  }
-  
-  </script>
 
+
+  }
+
+  </script>

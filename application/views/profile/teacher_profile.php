@@ -55,7 +55,7 @@
                     echo 'STUDENT';
                 } ?></span></h4></div>
 <?php if ($edit) { ?>
-                <div class="col-md-offset-1 col-md-10 center" ><a href="<?php echo base_url('index.php/profile/profile_settings'); ?>"><button class='btn btn-success col-md-12'>Edit Profile</button></a></div>
+                <div class="col-md-offset-1 col-md-10 center" ><a href="<?php echo base_url('index.php/profile/profile_settings'); ?>"><button class='btn btn-raised btn-success col-md-12'>Edit Profile</button></a></div>
 <?php } ?>
             <div class="clearfix"></div>
         </div>

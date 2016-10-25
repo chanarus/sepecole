@@ -10,7 +10,7 @@
                     <?php echo $succ_message; ?>
                 </div>
             <?php } ?>
-            <div class="panel panel-default">
+            <div class="panel panel-info">
                 <div class="panel-heading">Create Subject</div>
                 <div class="panel-body">
                     <div class="col-md-6">
@@ -46,22 +46,22 @@
                         <div class="form-group">
                             <label for="subjectinchargeid">Subject incharge</label>
                             <select name="subjectinchargeid" id="subjectinchargeid" class="form-control">
-                                    <?php 
-                                   
-                                    
+                                    <?php
+
+
                                     foreach ($result as $row) {?>
-                                        
-                                    
-                                        
+
+
+
                                 <option value="<?php echo $row->id;?>"><?php echo $row->full_name; ?> </option>
                                                                                                        <?php  }
                                       ?>
                             </select>
-                             
+
                             <?php echo form_error('subjectinchargeid', $error_prefix, $error_suffix); ?>
                         </div>
-                       
-                        <input type="submit" class="btn btn-success" value=" Submit ">
+
+                        <input type="submit" class="btn btn-raised btn-success" value=" Submit ">
                         <?php echo form_close(); ?>
                     </div>
                 </div>

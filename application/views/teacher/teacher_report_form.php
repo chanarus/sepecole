@@ -4,11 +4,11 @@
             <?php $this->view('teacher/sidebar_nav'); ?>
         </div>
         <div class="col-md-9">
-            <div class="panel panel-default">
+            <div class="panel panel-info">
                 <div class="panel-heading">Generate Teacher Reports</div>
                 <div class="panel-body">
                     <?php
-                    // Change the css classes to suit your needs    
+                    // Change the css classes to suit your needs
                     $l=0;
                     $attributes = array('class' => 'form-horizontal', 'id' => '');
                     echo form_open('teacher/report_pdf'."/".$value, $attributes);
@@ -23,7 +23,7 @@
                             <div class="media-body">
                                 <h4 class="media-heading">Teacher Report</h4>
                                 There are two report types. "Section" report and "Teacher" report. In Section report, you can
-                                print section wise reports. In Teacher report, you can print individual teacher report. 
+                                print section wise reports. In Teacher report, you can print individual teacher report.
                             </div>
                         </div>
                     </div>
@@ -39,10 +39,10 @@
                                     <?php echo form_error('reporttype'); ?>
                                 </div>
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-md-4 col-md-offset-1">
                                 <div class="form-group">
                                     <?php if ($value == 0) { ?>
-                                        
+
                                     <?php } else if ($value == 1) { $l = 1; ?>
                                         <select id="report" name="report" class="form-control">
                                             <option value="1">1/5</option>
@@ -70,7 +70,7 @@
                                 </div>
                             </div>
                             <div class="col-md-3">
-                                <input type="submit" class="btn btn-danger" value="Genarate Report">
+                                <input type="submit" class="btn btn-raised btn-danger" value="Genarate Report">
                             </div>
                         </div>
                     </div>

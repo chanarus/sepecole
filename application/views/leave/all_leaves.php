@@ -17,7 +17,7 @@
             ?>
         </div>
         <div class="col-md-9">
-            <div class="panel panel-default">
+            <div class="panel panel-info">
                 <div class="panel-heading">
                     <strong>ALL LEAVES</strong>
                 </div>
@@ -55,7 +55,7 @@
                             echo "<td>".$row->no_of_days."</td>" . PHP_EOL;
                             echo "<td>".$row->status."</td>" . PHP_EOL;
                             echo "<td>" . PHP_EOL; ?>
-                            <a href='<?php echo base_url('index.php/leave/get_leave_details/'.$row->id); ?>' class='btn btn-primary btn-xs'><span class='glyphicon glyphicon-list-alt'></span></a>
+                            <a href='<?php echo base_url('index.php/leave/get_leave_details/'.$row->id); ?>' class='btn btn-raised btn-primary btn-xs'><span class='glyphicon glyphicon-list-alt'></span></a>
                         <?php
                             echo "</td>" . PHP_EOL;
                             echo "</tr>" . PHP_EOL;

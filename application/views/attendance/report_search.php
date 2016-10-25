@@ -10,7 +10,7 @@
                     <?php echo validation_errors(); ?>
                 </div>
             <?php } ?>
-            <div class="panel panel-default">
+            <div class="panel panel-info">
                 <div class="panel-heading">Attendance Report Search</div>
                 <div class="panel-body">
                     <div class="row" style="margin-left: 1em;">
@@ -22,7 +22,7 @@
                             </div>
                             <div class="media-body">
                                 <h4 class="media-heading">Searching for Attendance Reports</h4>
-                                Select the date you want to get attendance records and click search. 
+                                Select the date you want to get attendance records and click search.
                             </div>
                         </div>
                     </div>
@@ -38,7 +38,7 @@
                         <div class="form-group">
                             <input type="date" id="date" name="date" class="form-control" placeholder="Select Date" size="15">
                         </div>
-                        <button type="submit" class="btn btn-success" ><i class="fa fa-check-square-o"></i></button>
+                        <button type="submit" class="btn btn-raised btn-success" ><i class="fa fa-check-square-o"></i></button>
                             <?php echo form_close(); ?>
                     </div>
                 </div>
