@@ -17,9 +17,8 @@ class marks extends CI_Controller
         if (!$this->session->userdata('logged_in')) {
             redirect('login');
         }
-
-
     }
+
 
     /**
      * load add marks page
@@ -40,3 +39,4 @@ class marks extends CI_Controller
 
 
 }
+

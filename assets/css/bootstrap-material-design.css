@@ -2879,6 +2879,18 @@ fieldset[disabled] .navbar .btn-link:focus {
   color: #FFFFFF !important;
   font-weight: 500;
 }
+.nav-tabs > li > a:hover {
+  background-color: transparent !important;
+  border: 10px;
+  border-color: #FAFAFA;
+  color: #26C6DA !important;
+  font-weight: 500;
+}
+.nav-tabs > li > .active > a,
+.nav-tabs > li > .active > a:hover,
+.nav-tabs > li > .active > a:focus {
+  color: #26C6DA;
+}
 .nav-tabs > li.disabled > a,
 .nav-tabs > li.disabled > a:hover {
   color: rgba(255, 255, 255, 0.5);
