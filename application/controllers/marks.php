@@ -12,15 +12,11 @@ class marks extends CI_Controller
     function __construct()
     {
         parent::__construct();
-
-
         if (!$this->session->userdata('logged_in')) {
             redirect('login');
         }
-
-
     }
-}
+
 /**
  * load add marks page
  */
@@ -33,6 +29,7 @@ function index()
     $this->load->view('templates/header', $data);
     $this->load->view('navbar_main', $data);
     $this->load->view('navbar_sub', $data);
-    $this->load->view('marks/add_marks', $data);
-    $this->load->view('/templates/footer');
+    $this->load->view('Marks/exam_details', $data);
+    $this->load->view('templates/footer');
+}
 }
