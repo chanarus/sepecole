@@ -78,6 +78,10 @@ class Sports extends CI_Controller {
     }
     
      function assign_leaders(){
+         if (!$this->session->userdata('id')) {
+            redirect('login', 'refresh');
+        }
+
         $data['user_type'] = $this->session->userdata['user_type'];
         $data['page_title'] = "Sports";
         $data['navbar'] = "sports";
@@ -89,6 +93,33 @@ class Sports extends CI_Controller {
         $this->load->view('navbar_sub', $data);
         $this->load->view('sports/assign_leaders_form', $data);
         $this->load->view('templates/footer');
+
+        if ($this->form_validation->run() == FALSE) {
+            $data['det'] = $this->sports_model->view_sport_category();
+            $data['navbar'] = "sport";
+            $data['page_title'] = "Sport Category";
+            $this->load->view('/templates/header', $data);
+            $this->load->view('navbar_main', $data);
+            $this->load->view('navbar_sub', $data);
+            $this->load->view('sports/assign_leaders_form', $data);
+            $this->load->view('/templates/footer');
+        }
+        else{
+            $sport_cat = $this->input->post('sport_name');
+            $sport_descrp = $this->input->post('description');
+            $sport_age_category = $this->input->post('agecat');
+            $this->sports_model->add_sport_category($sport_cat,$sport_descrp,$sport_age_category);
+            
+            $data['det'] = $this->sports_model->view_sport_category();
+            $data['succ_message'] = "Succesfully inserted";
+            $data['navbar'] = "sport";
+            $data['page_title'] = "Sport Category";
+            $this->load->view('/templates/header', $data);
+            $this->load->view('navbar_main', $data);
+            $this->load->view('navbar_sub', $data);
+            $this->load->view('sports/sport_details', $data);
+            $this->load->view('/templates/footer');
+        }
     }
     
     function assign_students(){
@@ -123,6 +154,11 @@ class Sports extends CI_Controller {
         // $sport_descrp = $this->input->post('description');
 
         // //$this->sports_model->edit_sport_details($sport_id,$sport_cat,$sport_descrp);
+    }
+
+    function get_captain_name($id){
+      $data['captain_name'] =  $this->sports_model->captain_name($id);
+      $this->load->view('/sports/captain',$data);
     }    
     
 }

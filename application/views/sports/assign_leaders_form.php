@@ -107,35 +107,31 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="inputEmail3" class="col-sm-2 control-label">Captain Name</label>
+                        <label for="cap_name" class="col-sm-2 control-label">Captain Name</label>
                         <div class="col-sm-5">
-                            <select id="captain" name="captain" class="form-control">
-                                <option value="0" <?php if (set_value('captain') == '0') { echo "selected"; } ?>>Select a Captain</option>
-                                <option value="1" <?php if (set_value('captain') == '1') { echo "selected"; } ?>>Devision1</option>
-                                <option value="2" <?php if (set_value('captain') == '2') { echo "selected"; } ?>>Devision2</option>
-                                <option value="3" <?php if (set_value('captain') == '3') { echo "selected"; } ?>>Devision3</option>
-                            </select>
+                            <div class="col-sm-10">
+                            <input id="cap_name" type="text" name="cap_name" id="cap_name"  value="<?php if(isset($succ_message)){ echo '';}else{echo set_value('cap_reg');} ?>" type="text" class="form-control" id="cap_reg" placeholder="Captain Name:">
+                            <?php echo form_error('cap_name'); ?>
+                        </div>
                             <?php echo form_error('teachername'); ?>
                         </div>
                         <div class="col-sm-3">
-                            <input id="event_name" type="text" name="event_name"  value="<?php if(isset($succ_message)){ echo '';}else{echo set_value('event_name');} ?>" type="text" class="form-control" id="event_name" placeholder="Register No:">
-                            <?php echo form_error('event_name'); ?>
+                            <input id="cap_reg" type="text" name="cap_reg" id="cap_reg"  value="<?php if(isset($succ_message)){ echo '';}else{echo set_value('cap_reg');} ?>" type="text" class="form-control" id="cap_reg" placeholder="Register No:">
+                            <?php echo form_error('cap_reg'); ?>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="inputEmail3" class="col-sm-2 control-label">Vice Captain Name</label>
                         <div class="col-sm-5">
-                            <select id="vice captain" name="vice captain" class="form-control">
-                                <option value="0" <?php if (set_value('vice captain') == '0') { echo "selected"; } ?>>Select a Vice Captain</option>
-                                <option value="1" <?php if (set_value('vice captain') == '1') { echo "selected"; } ?>>Devision1</option>
-                                <option value="2" <?php if (set_value('vice captain') == '2') { echo "selected"; } ?>>Devision2</option>
-                                <option value="3" <?php if (set_value('vice captain') == '3') { echo "selected"; } ?>>Devision3</option>
-                            </select>
+                            <div class="col-sm-10">
+                            <input id="vice_reg" type="text" name="vice_reg"  value="<?php if(isset($succ_message)){ echo '';}else{echo set_value('vice_reg');} ?>" type="text" class="form-control" id="vice_reg" placeholder="Vice Captain Name:">
+                            <?php echo form_error('vice_reg'); ?>
+                        </div>
                             <?php echo form_error('teachername'); ?>
                         </div>
                         <div class="col-sm-3">
-                            <input id="event_name" type="text" name="event_name"  value="<?php if(isset($succ_message)){ echo '';}else{echo set_value('event_name');} ?>" type="text" class="form-control" id="event_name" placeholder="Register No:">
-                            <?php echo form_error('event_name'); ?>
+                            <input id="vice_reg" type="text" name="vice_reg"  value="<?php if(isset($succ_message)){ echo '';}else{echo set_value('vice_reg');} ?>" type="text" class="form-control" id="vice_reg" placeholder="Register No:">
+                            <?php echo form_error('vice_reg'); ?>
                         </div>
                     </div>
                     <div class="form-group">
@@ -177,8 +173,6 @@
                                     }
                                     ?>
                                 </td>
-                                <td><a href="<?php echo base_url("index.php/sports/view_category"); ?>" data-id='<?php echo $row->id ?>' class='btnedit' title='edit'><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a></td>
-                                <td><a href="<?php echo base_url("index.php/sports/delete_news")."/".$row->id; ?>" onclick="return confirm('Are you sure you want to delete this news?');"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></i></a></td>
                             </tr>
                         <?php } ?>
                         </tbody>
@@ -191,3 +185,15 @@
     </div>
 
 </div>
+
+<script>
+var no = parseInt($("#cap_reg"));
+
+$(document).ready(function(){
+    $("#cap_name").change(function(){
+
+      get_captain_name(no);
+
+    });
+}
+</script>
