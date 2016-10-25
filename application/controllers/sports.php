@@ -81,18 +81,14 @@ class Sports extends CI_Controller {
          if (!$this->session->userdata('id')) {
             redirect('login', 'refresh');
         }
-
-        $data['user_type'] = $this->session->userdata['user_type'];
-        $data['page_title'] = "Sports";
         $data['navbar'] = "sports";
-        $data['sports'] = $this->sports_model->get_all_sports();
+        $this->load->library('form_validation');
+        $data['user_type'] = $this->session->userdata['user_type'];
 
-        $this->load->view('templates/header', $data);
-        $data['det'] = $this->sports_model->view_sport_category();
-        $this->load->view('navbar_main', $data);
-        $this->load->view('navbar_sub', $data);
-        $this->load->view('sports/assign_leaders_form', $data);
-        $this->load->view('templates/footer');
+        $this->form_validation->set_rules('sport_name', '', 'required');
+        $this->form_validation->set_rules('description', 'Full Name', 'required');
+        $this->form_validation->set_rules('agecat', 'Name with Initial', 'required');
+        $this->form_validation->set_error_delimiters('<br /><span class="error">', '</span>');
 
         if ($this->form_validation->run() == FALSE) {
             $data['det'] = $this->sports_model->view_sport_category();
@@ -117,7 +113,7 @@ class Sports extends CI_Controller {
             $this->load->view('/templates/header', $data);
             $this->load->view('navbar_main', $data);
             $this->load->view('navbar_sub', $data);
-            $this->load->view('sports/sport_details', $data);
+            $this->load->view('sports/assign_leaders_form', $data);
             $this->load->view('/templates/footer');
         }
     }
