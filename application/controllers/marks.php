@@ -17,11 +17,26 @@ class marks extends CI_Controller
         }
     }
 
-/**
- * load add marks page
- */
-function index()
-{
+  /**
+   * load add marks page
+   */
+  function index()
+  {
+      $data['page_title'] = " Student Grading Management";
+      $data['user_type'] = $this->session->userdata['user_type'];
+      $data['navbar'] = "admin";
+
+      $this->load->view('templates/header', $data);
+      $this->load->view('navbar_main', $data);
+      $this->load->view('navbar_sub', $data);
+      $this->load->view('Marks/exam_details', $data);
+      $this->load->view('templates/footer');
+  }
+
+  /**
+  *
+  */
+  function exam_marks() {
     $data['page_title'] = " Student Grading Management";
     $data['user_type'] = $this->session->userdata['user_type'];
     $data['navbar'] = "admin";
@@ -29,7 +44,37 @@ function index()
     $this->load->view('templates/header', $data);
     $this->load->view('navbar_main', $data);
     $this->load->view('navbar_sub', $data);
-    $this->load->view('Marks/exam_details', $data);
+    $this->load->view('Marks/exam_marks', $data);
     $this->load->view('templates/footer');
-}
+  }
+
+  /**
+  *
+  */
+  function view_marks() {
+    $data['page_title'] = " Student Grading Management";
+    $data['user_type'] = $this->session->userdata['user_type'];
+    $data['navbar'] = "admin";
+
+    $this->load->view('templates/header', $data);
+    $this->load->view('navbar_main', $data);
+    $this->load->view('navbar_sub', $data);
+    $this->load->view('Marks/view_marks', $data);
+    $this->load->view('templates/footer');
+  }
+
+  /**
+  *
+  */
+  function genarate_reports() {
+    $data['page_title'] = " Student Grading Management";
+    $data['user_type'] = $this->session->userdata['user_type'];
+    $data['navbar'] = "admin";
+
+    $this->load->view('templates/header', $data);
+    $this->load->view('navbar_main', $data);
+    $this->load->view('navbar_sub', $data);
+    $this->load->view('Marks/genarate_reports', $data);
+    $this->load->view('templates/footer');
+  }
 }
