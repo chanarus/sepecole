@@ -21,7 +21,11 @@ class Certificate extends CI_Controller {
     }
   }
 
-  function index() {
+/*
+*Index function
+*Load the main view
+*/
+function index() {
       $data['user_type'] = $this->session->userdata['user_type'];
       $data['page_title'] = "Certificate";
       $data['navbar'] = "admin";
@@ -35,6 +39,9 @@ class Certificate extends CI_Controller {
       $this->load->view('templates/footer');
   }
 
+  /*
+  *Load leaving certificate view
+  */
   function create_leaving_certificate() {
     $data['user_type'] = $this->session->userdata['user_type'];
     $data['page_title'] = "Certificate";
@@ -47,6 +54,9 @@ class Certificate extends CI_Controller {
     $this->load->view('templates/footer');
   }
 
+  /*
+  *Load character certificate view
+  */
   function create_character_certificate() {
     $data['user_type'] = $this->session->userdata['user_type'];
     $data['page_title'] = "Certificate";
@@ -65,5 +75,16 @@ class Certificate extends CI_Controller {
 
   function genarate_character_certificate() {
     $this->load->view('development');
+  }
+
+  /*
+  *Search a student
+  */
+  function search_students() {
+    $std_id = $this->input->post('student_id');
+    $std_name = $this->input->post('std_name');
+
+    $data['name'] = $this->Student_Model->get_student_only($std_id);
+    var_dump($data['name']);
   }
 }

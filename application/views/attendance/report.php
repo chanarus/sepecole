@@ -19,7 +19,7 @@
                 </div>
             </div>
             <div class="row" style="margin-left: 1em; margin-bottom: 2em;">
-                <a href="<?php echo base_url('index.php/attendance/confirm'); ?>"><button class="btn btn-primary">Confirm</button></a>
+                <a href="<?php echo base_url('index.php/attendance/confirm'); ?>"><button class="btn btn-primary btn-raised">Confirm</button></a>
             </div>
             <div class="row">
                 <ul class="nav nav-tabs" style="margin-bottom: 0x;">

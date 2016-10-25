@@ -2855,28 +2855,48 @@ fieldset[disabled] .navbar .btn-link:focus {
   color: #03a9f4;
 }
 .nav-tabs {
-  background: #1a75ff;
+  background: #212121;
+  border: 10px;
+  border-color: #FAFAFA;
 }
 .nav-tabs > li > a {
   color: #FFFFFF;
-  border: 0;
+  border: 10px;
+  border-color: #FAFAFA;
   margin: 0;
 }
 .nav-tabs > li > a:hover {
-  background-color: transparent;
-  border: 0;
+  background-color: #616161;
+  border: 10px;
+  border-color: #FAFAFA;
 }
 .nav-tabs > li > a,
 .nav-tabs > li > a:hover,
 .nav-tabs > li > a:focus {
   background-color: transparent !important;
-  border: 0 !important;
+  border: 10px;
+  border-color: #FAFAFA;
   color: #FFFFFF !important;
   font-weight: 500;
+}
+.nav-tabs > li > a:hover {
+  background-color: transparent !important;
+  border: 10px;
+  border-color: #FAFAFA;
+  color: #26C6DA !important;
+  font-weight: 500;
+}
+.nav-tabs > li > .active > a,
+.nav-tabs > li > .active > a:hover,
+.nav-tabs > li > .active > a:focus {
+  color: #26C6DA;
 }
 .nav-tabs > li.disabled > a,
 .nav-tabs > li.disabled > a:hover {
   color: rgba(255, 255, 255, 0.5);
+}
+.nav-tabs .active {
+  color: #26C6DA;
 }
 .popover,
 .tooltip-inner {
