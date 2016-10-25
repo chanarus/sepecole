@@ -18,6 +18,12 @@
                         <td>
                             <span class="glyphicon glyphicon-list-alt text-warning"></span><a href="<?php echo base_url('index.php/Marks/exam_marks'); ?>">Exam Marks</a>
                         </td>
+
+                    </tr>
+                    <tr>
+                         <td>
+                             <span class="glyphicons glyphicons-disk-open"></span><a href="<?php echo base_url('index.php/'); ?>">Generate Report</a>
+                         </td>
                     </tr>
                     <tr>
                         <td>
