@@ -18,8 +18,7 @@ class marks extends CI_Controller
             redirect('login');
         }
     }
-
-<<<<<<< HEAD
+    
   /**
    * load add marks page
    */

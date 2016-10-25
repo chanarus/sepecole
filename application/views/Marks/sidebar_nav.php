@@ -16,19 +16,14 @@
                     </tr>
                     <tr>
                         <td>
-                            <span class="glyphicon glyphicon-list-alt text-warning"></span><a href="<?php echo base_url('index.php/Marks/exam_marks'); ?>">Exam Marks</a>
+                            <span class="glyphicon glyphicon-list-alt text-warning"></span><a href="<?php echo base_url('index.php/Marks/view_marks'); ?>">Exam Marks</a>
                         </td>
-
-                    </tr>
-                    <tr>
-                         <td>
-                             <span class="glyphicons glyphicons-disk-open"></span><a href="<?php echo base_url('index.php/'); ?>">Generate Report</a>
-                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <span class="glyphicon glyphicon-list-alt text-warning"></span><a href="<?php echo base_url('index.php/Marks/view_marks'); ?>">Marks Lists</a>
+                            <span class="glyphicon glyphicon-list-alt text-warning"></span><a href="<?php echo base_url('index.php/Marks/exam_marks'); ?>">Marks Lists</a>
                         </td>
+
                     </tr>
                     <tr>
                         <td>
