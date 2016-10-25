@@ -18,9 +18,12 @@
                         <td>
                             <span class="glyphicons glyphicons-disk-open"></span><a href="<?php echo base_url('index.php/'); ?>">View Grades</a>
                         </td>
-                        <td>
-                            <span class="glyphicons glyphicons-disk-open"></span><a href="<?php echo base_url('index.php/'); ?>">Generate Report</a>
-                        </td>
+
+                    </tr>
+                    <tr>
+                         <td>
+                             <span class="glyphicons glyphicons-disk-open"></span><a href="<?php echo base_url('index.php/'); ?>">Generate Report</a>
+                         </td>
                     </tr>
                 </table>
             </div>
