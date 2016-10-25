@@ -32,7 +32,7 @@ class marks extends CI_Controller
         $this->load->view('templates/header', $data);
         $this->load->view('navbar_main', $data);
         $this->load->view('navbar_sub', $data);
-        $this->load->view('marks/add_marks', $data);
+        $this->load->view('marks/exam_details', $data);
         $this->load->view('/templates/footer');
     }
 
