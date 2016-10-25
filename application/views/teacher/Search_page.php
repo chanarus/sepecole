@@ -81,11 +81,11 @@
                                 <td><?php
                                     $med = $row->medium;
                                     if ($med == 's') {
-                                        echo 'sin';
+                                        echo 'Sinhala';
                                     } else if ($med == 'e') {
-                                        echo 'eng';
+                                        echo 'English';
                                     } else if ($med == 't') {
-                                        echo 'tam';
+                                        echo 'Tamil';
                                     }
                                     ?></td>
                                 <td><?php echo $row->contact_mobile; ?></td>

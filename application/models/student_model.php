@@ -336,6 +336,25 @@ class Student_Model extends CI_Model {
         }
     }
 
+    /**
+     * Get Logged user's username
+     *
+     * @param type $user_id
+     * @return boolean
+     */
+    public function get_student($user_id) {
+
+
+        $query=$this->db->get_where('students',array('id'=>$user_id));
+
+        if ($query->num_rows() > 0) {
+             $row=$query->row();
+            return $row->username;
+        } else {
+            return FALSE;
+        }
+    }
+
 
     /**
      * change Logged user's password
