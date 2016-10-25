@@ -108,8 +108,6 @@ class Student extends CI_Controller {
         $this->form_validation->set_rules('religion', 'Religion', 'callback_check_selection');
         $this->form_validation->set_rules('houseid', 'Houser', 'required');
         $this->form_validation->set_rules('address', 'Address', 'required');
-     // $this->form_validation->set_rules('address2', 'Address', 'required');
-     // $this->form_validation->set_rules('address3', 'Address', 'required');
         $this->form_validation->set_rules('contact_home', 'Contact Home', 'exact_length[10]|integer');
         $this->form_validation->set_rules('email', 'Email', 'valid_email');
 
@@ -226,10 +224,7 @@ class Student extends CI_Controller {
                 $data['row'] = $this->Student_Model->get_last_inserted_student($id);
                 $ID = $data['row']->id;
                 $username = $data['row']->admission_no;
-
-
-
-              $password =  $username;
+                $password =  $username;
 
                 $create = date('Y-m-d H:i:s');
                 $name = $studentd['full_name'];

@@ -268,6 +268,30 @@ class Student_Model extends CI_Model {
         }
     }
 
+    public function insert_new_guardian_data($username, $password, $create, $fname, $lname) {
+      $encryptpwd = md5($password);
+      $user_data = array(
+        'username'=>$username,
+        'password'=>$encryptpwd,
+        'first_name'=>$fname,
+        'last_name'=>$lname,
+        'created_at'=>$create,
+        'user_type'=>'P'
+      );
+      try {
+
+        if ($this->db->insert('users',$user_data)) {
+          $id = $this->db->insert_id();
+          return $id;
+        } else {
+          return NULL;
+        }
+      } catch (Exception $e) {
+        return FALSE;
+      }
+
+    }
+
         /**
      * getting the recode details of  Student with his guardian details by given id
      *
@@ -327,6 +351,25 @@ class Student_Model extends CI_Model {
 
 
         $query=$this->db->get_where('users',array('id'=>$user_id));
+
+        if ($query->num_rows() > 0) {
+             $row=$query->row();
+            return $row->username;
+        } else {
+            return FALSE;
+        }
+    }
+
+    /**
+     * Get Logged user's username
+     *
+     * @param type $user_id
+     * @return boolean
+     */
+    public function get_student($user_id) {
+
+
+        $query=$this->db->get_where('students',array('id'=>$user_id));
 
         if ($query->num_rows() > 0) {
              $row=$query->row();
