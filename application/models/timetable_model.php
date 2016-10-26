@@ -206,7 +206,7 @@ class Timetable_Model extends CI_Model {
       * get time slots of a teacher
     **/
 
-  /*  function get_time_slot($teacher_id) {
+    function get_time_slot($teacher_id) {
 
       try {
 
@@ -217,7 +217,7 @@ class Timetable_Model extends CI_Model {
         return FALSE;
       }
 
-    } */
+    } 
 
   /*  function get_class_id($timetable_id) {
       try {
