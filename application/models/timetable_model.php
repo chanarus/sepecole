@@ -210,7 +210,7 @@ class Timetable_Model extends CI_Model {
 
       try {
 
-        $query = $this->db->query("SELECT *  FROM timetable_slot WHERE teacher_id = $teacher_id ");
+        $query = $this->db->query("SELECT c.grade_id,c.name,s.subject_name,t.slot_id  FROM timetable_slot t,classes c,subjects s, class_timetable ct WHERE t.teacher_id = $teacher_id and ct.class_id=t.class_id and ct.class_id=c.id and s.id=t.subject_id");
         return $query->result();
 
       } catch (Exception $e) {
@@ -231,5 +231,7 @@ class Timetable_Model extends CI_Model {
       }
 
     }
+
+
 
 }

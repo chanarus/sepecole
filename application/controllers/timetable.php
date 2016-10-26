@@ -322,11 +322,11 @@ class Timetable extends CI_Controller {
         $teacher_id = $this->teacher_model->get_teacher_id($id);
         $data['slots']  = $this->timetable_model->get_time_slot($teacher_id);
 
-        var_dump(  $data['slots']) ;
+        //var_dump(  $data['slots']) ;
         // $class_id = $this->class_model->get_class_id($teacher_id);
         // $data['class'] = $this->class_model->get_class($class_id);
         // $data['class_students'] = $this->class_model->get_class_students($class_id);
-        $data['user_type'] = $this->session->userdata['user_type'];
+      $data['user_type'] = $this->session->userdata['user_type'];
         $data['navbar'] = "teacher";
         $this->load->view('templates/header', $data);
         $this->load->view('navbar_main', $data);
