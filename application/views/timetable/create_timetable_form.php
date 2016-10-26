@@ -55,7 +55,7 @@
                             <div class="form-group">
                                 <label class="col-sm-6 control-label" for="year">Enter Academic Year: </label>
                                 <div class="col-sm-4">
-                                    <input id="year" name="year" type="text" maxlength="4" class="form-control">
+                                    <input id="year" name="year" type="text" maxlength="4" readonly class="form-control" value="<?php echo date("Y"); ?>">
                                 </div>
                             </div>
                             <div class="form-group">
