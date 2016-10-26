@@ -21,7 +21,11 @@
 											<tbody>
 													<tr style="height: 45px;">
 															<td align="center">
-																	Test
+																	<?php foreach ($slots as $slot) {
+																	  if ($slot->slot_id === "MO1") {
+																	    var_dump($slot->subject_id);
+																	  }
+																  } ?>
 															</td>
 															<td align="center">
 																	Test
@@ -33,7 +37,11 @@
 																	Test
 															</td>
 															<td align="center">
-																	Test
+                                <?php foreach ($slots as $slot) {
+                                  if ($slot->slot_id === "FR1") {
+                                    var_dump($slot->subject_id);
+                                  }
+                                } ?>
 															</td>
 													</tr>
 													<tr style="height: 45px;">

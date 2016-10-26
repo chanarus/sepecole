@@ -252,7 +252,7 @@ class Timetable extends CI_Controller {
      * @param int $timetable_id
      * @param string $slot_id
      */
-    function add_slot($timetable_id, $slot_id) {
+  /*  function add_slot($timetable_id, $slot_id) {
         $data['page_title'] = "Test Timetable";
         $data['navbar'] = "timetable";
         //Getting user type
@@ -261,6 +261,7 @@ class Timetable extends CI_Controller {
         $data['slot_id'] = $slot_id;
         $data['teacher_list'] = $this->timetable_model->get_teacher_list();
         $data['subject_list'] = $this->timetable_model->get_subject_list();
+
 
         $this->form_validation->set_rules("teacher", "Teacher", "required|integer|callback_teacher_selected|callback_teacher_already_have_slot");
         $this->form_validation->set_rules("subject", "Subject", "required|callback_subject_selected");
@@ -276,11 +277,13 @@ class Timetable extends CI_Controller {
             $slot['slot_id'] = $slot_id;
             $slot['teacher_id'] = $this->input->post('teacher');
             $slot['subject_id'] = $this->input->post('subject');
+            $slot['class_id'] = $this->timetable_model->get_class_id($timetable_id);
             $slot['year'] = $this->timetable_model->get_timetable_year($timetable_id);
+
             $this->timetable_model->add_slot($slot);
             $this->open($timetable_id);
         }
-    }
+    }*/
 
     /**
      * Interface to delete a particular slot in a timetable
@@ -317,6 +320,9 @@ class Timetable extends CI_Controller {
     function view_teacher_timetable() {
         $id = $this->session->userdata['id'];
         $teacher_id = $this->teacher_model->get_teacher_id($id);
+        $data['slots']  = $this->timetable_model->get_time_slot($teacher_id);
+
+        var_dump(  $data['slots']) ;
         // $class_id = $this->class_model->get_class_id($teacher_id);
         // $data['class'] = $this->class_model->get_class($class_id);
         // $data['class_students'] = $this->class_model->get_class_students($class_id);
@@ -327,6 +333,18 @@ class Timetable extends CI_Controller {
         $this->load->view('navbar_sub', $data);
         $this->load->view('timetable/teacher_timetable', $data);
         $this->load->view('/templates/footer', $data);
+    }
+
+    /**
+      *Displaying the teacher's timetable
+    */
+
+    function display_teacher_timetable() {
+      $id = $this->session->userdata['id'];
+
+      $data['slot']  = $this->timetable_model->get_time_slot($id);
+
+      var_dump(  $data['slot']);
     }
 
 }
