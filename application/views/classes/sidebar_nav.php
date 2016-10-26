@@ -64,7 +64,7 @@
                       </tr>
                       <tr>
                           <td>
-                              <i class="fa fa-clock-o text-primary"></i><a href="<?php echo base_url('index.php/classes/'); ?>">&nbsp;&nbsp;&nbsp;Time Table</a>
+                              <i class="fa fa-clock-o text-primary"></i><a href="<?php echo base_url('index.php/timetable/view_teacher_timetable'); ?>">&nbsp;&nbsp;&nbsp;Time Table</a>
                           </td>
                       </tr>
                   </table>

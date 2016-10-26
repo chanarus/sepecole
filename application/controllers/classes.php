@@ -123,7 +123,7 @@ class Classes extends CI_Controller {
         $data['class_students'] = $this->class_model->get_class_students($class_id);
         $data['page_title'] = "{$data['class']->name} : Class Management";
         $data['user_type'] = $this->session->userdata['user_type'];
-        $data['navbar'] = "admin";
+        $data['navbar'] = "teacher";
         $this->load->view('templates/header', $data);
         $this->load->view('navbar_main', $data);
         $this->load->view('navbar_sub', $data);

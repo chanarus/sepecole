@@ -6,7 +6,7 @@
  *
  * @author  K.H.M Vidyaratna
  */
- 
+
 class Timetable extends CI_Controller {
 
     /**
@@ -312,6 +312,21 @@ class Timetable extends CI_Controller {
         } else {
             return TRUE;
         }
+    }
+
+    function view_teacher_timetable() {
+        $id = $this->session->userdata['id'];
+        $teacher_id = $this->teacher_model->get_teacher_id($id);
+        // $class_id = $this->class_model->get_class_id($teacher_id);
+        // $data['class'] = $this->class_model->get_class($class_id);
+        // $data['class_students'] = $this->class_model->get_class_students($class_id);
+        $data['user_type'] = $this->session->userdata['user_type'];
+        $data['navbar'] = "teacher";
+        $this->load->view('templates/header', $data);
+        $this->load->view('navbar_main', $data);
+        $this->load->view('navbar_sub', $data);
+        $this->load->view('timetable/teacher_timetable', $data);
+        $this->load->view('/templates/footer', $data);
     }
 
 }
