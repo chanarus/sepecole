@@ -217,9 +217,9 @@ class Timetable_Model extends CI_Model {
         return FALSE;
       }
 
-    } 
+    }
 
-  /*  function get_class_id($timetable_id) {
+    function get_class_id($timetable_id) {
       try {
 
         $query = $this->db->query("SELECT class_id  FROM class_timetable WHERE id = $timetable_id ");
@@ -230,6 +230,6 @@ class Timetable_Model extends CI_Model {
         return FALSE;
       }
 
-    }*/
+    }
 
 }
