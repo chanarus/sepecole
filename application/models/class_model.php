@@ -27,6 +27,16 @@ class Class_Model extends CI_Model {
         return $this->db->get_where('classes', array('id' => $class_id), 1)->row();
     }
 
+    public function get_class_id($teacher_id) {
+      try {
+          $query = $this->db->query("SELECT id FROM classes WHERE teacher_id='$teacher_id'");
+          $row = $query->row();
+          return $row->id;
+      } catch (Exception $ex) {
+          return FALSE;
+      }
+    }
+
     public function get_grades() {
         return $this->db->get('grades')->result();
     }

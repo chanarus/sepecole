@@ -774,5 +774,4 @@ class Teacher_Model extends CI_Model {
         $sql = "SELECT name_with_initials FROM teachers WHERE id='{$teacher_id}'";
         return $this->db->query($sql)->row();
     }
-
 }
