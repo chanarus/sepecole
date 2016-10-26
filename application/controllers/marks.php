@@ -35,6 +35,7 @@ class marks extends CI_Controller
       $this->load->view('templates/footer');
   }
 
+
   /**
   *
   */
@@ -42,6 +43,7 @@ class marks extends CI_Controller
     $data['page_title'] = " Student Grading Management";
     $data['user_type'] = $this->session->userdata['user_type'];
     $data['navbar'] = "admin";
+
 
     $this->load->view('templates/header', $data);
     $this->load->view('navbar_main', $data);

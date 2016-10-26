@@ -19,8 +19,8 @@
                           </a>
                       </div>
                       <div class="media-body">
-                          <h4 class="media-heading">Exam Details</h4>
-                          aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                          <h4 class="media-heading">Examination Details</h4>
+                          The examination details can be entered to the system by means of giving the start and the relevant end dates.
                       </div>
                   </div>
               </div><hr>
@@ -39,21 +39,21 @@
                   <div class="form-group">
                     <div class="row">
                       <div class="col-md-3 col-md-offset-2">
-                        <h4>Grade:</h4>
+                        <h4>Year:</h4>
                       </div>
                       <div class="col-md-5">
-                        <input type="text" class="form-control" name="examname" placeholder="Examination Name">
+                        <input type="text" class="form-control" name="examname" placeholder="Year">
                       </div>
                     </div>
                   </div>
                   <div class="form-group">
                     <div class="row">
                       <div class="col-md-3 col-md-offset-2">
-                        <h4>Year:</h4>
+                        <h4>Grade:</h4>
                       </div>
                       <div class="col-md-4">
                         <select class="form-control">
-                          <option value="0">Select a Grade</option>
+                          <option value="0">Select a Year</option>
                           <option value="1">Grade 1</option>
                           <option value="2">Grade 2</option>
                           <option value="3">Grade 3</option>
