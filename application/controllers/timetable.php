@@ -252,7 +252,7 @@ class Timetable extends CI_Controller {
      * @param int $timetable_id
      * @param string $slot_id
      */
-  /*  function add_slot($timetable_id, $slot_id) {
+    function add_slot($timetable_id, $slot_id) {
         $data['page_title'] = "Test Timetable";
         $data['navbar'] = "timetable";
         //Getting user type
@@ -283,7 +283,7 @@ class Timetable extends CI_Controller {
             $this->timetable_model->add_slot($slot);
             $this->open($timetable_id);
         }
-    }*/
+    }
 
     /**
      * Interface to delete a particular slot in a timetable
