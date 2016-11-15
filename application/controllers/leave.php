@@ -98,7 +98,7 @@ class leave extends CI_Controller {
      *  Function to Apply Leave
      *  This Function will help you to apply leaves on teacher side
      */
-    public function apply_leave() {
+/*    public function apply_leave() {
         $data['navbar'] = "leave";
 
         //Basic data to be loaded
@@ -286,7 +286,7 @@ class leave extends CI_Controller {
             $this->load->view('/templates/footer');
         }
     }
-
+*/
     /**
      * Function to Get Leave Details
      *
