@@ -294,7 +294,7 @@ class leave extends CI_Controller {
      *
      * @return Results
      */
-  /*  public function get_leave_details($id) {
+    public function get_leave_details($id) {
         $data['navbar'] = "leave";
 
         $data['page_title'] = "Leave Details";
@@ -339,7 +339,7 @@ class leave extends CI_Controller {
         $this->load->view('/leave/view_leave', $data);
         $this->load->view('/templates/footer');
     }
-*/
+
     /**
      * Function to Approve Leave
      *
@@ -772,7 +772,7 @@ class leave extends CI_Controller {
     /**
      * Function to load short leaves page
      */
-/*    public function short_leave() {
+    public function short_leave() {
         $data['navbar'] = "leave";
 
         //other
@@ -796,11 +796,11 @@ class leave extends CI_Controller {
         $this->load->view('/leave/short_leaves', $data);
         $this->load->view('/templates/footer');
     }
-*/
+
     /**
      * Function to apply short leaves and half days
      */
-  /*  public function apply_short_leave() {
+    public function apply_short_leave() {
         $data['navbar'] = "leave";
 
         //other
@@ -889,7 +889,7 @@ class leave extends CI_Controller {
             $this->load->view('/leave/short_leaves', $data);
             $this->load->view('/templates/footer');
         }
-    }*/
+    }
 
     /**
      * Function to get short Leaves Details
@@ -898,7 +898,7 @@ class leave extends CI_Controller {
      *
      * @return Results
      */
-/*    public function get_short_leave_details($id) {
+    public function get_short_leave_details($id) {
         $data['navbar'] = "leave";
 
         $data['page_title'] = "Short Leave Details";
@@ -915,7 +915,7 @@ class leave extends CI_Controller {
         $this->load->view('navbar_sub', $data);
         $this->load->view('/leave/view_short_leave', $data);
         $this->load->view('/templates/footer');
-    } */
+    }
 
     /**
      * Function to get short Leaves Details
@@ -959,7 +959,7 @@ class leave extends CI_Controller {
      *
      * @return bool
      */
-  /*  function check_date_validations($date) {
+    function check_date_validations($date) {
         //Other essential data
         $applieddate = date("Y-m-d");
         $dateold = date_diff(date_create($applieddate), date_create($date));
@@ -1007,7 +1007,7 @@ class leave extends CI_Controller {
         // var_dump(send_sms($phone_number, $message));
     }
 
-}*/
+}
 
 /* Coded by Udara Karunarathna @P0dda */
 /* Location: www.udara.info */
