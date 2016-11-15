@@ -45,7 +45,7 @@ class Leave_Model extends CI_Model {
     }
 
 	/*
-     * Function to get max leave count
+     * Function to get max leave count for each leave type
      *
      * @param  string name
      *
@@ -76,11 +76,16 @@ class Leave_Model extends CI_Model {
         if( $leave_type == '1' ){
             try {
                 //Normal Casual Leaves
-                $query = $this->db->query("SELECT sum(no_of_days) as days FROM apply_leaves al WHERE user_id = '$uid' AND (YEAR(CURDATE())=YEAR(al.start_date)) AND leave_type_id = '$leave_type'  AND al.is_half_day = 0 AND (leave_status = '1' OR leave_status='0')");
+                $query = $this->db->query("SELECT sum(no_of_days) as days FROM apply_leaves al
+								 														WHERE user_id = '$uid' AND (YEAR(CURDATE())=YEAR(al.start_date))
+																						 AND leave_type_id = '$leave_type'  AND al.is_half_day = 0
+																						 AND (leave_status = '1' OR leave_status='0')");
                 $row = $query->row();
                 $normal_days = $row->days;
                 //Normal Halfdays
-                $query = $this->db->query("SELECT sum(no_of_days) as days FROM apply_leaves al WHERE user_id = '$uid' AND (YEAR(CURDATE())=YEAR(al.start_date)) AND leave_type_id = '$leave_type'  AND al.is_half_day = 1 AND (leave_status = '1' OR leave_status='0')");
+                $query = $this->db->query("SELECT sum(no_of_days) as days FROM apply_leaves al WHERE user_id = '$uid'
+								 														AND (YEAR(CURDATE())=YEAR(al.start_date)) AND leave_type_id = '$leave_type'
+																						AND al.is_half_day = 1 AND (leave_status = '1' OR leave_status='0')");
                 $row = $query->row();
                 $half_days = ($row->days)/2;
 
@@ -114,11 +119,15 @@ class Leave_Model extends CI_Model {
 				if( $leave_type == '1' ){
 						try {
 								//Normal Casual Leaves
-								$query = $this->db->query("SELECT sum(no_of_days) as days FROM apply_leaves al WHERE user_id = '$uid' AND (YEAR(CURDATE())=YEAR(al.start_date)) AND leave_type_id = '$leave_type'  AND al.is_half_day = 0 AND leave_status = '1'");
+								$query = $this->db->query("SELECT sum(no_of_days) as days FROM apply_leaves al
+																						WHERE user_id = '$uid' AND (YEAR(CURDATE())=YEAR(al.start_date))
+																						AND leave_type_id = '$leave_type'  AND al.is_half_day = 0 AND leave_status = '1'");
 								$row = $query->row();
 								$normal_days = $row->days;
 								//Normal Halfdays
-								$query = $this->db->query("SELECT sum(no_of_days) as days FROM apply_leaves al WHERE user_id = '$uid' AND (YEAR(CURDATE())=YEAR(al.start_date)) AND leave_type_id = '$leave_type'  AND al.is_half_day = 1 AND leave_status = '1'");
+								$query = $this->db->query("SELECT sum(no_of_days) as days FROM apply_leaves al
+																						WHERE user_id = '$uid' AND (YEAR(CURDATE())=YEAR(al.start_date))
+																						 AND leave_type_id = '$leave_type'  AND al.is_half_day = 1 AND leave_status = '1'");
 								$row = $query->row();
 								$half_days = ($row->days)/2;
 
@@ -175,8 +184,10 @@ class Leave_Model extends CI_Model {
      */
 	public function apply_for_leave($user_id, $teacher_id, $leave_type_id, $applied_date, $start_date, $end_date, $reason, $no_of_days){
 		try {
-    		if($this->db->query("INSERT INTO apply_leaves (`id`, `user_id`, `teacher_id`, `leave_type_id`, `is_half_day`, `applied_date`, `start_date`, `end_date`, `reason`, `leave_status`, `remarks`, `no_of_days`)
-                VALUES (NULL ,'$user_id', '$teacher_id', '$leave_type_id','0' ,'$applied_date', '$start_date', '$end_date', '$reason','0',NULL ,'$no_of_days');")) {
+    		if($this->db->query("INSERT INTO apply_leaves (`id`, `user_id`, `teacher_id`, `leave_type_id`, `is_half_day`, `applied_date`,
+				 																	`start_date`, `end_date`, `reason`, `leave_status`, `remarks`, `no_of_days`)
+                VALUES (NULL ,'$user_id', '$teacher_id', '$leave_type_id','0' ,'$applied_date', '$start_date', '$end_date', '$reason','0',
+												NULL ,'$no_of_days');")) {
     			return TRUE;
     		} else {
     			return FALSE;
@@ -234,7 +245,9 @@ class Leave_Model extends CI_Model {
     */
     public function get_leave_details($id){
         try {
-            $query = $this->db->query("SELECT t.full_name, al.id, al.user_id,lt.name,al.applied_date,al.start_date,al.end_date,al.reason,al.no_of_days,ls.status FROM apply_leaves al,teachers t, leave_types lt, leave_status ls WHERE al.leave_status=ls.id AND al.id = '$id' AND al.user_id = t.user_id AND lt.id = al.leave_type_id");
+            $query = $this->db->query("SELECT t.full_name, al.id, al.user_id,lt.name,al.applied_date,al.start_date,al.end_date,
+							al.reason,al.no_of_days,ls.status FROM apply_leaves al,teachers t, leave_types lt, leave_status ls
+							 WHERE al.leave_status=ls.id AND al.id = '$id' AND al.user_id = t.user_id AND lt.id = al.leave_type_id");
             return $query->result();
 
         } catch(Exception $ex) {
@@ -443,7 +456,7 @@ class Leave_Model extends CI_Model {
     }
 
     /*
-    * Function to get applied short leaves list
+    * Function to get applied short leaves list for the current month
     *
     * @param  int uid
     *
@@ -451,7 +464,10 @@ class Leave_Model extends CI_Model {
     */
     public function get_applied_short_leaves_list($uid){
         try{
-            $query = $this->db->query("SELECT lt.name,al.applied_date,al.date,al.reason,ls.status FROM apply_short_leaves al,short_leave_types lt,leave_status ls where (al.leave_Type  = lt.id) AND al.status = ls.id AND al.user_id='$uid' AND ( al.leave_Type = '1' ) AND (MONTH(CURDATE())=MONTH(al.date))");
+            $query = $this->db->query("SELECT lt.name,al.applied_date,al.date,al.reason,ls.status
+							 													FROM apply_short_leaves al,short_leave_types lt,leave_status ls
+																				 where (al.leave_Type  = lt.id) AND al.status = ls.id AND al.user_id='$uid'
+																				  AND ( al.leave_Type = '1' ) AND (MONTH(CURDATE())=MONTH(al.date))");
             return $query->result();
         } catch(Exception $ex) {
             return FALSE;
@@ -467,7 +483,10 @@ class Leave_Model extends CI_Model {
     */
     public function get_recent_applied_short_leaves_list($uid){
         try{
-            $query = $this->db->query("SELECT lt.name,al.applied_date,al.date,al.reason,ls.status FROM apply_short_leaves al,short_leave_types lt,leave_status ls where (al.leave_Type  = lt.id) AND al.status = ls.id AND al.user_id='$uid' ORDER BY al.applied_date desc LIMIT 10");
+            $query = $this->db->query("SELECT lt.name,al.applied_date,al.date,al.reason,ls.status
+																			FROM apply_short_leaves al,short_leave_types lt,leave_status ls
+																			where (al.leave_Type  = lt.id) AND al.status = ls.id AND al.user_id='$uid'
+																			ORDER BY al.applied_date desc LIMIT 10");
             return $query->result();
         } catch(Exception $ex) {
             return FALSE;
@@ -475,7 +494,7 @@ class Leave_Model extends CI_Model {
     }
 
     /*
-    * Function to get applied short leaves count
+    * Function to get applied short leaves count of the current month
     *
     * @param  int uid
     *
@@ -483,7 +502,10 @@ class Leave_Model extends CI_Model {
     */
     public function get_applied_short_leaves_count($uid){
         try{
-            $query = $this->db->query("SELECT COUNT(*) as count FROM apply_short_leaves al,short_leave_types lt,leave_status ls where (al.leave_Type  = lt.id) AND ( al.status = 0 OR al.status = 1 ) AND al.status = ls.id AND al.user_id='$uid' AND ( al.leave_Type = '1' )  AND (MONTH(CURDATE())=MONTH(al.date))");
+            $query = $this->db->query("SELECT COUNT(*) as count FROM apply_short_leaves al,short_leave_types lt,leave_status ls
+						 														where (al.leave_Type  = lt.id) AND ( al.status = 0 OR al.status = 1 )
+																				 AND al.status = ls.id AND al.user_id='$uid' AND ( al.leave_Type = '1' )
+																				 AND (MONTH(CURDATE())=MONTH(al.date))");
             $row = $query->row();
             return $row->count;
         } catch(Exception $ex) {

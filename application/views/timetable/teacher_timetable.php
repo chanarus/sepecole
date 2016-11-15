@@ -315,7 +315,7 @@
                                 <?php foreach ($slots as $slot) {
                                   if ($slot->slot_id === "FR8") {
                                     echo $slot->grade_id.$slot->name."<br>".$slot->subject_name;
-                                  } 
+                                  }
                                 } ?>
 															</td>
 													</tr>
