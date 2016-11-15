@@ -58,7 +58,8 @@
                                     <td>
 
 
-                                    <a href="<?php echo base_url('index.php/subject/edit') . '/' . $row->id; ?>" data-original-title="Remove this user" data-toggle="tooltip" type="button" class="btn btn-raised btn-xs btn-info"><i class="glyphicon glyphicon-trash"></i></a>
+                                    <a href="<?php echo base_url('index.php/subject/edit') . '/' . $row->id; ?>" data-original-title="Edit this Subject" data-toggle="tooltip" type="button" class="btn btn-raised btn-xs btn-info"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                                    <a href="<?php echo base_url('index.php/subject/delete') . '/' . $row->id; ?>" data-original-title="Delete this Subject" data-toggle="tooltip" type="button" class="btn btn-raised btn-xs btn-danger"><i class="fa fa-trash" aria-hidden="true"></i></a>
                                     </td>
                                 </tr>
                             <?php } ?>

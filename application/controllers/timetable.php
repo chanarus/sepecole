@@ -60,8 +60,8 @@ class Timetable extends CI_Controller {
         } else {
             $data['class_id'] = $this->input->post('class');
             $data['year'] = $this->input->post('year');
-            $data['timetable_id'] = $this->timetable_model->create_class_timetable($data['class_id'], $data['year']);
             $data['class_name'] = $this->class_model->get_class_name($data['class_id']);
+            $data['timetable_id'] = $this->timetable_model->create_class_timetable($data['class_id'], $data['year']);
             //For news field
             $tech_id = $this->session->userdata('id');
             $tech_details = $this->teacher_model->user_details($tech_id);
