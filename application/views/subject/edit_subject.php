@@ -25,7 +25,7 @@
                         $error_suffix = "</p>"
                         ?>
                         <?php echo form_open('subject/edit_subject'); ?>
-                        <input type="text" name="subjectid" id="subjectid" hidden class="form-control" value="<?php echo $subject_details->id;?>">
+                        <input type="text" name="subjectid" id="subjectid" readonly class="form-control" value="<?php echo $subject_details->id;?>">
                         <div class="form-group">
                             <label for="subjectname">Subject name</label>
                             <input type="text" name="subjectname" id="subjectname" readonly class="form-control" value="<?php echo $subject_details->subject_name;?>">

@@ -11,7 +11,12 @@
                 <table class="table">
                     <tr>
                         <td>
-                            <span class="glyphicon glyphicon-user text-primary"></span><a href="<?php echo base_url('index.php/timetable/create'); ?>">Create Timetable</a>
+                            <i class="fa fa-table text-primary" aria-hidden="true"></i><a href="<?php echo base_url('index.php/timetable/index'); ?>">&nbsp;&nbsp;&nbsp;All Timetables</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <i class="fa fa-table text-primary" aria-hidden="true"></i><a href="<?php echo base_url('index.php/timetable/create'); ?>">&nbsp;&nbsp;&nbsp;Create Timetable</a>
                         </td>
                     </tr>
                 </table>

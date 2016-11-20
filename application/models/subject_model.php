@@ -69,15 +69,15 @@ class Subject_model extends CI_Model {
      * @param type $offset
      * @return type Query result
      */
-//    public function get_subjects( $limit = 1, $offset = null) {
-//        $sql = "SELECT * FROM subjects  LIMIT {$limit}";
-//        //if ofset is not null
-//        if (isset($offset)) {
-//            $sql .= " OFFSET {$offset}";
-//        }
-//        $query = $this->db->query($sql);
-//        return $query;
-//    }
+   public function get_subjects( $limit = 1, $offset = null) {
+       $sql = "SELECT * FROM subjects  LIMIT {$limit}";
+       //if ofset is not null
+       if (isset($offset)) {
+           $sql .= " OFFSET {$offset}";
+       }
+       $query = $this->db->query($sql);
+       return $query;
+   }
 
     /**
      * Get total row count of the subjects table .. this is needed for pagination

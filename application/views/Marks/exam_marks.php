@@ -20,7 +20,7 @@
                       </div>
                       <div class="media-body">
                           <h4 class="media-heading">Exam Details</h4>
-                          aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                          The details of marks can be viewed here
                       </div>
                   </div>
               </div><hr>

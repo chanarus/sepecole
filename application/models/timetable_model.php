@@ -192,7 +192,8 @@ class Timetable_Model extends CI_Model {
         $teacher_id = $slot['teacher_id'];
         $subject_id = $slot['subject_id'];
         $year = $slot['year'];
-        $sql = "INSERT INTO timetable_slot (timetable_id, slot_id, teacher_id, subject_id, year) VALUES($timetable_id, '$slot_id', $teacher_id, $subject_id, '$year')";
+        $class_id = $slot['class_id'];
+        $sql = "INSERT INTO timetable_slot (timetable_id, slot_id, teacher_id, subject_id, year,class_id) VALUES($timetable_id, '$slot_id', $teacher_id, $subject_id, '$year',$class_id)";
 
         if ($this->db->query($sql)) {
             return TRUE;
@@ -200,5 +201,39 @@ class Timetable_Model extends CI_Model {
             return FALSE;
         }
     }
+
+    /**
+      * get time slots of a teacher
+    **/
+
+    function get_time_slot($teacher_id) {
+
+      try {
+
+        $query = $this->db->query("SELECT c.grade_id,c.name,s.subject_name,t.slot_id
+                                    FROM timetable_slot t,classes c,subjects s, class_timetable ct
+                                    WHERE t.teacher_id = $teacher_id and ct.class_id=t.class_id and ct.class_id=c.id and s.id=t.subject_id");
+        return $query->result();
+
+      } catch (Exception $e) {
+        return FALSE;
+      }
+
+    }
+
+    function get_class_id($timetable_id) {
+      try {
+
+        $query = $this->db->query("SELECT class_id  FROM class_timetable WHERE id = $timetable_id ");
+        $row = $query->row();
+        return $row->class_id;
+
+      } catch (Exception $e) {
+        return FALSE;
+      }
+
+    }
+
+
 
 }

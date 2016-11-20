@@ -10,7 +10,7 @@ class Sports extends CI_Controller {
         parent::__construct();
         $this->load->model('sports_model');
     }
-    
+
     function index(){
         $data['user_type'] = $this->session->userdata['user_type'];
         $data['page_title'] = "Sports";
@@ -22,7 +22,7 @@ class Sports extends CI_Controller {
         $this->load->view('sports/sport_details', $data);
         $this->load->view('templates/footer');
     }
-    
+
     function add_sport_category(){
         if (!$this->session->userdata('id')) {
             redirect('login', 'refresh');
@@ -37,7 +37,7 @@ class Sports extends CI_Controller {
         $this->form_validation->set_rules('captain', '', 'required');
         $this->form_validation->set_rules('vice', 'Vice Captain', 'required');
         $this->form_validation->set_error_delimiters('<br /><span class="error">', '</span>');
-        
+
         if ($this->form_validation->run() == FALSE) {
             $data['det'] = $this->sports_model->view_sport_category();
             $data['navbar'] = "sport";
@@ -53,7 +53,7 @@ class Sports extends CI_Controller {
             $sport_descrp = $this->input->post('description');
             $sport_age_category = $this->input->post('agecat');
             $this->sports_model->add_sport_category($sport_cat,$sport_descrp,$sport_age_category);
-            
+
             $data['det'] = $this->sports_model->view_sport_category();
             $data['succ_message'] = "Succesfully inserted";
             $data['navbar'] = "sport";
@@ -64,10 +64,10 @@ class Sports extends CI_Controller {
             $this->load->view('sports/sport_details', $data);
             $this->load->view('/templates/footer');
         }
-        
-        
+
+
     }
-    
+
     public function view_category() {
         if (!$this->session->userdata('logged_in')) {
             redirect('login', 'refresh');
@@ -78,7 +78,7 @@ class Sports extends CI_Controller {
         $data['details'] = $this->sports_model->sport_category_details($id);
         $this->load->view('sports/edit_sport_category_form', $data);
     }
-    
+
      function assign_leaders(){
          if (!$this->session->userdata('id')) {
             redirect('login', 'refresh');
@@ -108,7 +108,7 @@ class Sports extends CI_Controller {
             $sport_descrp = $this->input->post('description');
             $sport_age_category = $this->input->post('agecat');
             $this->sports_model->add_sport_category($sport_cat,$sport_descrp,$sport_age_category);
-            
+
             $data['det'] = $this->sports_model->view_sport_category();
             $data['sports'] = $this->smorts_model->get_all_sports();
             $data['succ_message'] = "Succesfully inserted";
@@ -121,7 +121,7 @@ class Sports extends CI_Controller {
             $this->load->view('/templates/footer');
         }
     }
-    
+
     function assign_students(){
         $data['user_type'] = $this->session->userdata['user_type'];
         $data['det'] = $this->sports_model->view_sport_category();
@@ -135,7 +135,7 @@ class Sports extends CI_Controller {
         $this->load->view('sports/assign_students', $data);
         $this->load->view('templates/footer');
     }
-    
+
     function management_details(){
         $data['user_type'] = $this->session->userdata['user_type'];
         $data['det'] = $this->sports_model->view_sport_category();
@@ -162,6 +162,12 @@ class Sports extends CI_Controller {
     function get_captain_name($id){
       $data['captain_name'] =  $this->sports_model->captain_name($id);
       $this->load->view('/sports/captain',$data);
-    }    
-    
+    }
+
+    function get_captain_regno(){
+      $cap_name = $_SERVER['QUERY_STRING'];
+      $data['captain_regno'] =  $this->sports_model->get_cap_regno($cap_name);
+      $this->load->view('/sports/captain',$data);
+    }
+
 }
