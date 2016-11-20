@@ -57,7 +57,8 @@ class leave extends CI_Controller {
         $data['applied_maternity_leaves'] = $this->Leave_Model->get_no_leaves('5', $userid);
 
         //total leaves
-        $data['total_leaves'] = $data['applied_casual_leaves'] + $data['applied_medical_leaves'] + $data['applied_duty_leaves'] + $data['applied_other_leaves'] + $data['applied_maternity_leaves'];
+        $data['total_leaves'] = $data['applied_casual_leaves'] + $data['applied_medical_leaves'] + $data['applied_duty_leaves'] +
+         $data['applied_other_leaves'] + $data['applied_maternity_leaves'];
 
         //Getting user type
         $data['user_type'] = $this->session->userdata['user_type'];
@@ -750,7 +751,8 @@ class leave extends CI_Controller {
                 if ($no_of_days_mc == 0) {
                     $data['error_message'] = "No of days are 0. May be you applied a leave on School Holidays. Check with Year Plan";
                 } else{
-                    if ($this->Leave_Model->apply_for_leave($userid, $teacherid, $leavetype, $applieddate, $startdate, $enddate, $reason, $no_of_days_mc) == TRUE) {
+                    if ($this->Leave_Model->apply_for_leave($userid, $teacherid, $leavetype, $applieddate, $startdate, $enddate,
+                                                              $reason, $no_of_days_mc) == TRUE) {
                     $data['succ_message'] = "Leave Applied Successfully for " . $no_of_days_mc . " days";
                     } else {
                         $data['error_message'] = "Failed to save data to the Database";
@@ -796,7 +798,7 @@ class leave extends CI_Controller {
     }
 
     /**
-     * Function to apply short leaves
+     * Function to apply short leaves and half days
      */
     public function apply_short_leave() {
         $data['navbar'] = "leave";
@@ -988,10 +990,12 @@ class leave extends CI_Controller {
         }
 
         if ($dateoldc < 0) {
-            $this->form_validation->set_message('check_date_validations', 'Date cannot be a previous date');
+            $this->form_validation->set_message('check_date_validations',
+                                              'Date cannot be a previous date');
             return FALSE;
         } elseif ($aca_year_stat == FALSE) {
-            $this->form_validation->set_message('check_date_validations', 'You cannot Apply Short Leaves on School Holidays');
+            $this->form_validation->set_message('check_date_validations',
+                      'You cannot Apply Short Leaves on School Holidays');
             return FALSE;
         } else {
             return TRUE;

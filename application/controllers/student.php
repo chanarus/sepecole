@@ -397,7 +397,7 @@ class Student extends CI_Controller {
         $this->load->view('navbar_main', $data);
         $this->load->view('navbar_sub', $data);
 
-        if ($data['user_type'] == 'A') {
+        if ($data['user_type'] == 'S') {
             $this->load->view('student/check_student_only_profile', $data);
         } else if ($data['user_type'] == 'T') {
             $this->load->view('student/check_student_only_profile_1', $data);
