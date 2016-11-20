@@ -46,6 +46,12 @@ class Sports_Model extends CI_Model {
         return $data->result();
     }
 
+    public function get_all_teachers(){
+        $data = $this->db->query("SELECT full_name FROM teachers");
+        return $data->result();
+    }
+
+
     public function captain_name($id){
 
         try {

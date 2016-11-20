@@ -58,13 +58,11 @@
                         <div class="col-sm-5">
                             <select id="name" name="name" class="form-control">
                                 <option value="0" <?php if (set_value('name') == '0') { echo "selected"; } ?>>Select a Sport</option>
-                                <option value="1" <?php if (set_value('name') == '1') { echo "selected"; } ?>>Cricket</option>
-                                <option value="2" <?php if (set_value('name') == '2') { echo "selected"; } ?>>Foot Ball</option>
-                                <option value="3" <?php if (set_value('name') == '3') { echo "selected"; } ?>>Rugby</option>
-                                <option value="4" <?php if (set_value('name') == '4') { echo "selected"; } ?>>Vally Ball</option>
-                                <option value="5" <?php if (set_value('name') == '5') { echo "selected"; } ?>>Base Ball</option>
+                            <?php foreach($sports as $sport)  { ?>
+                                 <option value="<?php echo $sport->name; ?>"><?php echo $sport->name; ?> </option>
+                            <?php } ?>
                             </select>
-                            <?php echo form_error('studname'); ?>
+                            <?php echo form_error('teachername'); ?>
                         </div>
                     </div>
                     <div class="form-group">
@@ -150,34 +148,41 @@
                     <table class="table table-hover">
                         <thead>
                             <tr>
-                                <th>#</th>
-                                <th>Sport Name</th>
-                                <th>Description</th>
+                                <th>Name</th>
+                                <th>Sport</th>
                                 <th>Age Category</th>
+                                <th>Devision</th>
                                 <th></th>
                             </tr>
                         </thead>
                         <tbody id="fillgrid">
-                            <?php foreach ($det as $row) { ?>
                             <tr>
-                                <td><?php echo $row->id; ?></td>
-                                <td><?php echo $row->name; ?></td>
-                                <td><?php echo $row->description; ?></td>
-                                <td><?php
-                                    $age = $row->age_category;
-                                    if ($age == 1) {
-                                        echo 'Under 10,12,14,16,18,20';
-                                    } else if ($age == 2) {
-                                        echo 'Under 13,15,17,19';
-                                    } else{
-                                        echo '';
-                                    }
-                                    ?>
-                                </td>
-                                <td><a href="<?php echo base_url("index.php/sports/view_category"); ?>" data-id='<?php echo $row->id ?>' class='btnedit' title='edit'><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a></td>
-                                <td><a href="<?php echo base_url("index.php/sports/delete_news")."/".$row->id; ?>" onclick="return confirm('Are you sure you want to delete this news?');"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></i></a></td>
+                                <td>Udara Perera</td>
+                                <td>Rugby</td>
+                                <td>Under 19</td>
+                                <td>Devision 1</td>
+                                <td><button type="button" data-id='<?php echo $row->id ?>' class="btn btn-raised btn-info" data-toggle="modal" data-target="#myModal">Update</button></td>
+                                <td><button type="button" data-id='<?php echo $row->id ?>' class="btn btn-raised btn-danger" onclick="return confirm('Are you sure you want to delete this sport?');">Delete</button></td>
+                            
                             </tr>
-                        <?php } ?>
+                            <tr>
+                                <td>Lahiru Perera</td>
+                                <td>Foot Ball</td>
+                                <td>Under 19</td>
+                                <td>Devision 1</td>
+                                <td><button type="button" data-id='<?php echo $row->id ?>' class="btn btn-raised btn-info" data-toggle="modal" data-target="#myModal">Update</button></td>
+                                <td><button type="button" data-id='<?php echo $row->id ?>' class="btn btn-raised btn-danger" onclick="return confirm('Are you sure you want to delete this sport?');">Delete</button></td>
+                            
+                            </tr>
+                            <tr>
+                                <td>Chathura De Silva</td>
+                                <td>Cricket</td>
+                                <td>Under 19</td>
+                                <td>Devision 1</td>
+                                <td><button type="button" data-id='<?php echo $row->id ?>' class="btn btn-raised btn-info" data-toggle="modal" data-target="#myModal">Update</button></td>
+                                <td><button type="button" data-id='<?php echo $row->id ?>' class="btn btn-raised btn-danger" onclick="return confirm('Are you sure you want to delete this sport?');">Delete</button></td>
+                            
+                            </tr>
                         </tbody>
                     </table>
                     </div>
