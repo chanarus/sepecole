@@ -111,6 +111,7 @@
 
                             <!-- Check if the leave is pending -->
                             <?php if ($row->status == "Pending") { ?>
+                            <button id="btnLeaveHistory" data-leave-id="<?php echo $row->id; ?>" class="btn btn-raised btn-raised btn-info" class="btn btn-raised btn-info" data-toggle="modal" data-target=".btnLeaveHistory">Leave History</button>
                             <a id="btnApprove" data-leave-id="<?php echo $row->id; ?>" class="btn btn-raised btn-success">Approve</a>
                             <a id="btnReject" data-leave-id="<?php echo $row->id; ?>"  class="btn btn-raised btn-danger">Reject</a>
                             <?php } ?>

@@ -192,8 +192,41 @@ var no = parseInt($("#cap_reg"));
 $(document).ready(function(){
     $("#cap_name").change(function(){
 
-      get_captain_name(no);
+      get_captain_name($("#cap_name").val());
 
     });
+});
+
+
+function get_captain_name(name){
+
+  var sendData = JSON.stringify({cap_name: name});
+
+  $.ajax({
+                  url: "<?php echo base_url("index.php/sports/get_captain_regno?"); ?>" + name,
+                  dataType: "json",
+                  contentType: "application/json; charset=utf-8",
+                  type: "GET",
+                  //data: sendData,
+                  success: function (result) {
+                    $("#cap_name").val = result.d;
+
+                  }, error: function (request, status, error) {
+
+                      var temp = JSON.parse(request.responseText);
+
+                      alert(temp.Message);
+                  }
+              });
+
+
+
+
+
+
+
 }
+
+
+
 </script>

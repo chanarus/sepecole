@@ -1,3 +1,6 @@
 <?php
-    echo $captain_name;
+
+    foreach ($captain_regno as $value) {
+      echo $value->admission_no;
+    }
 ?>
