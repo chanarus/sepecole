@@ -78,7 +78,7 @@
                 <a name="sports"></a>
                     <div class="panel panel-info">
                         <div class="panel-heading">
-                            <strong>Sports</strong>
+                            <strong>Sports In-Charge</strong>
                     </div>
                    <div class="panel-body">
                     <table class="table table-hover">
