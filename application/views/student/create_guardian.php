@@ -63,14 +63,14 @@
                     <div class="col-md-5 col-md-push-1 form-group">
 
                                 <label for="gfirstname">First Name</label>
-                                <input type="text" name="gfirstname" value="<?php echo set_value('gfirstname'); ?>" class="form-control" id="gfirstname" placeholder="First Name" >
+                                <input type="text" name="gfirstname" value="<?php echo set_value('gfirstname'); ?>" class="form-control" id="gfirstname" >
                                 <div><?php echo form_error('gfirstname'); ?></div>
 
                      </div>
                      <div class="col-md-5 col-md-push-1 form-group">
 
                                 <label for="glastname">Last Name</label>
-                                <input type="text" name="glastname" value="<?php echo set_value('glastname'); ?>" class="form-control" id="glastname" placeholder="Last Name" >
+                                <input type="text" name="glastname" value="<?php echo set_value('glastname'); ?>" class="form-control" id="glastname" >
                                 <div><?php echo form_error('glastname'); ?></div>
 
                      </div>
@@ -81,7 +81,7 @@
                     <div class="col-md-5 col-md-push-1 form-group">
 
                                 <label for="initials">Name With Initials</label>
-                                <input type="text" name="initial" value="<?php echo set_value('initial'); ?>" class="form-control" id="initial" placeholder="Name with Initials">
+                                <input type="text" name="initial" value="<?php echo set_value('initial'); ?>" class="form-control" id="initial" >
                                 <div> <?php echo form_error('initial'); ?></div>
 
                     </div>
@@ -111,14 +111,14 @@
                     <div class="col-md-5 col-md-push-1 form-group">
 
                                 <label for="contact_homeg">Contact No</label>
-                                <input type="text" name="contact_homeg" value="<?php echo set_value('contact_homeg'); ?>" class="form-control " id="contact_homeg" placeholder="Contact No">
+                                <input type="text" name="contact_homeg" value="<?php echo set_value('contact_homeg'); ?>" class="form-control " id="contact_homeg" >
                                 <div><?php echo form_error('contact_homeg'); ?></div>
 
                      </div>
                      <div class="col-md-5 col-md-push-1 form-group">
 
                                 <label for="contact_mobile">Contact Mobile</label>
-                                <input type="text" name="contact_mobile" value="<?php echo set_value('contact_mobile'); ?>" class="form-control" id="contact_mobile" placeholder="Contact Moblile">
+                                <input type="text" name="contact_mobile" value="<?php echo set_value('contact_mobile'); ?>" class="form-control" id="contact_mobile" >
                                 <div> <?php echo form_error('contact_mobile'); ?></div>
 
                      </div>
@@ -131,7 +131,7 @@
                     <div class="col-md-5 col-md-push-1 form-group">
 
                                 <label for="dobg">Date of Birth</label>
-                                <input type="date" name="dobg" value="<?php echo set_value('dobg'); ?>" class="form-control " id="dobg" placeholder="DOB">
+                                <input type="date" name="dobg" value="<?php echo set_value('dobg'); ?>" class="form-control " id="dobg" >
                                 <div> <?php echo form_error('dobg'); ?></div>
 
                      </div>
@@ -163,7 +163,7 @@
                      <div class="col-md-5 col-md-push-1 form-group">
                                 <div><?php echo form_error('occupation'); ?></div>
                                 <label for="occupation">Occupation</label>
-                                <input type="text" name="occupation" value="<?php echo set_value('occupation'); ?>" class="form-control " id="occupation" placeholder="Occupation">
+                                <input type="text" name="occupation" value="<?php echo set_value('occupation'); ?>" class="form-control " id="occupation" >
                      </div>
 
 
@@ -179,19 +179,19 @@
                                 <label for="inputEmail3" class="col-sm-2 control-label">Address</label>
                                 <div>
 
-                                    <input id="address" type="text" name="address"  value="<?php echo set_value('address'); ?>" type="text" class="form-control" id="address" placeholder="Address 1">
+                                    <input id="address" type="text" name="address"  value="<?php echo set_value('address'); ?>" type="text" class="form-control" id="address" >
                                         <?php echo form_error('address'); ?>
                                 </div>
                                 <label for="inputEmail3" class="col-sm-2 control-label"></label>
                                 <div>
 
-                                    <input id="address1" type="text" name="address1"  value="<?php echo set_value('address1'); ?>" type="text" class="form-control" id="address1" placeholder="Address 2">
+                                    <input id="address1" type="text" name="address1"  value="<?php echo set_value('address1'); ?>" type="text" class="form-control" id="address1" >
                                         <?php echo form_error('address'); ?>
                                 </div>
                                 <label for="inputEmail3" class="col-sm-2 control-label"></label>
                                 <div>
 
-                                    <input id="address2" type="text" name="address2"  value="<?php echo set_value('address2'); ?>" type="text" class="form-control" id="address2" placeholder="Address 3">
+                                    <input id="address2" type="text" name="address2"  value="<?php echo set_value('address2'); ?>" type="text" class="form-control" id="address2" >
                                         <?php echo form_error('address'); ?>
                                 </div>
                             </div>

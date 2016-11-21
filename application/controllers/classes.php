@@ -105,6 +105,22 @@ class Classes extends CI_Controller {
         $this->load->view('/templates/footer', $data);
     }
 
+    function view_class_teacher() {
+        $id = $this->session->userdata['id'];
+        $teacher_id = $this->teacher_model->get_teacher_id($id);
+        $class_id = $this->class_model->get_class_id($teacher_id);
+        $data['class'] = $this->class_model->get_class($class_id);
+        $data['class_students'] = $this->class_model->get_class_students($class_id);
+        $data['page_title'] = "{$data['class']->name} : Class Management";
+        $data['user_type'] = $this->session->userdata['user_type'];
+        $data['navbar'] = "teacher";
+        $this->load->view('templates/header', $data);
+        $this->load->view('navbar_main', $data);
+        $this->load->view('navbar_sub', $data);
+        $this->load->view('classes/view_class', $data);
+        $this->load->view('/templates/footer', $data);
+    }
+
     function assign_to_class($class_id) {
         $data['class'] = $this->class_model->get_class($class_id);
         $data['class_students'] = $this->class_model->get_class_students($class_id);

@@ -225,7 +225,7 @@ class Student_Model extends CI_Model {
      * @return boolean
      */
     public function update_student($student, $myid) {
-        $sql = "UPDATE students SET full_name ='{$student['name']}',  permanent_addr='{$student['address']}', permanent_addr1='{$student['address1']}; permanent_addr2='{$student['address2']}; name_with_initials='{$student['nameWithInitials']}', contact_home='{$student['contact_home']}',email='{$student['email']}'  WHERE user_id='$myid'";
+        $sql = "UPDATE students SET full_name ='{$student['name']}',  permanent_addr='{$student['address']}', name_with_initials='{$student['nameWithInitials']}', contact_home='{$student['contact_home']}', email='{$student['email']}'  WHERE user_id='$myid'";
 
         if ($query = $this->db->query($sql)) {
             return TRUE;
@@ -680,6 +680,12 @@ class Student_Model extends CI_Model {
         } catch (Exception $ex) {
             return null;
         }
+    }
+
+    public function student_certificate($id) {
+        $data = $this->db->query("select * from `students` where `admission_no` = $id");
+        $result = $data->row();
+        return $result;
     }
 
 }

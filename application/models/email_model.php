@@ -12,7 +12,7 @@ class Email_Model extends CI_Model {
 				'smtp_host' => 'ssl://smtp.googlemail.com',
 				'smtp_port' => 465,
 				'smtp_user' => 'chanarusampath@gmail.com',
-				'smtp_pass' => '19930305-sam',
+				'smtp_pass' => '19930305-sampath',
 				'mailtype'  => 'html',
 				'charset'   => 'iso-8859-1'
 			);

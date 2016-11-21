@@ -29,6 +29,7 @@
                             <span class="glyphicon glyphicon-sort"></span><a href="<?php echo base_url('index.php/leave/short_leave'); ?>">Apply Short Leave</a>
                         </td>
                     </tr>
+                    
                 </table>
             </div>
         </div>

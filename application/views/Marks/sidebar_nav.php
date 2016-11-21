@@ -2,7 +2,7 @@
     <div class="panel panel-info">
         <div class="panel-heading">
             <h4 class="panel-title">
-                <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"><i class="fa fa-download"></i>
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
                     Subject Grading Manegment</a>
             </h4>
         </div>

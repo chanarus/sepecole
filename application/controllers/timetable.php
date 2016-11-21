@@ -4,9 +4,9 @@
  *
  * Controller to create and manage timetables
  *
- * @author  K.H.M Vidyaratna
+ * @author  H.S Anuradha
  */
- 
+
 class Timetable extends CI_Controller {
 
     /**
@@ -31,11 +31,13 @@ class Timetable extends CI_Controller {
 
         $data['timetable_list'] = $this->timetable_model->get_timetable_list();
 
+
         $this->load->view('templates/header', $data);
         $this->load->view('navbar_main', $data);
         $this->load->view('navbar_sub', $data);
         $this->load->view('timetable/index', $data);
         $this->load->view('/templates/footer');
+        $this->load->library('calendar');
     }
 
     /**
@@ -60,8 +62,8 @@ class Timetable extends CI_Controller {
         } else {
             $data['class_id'] = $this->input->post('class');
             $data['year'] = $this->input->post('year');
-            $data['timetable_id'] = $this->timetable_model->create_class_timetable($data['class_id'], $data['year']);
             $data['class_name'] = $this->class_model->get_class_name($data['class_id']);
+            $data['timetable_id'] = $this->timetable_model->create_class_timetable($data['class_id'], $data['year']);
             //For news field
             $tech_id = $this->session->userdata('id');
             $tech_details = $this->teacher_model->user_details($tech_id);
@@ -262,6 +264,7 @@ class Timetable extends CI_Controller {
         $data['teacher_list'] = $this->timetable_model->get_teacher_list();
         $data['subject_list'] = $this->timetable_model->get_subject_list();
 
+
         $this->form_validation->set_rules("teacher", "Teacher", "required|integer|callback_teacher_selected|callback_teacher_already_have_slot");
         $this->form_validation->set_rules("subject", "Subject", "required|callback_subject_selected");
 
@@ -276,7 +279,9 @@ class Timetable extends CI_Controller {
             $slot['slot_id'] = $slot_id;
             $slot['teacher_id'] = $this->input->post('teacher');
             $slot['subject_id'] = $this->input->post('subject');
+            $slot['class_id'] = $this->timetable_model->get_class_id($timetable_id);
             $slot['year'] = $this->timetable_model->get_timetable_year($timetable_id);
+
             $this->timetable_model->add_slot($slot);
             $this->open($timetable_id);
         }
@@ -312,6 +317,37 @@ class Timetable extends CI_Controller {
         } else {
             return TRUE;
         }
+    }
+
+    /**
+      *Displaying the teacher's timetable
+    */
+
+    function view_teacher_timetable() {
+        $id = $this->session->userdata['id'];
+        $teacher_id = $this->teacher_model->get_teacher_id($id);
+        $data['slots']  = $this->timetable_model->get_time_slot($teacher_id);
+
+
+      $data['user_type'] = $this->session->userdata['user_type'];
+        $data['navbar'] = "teacher";
+        $this->load->view('templates/header', $data);
+        $this->load->view('navbar_main', $data);
+        $this->load->view('navbar_sub', $data);
+        $this->load->view('timetable/teacher_timetable', $data);
+        $this->load->view('/templates/footer', $data);
+    }
+
+    /**
+      *Displaying the teacher's timetable
+    */
+
+    function display_teacher_timetable() {
+      $id = $this->session->userdata['id'];
+
+      $data['slot']  = $this->timetable_model->get_time_slot($id);
+
+      var_dump(  $data['slot']);
     }
 
 }
