@@ -168,5 +168,35 @@ class Sports_Model extends CI_Model {
         $this->db->query("delete from sport_team where id='$id'");
         return TRUE;
     }
+
+    /*
+    *get individual student details from the db
+    */
+    public function get_student($id) {
+        try {
+            if ($data = $this->db->query("SELECT * FROM sport_team WHERE id = '$id'")) {
+                $row = $data->row();
+                return $row;
+            } else {
+                return null;
+            }
+        } catch (Exception $ex) {
+            return null;
+        }
+    }
+
+    /*
+    *update student deatils in to database
+    */
+    public function update_student($id, $team_data) {
+        
+        $sql = "UPDATE sport_team SET sport_name ='{$team_data['sname']}', category='{$team_data['cat']}', division='{$team_data['div']}' WHERE id='$id'";
+
+        if ($query = $this->db->query($sql)) {
+            return TRUE;
+        } else {
+            return FALSE;
+        }
+    }
 }
 ?>

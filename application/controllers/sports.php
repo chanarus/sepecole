@@ -338,4 +338,37 @@ class Sports extends CI_Controller {
         redirect('sports/assign_students');
     }
 
+    /*
+    *Sport captains edit view
+    */
+    public function edit_single_student($id) {
+        $data['page_title'] = "Edit Sport";        
+
+        $data['result'] = $this->sports_model->get_student($id);
+
+        $data['succ_message'] = "Succesfully inserted";
+        $data['navbar'] = "sport";
+        $data['page_title'] = "Leader Edit";
+        $data['user_type'] = $this->session->userdata['user_type'];
+        $this->load->view('/templates/header', $data);
+        $this->load->view('navbar_main', $data);
+        $this->load->view('navbar_sub', $data);
+        $this->load->view('sports/edit_student', $data);
+        $this->load->view('/templates/footer');
+    }
+
+    public function edit_student() {
+        $id = $this->input->post('id');
+        var_dump($id);
+        $std_data  = array(
+            'sname'=> $this->input->post('sname'),
+            'cat'=> $this->input->post('cat'),
+            'div'=> $this->input->post('div'),
+        );
+
+        if($this->sports_model->update_student($id,$std_data)) {
+            redirect('sports/assign_students');
+        }
+    }
+
 }

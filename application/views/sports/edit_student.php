@@ -9,9 +9,14 @@
         <div class="col-md-9">
             <div class="container">
                 <h2>Edit Leaders</h2>
-                <?php echo form_open('sports/edit_captain'); ?>
+                <?php echo form_open('sports/edit_student'); ?>
                     <div class="form-group">
                         <input type="hidden"  value="<?php echo $result->id ?>" name="id">
+                        <label for="name">Sport Name</label>
+                        <input type="text" id="sname" name="sname" class="form-control" value="<?php echo $result->sport_name ?>">
+                    </div>
+
+                    <div class="form-group">
                         <label for="name">Category</label>
                         <input type="text" id="cat" name="cat" class="form-control" value="<?php echo $result->category ?>">
                     </div>
@@ -19,16 +24,6 @@
                     <div class="form-group">
                         <label for="name">Division</label>
                         <input type="text" id="div" name="div" class="form-control" value="<?php echo $result->division ?>">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="name">Captain</label>
-                        <input type="text" id="cap" name="cap" class="form-control" value="<?php echo $result->captain ?>">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="name">Vice Captain</label>
-                        <input type="text" id="vice" name="vice" class="form-control" value="<?php echo $result->vice ?>">
                     </div>
 
                     <div class="row">

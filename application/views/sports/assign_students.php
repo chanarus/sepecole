@@ -200,7 +200,7 @@
                                     }
                                 ?></td>
                                 
-                                <td><a href='<?php echo base_url('index.php/sports/edit_single_sport/'.$row->id); ?>' class='btn btn-raised btn-primary btn-xs'>Update</a></td>
+                                <td><a href='<?php echo base_url('index.php/sports/edit_single_student/'.$row->id); ?>' class='btn btn-raised btn-primary btn-xs'>Update</a></td>
                                 <td><a href='<?php echo base_url('index.php/sports/delete_team/'.$row->id); ?>' class='btn btn-raised btn-danger btn-xs'>Delete</a></td>
 
                             </tr>
