@@ -15,7 +15,7 @@
         $attributes = array('class' => 'form-horizontal');
         ?>
 
-        <?php echo form_open('certificate/genarate_leaving_certificate', $attributes); ?>
+        <?php echo form_open('certificate/report_pdf_character', $attributes); ?>
 
         <div class="panel-body">
           <div class="media">
@@ -45,6 +45,16 @@
               </div>
             </div>
 
+            <br><br>
+
+            <div class="row">
+              <div class="col-md-9 col-md-offset-1">
+                <label for="description">Description:</label>
+                <textarea class="form-control" rows="5" id="description" name="description"></textarea>
+              </div>
+            </div>
+
+            
             <div class="container form-group">
               <input type="submit" class="btn btn-raised btn-danger" value="Genarate Report">
             </div>

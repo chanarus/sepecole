@@ -4,7 +4,7 @@
  *
  * Controller to create and manage timetables
  *
- * @author  K.H.M Vidyaratna
+ * @author  H.S Anuradha
  */
 
 class Timetable extends CI_Controller {
@@ -31,11 +31,13 @@ class Timetable extends CI_Controller {
 
         $data['timetable_list'] = $this->timetable_model->get_timetable_list();
 
+
         $this->load->view('templates/header', $data);
         $this->load->view('navbar_main', $data);
         $this->load->view('navbar_sub', $data);
         $this->load->view('timetable/index', $data);
         $this->load->view('/templates/footer');
+        $this->load->library('calendar');
     }
 
     /**

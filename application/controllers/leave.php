@@ -130,8 +130,8 @@ class leave extends CI_Controller {
 
         $this->load->library('form_validation');
         $this->form_validation->set_rules('txt_reason', 'Reason', "required|xss_clean");
-        $this->form_validation->set_rules('txt_startdate', 'Start Date', "required|xss_clean|callback_check_date_for_current_year");
-        $this->form_validation->set_rules('txt_enddate', 'End Date', "required|xss_clean|callback_check_date_for_current_year");
+        $this->form_validation->set_rules('txt_startdate', 'Start Date', "required|xss_clean|is_unique[apply_leaves.start_date]|callback_check_date_for_current_year");
+        $this->form_validation->set_rules('txt_enddate', 'End Date', "required|xss_clean|is_unique[apply_leaves.end_date]|callback_check_date_for_current_year");
 
         $data['page_title'] = "Leave Management";
 
