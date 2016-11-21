@@ -155,7 +155,7 @@ class Sports_Model extends CI_Model {
     */
     public function update_captain($id, $cap_data) {
         
-        $sql = "UPDATE sport_captains SET category ='{$cap_data['cat']}', division='{$cap_data['div']}', captain='{$cap_data['cap']}', vice='{$cat_data['vice']}'  WHERE id='$id'";
+        $sql = "UPDATE sport_captains SET category ='{$cap_data['cat']}', division='{$cap_data['div']}', captain='{$cap_data['cap']}', vice='{$cap_data['vice']}'  WHERE id='$id'";
 
         if ($query = $this->db->query($sql)) {
             return TRUE;
