@@ -15,6 +15,12 @@ class Sports extends CI_Controller {
         $this->load->model('sports_model');
     }
 
+    /***
+    * Function name - index
+    * Description - First run this index method. The session keeps track of whether the user logged in or not. If not, user has to login to the system.
+    *               It riderects user to another method according to the user type.
+    */
+
     function index(){
         $data['user_type'] = $this->session->userdata['user_type'];
         $data['page_title'] = "Sports";
@@ -28,6 +34,11 @@ class Sports extends CI_Controller {
         $this->load->view('sports/sport_details', $data);
         $this->load->view('templates/footer');
     }
+
+    /***
+    * Function name - add_sport_category
+    * Description - This method is used to create a new sport in to the system
+    */
 
     function add_sport_category(){
         if (!$this->session->userdata('id')) {
@@ -74,6 +85,11 @@ class Sports extends CI_Controller {
 
     }
 
+    /***
+    * Function name - view_category
+    * Description - This method is used to view sports in the system
+    */
+
     public function view_category() {
         if (!$this->session->userdata('logged_in')) {
             redirect('login', 'refresh');
@@ -84,6 +100,11 @@ class Sports extends CI_Controller {
         $data['details'] = $this->sports_model->sport_category_details($id);
         $this->load->view('sports/edit_sport_category_form', $data);
     }
+
+    /***
+    * Function name - assign_leaders
+    * Description - This method is used to assign captains to sports in the system
+    */
 
      function assign_leaders(){
          if (!$this->session->userdata('id')) {
@@ -135,6 +156,11 @@ class Sports extends CI_Controller {
             $this->load->view('/templates/footer');
         }
     }
+
+    /***
+    * Function name - assign_students
+    * Description - This method is used to assign new students to sports in the system
+    */
 
     function assign_students(){
         if (!$this->session->userdata('id')) {
@@ -192,6 +218,11 @@ class Sports extends CI_Controller {
         }    
     }
 
+    /***
+    * Function name - management_details
+    * Description - This method is used to assign in-charge teachers to sports in the system
+    */
+
     function management_details(){
         if (!$this->session->userdata('id')) {
             redirect('login', 'refresh');
@@ -243,16 +274,31 @@ class Sports extends CI_Controller {
         }    
     }
 
+    /***
+    * Function name - get_captain_name
+    * Description - This method is used to get captains list from the system
+    */
+
     function get_captain_name($id){
       $data['captain_name'] =  $this->sports_model->captain_name($id);
       $this->load->view('/sports/captain',$data);
     }
+
+    /***
+    * Function name - get_captain_regno
+    * Description - This method is used to get captain's registration no from the system
+    */
 
     function get_captain_regno(){
       $cap_name = $_SERVER['QUERY_STRING'];
       $data['captain_regno'] =  $this->sports_model->get_cap_regno($cap_name);
       $this->load->view('/sports/captain',$data);
     }
+
+    /***
+    * Function name - delete_sport
+    * Description - This method is used to delete sports from the system
+    */
 
      public function delete_sport($id) {
         if (!$this->session->userdata('logged_in')) {
@@ -267,9 +313,11 @@ class Sports extends CI_Controller {
         redirect('sports/add_sport_category');
     }
 
-    /*
-    *Sport edit view
+    /***
+    * Function name - edit_single_sport
+    * Description - This method is used to get id of single sport from the system
     */
+
     public function edit_single_sport($id) {
         $data['page_title'] = "Edit Sport";        
 
@@ -286,6 +334,11 @@ class Sports extends CI_Controller {
         $this->load->view('/templates/footer');
     }
 
+    /***
+    * Function name - edit_sport
+    * Description - This method is used to edit a single sport from the system
+    */
+
     public function edit_sport() {
         $id = $this->input->post('id');
         var_dump($id);
@@ -298,6 +351,11 @@ class Sports extends CI_Controller {
             redirect('sports/add_sport_category');
         }
     }
+
+    /***
+    * Function name - delete_captain
+    * Description - This method is used to delete leaders from the system
+    */
 
     public function delete_captain($id) {
         if (!$this->session->userdata('logged_in')) {
@@ -312,9 +370,11 @@ class Sports extends CI_Controller {
         redirect('sports/assign_leaders');
     }
 
-    /*
-    *Sport captains edit view
+    /***
+    * Function name - edit_single_captain
+    * Description - this method is used to get id of single leader from the system
     */
+
     public function edit_single_captain($id) {
         $data['page_title'] = "Edit Sport";        
 
@@ -330,6 +390,11 @@ class Sports extends CI_Controller {
         $this->load->view('sports/edit_leader', $data);
         $this->load->view('/templates/footer');
     }
+
+    /***
+    * Function name - edit_captain
+    * Description - This method is used to edit a single leader from the system
+    */
 
     public function edit_captain() {
         $id = $this->input->post('id');
