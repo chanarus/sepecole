@@ -20,7 +20,7 @@
         $attributes = array('class' => 'form-horizontal');
         ?>
 
-        <?php echo form_open('certificate/report_pdf', $attributes); ?>
+        <?php echo form_open('certificate/report_pdf_leaving', $attributes); ?>
 
         <div class="panel-body">
           <div class="media">

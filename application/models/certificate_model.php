@@ -164,4 +164,4 @@ class Certificate_Model extends CI_Model {
             </div>";
         }
     }
-    }
+}
