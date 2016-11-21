@@ -31,9 +31,11 @@ class Sports extends CI_Controller {
         $this->load->library('form_validation');
         $data['user_type'] = $this->session->userdata['user_type'];
         //edit_teacher_profile view validations
-        $this->form_validation->set_rules('sport_name', '', 'required');
-        $this->form_validation->set_rules('description', 'Full Name', 'required');
-        $this->form_validation->set_rules('agecat', 'Name with Initial', 'required');
+        $this->form_validation->set_rules('name', '', 'required');
+        $this->form_validation->set_rules('category', '', 'required');
+        $this->form_validation->set_rules('divition', '', 'required');
+        $this->form_validation->set_rules('captain', '', 'required');
+        $this->form_validation->set_rules('vice', 'Vice Captain', 'required');
         $this->form_validation->set_error_delimiters('<br /><span class="error">', '</span>');
 
         if ($this->form_validation->run() == FALSE) {
@@ -47,7 +49,7 @@ class Sports extends CI_Controller {
             $this->load->view('/templates/footer');
         }
         else{
-            $sport_cat = $this->input->post('sport_name');
+            $sport_cat = $this->input->post('name');
             $sport_descrp = $this->input->post('description');
             $sport_age_category = $this->input->post('agecat');
             $this->sports_model->add_sport_category($sport_cat,$sport_descrp,$sport_age_category);
@@ -92,6 +94,7 @@ class Sports extends CI_Controller {
 
         if ($this->form_validation->run() == FALSE) {
             $data['det'] = $this->sports_model->view_sport_category();
+            $data['sports'] = $this->sports_model->get_all_sports();
             $data['navbar'] = "sport";
             $data['page_title'] = "Sport Category";
             $this->load->view('/templates/header', $data);
@@ -107,6 +110,7 @@ class Sports extends CI_Controller {
             $this->sports_model->add_sport_category($sport_cat,$sport_descrp,$sport_age_category);
 
             $data['det'] = $this->sports_model->view_sport_category();
+            $data['sports'] = $this->smorts_model->get_all_sports();
             $data['succ_message'] = "Succesfully inserted";
             $data['navbar'] = "sport";
             $data['page_title'] = "Sport Category";
@@ -121,6 +125,7 @@ class Sports extends CI_Controller {
     function assign_students(){
         $data['user_type'] = $this->session->userdata['user_type'];
         $data['det'] = $this->sports_model->view_sport_category();
+        $data['sports'] = $this->sports_model->get_all_sports();
         $data['page_title'] = "Sports";
         $data['navbar'] = "sports";
 
@@ -134,6 +139,8 @@ class Sports extends CI_Controller {
     function management_details(){
         $data['user_type'] = $this->session->userdata['user_type'];
         $data['det'] = $this->sports_model->view_sport_category();
+        $data['sports'] = $this->sports_model->get_all_sports();
+        $data['teachers'] = $this->sports_model->get_all_teachers();
         $data['page_title'] = "Sports";
         $data['navbar'] = "sports";
 

@@ -143,38 +143,51 @@
                 <a name="sports"></a>
                     <div class="panel panel-info">
                         <div class="panel-heading">
-                    <strong>Sports</strong>
+                    <strong>Team Captains</strong>
                     </div>
                     <div class="panel-body">
                     <table class="table table-hover">
                         <thead>
                             <tr>
-                                <th>#</th>
                                 <th>Sport Name</th>
-                                <th>Description</th>
                                 <th>Age Category</th>
+                                <th>Devision</th>
+                                <th>Captain</th>
+                                <th>Vice Captain</th>
                                 <th></th>
                             </tr>
                         </thead>
                         <tbody id="fillgrid">
-                            <?php foreach ($det as $row) { ?>
                             <tr>
-                                <td><?php echo $row->id; ?></td>
-                                <td><?php echo $row->name; ?></td>
-                                <td><?php echo $row->description; ?></td>
-                                <td><?php
-                                    $age = $row->age_category;
-                                    if ($age == 1) {
-                                        echo 'Under 10,12,14,16,18,20';
-                                    } else if ($age == 2) {
-                                        echo 'Under 13,15,17,19';
-                                    } else{
-                                        echo '';
-                                    }
-                                    ?>
-                                </td>
+                                <td>Cricket</td>
+                                <td>Under 19</td>
+                                <td>Devision 1</td>
+                                <td>Lasith Perera</td>
+                                <td>Amal Kumara</td>
+                                <td><button type="button" data-id='<?php echo $row->id ?>' class="btn btn-raised btn-info" data-toggle="modal" data-target="#myModal">Update</button></td>
+                                <td><button type="button" data-id='<?php echo $row->id ?>' class="btn btn-raised btn-danger" onclick="return confirm('Are you sure you want to delete this sport?');">Delete</button></td>
+                            
                             </tr>
-                        <?php } ?>
+                            <tr>
+                                <td>Foot Ball</td>
+                                <td>Under 19</td>
+                                <td>Devision 1</td>
+                                <td>Kamal De Sliva</td>
+                                <td>Amila Perera</td>
+                                <td><button type="button" data-id='<?php echo $row->id ?>' class="btn btn-raised btn-info" data-toggle="modal" data-target="#myModal">Update</button></td>
+                                <td><button type="button" data-id='<?php echo $row->id ?>' class="btn btn-raised btn-danger" onclick="return confirm('Are you sure you want to delete this sport?');">Delete</button></td>
+                            
+                            </tr>
+                            <tr>
+                                <td>Rugby</td>
+                                <td>Under 19</td>
+                                <td>Devision 1</td>
+                                <td>Rasika De Silva</td>
+                                <td>Namal Sameera</td>
+                                <td><button type="button" data-id='<?php echo $row->id ?>' class="btn btn-raised btn-info" data-toggle="modal" data-target="#myModal">Update</button></td>
+                                <td><button type="button" data-id='<?php echo $row->id ?>' class="btn btn-raised btn-danger" onclick="return confirm('Are you sure you want to delete this sport?');">Delete</button></td>
+                            
+                            </tr>
                         </tbody>
                     </table>
                     </div>
@@ -186,7 +199,7 @@
 
 </div>
 
-<script>
+<!--<script>
 var no = parseInt($("#cap_reg"));
 
 $(document).ready(function(){
@@ -226,7 +239,4 @@ function get_captain_name(name){
 
 
 }
-
-
-
-</script>
+</script> -->
