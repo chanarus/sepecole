@@ -200,8 +200,8 @@ class Sports extends CI_Controller {
         $data['user_type'] = $this->session->userdata['user_type'];
 
         $this->load->library('form_validation');
-        $this->form_validation->set_rules('name', 'Sport Name', 'required|greater_than[0]');
-        $this->form_validation->set_rules('tname', 'Teacher Name', 'required|greater_than[0]');
+        $this->form_validation->set_rules('name', 'Sport Name', 'required');
+        $this->form_validation->set_rules('tname', 'Teacher Name', 'required');
 
         if ($this->form_validation->run() == FALSE) {
             $data['navbar'] = "sports";
@@ -210,16 +210,36 @@ class Sports extends CI_Controller {
             $data['det'] = $this->sports_model->view_sport_category();
             $data['sports'] = $this->sports_model->get_all_sports();
             $data['teachers'] = $this->sports_model->get_all_teachers();
+            $data['incharge'] = $this->sports_model->view_sport_incharge();
+
+            $this->load->view('templates/header', $data);
+            $this->load->view('navbar_main', $data);
+            $this->load->view('navbar_sub', $data);
+            $this->load->view('sports/sport_managers_form', $data);
+            $this->load->view('templates/footer');
         }
         else{
 
-        }    
+            $data['navbar'] = "sports";
+            $data['page_title'] = "Sports";
+            $data['user_type'] = $this->session->userdata['user_type'];
+            $data['det'] = $this->sports_model->view_sport_category();
+            $data['sports'] = $this->sports_model->get_all_sports();
+            $data['teachers'] = $this->sports_model->get_all_teachers();
+            $data['incharge'] = $this->sports_model->view_sport_incharge();
 
-        $this->load->view('templates/header', $data);
-        $this->load->view('navbar_main', $data);
-        $this->load->view('navbar_sub', $data);
-        $this->load->view('sports/sport_managers_form', $data);
-        $this->load->view('templates/footer');
+            $sname = $this->input->post('name');
+            $incharge = $this->input->post('tname');
+            $this->sports_model->add_sport_incharge($sname,$incharge);
+            redirect('sports/management_details');
+
+            $data['succ_message'] = "Succesfully inserted";
+            $this->load->view('templates/header', $data);
+            $this->load->view('navbar_main', $data);
+            $this->load->view('navbar_sub', $data);
+            $this->load->view('sports/sport_managers_form', $data);
+            $this->load->view('templates/footer');
+        }    
     }
 
     function get_captain_name($id){
@@ -336,6 +356,84 @@ class Sports extends CI_Controller {
         }
         $this->sports_model->delete_team_member($id);
         redirect('sports/assign_students');
+    }
+
+    /*
+    *Sport captains edit view
+    */
+    public function edit_single_student($id) {
+        $data['page_title'] = "Edit Sport";        
+
+        $data['result'] = $this->sports_model->get_student($id);
+
+        $data['succ_message'] = "Succesfully inserted";
+        $data['navbar'] = "sport";
+        $data['page_title'] = "Leader Edit";
+        $data['user_type'] = $this->session->userdata['user_type'];
+        $this->load->view('/templates/header', $data);
+        $this->load->view('navbar_main', $data);
+        $this->load->view('navbar_sub', $data);
+        $this->load->view('sports/edit_student', $data);
+        $this->load->view('/templates/footer');
+    }
+
+    public function edit_student() {
+        $id = $this->input->post('id');
+        var_dump($id);
+        $std_data  = array(
+            'sname'=> $this->input->post('sname'),
+            'cat'=> $this->input->post('cat'),
+            'div'=> $this->input->post('div'),
+        );
+
+        if($this->sports_model->update_student($id,$std_data)) {
+            redirect('sports/assign_students');
+        }
+    }
+
+    public function delete_incharge($id) {
+        if (!$this->session->userdata('logged_in')) {
+            redirect('login', 'refresh');
+        }
+        //Getting user type and Authorize it to be an Admin
+        $data['user_type'] = $this->session->userdata['user_type'];
+        if ($data['user_type'] != 'A') {
+            redirect('login', 'refresh');
+        }
+        $this->sports_model->delete_team_incharge($id);
+        redirect('sports/management_details');
+    }
+
+    /*
+    *Sport captains edit view
+    */
+    public function edit_single_teacher($id) {
+        $data['page_title'] = "Edit Sport";        
+
+        $data['result'] = $this->sports_model->get_incharge($id);
+
+        $data['succ_message'] = "Succesfully inserted";
+        $data['navbar'] = "sport";
+        $data['page_title'] = "Leader Edit";
+        $data['user_type'] = $this->session->userdata['user_type'];
+        $this->load->view('/templates/header', $data);
+        $this->load->view('navbar_main', $data);
+        $this->load->view('navbar_sub', $data);
+        $this->load->view('sports/edit_incharge', $data);
+        $this->load->view('/templates/footer');
+    }
+
+    public function edit_teacher() {
+        $id = $this->input->post('id');
+        var_dump($id);
+        $incharge_data  = array(
+            'sname'=> $this->input->post('sname'),
+            'tname'=> $this->input->post('tname'),
+        );
+
+        if($this->sports_model->update_incharge($id,$incharge_data)) {
+            redirect('sports/management_details');
+        }
     }
 
 }

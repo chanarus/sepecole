@@ -8,27 +8,17 @@
 
         <div class="col-md-9">
             <div class="container">
-                <h2>Edit Leaders</h2>
-                <?php echo form_open('sports/edit_captain'); ?>
+                <h2>Edit In-charge</h2>
+                <?php echo form_open('sports/edit_teacher'); ?>
                     <div class="form-group">
                         <input type="hidden"  value="<?php echo $result->id ?>" name="id">
-                        <label for="name">Category</label>
-                        <input type="text" id="cat" name="cat" class="form-control" value="<?php echo $result->category ?>">
+                        <label for="name">Sport Name</label>
+                        <input type="text" id="sname" name="sname" class="form-control" value="<?php echo $result->incharge_name ?>">
                     </div>
 
                     <div class="form-group">
-                        <label for="name">Division</label>
-                        <input type="text" id="div" name="div" class="form-control" value="<?php echo $result->division ?>">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="name">Captain</label>
-                        <input type="text" id="cap" name="cap" class="form-control" value="<?php echo $result->captain ?>">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="name">Vice Captain</label>
-                        <input type="text" id="vice" name="vice" class="form-control" value="<?php echo $result->vice ?>">
+                        <label for="name">Teacher Name</label>
+                        <input type="text" id="tname" name="tname" class="form-control" value="<?php echo $result->sport_name ?>">
                     </div>
 
                     <div class="row">
