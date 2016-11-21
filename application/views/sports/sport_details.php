@@ -7,18 +7,27 @@
         </div>
 
         <div class="col-md-9">
+
             <?php if (isset($succ_message)) { ?>
-            <div class="alert alert-success alert-dismissible" role="alert">
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <?php echo $succ_message; ?>
-            </div>
-        <?php } ?>
-        <?php if (isset($err_message)) { ?>
-            <div class="alert alert-danger alert-dismissible" role="alert">
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <?php echo $err_message; ?>
-            </div>
-        <?php } ?>
+                <div class="alert alert-success alert-dismissible" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <strong>Success </strong>
+                    <?php echo $succ_message; ?>
+                </div>
+            <?php } ?>
+            <?php if (validation_errors()) { ?>
+                <div class="alert alert-danger alert-dismissible" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <?php echo validation_errors(); ?>
+                </div>
+            <?php } ?>
+            <?php if (isset($error_message)) { ?>
+                <div class="alert alert-danger alert-dismissible" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <strong>Error </strong>
+                    <?php echo $error_message; ?>
+                </div>
+            <?php } ?>
 
             <div class="panel panel-info">
                 <div class="panel-heading">
@@ -33,24 +42,22 @@
                     ?>
 
                     <div class="form-group">
-                        <label for="inputEmail3" class="col-sm-2 control-label">Sport Name</label>
+                        <label for="name" class="col-sm-2 control-label">Sport Name</label>
                         <div class="col-sm-5">
-                            <input id="sport_name" type="text" name="sport_name"  value="<?php if(isset($succ_message)){ echo '';}else{echo set_value('sport_name');} ?>" type="text" class="form-control" id="sport_name" placeholder="Sport Name">
-                            <?php echo form_error('sport_name'); ?>
+                            <input id="sport_name" type="text" name="sport_name" type="text" class="form-control" id="sport_name" placeholder="Sport Name">
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label for="inputEmail3" class="col-sm-2 control-label">Description</label>
+                        <label for="dis" class="col-sm-2 control-label">Description</label>
                         <div class="col-sm-5">
 
-                            <textarea id="description" type="text" name="description"  value=""  type="text" class="form-control" id="description" placeholder="Description"><?php if(isset($succ_message)){ echo '';}else{echo set_value('description');} ?></textarea>
-                            <?php echo form_error('description'); ?>
+                            <textarea id="description" type="text" name="description" type="text" class="form-control" id="description" placeholder="Description"><?php if(isset($succ_message)){ echo '';}else{echo set_value('description');} ?></textarea>
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label for="inputEmail3" class="col-sm-2 control-label">Age Category</label>
+                        <label for="age_cat" class="col-sm-2 control-label">Age Category</label>
                         <div class="col-sm-6">
                             <label class="radio-inline">
                                 <input id="age1" type="radio" name="agecat"  value="1" <?php if (set_value('gender') == 'm') { echo "checked"; } ?>> Under 10,12,14,16,18,20
@@ -60,7 +67,6 @@
                                 <input id="age2" type="radio" name="agecat" value="2" <?php if (set_value('gender') == 'f') { echo "checked"; } ?>> Under 13,15,17,19
                             </label>
                             <br>
-                            <?php echo form_error('agecat'); ?>
                         </div>
                     </div>
 
@@ -106,38 +112,11 @@
                                     }
                                     ?>
                                 </td>
-                                <td><button type="button" data-id='<?php echo $row->id ?>' class="btn btn-raised btn-info" data-toggle="modal" data-target="#myModal">Update</button></td>
-                                <td><button type="button" data-id='<?php echo $row->id ?>' class="btn btn-raised btn-danger" onclick="return confirm('Are you sure you want to delete this sport?');">Delete</button></td>
-                                
-                          <!--      <td><a href="<?php echo base_url("index.php/sports/delete_news")."/".$row->id; ?>" onclick="return confirm('Are you sure you want to delete this news?');"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></i></a></td>  -->
+                                <td><a href='<?php echo base_url('index.php/sports/edit_single_sport/'.$row->id); ?>' class='btn btn-raised btn-primary btn-xs'>Update</a></td>
+                                <td><a href='<?php echo base_url('index.php/sports/delete_sport/'.$row->id); ?>' class='btn btn-raised btn-danger btn-xs'>Delete</a></td>
                             </tr>
 
                             <?php echo form_open(); ?>
-                            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"> 
-                                <div class="modal-dialog" role="document"> 
-                                    <div class="modal-content"> 
-                                        <div class="modal-header"> 
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span>  
-                                        </div> 
-                                          <div class="modal-body">
-                                            <h4 class="modal-title" id="myModalLabel">Update Sport</h4>
-                                             <!--       <input type="hidden" id="sportsid" name="sports_id" class="form-control" value="<?php echo $details->id; ?>">
-                                                    <div class="form-group">
-                                                        <label for="exampleInputEmail2">Sport Name</label>
-                                                        <input type="text" id="sportsname" name="sport_name" class="form-control" value="<?php echo $details->name; ?>">
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="exampleInputEmail2">Description</label>
-                                                        <input class="form-control" id="sportsdescription" name="description" type="text" value="<?php echo $details->description; ?>" >
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <input type="submit" class="btn btn-raised btn-success" id="updateitem" value="update">
-                                                        <input type="reset" class="btn btn-raised btn-default" value="Reset">
-                                                    </div> -->
-                                        </div>
-                                    </div> 
-                                </div> 
-                            </div>
                             <?php echo form_close(); ?>
                         <?php } ?>
                         </tbody>
@@ -239,4 +218,17 @@
             window.location.href = "<?php echo base_url("index.php/sports/reject_leave"); ?>" + "/" + leaveid;
         });
     }
+</script>
+
+<script>
+
+    function validation(){
+        var x = document.getElementById('sport_name').value;
+
+        if(x == ''){
+            alert("Name must be selected");
+            return false;
+        }
+    }
+
 </script>

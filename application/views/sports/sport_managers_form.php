@@ -7,18 +7,27 @@
         </div>
 
         <div class="col-md-9">
+
             <?php if (isset($succ_message)) { ?>
-            <div class="alert alert-success alert-dismissible" role="alert">
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <?php echo $succ_message; ?>
-            </div>
-        <?php } ?>
-        <?php if (isset($err_message)) { ?>
-            <div class="alert alert-danger alert-dismissible" role="alert">
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <?php echo $err_message; ?>
-            </div>
-        <?php } ?>
+                <div class="alert alert-success alert-dismissible" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <strong>Success </strong>
+                    <?php echo $succ_message; ?>
+                </div>
+            <?php } ?>
+            <?php if (validation_errors()) { ?>
+                <div class="alert alert-danger alert-dismissible" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <?php echo validation_errors(); ?>
+                </div>
+            <?php } ?>
+            <?php if (isset($error_message)) { ?>
+                <div class="alert alert-danger alert-dismissible" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <strong>Error </strong>
+                    <?php echo $error_message; ?>
+                </div>
+            <?php } ?>
 
             <div class="panel panel-info">
                 <div class="panel-heading">
@@ -48,10 +57,10 @@
                     <div class="form-group">
                         <label for="inputEmail3" class="col-sm-2 control-label">Teacher Name</label>
                         <div class="col-sm-5">
-                            <select id="name" name="name" class="form-control">
+                            <select id="name" name="tname" class="form-control">
                                 <option value="0" <?php if (set_value('name') == '0') { echo "selected"; } ?>>Select a Teacher</option>
                             <?php foreach($teachers as $teacher)  { ?>
-                                 <option value="<?php echo $sport->name; ?>"><?php echo $teacher->full_name; ?> </option>
+                                 <option value="<?php echo $teacher->full_name; ?>"><?php echo $teacher->full_name; ?> </option>
                             <?php } ?>
                             </select>
                             <?php echo form_error('teachername'); ?>

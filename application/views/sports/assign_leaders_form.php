@@ -7,18 +7,27 @@
         </div>
 
         <div class="col-md-9">
+
             <?php if (isset($succ_message)) { ?>
-            <div class="alert alert-success alert-dismissible" role="alert">
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <?php echo $succ_message; ?>
-            </div>
-        <?php } ?>
-        <?php if (isset($err_message)) { ?>
-            <div class="alert alert-danger alert-dismissible" role="alert">
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <?php echo $err_message; ?>
-            </div>
-        <?php } ?>
+                <div class="alert alert-success alert-dismissible" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <strong>Success </strong>
+                    <?php echo $succ_message; ?>
+                </div>
+            <?php } ?>
+            <?php if (validation_errors()) { ?>
+                <div class="alert alert-danger alert-dismissible" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <?php echo validation_errors(); ?>
+                </div>
+            <?php } ?>
+            <?php if (isset($error_message)) { ?>
+                <div class="alert alert-danger alert-dismissible" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <strong>Error </strong>
+                    <?php echo $error_message; ?>
+                </div>
+            <?php } ?>
 
             <div class="panel panel-info">
                 <div class="panel-heading">
@@ -35,13 +44,12 @@
                     <div class="form-group">
                         <label for="inputEmail3" class="col-sm-2 control-label">Sport Name</label>
                         <div class="col-sm-5">
-                            <select id="name" name="name" class="form-control">
-                                <option value="0" <?php if (set_value('name') == '0') { echo "selected"; } ?>>Select a Sport</option>
+                            <select id="sname" name="sname" class="form-control" placeholder="Select a Sport" onchange="refresh()">                                
+                            <option value="0" <?php if (set_value('division') == '0') { echo "selected"; } ?>>Select a Sport</option>
                             <?php foreach($sports as $sport)  { ?>
                                  <option value="<?php echo $sport->name; ?>"><?php echo $sport->name; ?> </option>
                             <?php } ?>
                             </select>
-                            <?php echo form_error('teachername'); ?>
                         </div>
                     </div>
                     <div class="form-group">
@@ -49,49 +57,48 @@
                         <div class="col-sm-6">
                             <div class="col-md-6">
                                 <label class="radio-inline">
-                                    <input id="age1" type="radio" name="agecat"  value="m" <?php if (set_value('gender') == 'm') { echo "checked"; } ?>> Under 10
+                                    <input id="age1" type="radio" name="agecat"  value="1" <?php if (set_value('gender') == '1') { echo "checked"; } ?>> Under 10
                                 </label>
                                 <br>
                                 <label class="radio-inline">
-                                    <input id="age2" type="radio" name="agecat" value="f" <?php if (set_value('gender') == 'f') { echo "checked"; } ?>> Under 12
+                                    <input id="age2" type="radio" name="agecat" value="2" <?php if (set_value('gender') == '2') { echo "checked"; } ?>> Under 12
                                 </label>
                                 <br>
                                 <label class="radio-inline">
-                                    <input id="age3" type="radio" name="agecat"  value="m" <?php if (set_value('gender') == 'm') { echo "checked"; } ?>> Under 14
+                                    <input id="age3" type="radio" name="agecat"  value="3" <?php if (set_value('gender') == '3') { echo "checked"; } ?>> Under 14
                                 </label>
                                 <br>
                                 <label class="radio-inline">
-                                    <input id="age4" type="radio" name="agecat" value="f" <?php if (set_value('gender') == 'f') { echo "checked"; } ?>> Under 16
+                                    <input id="age4" type="radio" name="agecat" value="4" <?php if (set_value('gender') == '4') { echo "checked"; } ?>> Under 16
                                 </label>
                                 <br>
                                 <label class="radio-inline">
-                                    <input id="age3" type="radio" name="agecat"  value="m" <?php if (set_value('gender') == 'm') { echo "checked"; } ?>> Under 18
+                                    <input id="age3" type="radio" name="agecat"  value="5" <?php if (set_value('gender') == '5') { echo "checked"; } ?>> Under 18
                                 </label>
                                 <br>
                                 <label class="radio-inline">
-                                    <input id="age4" type="radio" name="agecat" value="f" <?php if (set_value('gender') == 'f') { echo "checked"; } ?>> Under 20
+                                    <input id="age4" type="radio" name="agecat" value="6" <?php if (set_value('gender') == '6') { echo "checked"; } ?>> Under 20
                                 </label>
                                 <br>
                             </div>
                             <div class="col-md-6">
                                 <label class="radio-inline">
-                                    <input id="age1" type="radio" name="agecat"  value="m" <?php if (set_value('gender') == 'm') { echo "checked"; } ?>> Under 13
+                                    <input id="age1" type="radio" name="agecat"  value="7" <?php if (set_value('gender') == '7') { echo "checked"; } ?>> Under 13
                                 </label>
                                 <br>
                                 <label class="radio-inline">
-                                    <input id="age2" type="radio" name="agecat" value="f" <?php if (set_value('gender') == 'f') { echo "checked"; } ?>> Under 15
+                                    <input id="age2" type="radio" name="agecat" value="8" <?php if (set_value('gender') == '8') { echo "checked"; } ?>> Under 15
                                 </label>
                                 <br>
                                 <label class="radio-inline">
-                                    <input id="age3" type="radio" name="agecat"  value="m" <?php if (set_value('gender') == 'm') { echo "checked"; } ?>> Under 17
+                                    <input id="age3" type="radio" name="agecat"  value="9" <?php if (set_value('gender') == '9') { echo "checked"; } ?>> Under 17
                                 </label>
                                 <br>
                                 <label class="radio-inline">
-                                    <input id="age4" type="radio" name="agecat" value="f" <?php if (set_value('gender') == 'f') { echo "checked"; } ?>> Under 19
+                                    <input id="age4" type="radio" name="agecat" value="10" <?php if (set_value('gender') == '10') { echo "checked"; } ?>> Under 19
                                 </label>
                                 <br>
                             </div>
-                            <?php echo form_error('gender'); ?>
                         </div>
                     </div>
                     <div class="form-group">
@@ -111,7 +118,7 @@
                         <div class="col-sm-5">
                             <div class="col-sm-10">
                             <input id="cap_name" type="text" name="cap_name" id="cap_name"  value="<?php if(isset($succ_message)){ echo '';}else{echo set_value('cap_reg');} ?>" type="text" class="form-control" id="cap_reg" placeholder="Captain Name:">
-                            <?php echo form_error('cap_name'); ?>
+                            
                         </div>
                             <?php echo form_error('teachername'); ?>
                         </div>
@@ -124,13 +131,13 @@
                         <label for="inputEmail3" class="col-sm-2 control-label">Vice Captain Name</label>
                         <div class="col-sm-5">
                             <div class="col-sm-10">
-                            <input id="vice_reg" type="text" name="vice_reg"  value="<?php if(isset($succ_message)){ echo '';}else{echo set_value('vice_reg');} ?>" type="text" class="form-control" id="vice_reg" placeholder="Vice Captain Name:">
-                            <?php echo form_error('vice_reg'); ?>
+                            <input id="vice_name" type="text" name="vice_name" type="text" class="form-control" id="vice_reg" placeholder="Vice Captain Name:">
+                            
                         </div>
                             <?php echo form_error('teachername'); ?>
                         </div>
                         <div class="col-sm-3">
-                            <input id="vice_reg" type="text" name="vice_reg"  value="<?php if(isset($succ_message)){ echo '';}else{echo set_value('vice_reg');} ?>" type="text" class="form-control" id="vice_reg" placeholder="Register No:">
+                            <input id="vice_reg" type="text" name="vice_reg" type="text" class="form-control" id="vice_reg" placeholder="Register No:">
                             <?php echo form_error('vice_reg'); ?>
                         </div>
                     </div>
@@ -158,37 +165,55 @@
                             </tr>
                         </thead>
                         <tbody id="fillgrid">
+                                 <?php foreach ($cap as $row) { ?>
                             <tr>
-                                <td>Cricket</td>
-                                <td>Under 19</td>
-                                <td>Devision 1</td>
-                                <td>Lasith Perera</td>
-                                <td>Amal Kumara</td>
-                                <td><button type="button" data-id='<?php echo $row->id ?>' class="btn btn-raised btn-info" data-toggle="modal" data-target="#myModal">Update</button></td>
-                                <td><button type="button" data-id='<?php echo $row->id ?>' class="btn btn-raised btn-danger" onclick="return confirm('Are you sure you want to delete this sport?');">Delete</button></td>
-                            
+                                <td><?php echo $row->name; ?></td>
+                                <td><?php 
+                                    
+                                    $cat = $row->category; 
+                                    if ($cat == 1) {
+                                        echo 'Under 10';
+                                    } else if ($cat == 2) {
+                                        echo 'Under 12';
+                                    } else if ($cat == 3) {
+                                        echo 'Under 14';
+                                    } else if ($cat == 4) {
+                                        echo 'Under 16';
+                                    } else if ($cat == 5) {
+                                        echo 'Under 18';
+                                    } else if ($cat == 6) {
+                                        echo 'Under 20';
+                                    } else if ($cat == 7) {
+                                        echo 'Under 13';
+                                    } else if ($cat == 8) {
+                                        echo 'Under 15';
+                                    } else if ($cat == 9) {
+                                        echo 'Under 17';
+                                    } else if ($cat == 10) {
+                                        echo 'Under 19';
+                                    } else {
+                                        echo '';
+                                    }
+                                ?>  
+                                </td>
+                                <td><?php 
+                                    $div = $row->division; 
+                                    if ($div == 1) {
+                                        echo 'Division 1';
+                                    } else if ($div == 2) {
+                                        echo 'Division 2';
+                                    } else if ($div == 3) {
+                                        echo 'Division 3';
+                                    }
+                                ?></td>
+                                <td><?php echo $row->captain; ?></td>
+                                <td><?php echo $row->vice; ?></td>
+                            </tr> 
+                            <td><a href='<?php echo base_url('index.php/sports/edit_single_captain/'.$row->id); ?>' class='btn btn-raised btn-primary btn-xs'>Update</a></td>
+                            <td><a href='<?php echo base_url('index.php/sports/delete_captain/'.$row->id); ?>' class='btn btn-raised btn-danger btn-xs'>Delete</a></td>
                             </tr>
-                            <tr>
-                                <td>Foot Ball</td>
-                                <td>Under 19</td>
-                                <td>Devision 1</td>
-                                <td>Kamal De Sliva</td>
-                                <td>Amila Perera</td>
-                                <td><button type="button" data-id='<?php echo $row->id ?>' class="btn btn-raised btn-info" data-toggle="modal" data-target="#myModal">Update</button></td>
-                                <td><button type="button" data-id='<?php echo $row->id ?>' class="btn btn-raised btn-danger" onclick="return confirm('Are you sure you want to delete this sport?');">Delete</button></td>
-                            
-                            </tr>
-                            <tr>
-                                <td>Rugby</td>
-                                <td>Under 19</td>
-                                <td>Devision 1</td>
-                                <td>Rasika De Silva</td>
-                                <td>Namal Sameera</td>
-                                <td><button type="button" data-id='<?php echo $row->id ?>' class="btn btn-raised btn-info" data-toggle="modal" data-target="#myModal">Update</button></td>
-                                <td><button type="button" data-id='<?php echo $row->id ?>' class="btn btn-raised btn-danger" onclick="return confirm('Are you sure you want to delete this sport?');">Delete</button></td>
-                            
-                            </tr>
-                        </tbody>
+                            <?php } ?>
+                         </table>                        
                     </table>
                     </div>
             </div>
@@ -231,12 +256,6 @@ function get_captain_name(name){
                       alert(temp.Message);
                   }
               });
-
-
-
-
-
-
 
 }
 </script> -->
