@@ -23,6 +23,11 @@ class marks_model extends CI_Model
         $this->db->query("insert into exams(name,grade_id,year,start_date,end_date) values('$name','$year','$ids','$start_date','$end_date')");
         return TRUE;
     }
+
+    public function enter_grade($name,$student_id,$subject_id,$marks){
+        $this->db->query("insert into exams_marks(name,student_id,subject_id,marks) values('$name','$student_id','$subject_id','$marks')");
+        return TRUE;
+    }
 /*
     public function enter_marks($name,$grade,$year,$sdate,$edate) {
         $data=array(
@@ -53,6 +58,11 @@ class marks_model extends CI_Model
     }
     public function get_all_subjects() {
         $data = $this->db->query("SELECT subject_name, id  FROM subjects");
+        return $data->result();
+    }
+
+    public function get_examination_names() {
+        $data = $this->db->query("SELECT name, id  FROM exams");
         return $data->result();
     }
 

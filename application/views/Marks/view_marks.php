@@ -34,7 +34,7 @@
                       <div class="col-md-5">
                         <select id="name" name="name" class="form-control">
                           <option value="0" <?php if (set_value('name') == '0') { echo "selected"; } ?>>Examination name</option>
-                          <?php foreach($ids as $name)  { ?>
+                          <?php foreach($name as $name)  { ?>
                             <option value="<?php echo $name->name; ?>"><?php echo $name->name; ?> </option>
                           <?php } ?>
                         </select>
@@ -47,7 +47,7 @@
                         <h4>Student ID:</h4>
                       </div>
                       <div class="col-md-5">
-                        <input type="text" class="form-control" name="examname" placeholder="Student ID">
+                        <input type="text" class="form-control" name="student_id" placeholder="Student ID">
                       </div>
                     </div>
                   </div>
@@ -57,10 +57,10 @@
                         <h4>Subject Name:</h4>
                       </div>
                       <div class="col-md-4">
-                        <select id="name" name="name" class="form-control">
+                        <select id="name" name="subject_id" class="form-control">
                           <option value="0" <?php if (set_value('name') == '0') { echo "selected"; } ?>>Select a Subject</option>
                           <?php foreach($ids as $name)  { ?>
-                            <option value="<?php echo $name->name; ?>"><?php echo $name->name; ?> </option>
+                            <option value="<?php echo $name->id; ?>"><?php echo $name->name; ?> </option>
                           <?php } ?>
                         </select>
                       </div>
@@ -79,7 +79,7 @@
                   <div class="form-group">
                     <div class="row">
                       <div class="col-md-2 col-md-offset-2">
-                        <input type="button" class="btn btn-primary btn-raised" value="Submit">
+                        <input type="submit" class="btn btn-primary btn-raised" value="Submit">
                       </div>
                       <div class="col-md-2">
                         <input type="reset" class="btn btn-danger btn-raised" value="Reset">
