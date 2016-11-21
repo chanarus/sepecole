@@ -4,7 +4,7 @@
  *
  * Controller to create and manage timetables
  *
- * @author  K.H.M Vidyaratna
+ * @author  H.S Anuradha
  */
 
 class Timetable extends CI_Controller {
