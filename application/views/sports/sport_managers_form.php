@@ -91,27 +91,16 @@
                             </tr>
                         </thead>
                         <tbody id="fillgrid">
+                            <?php foreach ($incharge as $row) { ?>
                             <tr>
-                                <td>Cricket</td>
-                                <td>Lalith Perera</td>
-                                <td><button type="button" data-id='<?php echo $row->id ?>' class="btn btn-raised btn-info" data-toggle="modal" data-target="#myModal">Update</button></td>
-                                <td><button type="button" data-id='<?php echo $row->id ?>' class="btn btn-raised btn-danger" onclick="return confirm('Are you sure you want to delete this sport?');">Delete</button></td>
-                            
-                            </tr> 
-                            <tr>
-                                <td>Rugby</td>
-                                <td>Jayantha De Silva</td>
-                                <td><button type="button" data-id='<?php echo $row->id ?>' class="btn btn-raised btn-info" data-toggle="modal" data-target="#myModal">Update</button></td>
-                                <td><button type="button" data-id='<?php echo $row->id ?>' class="btn btn-raised btn-danger" onclick="return confirm('Are you sure you want to delete this sport?');">Delete</button></td>
-                            
-                            </tr>  
-                            <tr>
-                                <td>Foot Ball</td>
-                                <td>Amal Ranasinge</td>
-                                <td><button type="button" data-id='<?php echo $row->id ?>' class="btn btn-raised btn-info" data-toggle="modal" data-target="#myModal">Update</button></td>
-                                <td><button type="button" data-id='<?php echo $row->id ?>' class="btn btn-raised btn-danger" onclick="return confirm('Are you sure you want to delete this sport?');">Delete</button></td>
-                            
-                            </tr>                         
+                                <td><?php echo $row->incharge_name; ?></td>
+                                <td><?php echo $row->sport_name; ?></td>
+
+                                <td><a href='<?php echo base_url('index.php/sports/edit_single_teacher/'.$row->id); ?>' class='btn btn-raised btn-primary btn-xs'>Update</a></td>
+                                <td><a href='<?php echo base_url('index.php/sports/delete_incharge/'.$row->id); ?>' class='btn btn-raised btn-danger btn-xs'>Delete</a></td>
+
+                            </tr>
+                            <?php } ?>                        
                         </tbody>
                     </table>
                     </div>
