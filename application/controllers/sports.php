@@ -105,6 +105,7 @@ class Sports extends CI_Controller {
             $data['sports'] = $this->sports_model->get_all_sports();
             $data['navbar'] = "sport";
             $data['page_title'] = "Sport Category";
+            $data['page_title'] = "Sports";
             $this->load->view('/templates/header', $data);
             $this->load->view('navbar_main', $data);
             $this->load->view('navbar_sub', $data);

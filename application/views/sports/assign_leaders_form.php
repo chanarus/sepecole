@@ -156,12 +156,12 @@
                     <table class="table table-hover">
                         <thead>
                             <tr>
-                                <th>Sport Name</th>
-                                <th>Age Category</th>
-                                <th>Devision</th>
-                                <th>Captain</th>
-                                <th>Vice Captain</th>
-                                <th></th>
+                                <th width ='150px'>Sport</th>
+                                <th width ='150px'>Category</th>
+                                <th width ='150px'>Devision</th>
+                                <th width ='150px'>Captain</th>
+                                <th width ='150px'>Vice Captain</th>
+                                <th width ='150px'></th>
                             </tr>
                         </thead>
                         <tbody id="fillgrid">
@@ -207,8 +207,7 @@
                                     }
                                 ?></td>
                                 <td><?php echo $row->captain; ?></td>
-                                <td><?php echo $row->vice; ?></td>
-                            </tr> 
+                                <td><?php echo $row->vice; ?></td> 
                             <td><a href='<?php echo base_url('index.php/sports/edit_single_captain/'.$row->id); ?>' class='btn btn-raised btn-primary btn-xs'>Update</a></td>
                             <td><a href='<?php echo base_url('index.php/sports/delete_captain/'.$row->id); ?>' class='btn btn-raised btn-danger btn-xs'>Delete</a></td>
                             </tr>
