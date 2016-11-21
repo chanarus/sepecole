@@ -49,8 +49,6 @@ class marks extends CI_Controller
 
      $this->load->library('form_validation');
 
-
-
       $this->form_validation->set_rules('examname','examname','required|min_length[6]');
       $this->form_validation->set_rules('year','year','required');
       $this->form_validation->set_rules('grade', 'grade', 'required|callback_grade_selected');
@@ -71,7 +69,7 @@ class marks extends CI_Controller
           $end_date = $this->input->post('end_date');
 
           $this->marks_model->enter_marks1($examname,$year,$grade,$start_date,$end_date);
-//
+
           $data['succ_message'] = "Succesfully inserted";
           $this->load->view('templates/header', $data);
           $this->load->view('navbar_main', $data);
@@ -86,15 +84,44 @@ class marks extends CI_Controller
   * marks lists can be viewed.
   */
   function view_marks() {
-    $data['page_title'] = " Student Grading Management";
-    $data['user_type'] = $this->session->userdata['user_type'];
-    $data['navbar'] = "admin";
+      $data['page_title'] = " Student Grading Management";
+      $data['user_type'] = $this->session->userdata['user_type'];
+      $data['navbar'] = "admin";
+      $data['ids'] = $this->marks_model->get_all_subjects();
 
-    $this->load->view('templates/header', $data);
-    $this->load->view('navbar_main', $data);
-    $this->load->view('navbar_sub', $data);
-    $this->load->view('Marks/view_marks', $data);
-    $this->load->view('templates/footer');
+      $this->load->library('form_validation');
+
+      $this->form_validation->set_rules('name','name','required|min_length[6]');
+      $this->form_validation->set_rules('student_id','student_id','required');
+      $this->form_validation->set_rules('student_id','student_id','required');
+      $this->form_validation->set_rules('marks', 'marks', 'required');
+
+      $this->form_validation->set_error_delimiters('<br /><span class="error">', '</span>');
+
+      if ($this->form_validation->run() == FALSE) {
+          $this->load->view('templates/header', $data);
+          $this->load->view('navbar_main', $data);
+          $this->load->view('navbar_sub', $data);
+          $this->load->view('Marks/view_marks', $data);
+          $this->load->view('templates/footer');
+      }
+      else{
+          $name = $this->input->post('name');
+          $student_id = $this->input->post('student_id');
+          $subject_id = $this->input->post('subject_id');
+          $marks = $this->input->post('marks');
+
+          $this->marks_model->enter_grade($name,$student_id,$subject_id,$marks);
+
+          $data['succ_message'] = "Succesfully inserted";
+
+          $this->load->view('templates/header', $data);
+          $this->load->view('navbar_main', $data);
+          $this->load->view('navbar_sub', $data);
+          $this->load->view('Marks/view_marks', $data);
+          $this->load->view('templates/footer');
+      }
+
   }
 
     function mark_marks() {
