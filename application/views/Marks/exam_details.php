@@ -20,12 +20,17 @@
                       </div>
                       <div class="media-body">
                           <h4 class="media-heading">Examination Details</h4>
-                          The examination details can be entered to the system by means of giving the start and the relevant end dates.
+                          The examination details can be entered to the system by means of giving the start and the relevant end dates of the examination.
                       </div>
                   </div>
               </div><hr>
               <div class="col-md-10">
-                <?php echo form_open(); ?>
+                <?php
+                $error_prefix = "<p class=\"help-block error\">";
+                $error_suffix = "</p>";
+                $attributes = array('class' => 'form-horizontal');
+                ?>
+                <?php echo form_open('marks/exam_marks'); ?>
                   <div class="form-group">
                     <div class="row">
                       <div class="col-md-3 col-md-offset-2">
@@ -42,7 +47,7 @@
                         <h4>Year:</h4>
                       </div>
                       <div class="col-md-5">
-                        <input type="text" class="form-control" name="examname" placeholder="Year">
+                        <input type="text" class="form-control" name="year" placeholder="Year">
                       </div>
                     </div>
                   </div>
@@ -52,22 +57,13 @@
                         <h4>Grade:</h4>
                       </div>
                       <div class="col-md-4">
-                        <select class="form-control">
-                          <option value="0">Select a Year</option>
-                          <option value="1">Grade 1</option>
-                          <option value="2">Grade 2</option>
-                          <option value="3">Grade 3</option>
-                          <option value="4">Grade 4</option>
-                          <option value="5">Grade 5</option>
-                          <option value="6">Grade 6</option>
-                          <option value="7">Grade 7</option>
-                          <option value="8">Grade 8</option>
-                          <option value="9">Grade 9</option>
-                          <option value="10">Grade 10</option>
-                          <option value="11">Grade 11</option>
-                          <option value="12">Grade 12</option>
-                          <option value="13">Grade 13</option>
+                        <select id="name" name="grade" class="form-control">
+                          <option value="0" <?php if (set_value('name') == '0') { echo "selected"; } ?>Select a Grade</option>
+                          <?php foreach($ids as $name)  { ?>
+                            <option value="<?php echo $name->id; ?>"><?php echo $name->name; ?> </option>
+                          <?php } ?>
                         </select>
+
                       </div>
                     </div>
                   </div>
@@ -94,9 +90,9 @@
                   <div class="form-group">
                     <div class="row">
                       <div class="col-md-2 col-md-offset-2">
-                        <input type="button" class="btn btn-primary btn-raised" value="Submit">
+                        <input type="submit" class="btn btn-primary btn-raised" value="Submit">
                       </div>
-                      <div class="col-md-2">
+                      <div class="col-md-2 col-md-offset-1">
                         <input type="reset" class="btn btn-danger btn-raised" value="Reset">
                       </div>
                     </div>

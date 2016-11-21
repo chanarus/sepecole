@@ -92,16 +92,6 @@ class Classes extends CI_Controller {
         }
     }
 
-    function grade_selected() {
-        $grade = $this->input->post('grade');
-        if ($grade == 'select_grade') {
-            $this->form_validation->set_message('grade_selected', 'Please select a grade');
-            return FALSE;
-        } else {
-            return TRUE;
-        }
-    }
-
     function view_class($class_id) {
         $data['class'] = $this->class_model->get_class($class_id);
         $data['class_students'] = $this->class_model->get_class_students($class_id);

@@ -20,7 +20,7 @@
                       </div>
                       <div class="media-body">
                           <h4 class="media-heading">Marks</h4>
-                          aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                        Marks of the students can be entered to a given student of a particular grade.
                       </div>
                   </div>
               </div><hr>
@@ -32,7 +32,12 @@
                         <h4>Examination Name:</h4>
                       </div>
                       <div class="col-md-5">
-                        <input type="text" class="form-control" name="examname" placeholder="Examination Name">
+                        <select id="name" name="name" class="form-control">
+                          <option value="0" <?php if (set_value('name') == '0') { echo "selected"; } ?>>Examination name</option>
+                          <?php foreach($ids as $name)  { ?>
+                            <option value="<?php echo $name->name; ?>"><?php echo $name->name; ?> </option>
+                          <?php } ?>
+                        </select>
                       </div>
                     </div>
                   </div>
@@ -52,8 +57,11 @@
                         <h4>Subject Name:</h4>
                       </div>
                       <div class="col-md-4">
-                        <select class="form-control">
-                          <option value="0">Select a Grade</option>
+                        <select id="name" name="name" class="form-control">
+                          <option value="0" <?php if (set_value('name') == '0') { echo "selected"; } ?>>Select a Subject</option>
+                          <?php foreach($ids as $name)  { ?>
+                            <option value="<?php echo $name->name; ?>"><?php echo $name->name; ?> </option>
+                          <?php } ?>
                         </select>
                       </div>
                     </div>
